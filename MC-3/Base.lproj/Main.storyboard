@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="02J-wh-gZE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -76,20 +76,24 @@ tentang dirimu</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Triangle"/>
                                 <connections>
-                                    <action selector="ButtonLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0qp-C5-YUE"/>
+                                    <action selector="buttonLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0qp-C5-YUE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w4Z-uP-Wgn">
                                 <rect key="frame" x="111" y="751" width="192" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Primary Button"/>
+                                <connections>
+                                    <action selector="buttonNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qYL-C1-Hsp"/>
+                                    <segue destination="6Rj-Wh-IKd" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="XEi-Ck-I8h"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbF-zj-HCO">
                                 <rect key="frame" x="298" y="305" width="25" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Triangle_Kanan"/>
                                 <connections>
-                                    <action selector="ButtonRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aaB-R9-5gk"/>
+                                    <action selector="buttonRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aaB-R9-5gk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBo-w7-QIE">
@@ -97,7 +101,7 @@ tentang dirimu</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Button_Plus"/>
                                 <connections>
-                                    <action selector="ButtonPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NAr-Nw-6TN"/>
+                                    <action selector="buttonPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NAr-Nw-6TN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXN-4D-GTy">
@@ -105,7 +109,7 @@ tentang dirimu</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Button_Minus"/>
                                 <connections>
-                                    <action selector="ButtonMin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Xb-be-6sO"/>
+                                    <action selector="buttonMin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Xb-be-6sO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmf-ye-YsU">
@@ -113,7 +117,7 @@ tentang dirimu</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Button_Cowo"/>
                                 <connections>
-                                    <action selector="ButtonMale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jq6-02-R8H"/>
+                                    <action selector="buttonMale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jq6-02-R8H"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znz-75-iWu">
@@ -121,7 +125,7 @@ tentang dirimu</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Button_Cewe"/>
                                 <connections>
-                                    <action selector="ButtonFemale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p4V-De-SRd"/>
+                                    <action selector="buttonFemale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p4V-De-SRd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -129,9 +133,9 @@ tentang dirimu</string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="RegisAge" destination="026-sm-dPE" id="RwV-iB-hfS"/>
-                        <outlet property="RegisImage" destination="1ZP-Bu-ngw" id="Lx9-T8-ojP"/>
-                        <outlet property="RegisUsername" destination="TK8-NE-xJc" id="bXW-4p-OOm"/>
+                        <outlet property="regisAge" destination="026-sm-dPE" id="RwV-iB-hfS"/>
+                        <outlet property="regisImage" destination="1ZP-Bu-ngw" id="Lx9-T8-ojP"/>
+                        <outlet property="regisUsername" destination="TK8-NE-xJc" id="bXW-4p-OOm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -389,13 +393,17 @@ kamu butuhkan</string>
                                 <rect key="frame" x="111" y="758" width="192" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Primary Button"/>
+                                <connections>
+                                    <action selector="buttonNext:" destination="6Rj-Wh-IKd" eventType="touchUpInside" id="K2L-YD-edc"/>
+                                    <segue destination="7Fd-qT-mtD" kind="presentation" modalPresentationStyle="fullScreen" id="GUp-Gg-t72"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDZ-Df-v2X">
                                 <rect key="frame" x="111" y="523" width="192" height="55"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Button_Semua"/>
                                 <connections>
-                                    <action selector="ButtonAll:" destination="6Rj-Wh-IKd" eventType="touchUpInside" id="gBV-96-9wh"/>
+                                    <action selector="buttonAll:" destination="6Rj-Wh-IKd" eventType="touchUpInside" id="bMc-gv-uv3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8s-z5-MfZ">
@@ -403,7 +411,7 @@ kamu butuhkan</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Button_Cewe"/>
                                 <connections>
-                                    <action selector="ButtonFemale:" destination="6Rj-Wh-IKd" eventType="touchUpInside" id="Lnz-kU-Kmf"/>
+                                    <action selector="buttonFemale:" destination="6Rj-Wh-IKd" eventType="touchUpInside" id="pl8-Dj-bQ9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJe-fZ-tCa">
@@ -411,13 +419,18 @@ kamu butuhkan</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Button_Cowo"/>
                                 <connections>
-                                    <action selector="ButtonMale:" destination="6Rj-Wh-IKd" eventType="touchUpInside" id="okd-Yt-NGP"/>
+                                    <action selector="buttonMale:" destination="6Rj-Wh-IKd" eventType="touchUpInside" id="0oJ-4w-79O"/>
                                 </connections>
                             </button>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="KI0-n5-tiE">
+                                <rect key="frame" x="185" y="223" width="118" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Ryg-MJ-1gC"/>
                     </view>
+                    <navigationItem key="navigationItem" id="PBd-pK-msB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zx9-I2-hst" sceneMemberID="firstResponder"/>
             </objects>
@@ -462,13 +475,6 @@ kamu butuhkan</string>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sudah mengarungi lautan sejak:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuH-0M-OJA">
                                 <rect key="frame" x="25" y="509" width="362" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 juli 2020" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuA-jN-RRv">
-                                <rect key="frame" x="161" y="557" width="89" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
@@ -544,20 +550,29 @@ kamu butuhkan</string>
                                     <action selector="ButtonSave:" destination="7Fd-qT-mtD" eventType="touchUpInside" id="LJG-lq-etE"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 juli 2020" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuA-jN-RRv">
+                                <rect key="frame" x="41" y="551" width="329" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="LEe-PI-5Zt"/>
                     </view>
                     <connections>
-                        <outlet property="ProfileImage" destination="2VE-QZ-aAc" id="LGN-cL-MvO"/>
-                        <outlet property="ProfileUsername" destination="CDM-60-8c5" id="hqa-dQ-U4s"/>
-                        <outlet property="ReceiveCounter" destination="nmy-k3-7dI" id="lak-wv-Kl0"/>
-                        <outlet property="SendCounter" destination="NsL-aV-pUB" id="DXU-20-kik"/>
+                        <outlet property="haiUser" destination="ECX-Uj-Rd6" id="OzD-0W-4as"/>
+                        <outlet property="profileImage" destination="2VE-QZ-aAc" id="LGN-cL-MvO"/>
+                        <outlet property="profileUsername" destination="CDM-60-8c5" id="hqa-dQ-U4s"/>
+                        <outlet property="receiveCounter" destination="nmy-k3-7dI" id="lak-wv-Kl0"/>
+                        <outlet property="sendCounter" destination="NsL-aV-pUB" id="DXU-20-kik"/>
+                        <outlet property="since" destination="XuA-jN-RRv" id="CFW-5w-bBg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPG-6g-Q6F" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1119" y="-186"/>
+            <point key="canvasLocation" x="1118.840579710145" y="-186.16071428571428"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="L6R-LO-3iE">
