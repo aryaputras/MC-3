@@ -9,6 +9,7 @@
 import UIKit
 import CloudKit
 
+
 class RegisterVC: UIViewController, UITextFieldDelegate {
     var gender : Int = 0
     var age : Int = 19
@@ -31,7 +32,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         
          let destinationVC = segue.destination as! Register2VC
         
-               destinationVC.age = age
+                destinationVC.age = age
                destinationVC.gender = gender
                destinationVC.name = regisUsername.text!
                destinationVC.avatar = imageName[index]

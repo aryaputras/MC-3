@@ -8,10 +8,13 @@
 
 import UIKit
 import CloudKit
+import RangeSeekSlider
 
+//BUG, BUTTON HANTU!
 class Register2VC: UIViewController {
     var genderPrefer : [Int] = []
-    var agePrefer : [Int] = []
+    var agePreferMin = 0
+    var agePreferMax = 0
     
     
     var age = 0
@@ -20,12 +23,15 @@ class Register2VC: UIViewController {
     var avatar = ""
     
     
+    @IBOutlet weak var rangeSlider: RangeSeekSlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
- 
-
+        
+       
 
     }
+   
     
     @IBAction func buttonMale(_ sender: Any) {
         genderPrefer = [0]
@@ -40,7 +46,13 @@ class Register2VC: UIViewController {
     }
 
    
-
+    @IBAction func dadadada(_ sender: RangeSeekSlider) {
+        
+        agePreferMin = Int(sender.selectedMinValue)
+        agePreferMax = Int(sender.selectedMaxValue)
+        print(agePreferMin, agePreferMax)
+    }
+    
     @IBAction func buttonNext(_ sender: Any) {
         
           CKContainer.default().fetchUserRecordID { userID, error in
@@ -49,7 +61,8 @@ class Register2VC: UIViewController {
             let nameRecord = self.name as CKRecordValue
             let ageRecord = self.age as CKRecordValue
             let genderRecord = self.gender as CKRecordValue
-            let agePreferRecord = self.agePrefer as CKRecordValue
+            let agePreferMinRecord = self.agePreferMin as CKRecordValue
+            let agePreferMaxRecord = self.agePreferMax as CKRecordValue
             let genderPreferRecord = self.genderPrefer as CKRecordValue
             let avatarRecord = self.avatar as CKRecordValue
             let creatorID = userID.recordName as CKRecordValue
@@ -62,11 +75,12 @@ class Register2VC: UIViewController {
                 
                 let database = CKContainer.default().publicCloudDatabase
                 
-                //newRecord.setObject(avatar, forKey: "regisimage")
+                
                 newRecord.setObject(nameRecord, forKey: "username")
                 newRecord.setObject(ageRecord, forKey: "age")
                 newRecord.setObject(genderRecord, forKey: "gender")
-                newRecord.setObject(agePreferRecord, forKey: "agePreference")
+                newRecord.setObject(agePreferMinRecord, forKey: "agePreferenceMin")
+                newRecord.setObject(agePreferMaxRecord, forKey: "agePreferenceMax")
                 newRecord.setObject(genderPreferRecord, forKey: "genderPreference")
                 newRecord.setObject(avatarRecord, forKey: "avatar")
                 newRecord.setObject(creatorID, forKey: "creatorID")
@@ -96,5 +110,4 @@ class Register2VC: UIViewController {
 //
 //
 
-                   }
-              
+}
