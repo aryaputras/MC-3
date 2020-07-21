@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		485FB635A1D58525A4AF548B /* Pods_MC_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F704762A03EF5AAF2AF16004 /* Pods_MC_3.framework */; };
+		4954B65B24C6B9AB003A35AA /* SendAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954B65A24C6B9AB003A35AA /* SendAnimationViewController.swift */; };
 		498209D124C5891B00A5FDD5 /* RiwayatCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498209CF24C5891B00A5FDD5 /* RiwayatCollectionCell.swift */; };
 		498209D224C5891B00A5FDD5 /* RiwayatCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 498209D024C5891B00A5FDD5 /* RiwayatCollectionCell.xib */; };
 		49DD0D5424C2F59500425052 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD0D5324C2F59500425052 /* ProfileVC.swift */; };
@@ -28,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		243819C0866D882BB9761732 /* Pods-MC-3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC-3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MC-3/Pods-MC-3.debug.xcconfig"; sourceTree = "<group>"; };
+		4954B65A24C6B9AB003A35AA /* SendAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAnimationViewController.swift; sourceTree = "<group>"; };
 		498209CF24C5891B00A5FDD5 /* RiwayatCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiwayatCollectionCell.swift; sourceTree = "<group>"; };
 		498209D024C5891B00A5FDD5 /* RiwayatCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RiwayatCollectionCell.xib; sourceTree = "<group>"; };
 		49DD0D5324C2F59500425052 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				498209CF24C5891B00A5FDD5 /* RiwayatCollectionCell.swift */,
 				498209D024C5891B00A5FDD5 /* RiwayatCollectionCell.xib */,
 				C04B3E6E24C1917700707D0F /* Main.storyboard */,
+				4954B65A24C6B9AB003A35AA /* SendAnimationViewController.swift */,
 				C08FBBAE24C5854C002F6E9D /* SendViewController.swift */,
 				C04B3E7424C1917800707D0F /* Assets.xcassets */,
 				C04B3E7624C1917800707D0F /* LaunchScreen.storyboard */,
@@ -240,6 +243,7 @@
 				49DD0D5824C2F65600425052 /* Register2VC.swift in Sources */,
 				C08FBBB124C588EA002F6E9D /* ReceiveViewController.swift in Sources */,
 				49DD0D5424C2F59500425052 /* ProfileVC.swift in Sources */,
+				4954B65B24C6B9AB003A35AA /* SendAnimationViewController.swift in Sources */,
 				C04B3E6D24C1917700707D0F /* ViewController.swift in Sources */,
 				498209D124C5891B00A5FDD5 /* RiwayatCollectionCell.swift in Sources */,
 				C04B3E6924C1917700707D0F /* AppDelegate.swift in Sources */,
