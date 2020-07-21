@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oly-R8-9mk">
+
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="05H-7O-M6E">
+
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -612,10 +614,10 @@ kamu butuhkan</string>
             </objects>
             <point key="canvasLocation" x="1118.840579710145" y="-186.16071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Send View Controller-->
         <scene sceneID="L6R-LO-3iE">
             <objects>
-                <viewController id="05H-7O-M6E" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="05H-7O-M6E" customClass="SendViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ale-Ni-IS2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -658,6 +660,9 @@ kamu butuhkan</string>
                                 <state key="normal" title="Selesai">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="doneAction:" destination="05H-7O-M6E" eventType="touchUpInside" id="VnK-4F-ZXj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3G-qO-PZg">
                                 <rect key="frame" x="29" y="54" width="17" height="29"/>
@@ -699,6 +704,9 @@ kamu butuhkan</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="tXm-Nh-ZL4"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="8EF-Zy-qCc" id="kLM-Q1-vpU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wen-7j-Gzz" sceneMemberID="firstResponder"/>
             </objects>
@@ -1262,10 +1270,10 @@ perahu kertas!</string>
             </objects>
             <point key="canvasLocation" x="4641" y="-186"/>
         </scene>
-        <!--View Controller-->
+        <!--Receive View Controller-->
         <scene sceneID="zE1-YM-dn8">
             <objects>
-                <viewController id="ukp-1A-eOK" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ukp-1A-eOK" customClass="ReceiveViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d7y-Dh-gdr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1333,6 +1341,10 @@ perahu kertas!</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="SgB-wZ-0ge"/>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="KxB-3d-KMV" id="ptm-F4-IeH"/>
+                        <outlet property="usernameLabel" destination="ccz-g5-X9g" id="9sD-GM-23T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kba-Ci-14G" sceneMemberID="firstResponder"/>
             </objects>
@@ -1495,7 +1507,7 @@ perahu kertas!</string>
         <!--View Controller-->
         <scene sceneID="Cmh-wH-Ift">
             <objects>
-                <viewController id="dZW-pK-S8h" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dZW-pK-S8h" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JmL-gt-cVi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1599,7 +1611,7 @@ s
         <!--View Controller-->
         <scene sceneID="9x6-hH-xpv">
             <objects>
-                <viewController id="jrJ-xg-yLJ" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jrJ-xg-yLJ" customClass="MICDELETELATERViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pyU-xk-Kk4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1682,6 +1694,14 @@ s
                                 <state key="normal" image="Mic_Thin">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSO-wC-MRM">
+                                <rect key="frame" x="299" y="570" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="PLay"/>
+                                <connections>
+                                    <action selector="playTapped:" destination="jrJ-xg-yLJ" eventType="touchUpInside" id="NO6-7a-252"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
