@@ -11,6 +11,7 @@
 		49DD0D5424C2F59500425052 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD0D5324C2F59500425052 /* ProfileVC.swift */; };
 		49DD0D5624C2F5A400425052 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD0D5524C2F5A400425052 /* RegisterVC.swift */; };
 		49DD0D5824C2F65600425052 /* Register2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD0D5724C2F65600425052 /* Register2VC.swift */; };
+		C032542224C5F77000AFC520 /* MICDELETELATERViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C032542124C5F77000AFC520 /* MICDELETELATERViewController.swift */; };
 		C04B3E6924C1917700707D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B3E6824C1917700707D0F /* AppDelegate.swift */; };
 		C04B3E6B24C1917700707D0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B3E6A24C1917700707D0F /* SceneDelegate.swift */; };
 		C04B3E6D24C1917700707D0F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B3E6C24C1917700707D0F /* ViewController.swift */; };
@@ -19,6 +20,8 @@
 		C04B3E7524C1917800707D0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C04B3E7424C1917800707D0F /* Assets.xcassets */; };
 		C04B3E7824C1917800707D0F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C04B3E7624C1917800707D0F /* LaunchScreen.storyboard */; };
 		C04B3E8224C191C800707D0F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C04B3E8124C191C800707D0F /* CloudKit.framework */; };
+		C08FBBAF24C5854C002F6E9D /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08FBBAE24C5854C002F6E9D /* SendViewController.swift */; };
+		C08FBBB124C588EA002F6E9D /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08FBBB024C588EA002F6E9D /* ReceiveViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +30,7 @@
 		49DD0D5524C2F5A400425052 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		49DD0D5724C2F65600425052 /* Register2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2VC.swift; sourceTree = "<group>"; };
 		53DEC19971A47E29A1EF7C75 /* Pods-MC-3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC-3.release.xcconfig"; path = "Pods/Target Support Files/Pods-MC-3/Pods-MC-3.release.xcconfig"; sourceTree = "<group>"; };
+		C032542124C5F77000AFC520 /* MICDELETELATERViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MICDELETELATERViewController.swift; sourceTree = "<group>"; };
 		C04B3E6524C1917700707D0F /* MC-3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC-3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C04B3E6824C1917700707D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C04B3E6A24C1917700707D0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +42,8 @@
 		C04B3E7924C1917800707D0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C04B3E7F24C191B200707D0F /* MC-3.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "MC-3.entitlements"; sourceTree = "<group>"; };
 		C04B3E8124C191C800707D0F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		C08FBBAE24C5854C002F6E9D /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
+		C08FBBB024C588EA002F6E9D /* ReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
 		F704762A03EF5AAF2AF16004 /* Pods_MC_3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MC_3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -86,16 +92,19 @@
 			children = (
 				C04B3E7F24C191B200707D0F /* MC-3.entitlements */,
 				C04B3E6824C1917700707D0F /* AppDelegate.swift */,
+				C032542124C5F77000AFC520 /* MICDELETELATERViewController.swift */,
 				C04B3E6A24C1917700707D0F /* SceneDelegate.swift */,
 				C04B3E6C24C1917700707D0F /* ViewController.swift */,
 				49DD0D5324C2F59500425052 /* ProfileVC.swift */,
 				49DD0D5524C2F5A400425052 /* RegisterVC.swift */,
 				49DD0D5724C2F65600425052 /* Register2VC.swift */,
 				C04B3E6E24C1917700707D0F /* Main.storyboard */,
+				C08FBBAE24C5854C002F6E9D /* SendViewController.swift */,
 				C04B3E7424C1917800707D0F /* Assets.xcassets */,
 				C04B3E7624C1917800707D0F /* LaunchScreen.storyboard */,
 				C04B3E7924C1917800707D0F /* Info.plist */,
 				C04B3E7124C1917700707D0F /* MC_3.xcdatamodeld */,
+				C08FBBB024C588EA002F6E9D /* ReceiveViewController.swift */,
 			);
 			path = "MC-3";
 			sourceTree = "<group>";
@@ -222,11 +231,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				49DD0D5824C2F65600425052 /* Register2VC.swift in Sources */,
+				C08FBBB124C588EA002F6E9D /* ReceiveViewController.swift in Sources */,
 				49DD0D5424C2F59500425052 /* ProfileVC.swift in Sources */,
 				C04B3E6D24C1917700707D0F /* ViewController.swift in Sources */,
 				C04B3E6924C1917700707D0F /* AppDelegate.swift in Sources */,
+				C08FBBAF24C5854C002F6E9D /* SendViewController.swift in Sources */,
 				49DD0D5624C2F5A400425052 /* RegisterVC.swift in Sources */,
 				C04B3E6B24C1917700707D0F /* SceneDelegate.swift in Sources */,
+				C032542224C5F77000AFC520 /* MICDELETELATERViewController.swift in Sources */,
 				C04B3E7324C1917700707D0F /* MC_3.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

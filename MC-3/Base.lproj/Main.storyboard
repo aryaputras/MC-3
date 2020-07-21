@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VMA-GH-yfh">
-
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="05H-7O-M6E">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -589,7 +587,6 @@ kamu butuhkan</string>
                                     <action selector="ButtonSave:" destination="7Fd-qT-mtD" eventType="touchUpInside" id="LJG-lq-etE"/>
                                 </connections>
                             </button>
-
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="10 juli 2020" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuA-jN-RRv">
                                 <rect key="frame" x="41" y="551" width="329" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -597,7 +594,6 @@ kamu butuhkan</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="LEe-PI-5Zt"/>
@@ -615,10 +611,10 @@ kamu butuhkan</string>
             </objects>
             <point key="canvasLocation" x="1118.840579710145" y="-186.16071428571428"/>
         </scene>
-        <!--View Controller-->
+        <!--Send View Controller-->
         <scene sceneID="L6R-LO-3iE">
             <objects>
-                <viewController id="05H-7O-M6E" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="05H-7O-M6E" customClass="SendViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ale-Ni-IS2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -656,6 +652,9 @@ kamu butuhkan</string>
                                 <state key="normal" title="Selesai">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="doneAction:" destination="05H-7O-M6E" eventType="touchUpInside" id="VnK-4F-ZXj"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gUz-Y2-3JE">
                                 <rect key="frame" x="351" y="745" width="24" height="29"/>
@@ -694,6 +693,9 @@ kamu butuhkan</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="tXm-Nh-ZL4"/>
                     </view>
+                    <connections>
+                        <outlet property="textField" destination="8EF-Zy-qCc" id="kLM-Q1-vpU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wen-7j-Gzz" sceneMemberID="firstResponder"/>
             </objects>
@@ -1238,10 +1240,10 @@ perahu kertas!</string>
             </objects>
             <point key="canvasLocation" x="4706" y="-186"/>
         </scene>
-        <!--View Controller-->
+        <!--Receive View Controller-->
         <scene sceneID="zE1-YM-dn8">
             <objects>
-                <viewController id="ukp-1A-eOK" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ukp-1A-eOK" customClass="ReceiveViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d7y-Dh-gdr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1261,11 +1263,6 @@ perahu kertas!</string>
                                 <state key="normal" image="Report_Button">
                                     <color key="titleColor" red="0.1529411765" green="0.13725490200000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="WEf-Aq-8Jd" kind="popoverPresentation" popoverAnchorView="uRc-8O-du0" id="f2h-uW-xwS">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAl-7I-bJW">
                                 <rect key="frame" x="103" y="692" width="208" height="55"/>
@@ -1314,6 +1311,10 @@ perahu kertas!</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="SgB-wZ-0ge"/>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="KxB-3d-KMV" id="ptm-F4-IeH"/>
+                        <outlet property="usernameLabel" destination="ccz-g5-X9g" id="9sD-GM-23T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kba-Ci-14G" sceneMemberID="firstResponder"/>
             </objects>
@@ -1385,7 +1386,7 @@ perahu kertas!</string>
             <objects>
                 <viewController id="WEf-Aq-8Jd" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dCg-uP-NCF">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="zFF-IM-JSc">
@@ -1476,7 +1477,7 @@ perahu kertas!</string>
         <!--View Controller-->
         <scene sceneID="Cmh-wH-Ift">
             <objects>
-                <viewController id="dZW-pK-S8h" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dZW-pK-S8h" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JmL-gt-cVi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1588,7 +1589,7 @@ perahu kertas!</string>
         <!--View Controller-->
         <scene sceneID="9x6-hH-xpv">
             <objects>
-                <viewController id="jrJ-xg-yLJ" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="jrJ-xg-yLJ" customClass="MICDELETELATERViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pyU-xk-Kk4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1679,6 +1680,14 @@ perahu kertas!</string>
                                 <state key="normal" image="Mic_Thin">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CSO-wC-MRM">
+                                <rect key="frame" x="299" y="570" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="PLay"/>
+                                <connections>
+                                    <action selector="playTapped:" destination="jrJ-xg-yLJ" eventType="touchUpInside" id="NO6-7a-252"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1943,10 +1952,7 @@ perahu kertas!</string>
         <image name="Button_Plus" width="34" height="34"/>
         <image name="Button_Semua" width="192" height="55"/>
         <image name="Button_Simpan" width="112" height="55"/>
-
-        <image name="Circle_Blue" width="31" height="31"/>
         <image name="Dark_pink" width="17" height="17"/>
-
         <image name="Dermaga1" width="47" height="23"/>
         <image name="Grenn" width="17" height="17"/>
         <image name="Image_LandingPage_Kotak" width="366" height="382"/>
