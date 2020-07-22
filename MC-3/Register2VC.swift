@@ -47,7 +47,7 @@ class Register2VC: UIViewController {
 
    
     @IBAction func dadadada(_ sender: RangeSeekSlider) {
-
+        
         agePreferMin = Int(sender.selectedMinValue)
         agePreferMax = Int(sender.selectedMaxValue)
         print(agePreferMin, agePreferMax)

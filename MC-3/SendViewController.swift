@@ -12,22 +12,13 @@ import CloudKit
 class SendViewController: UIViewController {
 
     
-    @IBOutlet weak var canvasView: CanvasView!
     @IBOutlet weak var textField: UITextField!
-    var color: UIColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-    
-    @IBAction func onClickReset(_ sender: Any) {
-           canvasView.clearDraw()
-       }
-    
-    @IBAction func onClickBrushSz(_ sender: UISlider) {
-        canvasView.strokeWidth = CGFloat(sender.value)
-    }
-    
+
+
     @IBAction func doneAction(_ sender: Any) {
     
     
@@ -62,44 +53,7 @@ class SendViewController: UIViewController {
                         }
                     }
                 }
-            }
-        }
-    }
+            } }
+}
 
-    @IBAction func buttonWhite(_ sender: Any) {
-        canvasView.strokeColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
-    }
-    
-    @IBAction func buttonBlack(_ sender: Any) {
-        canvasView.strokeColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-    }
-    
-    @IBAction func buttonBlue(_ sender: Any) {
-        canvasView.strokeColor = #colorLiteral(red: 0.2532024682, green: 0.812871635, blue: 0.9448824525, alpha: 1)
-    }
-    
-    @IBAction func buttonGreen(_ sender: Any) {
-        canvasView.strokeColor = #colorLiteral(red: 0, green: 0.7813212872, blue: 0, alpha: 1)
-    }
-    
-    @IBAction func buttonYellow(_ sender: Any) {
-        canvasView.strokeColor = #colorLiteral(red: 1, green: 0.8500413299, blue: 0, alpha: 1)
-    }
-    
-    @IBAction func buttonOrange(_ sender: Any) {
-        canvasView.strokeColor = #colorLiteral(red: 1, green: 0.5840916038, blue: 0, alpha: 1)
-    }
-    
-    @IBAction func buttonSoftPink(_ sender: Any) {
-        canvasView.strokeColor = #colorLiteral(red: 0.9786210656, green: 0.4592483044, blue: 0.9287266135, alpha: 1)
-    }
-    
-    @IBAction func buttonDarkPink(_ sender: Any) {
-        canvasView.strokeColor = #colorLiteral(red: 1, green: 0, blue: 0.525508225, alpha: 1)
-    }
-    
-    @IBAction func buttonPurple(_ sender: Any) {
-        canvasView.strokeColor = #colorLiteral(red: 0.5280317664, green: 0.1064086631, blue: 0.7941021323, alpha: 1)
-    }
-    
 }
