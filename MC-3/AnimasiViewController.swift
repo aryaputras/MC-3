@@ -13,7 +13,7 @@ class AnimasiViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let leftSwipe = uiswipeGestureRecognizer
+        //let leftSwipe = uiswipeGestureRecognizer
         
     }
     
