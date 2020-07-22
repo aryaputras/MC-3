@@ -19,6 +19,7 @@
 		49DD0D5424C2F59500425052 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD0D5324C2F59500425052 /* ProfileVC.swift */; };
 		49DD0D5624C2F5A400425052 /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD0D5524C2F5A400425052 /* RegisterVC.swift */; };
 		49DD0D5824C2F65600425052 /* Register2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD0D5724C2F65600425052 /* Register2VC.swift */; };
+		49FC9F7C24C8316400D76483 /* AnimasiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49FC9F7B24C8316400D76483 /* AnimasiViewController.swift */; };
 		C032542224C5F77000AFC520 /* MICDELETELATERViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C032542124C5F77000AFC520 /* MICDELETELATERViewController.swift */; };
 		C04B3E6924C1917700707D0F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B3E6824C1917700707D0F /* AppDelegate.swift */; };
 		C04B3E6B24C1917700707D0F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04B3E6A24C1917700707D0F /* SceneDelegate.swift */; };
@@ -45,6 +46,7 @@
 		49DD0D5324C2F59500425052 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		49DD0D5524C2F5A400425052 /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		49DD0D5724C2F65600425052 /* Register2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register2VC.swift; sourceTree = "<group>"; };
+		49FC9F7B24C8316400D76483 /* AnimasiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimasiViewController.swift; sourceTree = "<group>"; };
 		53DEC19971A47E29A1EF7C75 /* Pods-MC-3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC-3.release.xcconfig"; path = "Pods/Target Support Files/Pods-MC-3/Pods-MC-3.release.xcconfig"; sourceTree = "<group>"; };
 		C032542124C5F77000AFC520 /* MICDELETELATERViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MICDELETELATERViewController.swift; sourceTree = "<group>"; };
 		C04B3E6524C1917700707D0F /* MC-3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC-3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +118,7 @@
 				49DD0D5524C2F5A400425052 /* RegisterVC.swift */,
 				49DD0D5724C2F65600425052 /* Register2VC.swift */,
 				C04B3E6E24C1917700707D0F /* Main.storyboard */,
+				49FC9F7B24C8316400D76483 /* AnimasiViewController.swift */,
 				498209CF24C5891B00A5FDD5 /* RiwayatCollectionCell.swift */,
 				498209D024C5891B00A5FDD5 /* RiwayatCollectionCell.xib */,
 				4954B66024C6CFE5003A35AA /* MercusuarCollectionCell.swift */,
@@ -263,6 +266,7 @@
 				4954B65B24C6B9AB003A35AA /* SendAnimationViewController.swift in Sources */,
 				C04B3E6D24C1917700707D0F /* ViewController.swift in Sources */,
 				4954B66224C6CFE5003A35AA /* MercusuarCollectionCell.swift in Sources */,
+				49FC9F7C24C8316400D76483 /* AnimasiViewController.swift in Sources */,
 				498209D124C5891B00A5FDD5 /* RiwayatCollectionCell.swift in Sources */,
 				4954B65E24C6CDAB003A35AA /* RiwayatReplyCollectionCell.swift in Sources */,
 				C04B3E6924C1917700707D0F /* AppDelegate.swift in Sources */,

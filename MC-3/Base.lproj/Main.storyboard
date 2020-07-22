@@ -2453,7 +2453,7 @@ perahu kertas!</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="Skip_Button">
+                                <state key="normal" image="forward.fill" catalog="system">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
@@ -2662,7 +2662,6 @@ menghanyutkan bebanmu?</string>
         <image name="Rectangle-1" width="367" height="100"/>
         <image name="RectangleBackground" width="366" height="351"/>
         <image name="Report_Button" width="25" height="22"/>
-        <image name="Skip_Button" width="33" height="19"/>
         <image name="Slider_Size" width="24" height="236"/>
         <image name="Slider_Size-1" width="24" height="236"/>
         <image name="Soft_pink" width="17" height="17"/>
@@ -2677,6 +2676,7 @@ menghanyutkan bebanmu?</string>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="circle.fill" catalog="system" width="128" height="121"/>
         <image name="clock.fill" catalog="system" width="128" height="121"/>
+        <image name="forward.fill" catalog="system" width="128" height="79"/>
         <image name="laporkanpengguna" width="314" height="290"/>
         <image name="mic.fill" catalog="system" width="108" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
