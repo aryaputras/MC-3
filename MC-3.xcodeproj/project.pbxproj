@@ -3,12 +3,17 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		485FB635A1D58525A4AF548B /* Pods_MC_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F704762A03EF5AAF2AF16004 /* Pods_MC_3.framework */; };
 		4954B65B24C6B9AB003A35AA /* SendAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954B65A24C6B9AB003A35AA /* SendAnimationViewController.swift */; };
+		4954B65E24C6CDAB003A35AA /* RiwayatReplyCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954B65C24C6CDAB003A35AA /* RiwayatReplyCollectionCell.swift */; };
+		4954B65F24C6CDAB003A35AA /* RiwayatReplyCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4954B65D24C6CDAB003A35AA /* RiwayatReplyCollectionCell.xib */; };
+		4954B66224C6CFE5003A35AA /* MercusuarCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954B66024C6CFE5003A35AA /* MercusuarCollectionCell.swift */; };
+		4954B66324C6CFE5003A35AA /* MercusuarCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4954B66124C6CFE5003A35AA /* MercusuarCollectionCell.xib */; };
+		4962514B24C8236400B0A343 /* CanvasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4962514A24C8236400B0A343 /* CanvasView.swift */; };
 		498209D124C5891B00A5FDD5 /* RiwayatCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498209CF24C5891B00A5FDD5 /* RiwayatCollectionCell.swift */; };
 		498209D224C5891B00A5FDD5 /* RiwayatCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 498209D024C5891B00A5FDD5 /* RiwayatCollectionCell.xib */; };
 		49DD0D5424C2F59500425052 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49DD0D5324C2F59500425052 /* ProfileVC.swift */; };
@@ -30,6 +35,11 @@
 /* Begin PBXFileReference section */
 		243819C0866D882BB9761732 /* Pods-MC-3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC-3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MC-3/Pods-MC-3.debug.xcconfig"; sourceTree = "<group>"; };
 		4954B65A24C6B9AB003A35AA /* SendAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAnimationViewController.swift; sourceTree = "<group>"; };
+		4954B65C24C6CDAB003A35AA /* RiwayatReplyCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiwayatReplyCollectionCell.swift; sourceTree = "<group>"; };
+		4954B65D24C6CDAB003A35AA /* RiwayatReplyCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RiwayatReplyCollectionCell.xib; sourceTree = "<group>"; };
+		4954B66024C6CFE5003A35AA /* MercusuarCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MercusuarCollectionCell.swift; sourceTree = "<group>"; };
+		4954B66124C6CFE5003A35AA /* MercusuarCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MercusuarCollectionCell.xib; sourceTree = "<group>"; };
+		4962514A24C8236400B0A343 /* CanvasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
 		498209CF24C5891B00A5FDD5 /* RiwayatCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiwayatCollectionCell.swift; sourceTree = "<group>"; };
 		498209D024C5891B00A5FDD5 /* RiwayatCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RiwayatCollectionCell.xib; sourceTree = "<group>"; };
 		49DD0D5324C2F59500425052 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
@@ -101,12 +111,17 @@
 				C032542124C5F77000AFC520 /* MICDELETELATERViewController.swift */,
 				C04B3E6A24C1917700707D0F /* SceneDelegate.swift */,
 				C04B3E6C24C1917700707D0F /* ViewController.swift */,
+				4962514A24C8236400B0A343 /* CanvasView.swift */,
 				49DD0D5324C2F59500425052 /* ProfileVC.swift */,
 				49DD0D5524C2F5A400425052 /* RegisterVC.swift */,
 				49DD0D5724C2F65600425052 /* Register2VC.swift */,
+				C04B3E6E24C1917700707D0F /* Main.storyboard */,
 				498209CF24C5891B00A5FDD5 /* RiwayatCollectionCell.swift */,
 				498209D024C5891B00A5FDD5 /* RiwayatCollectionCell.xib */,
-				C04B3E6E24C1917700707D0F /* Main.storyboard */,
+				4954B66024C6CFE5003A35AA /* MercusuarCollectionCell.swift */,
+				4954B66124C6CFE5003A35AA /* MercusuarCollectionCell.xib */,
+				4954B65C24C6CDAB003A35AA /* RiwayatReplyCollectionCell.swift */,
+				4954B65D24C6CDAB003A35AA /* RiwayatReplyCollectionCell.xib */,
 				4954B65A24C6B9AB003A35AA /* SendAnimationViewController.swift */,
 				C08FBBAE24C5854C002F6E9D /* SendViewController.swift */,
 				C04B3E7424C1917800707D0F /* Assets.xcassets */,
@@ -189,8 +204,10 @@
 			files = (
 				C04B3E7824C1917800707D0F /* LaunchScreen.storyboard in Resources */,
 				C04B3E7524C1917800707D0F /* Assets.xcassets in Resources */,
+				4954B65F24C6CDAB003A35AA /* RiwayatReplyCollectionCell.xib in Resources */,
 				C04B3E7024C1917700707D0F /* Main.storyboard in Resources */,
 				498209D224C5891B00A5FDD5 /* RiwayatCollectionCell.xib in Resources */,
+				4954B66324C6CFE5003A35AA /* MercusuarCollectionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,17 +219,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-MC-3/Pods-MC-3-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RangeSeekSlider/RangeSeekSlider.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MC-3/Pods-MC-3-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RangeSeekSlider.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MC-3/Pods-MC-3-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MC-3/Pods-MC-3-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MC-3/Pods-MC-3-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9E06140B46116E599C24BF63 /* [CP] Check Pods Manifest.lock */ = {
@@ -242,10 +258,13 @@
 			files = (
 				49DD0D5824C2F65600425052 /* Register2VC.swift in Sources */,
 				C08FBBB124C588EA002F6E9D /* ReceiveViewController.swift in Sources */,
+				4962514B24C8236400B0A343 /* CanvasView.swift in Sources */,
 				49DD0D5424C2F59500425052 /* ProfileVC.swift in Sources */,
 				4954B65B24C6B9AB003A35AA /* SendAnimationViewController.swift in Sources */,
 				C04B3E6D24C1917700707D0F /* ViewController.swift in Sources */,
+				4954B66224C6CFE5003A35AA /* MercusuarCollectionCell.swift in Sources */,
 				498209D124C5891B00A5FDD5 /* RiwayatCollectionCell.swift in Sources */,
+				4954B65E24C6CDAB003A35AA /* RiwayatReplyCollectionCell.swift in Sources */,
 				C04B3E6924C1917700707D0F /* AppDelegate.swift in Sources */,
 				C08FBBAF24C5854C002F6E9D /* SendViewController.swift in Sources */,
 				49DD0D5624C2F5A400425052 /* RegisterVC.swift in Sources */,
@@ -397,7 +416,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MC-3/MC-3.entitlements";
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = 3QN5S48CNC;
 				INFOPLIST_FILE = "MC-3/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -406,6 +426,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Academy.MC-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Abigail Aryaputra Sudarman";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -417,8 +438,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = "MC-3/MC-3.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 3QN5S48CNC;
+				DEVELOPMENT_TEAM = N89WD274V4;
 				INFOPLIST_FILE = "MC-3/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -426,6 +448,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Academy.MC-3";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
