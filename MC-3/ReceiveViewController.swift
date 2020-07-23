@@ -41,7 +41,7 @@ class ReceiveViewController: UIViewController {
                     
                     //SHOULD RETURN 17,40 WHICH IS ACTUAL THE PROFILE AGEPREFERENCE.
                     print(self.agePreferenceMin, self.agePreferenceMax)
-                    let predicate = NSPredicate(value: true)
+                    let predicate = NSPredicate(format: "age BETWEEN {\(self.agePreferenceMin), \(self.agePreferenceMax)} AND gender == genderPreference")
                     //SETUPTHEPREDICATEBITCH
                     let query = CKQuery(recordType: "perahuKertas", predicate: predicate)
                     
