@@ -10,34 +10,27 @@ import UIKit
 import CloudKit
 
 class SendViewController: UIViewController {
-
     
     @IBOutlet weak var textField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-
-
+    
+    
     @IBAction func doneAction(_ sender: Any) {
-    
-    
         
         CKContainer.default().fetchUserRecordID { userID, error in
-         if let userID = userID {
-            //print(userID)
-            let creatorID = userID.recordName as CKRecordValue
-            let date = Date() as CKRecordValue
-            let story = self.textField.text! as CKRecordValue
-            //let audio =
-          
-
-                            
-            let newRecord = CKRecord(recordType: "perahuKertas")
-            let database = CKContainer.default().publicCloudDatabase
-            
+            if let userID = userID {
+                //print(userID)
+                let creatorID = userID.recordName as CKRecordValue
+                let date = Date() as CKRecordValue
+                let story = self.textField.text! as CKRecordValue
+                //let audio =
                 
-               
+                let newRecord = CKRecord(recordType: "perahuKertas")
+                let database = CKContainer.default().publicCloudDatabase
+                
                 newRecord.setObject(story, forKey: "message")
                 newRecord.setObject(creatorID, forKey: "creatorID")
                 newRecord.setObject(date, forKey: "sendingDate")
@@ -49,11 +42,11 @@ class SendViewController: UIViewController {
                             
                         } else {
                             print("record was saved")
-                          
+                            
                         }
                     }
                 }
-            } }
-}
-
+            }
+        }
+    }
 }
