@@ -9,10 +9,18 @@
 import UIKit
 
 class RiwayatCollectionCell: UICollectionViewCell {
-
+    
+    @IBOutlet var avatarImage: UIImageView!
+    @IBOutlet var suratLabel: UILabel!
+    @IBOutlet var replyCountLabel: UILabel!
+    @IBOutlet var tanggalLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
     }
-
+    static func nib() -> UINib {
+        return UINib(nibName: "RiwayatCollectionCell", bundle: nil)
+    }
+    
 }

@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Skip_Button@1x.png",
+      "filename" : "Image_LandingPage_Kotak.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Skip_Button@2x.png",
+      "filename" : "Image_LandingPage_Kotak@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Skip_Button@3x.png",
+      "filename" : "Image_LandingPage_Kotak@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

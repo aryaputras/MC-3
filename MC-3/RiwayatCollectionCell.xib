@@ -16,39 +16,45 @@
                 <rect key="frame" x="0.0" y="0.0" width="367" height="100"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="x76-wc-h08">
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="x76-wc-h08">
                         <rect key="frame" x="0.0" y="0.0" width="367" height="100"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Avatar_Picutre" translatesAutoresizingMaskIntoConstraints="NO" id="Fjj-SN-4Hc">
-                        <rect key="frame" x="8" y="15" width="61" height="61"/>
+                        <rect key="frame" x="16" y="16" width="68" height="68"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cuplikan surat" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hsa-Ie-kdS">
-                        <rect key="frame" x="85" y="25" width="258" height="19"/>
+                        <rect key="frame" x="100" y="28" width="201" height="20"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.1529411765" green="0.13725490200000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="[] Balasan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PS8-PQ-YTZ">
-                        <rect key="frame" x="85" y="45" width="70" height="16"/>
+                        <rect key="frame" x="100" y="56" width="116" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.1529411765" green="0.13725490200000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00/00/0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ghp-gF-HYW">
-                        <rect key="frame" x="273" y="10" width="70" height="16"/>
+                        <rect key="frame" x="280" y="8" width="70" height="16"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
-                        <nil key="textColor"/>
+                        <color key="textColor" red="0.1529411765" green="0.13725490200000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <point key="canvasLocation" x="137.68115942028987" y="152.34375"/>
+            <connections>
+                <outlet property="avatarImage" destination="Fjj-SN-4Hc" id="d2a-nn-3MO"/>
+                <outlet property="replyCountLabel" destination="PS8-PQ-YTZ" id="TE5-ho-IQH"/>
+                <outlet property="suratLabel" destination="hsa-Ie-kdS" id="EZb-mo-bTB"/>
+                <outlet property="tanggalLabel" destination="Ghp-gF-HYW" id="YPb-nZ-gt6"/>
+            </connections>
+            <point key="canvasLocation" x="136.95652173913044" y="152.00892857142856"/>
         </collectionViewCell>
     </objects>
     <resources>

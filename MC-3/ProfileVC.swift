@@ -36,7 +36,7 @@ class ProfileVC: UIViewController {
              
             }
             
-//            let reference = CKRecord.Reference(recordID: userID!, action: .none)
+            let reference = CKRecord.Reference(recordID: userID!, action: .none)
             let predicate = NSPredicate(format: "creatorID == %@", userID?.recordName ?? "")
             let query = CKQuery(recordType: "profile", predicate: predicate)
                 
