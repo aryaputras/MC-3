@@ -35,14 +35,13 @@ class ReplyViewController: UIViewController {
     @IBOutlet weak var recordButton: UIButton!
     @IBOutlet weak var drawButton: UIButton!
     
-    
     @IBOutlet weak var isiTextField: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-          print(senderID, username, message)
+        print(senderID, username, message)
         
         sliderSize.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi/2))
         recordButton.isHidden = false
@@ -136,7 +135,7 @@ class ReplyViewController: UIViewController {
     @IBAction func purpleButton(_ sender: Any) {
         canvasView.strokeColor = #colorLiteral(red: 0.5280317664, green: 0.1064086631, blue: 0.7941021323, alpha: 1)
     }
-   
+    
     @IBAction func sliderSize(_ sender: UISlider) {
         canvasView.strokeWidth = CGFloat(sender.value)
     }

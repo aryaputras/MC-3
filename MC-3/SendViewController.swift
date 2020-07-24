@@ -134,39 +134,29 @@ class SendViewController: UIViewController {
     }
     @IBAction func purpleButton(_ sender: Any) {
         canvasView.strokeColor = #colorLiteral(red: 0.5280317664, green: 0.1064086631, blue: 0.7941021323, alpha: 1)
-
-        //fetching age
-        CKContainer.default().fetchUserRecordID { userID, error in
-                 if let userID = userID {
-                    let database = CKContainer.default().publicCloudDatabase
-                    
-                    let predicate = NSPredicate(format: "creatorID == %@", userID.recordName)
-                    let queryProfile = CKQuery(recordType: "profile", predicate: predicate)
-                    queryProfile.sortDescriptors = [NSSortDescriptor(key: "signUpDate", ascending: false)]
-                    
-                    database.perform(queryProfile, inZoneWith: nil) { (records, error) in
-                           if let fetchedRecords = records {
-                               self.profile = fetchedRecords
-                               DispatchQueue.main.async {
-                                 //get sender age
-                                self.age = self.profile[0].object(forKey: "age") as! Int
-                               
-                                
-                                
-                                //get sender gender
-                                self.gender = self.profile[0].object(forKey: "gender") as! Int
-                               
-                                
-                                  
-                                   
-                               }
-                               
-                           }
-                       }
-                    
-                    
-            }
-            
+    }
+    
+    @IBAction func sliderSize(_ sender: UISlider) {
+        canvasView.strokeWidth = CGFloat(sender.value)
+    }
+    //fetching age
+    CKContainer.default().fetchUserRecordID { userID, error in
+    if let userID = userID {
+    let database = CKContainer.default().publicCloudDatabase
+    let predicate = NSPredicate(format: "creatorID == %@", userID.recordName)
+    let queryProfile = CKQuery(recordType: "profile", predicate: predicate)
+    queryProfile.sortDescriptors = [NSSortDescriptor(key: "signUpDate", ascending: false)]
+    database.perform(queryProfile, inZoneWith: nil) { (records, error) in
+    if let fetchedRecords = records {
+    self.profile = fetchedRecords
+    DispatchQueue.main.async {
+    //get sender age
+    self.age = self.profile[0].object(forKey: "age") as! Int
+    //get sender gender
+    self.gender = self.profile[0].object(forKey: "gender") as! Int
+    }
+    }
+    }
     }
     }
     
@@ -205,3 +195,25 @@ class SendViewController: UIViewController {
         }
     }
 }
+//    //UNTUK EXPORT GAMBAR
+//    extension UIView{
+//    func savePic() -> UIImage{
+//        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
+//
+//        drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+//
+//        let image = UIGraphicsGetImageFromCurrentImageContext()
+//        UIGraphicsEndImageContext()
+//
+//        if image != nil{
+//            return image!
+//        }
+//        return UIImage()
+//    }
+
+
+
+// pasang ini untuk let gambar nya
+//let image = canvas.savePic()
+
+
