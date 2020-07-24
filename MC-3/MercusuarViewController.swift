@@ -28,7 +28,7 @@ class MercusuarViewController: UIViewController{
         let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: "question", predicate: predicate)
         query.sortDescriptors = [NSSortDescriptor(key: "likes", ascending: false)]
-        
+        //LIMIT RESULT TO 10
         database.perform(query, inZoneWith: nil) { (records, error) in
               if let fetchedRecords = records {
                                 self.records = fetchedRecords
@@ -53,11 +53,13 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
         cell.frame.size = CGSize(width: 414, height: 172)
         let record = records[indexPath.row]
        
+        let likesNumber = record.object(forKey: "likes") as! Int
+        cell.replyLabel.text = record.object(forKey: "question") as? String
+        cell.numberOfLikes.text = "\(likesNumber)"
+        cell.userNameLabel.text = record.object(forKey: "username") as? String
         
-        cell.replyLabel.text = record.object(forKey: "question") as! String
         
-        
-        print(record.object(forKey: "question"))
+        print(likesNumber)
         
         // buat masukin isinya dari mana
                 //let item = Member[indexPath.item]
