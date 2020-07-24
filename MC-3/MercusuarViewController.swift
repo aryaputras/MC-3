@@ -47,9 +47,10 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
         //barang di collectionnya biasa pake counter
         return self.records.count
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MercusuarCollectionViewCell", for: indexPath) as! MercusuarCollectionViewCell
+        cell.frame.size = CGSize(width: 414, height: 172)
         let record = records[indexPath.row]
        
         

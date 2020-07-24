@@ -9,6 +9,9 @@
 import UIKit
 
 class ReplyViewController: UIViewController {
+    var senderID = ""
+    var username = ""
+    var message = ""
     
     @IBOutlet weak var sliderSize: UISlider!
     @IBOutlet weak var sliderimage: UIImageView!
@@ -38,6 +41,9 @@ class ReplyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+          print(senderID, username, message)
+        
         sliderSize.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi/2))
         recordButton.isHidden = false
         drawButton.isHidden = false

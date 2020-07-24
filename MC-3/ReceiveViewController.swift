@@ -187,6 +187,16 @@ class ReceiveViewController: UIViewController {
             }
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+           
+           let destinationVC = segue.destination as! ReplyViewController
+           
+           destinationVC.message = messageLabel.text!
+           destinationVC.username = usernameLabel.text!
+           destinationVC.senderID = self.inbox[0].object(forKey: "creatorID") as! String
+           
+           
+       }
     func getSenderID(sender: String) {
         
         
