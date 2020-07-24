@@ -78,11 +78,11 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func buttonMale(_ sender: Any) {
-        gender = 0
+        gender = 1
     }
     
     @IBAction func buttonFemale(_ sender: Any) {
-        gender = 1
+        gender = 2
     }
     
     @IBAction func buttonNext(_ sender: Any) {
