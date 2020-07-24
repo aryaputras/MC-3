@@ -34,6 +34,7 @@
 		C04B3E8224C191C800707D0F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C04B3E8124C191C800707D0F /* CloudKit.framework */; };
 		C08FBBAF24C5854C002F6E9D /* SendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08FBBAE24C5854C002F6E9D /* SendViewController.swift */; };
 		C08FBBB124C588EA002F6E9D /* ReceiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08FBBB024C588EA002F6E9D /* ReceiveViewController.swift */; };
+		C0B587ED24CAADC300E5851F /* AskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B587EC24CAADC300E5851F /* AskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		C04B3E8124C191C800707D0F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		C08FBBAE24C5854C002F6E9D /* SendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendViewController.swift; sourceTree = "<group>"; };
 		C08FBBB024C588EA002F6E9D /* ReceiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiveViewController.swift; sourceTree = "<group>"; };
+		C0B587EC24CAADC300E5851F /* AskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AskViewController.swift; sourceTree = "<group>"; };
 		F704762A03EF5AAF2AF16004 /* Pods_MC_3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MC_3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -120,6 +122,7 @@
 				C04B3E6E24C1917700707D0F /* Main.storyboard */,
 				4990E98B24C999BD00CFA1A8 /* canvasView.swift */,
 				4990E98724C9951900CFA1A8 /* ReplyViewController.swift */,
+				C0B587EC24CAADC300E5851F /* AskViewController.swift */,
 				C04B3E6A24C1917700707D0F /* SceneDelegate.swift */,
 				C04B3E6C24C1917700707D0F /* ViewController.swift */,
 				49DD0D5324C2F59500425052 /* ProfileVC.swift */,
@@ -276,6 +279,7 @@
 				C04B3E6D24C1917700707D0F /* ViewController.swift in Sources */,
 				498209D124C5891B00A5FDD5 /* RiwayatCollectionCell.swift in Sources */,
 				4990E96424C9768900CFA1A8 /* RiwayatViewController.swift in Sources */,
+				C0B587ED24CAADC300E5851F /* AskViewController.swift in Sources */,
 				C04B3E6924C1917700707D0F /* AppDelegate.swift in Sources */,
 				C08FBBAF24C5854C002F6E9D /* SendViewController.swift in Sources */,
 				4990E96224C9765700CFA1A8 /* MercusuarViewController.swift in Sources */,

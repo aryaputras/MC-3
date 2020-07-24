@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import CloudKit
 
 class ReplyViewController: UIViewController {
     var senderID = ""
     var username = ""
     var message = ""
+    var myUsername = ""
     
     @IBOutlet weak var sliderSize: UISlider!
     @IBOutlet weak var sliderimage: UIImageView!
@@ -42,6 +44,35 @@ class ReplyViewController: UIViewController {
         super.viewDidLoad()
         
         print(senderID, username, message)
+
+        CKContainer.default().fetchUserRecordID { userID, error in
+            if let userID = userID {
+                
+                
+                let database = CKContainer.default().publicCloudDatabase
+                
+                let predicate = NSPredicate(format: "creatorID == %@", userID.recordName)
+                
+                let query = CKQuery(recordType: "profile", predicate: predicate)
+                
+                query.sortDescriptors = [NSSortDescriptor(key: "signUpDate", ascending: false)]
+                
+                database.perform(query, inZoneWith: nil) { (records, error) in
+                    if let fetchedRecords = records {
+                        DispatchQueue.main.async {
+                            print(records![0])
+                            
+
+                            self.myUsername = records![0].object(forKey: "username") as! String
+                            print(self.myUsername)
+                        }
+                    }
+                }
+            }
+        }
+        
+        //MAKE REPLY
+
         
         sliderSize.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi/2))
         recordButton.isHidden = false
@@ -138,6 +169,30 @@ class ReplyViewController: UIViewController {
     
     @IBAction func sliderSize(_ sender: UISlider) {
         canvasView.strokeWidth = CGFloat(sender.value)
+    }
+    @IBAction func selesaiTapped(_ sender: Any) {
+        let reply = isiTextField.text as! CKRecordValue
+        let replyNickname = myUsername as CKRecordValue
+        let originID = senderID as CKRecordValue
+        
+        let database = CKContainer.default().publicCloudDatabase
+        let newRecord = CKRecord(recordType: "perahuKertasReply")
+        
+        newRecord.setObject(reply, forKey: "reply")
+        newRecord.setObject(replyNickname, forKey: "replyNickname")
+        newRecord.setObject(originID, forKey: "originID")
+        
+        database.save(newRecord) { (records, error) in
+            DispatchQueue.main.async {
+                if let error = error {
+                    print("error")
+                } else {
+                    print("record was saved")
+                }
+            }
+        }
+        
+
     }
     
 }

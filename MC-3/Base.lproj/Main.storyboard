@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4bU-yF-Ckv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="05H-7O-M6E">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -1814,6 +1814,9 @@ s
                                 <state key="normal" title="Selesai">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="selesaiTapped:" destination="dZW-pK-S8h" eventType="touchUpInside" id="GPm-Nv-Con"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMn-qb-Dam">
                                 <rect key="frame" x="41" y="488" width="50" height="33"/>
@@ -2460,10 +2463,10 @@ s
             </objects>
             <point key="canvasLocation" x="6563.7681159420299" y="1693.5267857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Ask View Controller-->
         <scene sceneID="iOt-k9-b4O">
             <objects>
-                <viewController id="pID-2n-Qvf" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pID-2n-Qvf" customClass="AskViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XW0-XD-85U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2489,6 +2492,9 @@ s
                                 <state key="normal" title="Selesai">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="selesaiButton:" destination="pID-2n-Qvf" eventType="touchUpInside" id="26g-3L-Wi4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eVO-QB-zTP">
                                 <rect key="frame" x="29" y="54" width="17" height="29"/>
@@ -2525,6 +2531,9 @@ s
                         <viewLayoutGuide key="safeArea" id="K1d-W5-eBp"/>
                     </view>
                     <navigationItem key="navigationItem" id="kCx-ak-Jbp"/>
+                    <connections>
+                        <outlet property="textfield" destination="TAd-U8-48M" id="OqP-Dx-6pO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flm-8J-z3g" sceneMemberID="firstResponder"/>
             </objects>
