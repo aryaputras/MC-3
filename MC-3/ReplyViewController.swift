@@ -1,41 +1,40 @@
 //
-//  ViewController.swift
+//  ReplyViewController.swift
 //  MC-3
 //
-//  Created by Abigail Aryaputra Sudarman on 17/07/20.
+//  Created by Andrew Novansky Ignatius on 23/07/20.
 //  Copyright © 2020 Abigail Aryaputra Sudarman. All rights reserved.
 //
 
 import UIKit
-import CloudKit
 
-class SendViewController: UIViewController {
-    
-   
-    
-    @IBOutlet weak var doneButton: UIButton!
-    @IBOutlet weak var deleteButton: UIButton!
-    @IBOutlet weak var drawButton: UIButton!
-    @IBOutlet weak var recordButton: UIButton!
-    
-    @IBOutlet weak var recordingButton: UIButton!
-    @IBOutlet weak var record1Label: UILabel!
-    @IBOutlet weak var record2Label: UILabel!
-    
-    @IBOutlet weak var textField: UITextField!
+class ReplyViewController: UIViewController {
     
     @IBOutlet weak var sliderSize: UISlider!
+    @IBOutlet weak var sliderimage: UIImageView!
     @IBOutlet weak var canvasView: canvasView!
-    @IBOutlet weak var sliderImage: UIImageView!
     @IBOutlet weak var whiteButton: UIButton!
     @IBOutlet weak var blackButton: UIButton!
     @IBOutlet weak var blueButton: UIButton!
     @IBOutlet weak var greenButton: UIButton!
     @IBOutlet weak var yellowButton: UIButton!
-    @IBOutlet weak var orangeButton: UIButton!
     @IBOutlet weak var softPinkButton: UIButton!
     @IBOutlet weak var darkPinkButton: UIButton!
     @IBOutlet weak var purpleButton: UIButton!
+    @IBOutlet weak var orangeButton: UIButton!
+    
+    @IBOutlet weak var record1Label: UILabel!
+    @IBOutlet weak var record2Label: UILabel!
+    @IBOutlet weak var recordingButton: UIButton!
+    
+    @IBOutlet weak var selesaiButton: UIButton!
+    @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var recordButton: UIButton!
+    @IBOutlet weak var drawButton: UIButton!
+    
+    
+    @IBOutlet weak var isiTextField: UITextField!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +42,7 @@ class SendViewController: UIViewController {
         recordButton.isHidden = false
         drawButton.isHidden = false
         sliderSize.isHidden = true
-        sliderImage.isHidden = true
+        sliderimage.isHidden = true
         canvasView.isHidden = true
         whiteButton.isHidden = true
         blackButton.isHidden = true
@@ -54,18 +53,17 @@ class SendViewController: UIViewController {
         softPinkButton.isHidden = true
         darkPinkButton.isHidden = true
         purpleButton.isHidden = true
-        textField.isHidden = false
+        isiTextField.isHidden = false
         record1Label.isHidden = true
         record2Label.isHidden = true
         recordingButton.isHidden = true
-
     }
     
     @IBAction func recordButton(_ sender: Any) {
         recordButton.isHidden = true
         drawButton.isHidden = true
         sliderSize.isHidden = true
-        sliderImage.isHidden = true
+        sliderimage.isHidden = true
         canvasView.isHidden = true
         whiteButton.isHidden = true
         blackButton.isHidden = true
@@ -77,17 +75,18 @@ class SendViewController: UIViewController {
         darkPinkButton.isHidden = true
         purpleButton.isHidden = true
         deleteButton.setTitle("Urungkan", for: .normal)
-        textField.isHidden = true
+        isiTextField.isHidden = true
         record1Label.isHidden = false
         record2Label.isHidden = false
         recordingButton.isHidden = false
+        
     }
     
     @IBAction func drawButton(_ sender: Any) {
         recordButton.isHidden = true
         drawButton.isHidden = true
         sliderSize.isHidden = false
-        sliderImage.isHidden = false
+        sliderimage.isHidden = false
         canvasView.isHidden = false
         whiteButton.isHidden = false
         blackButton.isHidden = false
@@ -98,12 +97,11 @@ class SendViewController: UIViewController {
         softPinkButton.isHidden = false
         darkPinkButton.isHidden = false
         purpleButton.isHidden = false
-        textField.isHidden = true
+        isiTextField.isHidden = true
         record1Label.isHidden = true
         record2Label.isHidden = true
         recordingButton.isHidden = true
     }
-    
     
     @IBAction func whiteButton(_ sender: Any) {
         canvasView.strokeColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -132,37 +130,9 @@ class SendViewController: UIViewController {
     @IBAction func purpleButton(_ sender: Any) {
         canvasView.strokeColor = #colorLiteral(red: 0.5280317664, green: 0.1064086631, blue: 0.7941021323, alpha: 1)
     }
-    
-    
-    @IBAction func doneAction(_ sender: Any) {
-        
-        CKContainer.default().fetchUserRecordID { userID, error in
-            if let userID = userID {
-                //print(userID)
-                let creatorID = userID.recordName as CKRecordValue
-                let date = Date() as CKRecordValue
-                let story = self.textField.text! as CKRecordValue
-                //let audio =
-                
-                let newRecord = CKRecord(recordType: "perahuKertas")
-                let database = CKContainer.default().publicCloudDatabase
-                
-                newRecord.setObject(story, forKey: "message")
-                newRecord.setObject(creatorID, forKey: "creatorID")
-                newRecord.setObject(date, forKey: "sendingDate")
-                
-                database.save(newRecord) { record , error in
-                    DispatchQueue.main.async {
-                        if let error = error {
-                            print("error")
-                            
-                        } else {
-                            print("record was saved")
-                            
-                        }
-                    }
-                }
-            }
-        }
+   
+    @IBAction func sliderSize(_ sender: UISlider) {
+        canvasView.strokeWidth = CGFloat(sender.value)
     }
+    
 }
