@@ -18,3 +18,14 @@ class ViewController: UIViewController {
     }
 
 }
+
+override func becomeFirstResponder() -> Bool {
+    return true
+}
+
+override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?){
+    if motion == .motionShake {
+        print("Shake Gesture Detected")
+        //show some alert here
+    }
+}
