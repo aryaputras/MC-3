@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class RiwayatViewController: UIViewController{
     
@@ -17,6 +18,8 @@ class RiwayatViewController: UIViewController{
         riwayatCollectionView.register(RiwayatCollectionCell.nib(),forCellWithReuseIdentifier: "RiwayatCollectionCell")
         riwayatCollectionView.delegate = self
         riwayatCollectionView.dataSource = self
+        
+        let database = CKContainer.default().publicCloudDatabase
     }
 }
 extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataSource {

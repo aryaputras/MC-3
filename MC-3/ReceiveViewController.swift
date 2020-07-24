@@ -17,7 +17,7 @@ class ReceiveViewController: UIViewController {
     var inboxProfile = [CKRecord]()
     var agePreferenceMin = 0
     var agePreferenceMax = 0
-    var genderPreference: [Int] = []
+    var genderPreference = 0
     var senderAge = 0
     var userID = ""
     var inboxMyProfile = [CKRecord]()
@@ -37,44 +37,23 @@ class ReceiveViewController: UIViewController {
                 self.userID = userID.recordName as! String
                 
                 self.getMyID { (ageMax, ageMin, arrOfGender) in
-                    let database = CKContainer.default().publicCloudDatabase
+                   
                     
-                    //SHOULD RETURN 17,40 WHICH IS ACTUAL THE PROFILE AGEPREFERENCE.
-                    print(self.agePreferenceMin, self.agePreferenceMax)
-                    let predicate = NSPredicate(format: "age BETWEEN {\(self.agePreferenceMin), \(self.agePreferenceMax)} AND gender == genderPreference")
-                    //SETUPTHEPREDICATEBITCH
-                    let query = CKQuery(recordType: "perahuKertas", predicate: predicate)
+                    //SHOULD RETURN xx,xx WHICH IS ACTUAL THE PROFILE AGEPREFERENCE.
+                    // print(self.agePreferenceMin, self.agePreferenceMax)
+                    //let predicate = NSPredicate(value: true)
                     
-                    query.sortDescriptors = [NSSortDescriptor(key: "sendingDate", ascending: false)]
-                    
-                    
-                    //get message
-                    database.perform(query, inZoneWith: nil) { (records, error) in
-                        if let fetchedRecords = records {
-                            self.inbox = fetchedRecords
-                            DispatchQueue.main.async {
-                                
-                                
-                                
-                                let message = self.inbox[0].object(forKey: "message")
-                                let senderID = self.inbox[0].object(forKey: "creatorID")
-                                self.getSenderID(sender: senderID as! String)
-                                
-                                self.messageLabel.text = message as! String
-                                
-                               
-                                //RETURN ZERO
-                                
-                                
-                                
-                                
-                            }
-                            
-                            
-                            
-                            
-                        }
+                 //   print(self.genderPreference)
+                    //GENDER ERROR
+                         //PAKE INI AJA: IF GENDER PREFERENCE = 0, pake predicate yg age aja,jadi semua gender masuk, jika gender preference ada, (1/2) maka pakai predicate yg cuma detect sendergender == preference.
+                    if self.genderPreference == 0 {
+                        self.withoutGenderReference()
+                    } else {
+                        self.withGenderReference()
+                        
                     }
+                
+                    
                 }
                 
                 
@@ -93,7 +72,95 @@ class ReceiveViewController: UIViewController {
     //func getMyID(completion: @escaping ( ageMax: Int,  ageMin: Int, _ genderPref: [Int]) -> Void){
     // completion(1, 1, [1, 1, 3])
     // }
-    func getMyID(completion: @escaping ( _ ageMax: Int,  _ ageMin: Int, _ genderPref: [Int]) -> Void){
+    func withGenderReference() {
+        let database = CKContainer.default().publicCloudDatabase
+        let predicate = NSPredicate(format: "senderAge BETWEEN {\(self.agePreferenceMin), \(self.agePreferenceMax)} AND senderGender = \(self.genderPreference)")
+              print(senderGender)
+              
+           
+              
+              
+              //bikin jd if genderpreference==0 {func a} else {funcb}
+              let query = CKQuery(recordType: "perahuKertas", predicate: predicate)
+              
+              query.sortDescriptors = [NSSortDescriptor(key: "sendingDate", ascending: false)]
+              
+              
+              //get message
+              database.perform(query, inZoneWith: nil) { (records, error) in
+                  if let fetchedRecords = records {
+                      self.inbox = fetchedRecords
+                      DispatchQueue.main.async {
+                          
+                          
+                          
+                          let message = self.inbox[0].object(forKey: "message")
+                          let senderID = self.inbox[0].object(forKey: "creatorID")
+                          self.getSenderID(sender: senderID as! String)
+                          
+                          self.messageLabel.text = message as! String
+                          
+                          //add senderID to field in my record when replying
+                          
+                          
+                          //RETURN ZERO
+                          
+                          
+                          
+                          
+                      }
+                      
+                      
+                      
+                      
+                  }
+              }
+    }
+    func withoutGenderReference() {
+         let database = CKContainer.default().publicCloudDatabase
+        let predicate = NSPredicate(format: "senderAge BETWEEN {\(self.agePreferenceMin), \(self.agePreferenceMax)}")
+        
+        
+     
+        
+        
+        //bikin jd if genderpreference==0 {func a} else {funcb}
+        let query = CKQuery(recordType: "perahuKertas", predicate: predicate)
+        
+        query.sortDescriptors = [NSSortDescriptor(key: "sendingDate", ascending: false)]
+        
+        
+        //get message
+        database.perform(query, inZoneWith: nil) { (records, error) in
+            if let fetchedRecords = records {
+                self.inbox = fetchedRecords
+                DispatchQueue.main.async {
+                    
+                    
+                    
+                    let message = self.inbox[0].object(forKey: "message")
+                    let senderID = self.inbox[0].object(forKey: "creatorID")
+                    self.getSenderID(sender: senderID as! String)
+                    
+                    self.messageLabel.text = message as! String
+                    
+                    //add senderID to field in my record when replying
+                    
+                    
+                    //RETURN ZERO
+                    
+                    
+                    
+                    
+                }
+                
+                
+                
+                
+            }
+        }
+    }
+    func getMyID(completion: @escaping ( _ ageMax: Int,  _ ageMin: Int, _ genderPref: Int) -> Void){
         
         
         let database = CKContainer.default().publicCloudDatabase
@@ -109,7 +176,7 @@ class ReceiveViewController: UIViewController {
                     
                     self.agePreferenceMin = self.inboxMyProfile[0].object(forKey: "agePreferenceMin") as! Int
                     self.agePreferenceMax = self.inboxMyProfile[0].object(forKey: "agePreferenceMax") as! Int
-                    self.genderPreference = self.inboxMyProfile[0].object(forKey: "genderPreference") as! [Int]
+                    self.genderPreference = self.inboxMyProfile[0].object(forKey: "genderPreference") as! Int
                     
                     
                     
@@ -136,6 +203,7 @@ class ReceiveViewController: UIViewController {
                     let username = self.inboxProfile[0].object(forKey: "username")
                     //print(username)
                     self.usernameLabel.text = username as! String
+                    
                     
                     //get sender age
                     

@@ -12,7 +12,7 @@ import RangeSeekSlider
 
 //BUG, BUTTON HANTU!
 class Register2VC: UIViewController {
-    var genderPrefer : [Int] = []
+    var genderPrefer = 0
     var agePreferMin = 0
     var agePreferMax = 0
     
@@ -34,15 +34,15 @@ class Register2VC: UIViewController {
    
     
     @IBAction func buttonMale(_ sender: Any) {
-        genderPrefer = [0]
+        genderPrefer = 1
     }
     
     @IBAction func buttonFemale(_ sender: Any) {
-        genderPrefer = [1]
+        genderPrefer = 2
     }
     
     @IBAction func buttonAll(_ sender: Any) {
-        genderPrefer = [0,1]
+        genderPrefer = 0
     }
 
    
@@ -77,8 +77,8 @@ class Register2VC: UIViewController {
                 
                 
                 newRecord.setObject(nameRecord, forKey: "username")
-                newRecord.setObject(ageRecord, forKey: "age")
-                newRecord.setObject(genderRecord, forKey: "gender")
+                newRecord.setObject(ageRecord, forKey: "senderAge")
+                newRecord.setObject(genderRecord, forKey: "senderGender")
                 newRecord.setObject(agePreferMinRecord, forKey: "agePreferenceMin")
                 newRecord.setObject(agePreferMaxRecord, forKey: "agePreferenceMax")
                 newRecord.setObject(genderPreferRecord, forKey: "genderPreference")
