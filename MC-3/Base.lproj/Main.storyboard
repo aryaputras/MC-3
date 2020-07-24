@@ -780,6 +780,9 @@ kamu butuhkan</string>
                                 <state key="normal" title="Hapus">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="hapusButton:" destination="05H-7O-M6E" eventType="touchUpInside" id="1MZ-6Q-Cvu"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OV-PY-Low">
                                 <rect key="frame" x="312" y="225" width="55" height="33"/>
@@ -2460,10 +2463,10 @@ s
             </objects>
             <point key="canvasLocation" x="6563.7681159420299" y="1693.5267857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Write Mercusuar View Controller-->
         <scene sceneID="iOt-k9-b4O">
             <objects>
-                <viewController id="pID-2n-Qvf" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pID-2n-Qvf" customClass="WriteMercusuarViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XW0-XD-85U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2525,6 +2528,9 @@ s
                         <viewLayoutGuide key="safeArea" id="K1d-W5-eBp"/>
                     </view>
                     <navigationItem key="navigationItem" id="kCx-ak-Jbp"/>
+                    <connections>
+                        <outlet property="mercusuarTextField" destination="TAd-U8-48M" id="LQc-a4-jno"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flm-8J-z3g" sceneMemberID="firstResponder"/>
             </objects>

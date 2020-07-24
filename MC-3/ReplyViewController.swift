@@ -62,6 +62,11 @@ class ReplyViewController: UIViewController {
         record1Label.isHidden = true
         record2Label.isHidden = true
         recordingButton.isHidden = true
+        
+        initializeHideKeyboard()
+        isiTextField.delegate = self
+        textFieldShouldReturn(isiTextField)
+
     }
     
     @IBAction func recordButton(_ sender: Any) {
@@ -140,4 +145,21 @@ class ReplyViewController: UIViewController {
         canvasView.strokeWidth = CGFloat(sender.value)
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    func initializeHideKeyboard(){
+    //Declare a Tap Gesture Recognizer which will trigger our dismissMyKeyboard() function
+    let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+    target: self,
+    action: #selector(dismissMyKeyboard))
+    //Add this tap gesture recognizer to the parent view
+    view.addGestureRecognizer(tap)
+    }
+    @objc func dismissMyKeyboard(){
+    //endEditing causes the view (or one of its embedded text fields) to resign the first responder status.
+    //In short- Dismiss the active keyboard.
+    view.endEditing(true)
+    }
 }

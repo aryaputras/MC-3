@@ -25,7 +25,10 @@ class ProfileVC: UIViewController {
             
         let database = CKContainer.default().publicCloudDatabase
         
-    
+        initializeHideKeyboard()
+        profileUsername.delegate = self
+        textFieldShouldReturn(profileUsername)
+        
         
         
         //EXPERIMENTAL
@@ -74,23 +77,8 @@ class ProfileVC: UIViewController {
                 
         }
 
-        
-        
-        
-        
-        
-       
-        
-        
-        
-        
-        
-        
-        
-        
         //EXPERIMENTAL
-        
-        
+
         // Do any additional setup after loading the view.
     }
 
@@ -121,6 +109,24 @@ class ProfileVC: UIViewController {
 
     @IBAction func ButtonSave(_ sender: Any) {
         
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+    func initializeHideKeyboard(){
+    //Declare a Tap Gesture Recognizer which will trigger our dismissMyKeyboard() function
+    let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+    target: self,
+    action: #selector(dismissMyKeyboard))
+    //Add this tap gesture recognizer to the parent view
+    view.addGestureRecognizer(tap)
+    }
+    @objc func dismissMyKeyboard(){
+    //endEditing causes the view (or one of its embedded text fields) to resign the first responder status.
+    //In short- Dismiss the active keyboard.
+    view.endEditing(true)
     }
     
 }
