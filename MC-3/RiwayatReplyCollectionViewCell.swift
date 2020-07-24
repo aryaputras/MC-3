@@ -20,6 +20,7 @@ class RiwayatReplyCollectionViewCell: UICollectionViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+    
     static func nib() -> UINib {
         return UINib(nibName: "RiwayatReplyCollectionViewCell", bundle: nil)
     }
