@@ -2466,17 +2466,10 @@ s
             </objects>
             <point key="canvasLocation" x="6563.7681159420299" y="1693.5267857142856"/>
         </scene>
-<<<<<<< HEAD
-        <!--Write Mercusuar View Controller-->
-        <scene sceneID="iOt-k9-b4O">
-            <objects>
-                <viewController id="pID-2n-Qvf" customClass="WriteMercusuarViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
-=======
         <!--Ask View Controller-->
         <scene sceneID="iOt-k9-b4O">
             <objects>
                 <viewController id="pID-2n-Qvf" customClass="AskViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
->>>>>>> 754fbe2643d74707f36a2973b1cf01215c342964
                     <view key="view" contentMode="scaleToFill" id="XW0-XD-85U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2542,11 +2535,7 @@ s
                     </view>
                     <navigationItem key="navigationItem" id="kCx-ak-Jbp"/>
                     <connections>
-<<<<<<< HEAD
-                        <outlet property="mercusuarTextField" destination="TAd-U8-48M" id="LQc-a4-jno"/>
-=======
                         <outlet property="textfield" destination="TAd-U8-48M" id="OqP-Dx-6pO"/>
->>>>>>> 754fbe2643d74707f36a2973b1cf01215c342964
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="flm-8J-z3g" sceneMemberID="firstResponder"/>
