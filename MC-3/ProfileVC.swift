@@ -9,7 +9,7 @@
 import UIKit
 import CloudKit
 
-class ProfileVC: UIViewController {
+class ProfileVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileUsername: UITextField!
     @IBOutlet weak var sendCounter: UILabel!

@@ -22,10 +22,10 @@ class MercusuarCollectionViewCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        let tapGR = UITapGestureRecognizer(target: self, action: #selector(PostlistViewController.handleTap(_:)))
-        tapGR.delegate = self
-        tapGR.numberOfTapsRequired = 2
-        view.addGestureRecognizer(tapGR)
+//        let tapGR = UITapGestureRecognizer(target: self, action: #selector(PostlistViewController.handleTap(_:)))
+//        tapGR.delegate = self
+//        tapGR.numberOfTapsRequired = 2
+//        view.addGestureRecognizer(tapGR)
         
     }
     static func nib() -> UINib {
@@ -36,13 +36,13 @@ class MercusuarCollectionViewCell: UICollectionViewCell {
         
     }
 }
-extension likesButton: UIGestureRecognizerDelegate {
-    func handleTap(_ gesture: UITapGestureRecognizer){
-        if(like == false){
-        print("doubletapped")
-        }
-        else {
-            print("Nothing happen")
-        }
-    }
-}
+//extension likesButton: UIGestureRecognizerDelegate {
+//    func handleTap(_ gesture: UITapGestureRecognizer){
+//        if(like == false){
+//        print("doubletapped")
+//        }
+//        else {
+//            print("Nothing happen")
+//        }
+//    }
+//}

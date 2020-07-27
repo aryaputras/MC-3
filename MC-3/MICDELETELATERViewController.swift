@@ -18,23 +18,7 @@ class MICDELETELATERViewController: UIViewController, AVAudioRecorderDelegate, A
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        recordingSession = AVAudioSession.sharedInstance()
 
-        do {
-            try recordingSession.setCategory(.playAndRecord, mode: .default)
-            try recordingSession.setActive(true)
-            recordingSession.requestRecordPermission() { [unowned self] allowed in
-                DispatchQueue.main.async {
-                    if allowed {
-                        self.loadRecordingUI()
-                    } else {
-                        // failed to record!
-                    }
-                }
-            }
-        } catch {
-            // failed to record!
-        }
 
 
         // Do any additional setup after loading the view.

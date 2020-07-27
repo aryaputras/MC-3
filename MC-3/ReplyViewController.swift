@@ -9,11 +9,12 @@
 import UIKit
 import CloudKit
 
-class ReplyViewController: UIViewController {
+class ReplyViewController: UIViewController, UITextFieldDelegate {
     var senderID = ""
     var username = ""
     var message = ""
     var myUsername = ""
+    var originID = ""
     
     @IBOutlet weak var sliderSize: UISlider!
     @IBOutlet weak var sliderimage: UIImageView!

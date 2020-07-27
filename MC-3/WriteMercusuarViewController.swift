@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WriteMercusuarViewController: UIViewController {
+class WriteMercusuarViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet var mercusuarTextField: UITextField!
     override func viewDidLoad() {

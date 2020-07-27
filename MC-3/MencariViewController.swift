@@ -51,6 +51,14 @@ class MencariViewController: UIViewController {
         
         if isLoud == true {
             print("true")
+            let path = getDocumentsDirectory().appendingPathComponent("Recording.m4a")
+            //The file recorded has been deleted
+            //But the file saved is not deleted
+            do {
+            try FileManager.default.removeItem(at: path)
+            } catch {
+                print("error removing audio")
+            }
             
         } else {
           
@@ -63,6 +71,10 @@ class MencariViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    func getDocumentsDirectory() -> URL {
+              let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+              return paths[0]
+          }
 
 
 }

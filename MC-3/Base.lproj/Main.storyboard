@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NGq-r8-fq1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VMA-GH-yfh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -165,7 +165,7 @@ tentang dirimu</string>
         <!--Item-->
         <scene sceneID="Iww-gM-wLr">
             <objects>
-                <viewController id="eEh-42-BzD" sceneMemberID="viewController">
+                <viewController id="eEh-42-BzD" customClass="HomeViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dss-cW-l8u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -284,10 +284,14 @@ geser ke bawah  untuk menangkap satu.</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="Dermaga1" id="0yy-C2-r9I"/>
                     <navigationItem key="navigationItem" id="21x-Xi-3B5"/>
+                    <connections>
+                        <segue destination="lmg-fm-10H" kind="presentation" identifier="swipeToReceive" modalPresentationStyle="fullScreen" id="Pj7-gd-Isc"/>
+                        <segue destination="Ib3-wX-25M" kind="presentation" identifier="swipeToSend" modalPresentationStyle="fullScreen" id="9b2-eg-5M3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9X-Ga-1QL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="403" y="-331"/>
+            <point key="canvasLocation" x="403" y="-318"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="fjO-dp-kQP">
@@ -751,7 +755,7 @@ kamu butuhkan</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WPG-6g-Q6F" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1119" y="-331"/>
+            <point key="canvasLocation" x="403" y="-1135"/>
         </scene>
         <!--Send View Controller-->
         <scene sceneID="L6R-LO-3iE">
@@ -767,7 +771,23 @@ kamu butuhkan</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kertas_Surat" translatesAutoresizingMaskIntoConstraints="NO" id="nid-Pi-M93">
                                 <rect key="frame" x="24" y="199" width="366" height="530"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8K-3V-x0m" customClass="canvasView">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6N-wD-Q7g">
+                                <rect key="frame" x="234" y="448" width="88" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="play"/>
+                                <connections>
+                                    <action selector="playButton:" destination="05H-7O-M6E" eventType="touchUpInside" id="ORx-1S-xni"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gI-5H-bJP">
+                                <rect key="frame" x="266" y="392" width="70" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Stop"/>
+                                <connections>
+                                    <action selector="stopRecordingButton:" destination="05H-7O-M6E" eventType="touchUpInside" id="zmZ-qj-Q8t"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8K-3V-x0m" customClass="canvasView" customModule="MC_3" customModuleProvider="target">
                                 <rect key="frame" x="76" y="275" width="288" height="406"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -953,6 +973,9 @@ kamu butuhkan</string>
                                 <state key="normal" image="Mic_Thin">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="recordingButton:" destination="05H-7O-M6E" eventType="touchUpInside" id="mtM-nN-7f6"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="gEQ-si-ljD">
                                 <rect key="frame" x="-62" y="480" width="236" height="30"/>
@@ -1062,16 +1085,17 @@ kamu butuhkan</string>
                         <outlet property="textField" destination="8EF-Zy-qCc" id="kLM-Q1-vpU"/>
                         <outlet property="whiteButton" destination="ltS-G4-Xot" id="6AE-mW-pT5"/>
                         <outlet property="yellowButton" destination="L1V-Tr-P1D" id="yUq-9W-l0W"/>
+                        <segue destination="90D-xC-XfU" kind="presentation" identifier="sendToBlow" modalPresentationStyle="fullScreen" id="sk5-X7-utM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wen-7j-Gzz" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2466.666666666667" y="-331.47321428571428"/>
+            <point key="canvasLocation" x="2610" y="-1158"/>
         </scene>
         <!--Item-->
         <scene sceneID="PHX-f3-p1d">
             <objects>
-                <viewController id="02J-wh-gZE" sceneMemberID="viewController">
+                <viewController id="02J-wh-gZE" customClass="HomeViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3NW-41-JZV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1125,8 +1149,9 @@ kamu butuhkan</string>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egy-1A-fuU">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <segue destination="eEh-42-BzD" kind="presentation" modalPresentationStyle="fullScreen" id="EZ7-60-G4u"/>
+                                    <segue destination="eEh-42-BzD" kind="presentation" modalPresentationStyle="fullScreen" id="P3E-d2-545"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1280,6 +1305,9 @@ Bullying/rasisme</string>
                                 <state key="normal" image="Ok_Aku_Siap">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="05H-7O-M6E" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="pcf-lP-Ouw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -1335,12 +1363,12 @@ Bullying/rasisme</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f4C-UF-Iph" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1832" y="-331"/>
+            <point key="canvasLocation" x="1887" y="-1158"/>
         </scene>
-        <!--View Controller-->
+        <!--Mencari Bener View Controller-->
         <scene sceneID="dXA-e0-FhK">
             <objects>
-                <viewController id="lmg-fm-10H" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lmg-fm-10H" customClass="MencariBenerViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kd7-kp-mxU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1419,10 +1447,13 @@ Bullying/rasisme</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Bq-bU-w1D"/>
                     </view>
+                    <connections>
+                        <segue destination="5D7-EV-M7R" kind="presentation" identifier="mencariToMenangkap" modalPresentationStyle="fullScreen" id="ZkE-Bg-WQ2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYW-tD-6bk" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3922" y="-331"/>
+            <point key="canvasLocation" x="1771" y="179"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="NAX-Bh-9kS">
@@ -1450,6 +1481,9 @@ Bullying/rasisme</string>
                                 <state key="normal" image="Big_Paper_Boat">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="ukp-1A-eOK" kind="presentation" modalPresentationStyle="fullScreen" id="mwP-IH-gmR"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Otter_Boat" translatesAutoresizingMaskIntoConstraints="NO" id="xf4-ZU-2Pf">
                                 <rect key="frame" x="171" y="588" width="375" height="227"/>
@@ -1483,7 +1517,7 @@ perahu kertas!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K0e-hi-zId" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4641" y="-331"/>
+            <point key="canvasLocation" x="2609" y="179"/>
         </scene>
         <!--Receive View Controller-->
         <scene sceneID="zE1-YM-dn8">
@@ -1553,6 +1587,15 @@ perahu kertas!</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MY-JD-nTe">
+                                <rect key="frame" x="29" y="589" width="47" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" image="play.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="playTapped:" destination="ukp-1A-eOK" eventType="touchUpInside" id="rgO-2Y-bD9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -1586,7 +1629,7 @@ perahu kertas!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kba-Ci-14G" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5390" y="-331"/>
+            <point key="canvasLocation" x="3419" y="179"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IX1-Li-SYz">
@@ -1749,7 +1792,7 @@ perahu kertas!</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P8B-fi-ygg" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5390" y="350"/>
+            <point key="canvasLocation" x="4264" y="1095"/>
         </scene>
         <!--Reply View Controller-->
         <scene sceneID="Cmh-wH-Ift">
@@ -2113,7 +2156,7 @@ s
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Htv-Ik-wzn" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6157.971014492754" y="-331.47321428571428"/>
+            <point key="canvasLocation" x="4591" y="16"/>
         </scene>
         <!--Riwayat View Controller-->
         <scene sceneID="g81-gx-lid">
@@ -2154,7 +2197,7 @@ s
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gRN-ON-1QW" customClass="RiwayatCollectionCell" customModule="MC_3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="100"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KyU-lD-mHO">
                                             <rect key="frame" x="0.0" y="0.0" width="366" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
@@ -2316,7 +2359,7 @@ s
                             <constraint firstItem="p9T-lk-LQH" firstAttribute="top" secondItem="f7b-r9-OjN" secondAttribute="bottom" constant="6" id="Xwh-DP-IRF"/>
                             <constraint firstItem="qTv-AA-2Mq" firstAttribute="centerX" secondItem="pmT-7G-NN0" secondAttribute="centerX" id="ZxN-tF-rQp"/>
                             <constraint firstItem="ogN-Nx-Or4" firstAttribute="leading" secondItem="jv6-2v-6Gc" secondAttribute="leading" constant="329" id="ab6-Cp-Wza"/>
-                            <constraint firstItem="aaj-l2-38j" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="f7b-r9-OjN" secondAttribute="trailing" symbolic="YES" id="cYs-Kg-BoY"/>
+                            <constraint firstItem="aaj-l2-38j" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="f7b-r9-OjN" secondAttribute="trailing" constant="8" symbolic="YES" id="cYs-Kg-BoY"/>
                             <constraint firstItem="hYe-Oc-THD" firstAttribute="top" secondItem="ogN-Nx-Or4" secondAttribute="bottom" constant="32" id="d9D-0D-13x"/>
                             <constraint firstItem="p9T-lk-LQH" firstAttribute="leading" secondItem="5kU-Zh-FVb" secondAttribute="trailing" constant="2" id="dE7-en-BM9"/>
                             <constraint firstItem="qTv-AA-2Mq" firstAttribute="top" secondItem="AYY-g3-arc" secondAttribute="bottom" constant="21" id="n0w-u0-RKu"/>
@@ -2611,6 +2654,9 @@ bebanmu melalui perahu kertas ini</string>
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="NGq-r8-fq1" kind="presentation" modalPresentationStyle="fullScreen" id="fvm-Jy-2P7"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -2645,7 +2691,7 @@ bebanmu melalui perahu kertas ini</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ZG-2G-F5L" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2467" y="350"/>
+            <point key="canvasLocation" x="3419" y="-1158"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9Mr-5f-PYW">
@@ -2715,7 +2761,7 @@ kamu merasa tidak nyaman.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o0l-5S-dB1" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6158" y="350"/>
+            <point key="canvasLocation" x="5074" y="1095"/>
         </scene>
         <!--Mencari View Controller-->
         <scene sceneID="9kz-bD-aNe">
@@ -2765,7 +2811,7 @@ kamu merasa tidak nyaman.</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQ4-I4-bZg" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3209" y="350"/>
+            <point key="canvasLocation" x="4184" y="-1158"/>
         </scene>
     </scenes>
     <resources>
@@ -2831,6 +2877,7 @@ kamu merasa tidak nyaman.</string>
         <image name="laporkanpengguna" width="314" height="290"/>
         <image name="mic.fill" catalog="system" width="108" height="128"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
         <image name="plus.circle" catalog="system" width="128" height="121"/>
         <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <image name="scribble" catalog="system" width="128" height="109"/>

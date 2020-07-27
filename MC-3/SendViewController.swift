@@ -8,12 +8,19 @@
 
 import UIKit
 import CloudKit
+import AVFoundation
 
-class SendViewController: UIViewController {
-      
+class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
+    
     var age = 0
     var gender = 0
-    var profile = [CKRecord]() 
+    var profile = [CKRecord]()
+    
+    //recording capabilities
+    var recordingSession: AVAudioSession!
+    var audioRecorder: AVAudioRecorder!
+    var filename = "Recording.m4a"
+    var soundPlayer = AVAudioPlayer()
     
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
@@ -23,7 +30,7 @@ class SendViewController: UIViewController {
     @IBOutlet weak var recordingButton: UIButton!
     @IBOutlet weak var record1Label: UILabel!
     @IBOutlet weak var record2Label: UILabel!
-
+    
     @IBOutlet weak var textField: UITextField!
     
     @IBOutlet weak var sliderSize: UISlider!
@@ -41,6 +48,28 @@ class SendViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Recording
+        recordingSession = AVAudioSession.sharedInstance()
+
+        do {
+            try recordingSession.setCategory(.playAndRecord, mode: .default)
+            try recordingSession.setActive(true)
+            recordingSession.requestRecordPermission() { [unowned self] allowed in
+                DispatchQueue.main.async {
+                    if allowed {
+                        //self.loadRecordingUI()
+                    } else {
+                        // failed to record!
+                    }
+                }
+            }
+        } catch {
+            // failed to record!
+        }
+        
+        
+        
         initializeHideKeyboard()
         sliderSize.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi/2))
         recordButton.isHidden = false
@@ -65,44 +94,57 @@ class SendViewController: UIViewController {
         initializeHideKeyboard()
         textField.delegate = self
         textFieldShouldReturn(textField)
-
-             //fetching age
-            CKContainer.default().fetchUserRecordID { userID, error in
-                     if let userID = userID {
-                        let database = CKContainer.default().publicCloudDatabase
+        
+        //fetching age
+        CKContainer.default().fetchUserRecordID { userID, error in
+            if let userID = userID {
+                let database = CKContainer.default().publicCloudDatabase
+                
+                let predicate = NSPredicate(format: "creatorID == %@", userID.recordName)
+                let queryProfile = CKQuery(recordType: "profile", predicate: predicate)
+                queryProfile.sortDescriptors = [NSSortDescriptor(key: "signUpDate", ascending: false)]
+                
+                database.perform(queryProfile, inZoneWith: nil) { (records, error) in
+                    if let fetchedRecords = records {
+                        self.profile = fetchedRecords
+                        DispatchQueue.main.async {
+                            //get sender age
+                            self.age = self.profile[0].object(forKey: "age") as! Int
+                            
+                            
+                            
+                            //get sender gender
+                            self.gender = self.profile[0].object(forKey: "gender") as! Int
+                            
+                            
+                            
+                            
+                        }
                         
-                        let predicate = NSPredicate(format: "creatorID == %@", userID.recordName)
-                        let queryProfile = CKQuery(recordType: "profile", predicate: predicate)
-                        queryProfile.sortDescriptors = [NSSortDescriptor(key: "signUpDate", ascending: false)]
-                        
-                        database.perform(queryProfile, inZoneWith: nil) { (records, error) in
-                               if let fetchedRecords = records {
-                                   self.profile = fetchedRecords
-                                   DispatchQueue.main.async {
-                                     //get sender age
-                                    self.age = self.profile[0].object(forKey: "age") as! Int
-                                   
-                                    
-                                    
-                                    //get sender gender
-                                    self.gender = self.profile[0].object(forKey: "gender") as! Int
-                                   
-                                    
-                                      
-                                       
-                                   }
-                                   
-                               }
-                           }
-                        
-                        
+                    }
                 }
                 
+                
+            }
+            
         }
         
         
     }
     
+    @IBAction func recordingButton(_ sender: Any) {
+         startRecording()
+        
+    }
+    @IBAction func stopRecordingButton(_ sender: Any) {
+        finishRecording(success: true)
+    }
+    
+    
+    @IBAction func playButton(_ sender: Any) {
+        preparePlayer()
+               soundPlayer.play()
+    }
     @IBAction func recordButton(_ sender: Any) {
         recordButton.isHidden = true
         drawButton.isHidden = true
@@ -123,6 +165,13 @@ class SendViewController: UIViewController {
         record1Label.isHidden = false
         record2Label.isHidden = false
         recordingButton.isHidden = false
+        
+        
+        //IN START RECORDING, CHANGELABEL
+       
+        
+        
+        
     }
     
     @IBAction func drawButton(_ sender: Any) {
@@ -179,25 +228,7 @@ class SendViewController: UIViewController {
         canvasView.strokeWidth = CGFloat(sender.value)
     }
     //fetching age
-    CKContainer.default().fetchUserRecordID { userID, error in
-    if let userID = userID {
-    let database = CKContainer.default().publicCloudDatabase
-    let predicate = NSPredicate(format: "creatorID == %@", userID.recordName)
-    let queryProfile = CKQuery(recordType: "profile", predicate: predicate)
-    queryProfile.sortDescriptors = [NSSortDescriptor(key: "signUpDate", ascending: false)]
-    database.perform(queryProfile, inZoneWith: nil) { (records, error) in
-    if let fetchedRecords = records {
-    self.profile = fetchedRecords
-    DispatchQueue.main.async {
-    //get sender age
-    self.age = self.profile[0].object(forKey: "age") as! Int
-    //get sender gender
-    self.gender = self.profile[0].object(forKey: "gender") as! Int
-    }
-    }
-    }
-    }
-    }
+  
     
     @IBAction func doneAction(_ sender: Any) {
         
@@ -212,7 +243,11 @@ class SendViewController: UIViewController {
                 let genderRecord = self.gender as CKRecordValue
                 let newRecord = CKRecord(recordType: "perahuKertas")
                 let database = CKContainer.default().publicCloudDatabase
+                let path = self.getDocumentsDirectory().appendingPathComponent(self.filename)
                 
+                let audio = CKAsset(fileURL: path) as CKRecordValue
+                
+                newRecord.setValue(audio, forKey: "audio")
                 newRecord.setObject(genderRecord, forKey: "senderGender")
                 newRecord.setObject(ageRecord, forKey: "senderAge")
                 newRecord.setObject(story, forKey: "message")
@@ -225,7 +260,10 @@ class SendViewController: UIViewController {
                             print("error")
                             
                         } else {
+                            
                             print("record was saved")
+                            
+                            self.performSegue(withIdentifier: "sendToBlow", sender: Any?.self)
                             
                         }
                     }
@@ -239,23 +277,103 @@ class SendViewController: UIViewController {
         return false
     }
     func initializeHideKeyboard(){
-    //Declare a Tap Gesture Recognizer which will trigger our dismissMyKeyboard() function
-    let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-    target: self,
-    action: #selector(dismissMyKeyboard))
-    //Add this tap gesture recognizer to the parent view
-    view.addGestureRecognizer(tap)
+        //Declare a Tap Gesture Recognizer which will trigger our dismissMyKeyboard() function
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissMyKeyboard))
+        //Add this tap gesture recognizer to the parent view
+        view.addGestureRecognizer(tap)
     }
     @objc func dismissMyKeyboard(){
-    //endEditing causes the view (or one of its embedded text fields) to resign the first responder status.
-    //In short- Dismiss the active keyboard.
-    view.endEditing(true)
+        //endEditing causes the view (or one of its embedded text fields) to resign the first responder status.
+        //In short- Dismiss the active keyboard.
+        view.endEditing(true)
     }
     @IBAction func hapusButton(_ sender: Any) {
         if canvasView.isHidden == false {
             canvasView.clearDraw()
         }
     }
+    func startRecording() {
+           let audioFilename = getDocumentsDirectory().appendingPathComponent(filename)
+
+           let settings = [
+               AVFormatIDKey: Int(kAudioFormatAppleLossless),
+               AVSampleRateKey: 48000,
+               AVNumberOfChannelsKey: 1,
+               AVEncoderBitRateKey: 320000,
+               AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue
+           ]
+
+           do {
+               audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
+               audioRecorder.delegate = self
+               audioRecorder.record()
+
+               recordButton.setTitle("Tap to Stop", for: .normal)
+           } catch {
+               finishRecording(success: false)
+           }
+           
+          
+           
+       }
+     
+           
+       
+       
+       func getDocumentsDirectory() -> URL {
+           let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+           return paths[0]
+       }
+       
+       
+       
+       
+       
+       func finishRecording(success: Bool) {
+           audioRecorder.stop()
+           audioRecorder = nil
+
+           if success {
+               recordButton.setTitle("Tap to Re-record", for: .normal)
+           } else {
+               recordButton.setTitle("Tap to Record", for: .normal)
+               // recording failed :(
+           }
+       }
+       
+       
+       
+//       @objc func recordTapped() {
+//           if audioRecorder == nil {
+//               startRecording()
+//           } else {
+//               finishRecording(success: true)
+//           }
+//       }
+
+       
+       func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+           if !flag {
+               finishRecording(success: false)
+           }
+       }
+    func preparePlayer(){
+         var error: NSError?
+          let path = getDocumentsDirectory().appendingPathComponent(filename)
+         do {
+         soundPlayer = try AVAudioPlayer(contentsOf: path)
+             soundPlayer.delegate = self
+             soundPlayer.prepareToPlay()
+             soundPlayer.volume = 100
+             
+         } catch {
+             print(error)
+         }
+         
+         
+     }
 }
 //    //UNTUK EXPORT GAMBAR
 //    extension UIView{
