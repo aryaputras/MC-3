@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VMA-GH-yfh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eEh-42-BzD">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -1596,6 +1596,11 @@ perahu kertas!</string>
                                     <action selector="playTapped:" destination="ukp-1A-eOK" eventType="touchUpInside" id="rgO-2Y-bD9"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWK-Ua-XZv">
+                                <rect key="frame" x="35" y="358" width="345" height="223"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -1623,13 +1628,14 @@ perahu kertas!</string>
                         <viewLayoutGuide key="safeArea" id="SgB-wZ-0ge"/>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="SWK-Ua-XZv" id="1fC-Zr-Yot"/>
                         <outlet property="messageLabel" destination="KxB-3d-KMV" id="ptm-F4-IeH"/>
                         <outlet property="usernameLabel" destination="ccz-g5-X9g" id="9sD-GM-23T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kba-Ci-14G" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3419" y="179"/>
+            <point key="canvasLocation" x="3418.840579710145" y="178.79464285714286"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="IX1-Li-SYz">

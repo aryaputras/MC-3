@@ -52,12 +52,14 @@ class MencariViewController: UIViewController {
         if isLoud == true {
             print("true")
             let path = getDocumentsDirectory().appendingPathComponent("Recording.m4a")
+           
             //The file recorded has been deleted
             //But the file saved is not deleted
             do {
+         
             try FileManager.default.removeItem(at: path)
             } catch {
-                print("error removing audio")
+                print("error removing audio/audio has been removed")
             }
             
         } else {

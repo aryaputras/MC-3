@@ -14,6 +14,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
     
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
     var inbox = [CKRecord]()
     var inboxProfile = [CKRecord]()
     var agePreferenceMin = 0
@@ -29,6 +30,9 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
     var audioURL: NSURL?
     var audioAsset: AVAsset?
     var audioPath: URL?
+    var image: CKAsset?
+    var imageURL: NSURL?
+    var imagePath: URL?
     
     
     
@@ -155,16 +159,45 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
                         let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
                         let destinationPath = NSURL(fileURLWithPath: documentsPath).appendingPathComponent("ReceivedAudio.m4a", isDirectory: false)
                         FileManager.default.createFile(atPath: destinationPath!.path, contents:audioData, attributes:nil)
-                        print("download succeed")
+                        print("download audio succeed")
                         //  paths = documentsPath
                         print(destinationPath!)
                         self.audioPath = destinationPath!
+                       
+                        
+                        
+                        
                         
                     } catch {
-                        print("error with gender")
+                        print("error download audio with gender")
                         
                     }
                     
+                    let imgRecord = self.inbox[0].object(forKey: "image")
+                    self.image = imgRecord as? CKAsset
+                    
+                    
+                    do {
+                        self.imageURL = self.image?.fileURL as NSURL?
+                        
+                        var imageData = try Data(contentsOf: (self.imageURL ?? NSURL()) as URL)
+                        
+                        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+                        let destinationPath = NSURL(fileURLWithPath: documentsPath).appendingPathComponent("ReceivedImage.jpg", isDirectory: false)
+                        FileManager.default.createFile(atPath: destinationPath!.path, contents: imageData, attributes: nil)
+                        do {
+                            let imgNewData = try Data(contentsOf: destinationPath!)
+                        print("download image succeed")
+                        
+                        
+                        //self.imagePath = destinationPath!
+                        self.imageView.image = UIImage(data: imgNewData)
+                        print("do do ")
+                        } catch {print("bgst") }
+                        
+                    } catch {
+                        print("error download picture with gender")
+                    }
                     //add senderID to field in my record when replying
                     
                     
@@ -219,7 +252,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
                         
                         
                         //downloadaudio
-                         let audioData = try Data(contentsOf: (self.audioURL ?? NSURL()) as URL)
+                        let audioData = try Data(contentsOf: (self.audioURL ?? NSURL()) as URL)
                         print(audioData)
                         let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
                         let destinationPath = NSURL(fileURLWithPath: documentsPath).appendingPathComponent("ReceivedAudio.m4a", isDirectory: false)

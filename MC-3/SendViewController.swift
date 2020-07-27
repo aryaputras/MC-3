@@ -21,6 +21,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
     var audioRecorder: AVAudioRecorder!
     var filename = "Recording.m4a"
     var soundPlayer = AVAudioPlayer()
+    var recorded = false
     
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
@@ -51,7 +52,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
         
         //Recording
         recordingSession = AVAudioSession.sharedInstance()
-
+        
         do {
             try recordingSession.setCategory(.playAndRecord, mode: .default)
             try recordingSession.setActive(true)
@@ -133,7 +134,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
     }
     
     @IBAction func recordingButton(_ sender: Any) {
-         startRecording()
+        startRecording()
         
     }
     @IBAction func stopRecordingButton(_ sender: Any) {
@@ -143,7 +144,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
     
     @IBAction func playButton(_ sender: Any) {
         preparePlayer()
-               soundPlayer.play()
+        soundPlayer.play()
     }
     @IBAction func recordButton(_ sender: Any) {
         recordButton.isHidden = true
@@ -168,7 +169,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
         
         
         //IN START RECORDING, CHANGELABEL
-       
+        
         
         
         
@@ -228,26 +229,43 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
         canvasView.strokeWidth = CGFloat(sender.value)
     }
     //fetching age
-  
+    
     
     @IBAction func doneAction(_ sender: Any) {
+        
         
         CKContainer.default().fetchUserRecordID { userID, error in
             if let userID = userID {
                 //print(userID)
+                //save image
+                let image = self.canvasView.savePic()
+                  let imgPath = self.getDocumentsDirectory().appendingPathComponent("image.jpg")
+                
+                //createfile
+                do {
+              
+                
+                    try image.pngData()?.write(to: imgPath, options: .atomic) } catch { print("saving image error")}
+                
                 let creatorID = userID.recordName as CKRecordValue
                 let date = Date() as CKRecordValue
                 let story = self.textField.text! as CKRecordValue
                 //let audio =
+                
                 let ageRecord = self.age as CKRecordValue
                 let genderRecord = self.gender as CKRecordValue
                 let newRecord = CKRecord(recordType: "perahuKertas")
                 let database = CKContainer.default().publicCloudDatabase
-                let path = self.getDocumentsDirectory().appendingPathComponent(self.filename)
+              //  let image = self.canvasView.savePic()
+                let imageRecord = CKAsset(fileURL: imgPath) as CKRecordValue
                 
-                let audio = CKAsset(fileURL: path) as CKRecordValue
-                
-                newRecord.setValue(audio, forKey: "audio")
+                if self.recorded == true {
+                    let path = self.getDocumentsDirectory().appendingPathComponent(self.filename)
+                    let audio =  CKAsset(fileURL: path) as CKRecordValue
+                    //let imageRecord = CKAsset(fileURL: imgp)
+                    newRecord.setValue(audio, forKey: "audio")
+                }
+                 newRecord.setValue(imageRecord, forKey: "image")
                 newRecord.setObject(genderRecord, forKey: "senderGender")
                 newRecord.setObject(ageRecord, forKey: "senderAge")
                 newRecord.setObject(story, forKey: "message")
@@ -257,7 +275,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
                 database.save(newRecord) { record , error in
                     DispatchQueue.main.async {
                         if let error = error {
-                            print("error")
+                            print(error.localizedDescription)
                             
                         } else {
                             
@@ -295,105 +313,106 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
         }
     }
     func startRecording() {
-           let audioFilename = getDocumentsDirectory().appendingPathComponent(filename)
-
-           let settings = [
-               AVFormatIDKey: Int(kAudioFormatAppleLossless),
-               AVSampleRateKey: 48000,
-               AVNumberOfChannelsKey: 1,
-               AVEncoderBitRateKey: 320000,
-               AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue
-           ]
-
-           do {
-               audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
-               audioRecorder.delegate = self
-               audioRecorder.record()
-
-               recordButton.setTitle("Tap to Stop", for: .normal)
-           } catch {
-               finishRecording(success: false)
-           }
-           
-          
-           
-       }
-     
-           
-       
-       
-       func getDocumentsDirectory() -> URL {
-           let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-           return paths[0]
-       }
-       
-       
-       
-       
-       
-       func finishRecording(success: Bool) {
-           audioRecorder.stop()
-           audioRecorder = nil
-
-           if success {
-               recordButton.setTitle("Tap to Re-record", for: .normal)
-           } else {
-               recordButton.setTitle("Tap to Record", for: .normal)
-               // recording failed :(
-           }
-       }
-       
-       
-       
-//       @objc func recordTapped() {
-//           if audioRecorder == nil {
-//               startRecording()
-//           } else {
-//               finishRecording(success: true)
-//           }
-//       }
-
-       
-       func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-           if !flag {
-               finishRecording(success: false)
-           }
-       }
+        let audioFilename = getDocumentsDirectory().appendingPathComponent(filename)
+        
+        let settings = [
+            AVFormatIDKey: Int(kAudioFormatAppleLossless),
+            AVSampleRateKey: 48000,
+            AVNumberOfChannelsKey: 1,
+            AVEncoderBitRateKey: 320000,
+            AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue
+        ]
+        
+        do {
+            audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
+            audioRecorder.delegate = self
+            audioRecorder.record()
+            
+            recordButton.setTitle("Tap to Stop", for: .normal)
+        } catch {
+            finishRecording(success: false)
+        }
+        
+        
+        
+    }
+    
+    
+    
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    
+    
+    
+    
+    func finishRecording(success: Bool) {
+        audioRecorder.stop()
+        audioRecorder = nil
+        recorded = true
+        if success {
+            recordButton.setTitle("Tap to Re-record", for: .normal)
+        } else {
+            recordButton.setTitle("Tap to Record", for: .normal)
+            // recording failed :(
+        }
+    }
+    
+    
+    
+    //       @objc func recordTapped() {
+    //           if audioRecorder == nil {
+    //               startRecording()
+    //           } else {
+    //               finishRecording(success: true)
+    //           }
+    //       }
+    
+    
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        if !flag {
+            finishRecording(success: false)
+        }
+    }
     func preparePlayer(){
-         var error: NSError?
-          let path = getDocumentsDirectory().appendingPathComponent(filename)
-         do {
-         soundPlayer = try AVAudioPlayer(contentsOf: path)
-             soundPlayer.delegate = self
-             soundPlayer.prepareToPlay()
-             soundPlayer.volume = 100
-             
-         } catch {
-             print(error)
-         }
-         
-         
-     }
+        var error: NSError?
+        let path = getDocumentsDirectory().appendingPathComponent(filename)
+        do {
+            soundPlayer = try AVAudioPlayer(contentsOf: path)
+            soundPlayer.delegate = self
+            soundPlayer.prepareToPlay()
+            soundPlayer.volume = 100
+            
+        } catch {
+            print(error)
+        }
+        
+        
+    }
 }
 //    //UNTUK EXPORT GAMBAR
-//    extension UIView{
-//    func savePic() -> UIImage{
-//        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
-//
-//        drawHierarchy(in: self.bounds, afterScreenUpdates: true)
-//
-//        let image = UIGraphicsGetImageFromCurrentImageContext()
-//        UIGraphicsEndImageContext()
-//
-//        if image != nil{
-//            return image!
-//        }
-//        return UIImage()
-//    }
 
-
-
-// pasang ini untuk let gambar nya
-//let image = canvas.savePic()
-
-
+extension UIView{
+    func savePic() -> UIImage{
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
+        
+        drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        if image != nil{
+            return image!
+        }
+        return UIImage()
+    }
+    
+    
+    
+    //pasang ini untuk let gambar nya
+    
+    
+}
