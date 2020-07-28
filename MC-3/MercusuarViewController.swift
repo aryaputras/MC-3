@@ -58,7 +58,9 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
         cell.numberOfLikes.text = "\(likesNumber)"
         cell.userNameLabel.text = record.object(forKey: "username") as? String
         
-        
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapLikes(sender:)))
+        tapRecognizer.numberOfTapsRequired = 2
+        cell.addGestureRecognizer(tapRecognizer)
         print(likesNumber)
         
         // buat masukin isinya dari mana
@@ -67,5 +69,17 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
         //        cell.label1.text = item.role
         //        cell.label2.text = item.name
         return cell
+    }
+    @objc func tapLikes(sender: UITapGestureRecognizer?){
+        if let tapLikes = sender {
+            //print(tapLikes.superclass)
+            //print(tapLikes.view)
+            let cellOwner = tapLikes.view as! MercusuarCollectionViewCell
+            print(cellOwner.replyLabel.text)
+            
+            //Make ID for each record and get from cellOwner.(ID) and pass it to CKModify  (ID) likes +1
+            
+           
+        }
     }
 }
