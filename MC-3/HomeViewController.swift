@@ -21,6 +21,8 @@ class HomeViewController: UIViewController {
         swipeDown.direction = .down
         view.addGestureRecognizer(swipeDown)
         // Do any additional setup after loading the view.
+        
+        
     }
     
     
