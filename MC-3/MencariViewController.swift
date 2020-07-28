@@ -9,7 +9,11 @@ class MencariViewController: UIViewController {
     var levelTimer = Timer()
 
     let LEVEL_THRESHOLD: Float = -10.0
-
+    @IBOutlet weak var orangeBackground: UIImageView!
+    @IBOutlet weak var paperBoat: UIImageView!
+    @IBOutlet weak var tideBackground: UIImageView!
+    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var labelAtas: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -51,6 +55,8 @@ class MencariViewController: UIViewController {
         
         if isLoud == true {
             print("true")
+            animate()
+            animate2()
             let path = getDocumentsDirectory().appendingPathComponent("Recording.m4a")
            
             //The file recorded has been deleted
@@ -77,6 +83,32 @@ class MencariViewController: UIViewController {
               let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
               return paths[0]
           }
-
+    
+    func animate() {
+        UIView.animate(withDuration: 10.0) {
+            self.orangeBackground.transform = CGAffineTransform(translationX: 0, y: 250)
+            self.tideBackground.transform = CGAffineTransform(translationX: 0, y: 250)
+            self.paperBoat.transform = CGAffineTransform(translationX: 0, y: -300)
+            self.paperBoat.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+            self.label.isHidden = true
+            self.labelAtas.isHidden = true
+        }
+    }
+    func animate2(){
+        
+        UIView.animate(withDuration: 13){
+            self.paperBoat.transform = CGAffineTransform(rotationAngle: CGFloat(-1))
+            self.paperBoat.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+           
+        }
+        UIView.animate(withDuration: 16){
+            self.paperBoat.transform = CGAffineTransform(rotationAngle: CGFloat(1))
+            self.paperBoat.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        }
+        UIView.animate(withDuration: 19){
+            self.paperBoat.transform = CGAffineTransform(rotationAngle: CGFloat(-1))
+            self.paperBoat.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        }
+    }
 
 }

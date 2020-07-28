@@ -2592,10 +2592,10 @@ s
             </objects>
             <point key="canvasLocation" x="7296" y="1694"/>
         </scene>
-        <!--View Controller-->
+        <!--Animasi Lipat Kertas View Controller-->
         <scene sceneID="VI7-Hh-oLD">
             <objects>
-                <viewController id="90D-xC-XfU" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="90D-xC-XfU" customClass="AnimasiLipatKertasViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2IE-Tp-aTD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2606,12 +2606,6 @@ s
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lipat_kertas1" translatesAutoresizingMaskIntoConstraints="NO" id="JGx-9g-FCP">
                                 <rect key="frame" x="24" y="229" width="366" height="502"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Isi surat" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b6y-8H-KRe">
-                                <rect key="frame" x="177" y="423.5" width="60" height="20.5"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auf-MW-als">
                                 <rect key="frame" x="355" y="54" width="35" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -2662,18 +2656,19 @@ bebanmu melalui perahu kertas ini</string>
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="NGq-r8-fq1" kind="presentation" modalPresentationStyle="fullScreen" id="fvm-Jy-2P7"/>
+                                    <action selector="NextAnimationButton:" destination="90D-xC-XfU" eventType="touchUpInside" id="HeB-Jt-bb4"/>
+                                    <segue destination="NGq-r8-fq1" kind="presentation" identifier="MelipatkeKirim" modalPresentationStyle="fullScreen" id="fvm-Jy-2P7"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="MrQ-Ps-mbQ" firstAttribute="leading" secondItem="UNz-ro-RC9" secondAttribute="leading" id="1Sg-ek-rgT"/>
                             <constraint firstItem="jqI-3M-DSq" firstAttribute="centerX" secondItem="OJB-KD-svf" secondAttribute="centerX" constant="1" id="1TX-mr-XP8"/>
                             <constraint firstItem="jqI-3M-DSq" firstAttribute="leading" secondItem="g7S-O4-7kG" secondAttribute="leading" constant="108" id="64N-42-toK"/>
                             <constraint firstItem="jqI-3M-DSq" firstAttribute="top" secondItem="JGx-9g-FCP" secondAttribute="bottom" constant="62" id="7bP-Dz-0Ic"/>
                             <constraint firstItem="092-YZ-Lei" firstAttribute="bottom" secondItem="OJB-KD-svf" secondAttribute="bottom" id="BdV-fd-r8H"/>
-                            <constraint firstItem="Wh3-Xi-IcS" firstAttribute="centerX" secondItem="b6y-8H-KRe" secondAttribute="centerX" id="Ctv-dq-YLJ"/>
                             <constraint firstItem="jqI-3M-DSq" firstAttribute="centerX" secondItem="JGx-9g-FCP" secondAttribute="centerX" constant="1" id="Gxh-Bm-Vh8"/>
                             <constraint firstItem="MrQ-Ps-mbQ" firstAttribute="centerX" secondItem="Wh3-Xi-IcS" secondAttribute="centerX" id="IG4-ue-fKG"/>
                             <constraint firstItem="MrQ-Ps-mbQ" firstAttribute="top" secondItem="OJB-KD-svf" secondAttribute="top" id="Ila-Ae-qjy"/>
@@ -2682,7 +2677,6 @@ bebanmu melalui perahu kertas ini</string>
                             <constraint firstItem="jqI-3M-DSq" firstAttribute="centerX" secondItem="2IE-Tp-aTD" secondAttribute="centerX" constant="1" id="PKR-y4-Bfk"/>
                             <constraint firstItem="MrQ-Ps-mbQ" firstAttribute="top" secondItem="UNz-ro-RC9" secondAttribute="top" id="Zxi-33-RMH"/>
                             <constraint firstItem="jqI-3M-DSq" firstAttribute="centerX" secondItem="UNz-ro-RC9" secondAttribute="centerX" constant="1" id="eJd-rk-J8c"/>
-                            <constraint firstItem="Wh3-Xi-IcS" firstAttribute="bottom" secondItem="b6y-8H-KRe" secondAttribute="bottom" id="g6b-wi-pbZ"/>
                             <constraint firstItem="Wh3-Xi-IcS" firstAttribute="top" secondItem="5CX-uI-iJo" secondAttribute="bottom" constant="15" id="gFZ-Ch-boG"/>
                             <constraint firstItem="MrQ-Ps-mbQ" firstAttribute="bottom" secondItem="UNz-ro-RC9" secondAttribute="bottom" id="kkC-1A-c5i"/>
                             <constraint firstItem="MrQ-Ps-mbQ" firstAttribute="leading" secondItem="OJB-KD-svf" secondAttribute="leading" id="mXV-LR-8QN"/>
@@ -2694,9 +2688,25 @@ bebanmu melalui perahu kertas ini</string>
                             <constraint firstAttribute="bottomMargin" secondItem="092-YZ-Lei" secondAttribute="bottom" constant="-37" id="y6o-Fy-Y3G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="g7S-O4-7kG"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="dMn-7i-z1n" appends="YES" id="jp2-Gg-2ot"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="borderOmbak" destination="092-YZ-Lei" id="S6D-AX-4BI"/>
+                        <outlet property="kertasLipat" destination="JGx-9g-FCP" id="cZR-J1-UIA"/>
+                        <outlet property="labelAtas" destination="5CX-uI-iJo" id="Y6s-F3-BLg"/>
+                        <outlet property="labelBawah" destination="Wh3-Xi-IcS" id="NUe-8t-lf7"/>
+                        <outlet property="labelKalimat" destination="jqI-3M-DSq" id="Dhm-vF-62C"/>
+                        <outlet property="shadowView" destination="OJB-KD-svf" id="Xno-Wp-kUN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ZG-2G-F5L" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="dMn-7i-z1n">
+                    <connections>
+                        <action selector="swipeGestureHandler:" destination="90D-xC-XfU" id="p54-H3-0Ar"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3419" y="-1158"/>
         </scene>
@@ -2778,10 +2788,22 @@ kamu merasa tidak nyaman.</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="cW5-A1-Scy">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MZC-Qs-nFQ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Paper_Boat_Move1" translatesAutoresizingMaskIntoConstraints="NO" id="ZHu-RY-4yy">
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle-2" translatesAutoresizingMaskIntoConstraints="NO" id="cW5-A1-Scy">
+                                        <rect key="frame" x="0.0" y="-250" width="414" height="896"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 3" translatesAutoresizingMaskIntoConstraints="NO" id="Fgz-AC-6yD">
+                                        <rect key="frame" x="0.0" y="60" width="414" height="838"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Paper_Boat" translatesAutoresizingMaskIntoConstraints="NO" id="ZHu-RY-4yy">
                                 <rect key="frame" x="24" y="421" width="366" height="181"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apakah kamu sudah siap menghanyutkan bebanmu?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOx-Vp-GUn">
@@ -2803,22 +2825,27 @@ kamu merasa tidak nyaman.</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="nOx-Vp-GUn" firstAttribute="leading" secondItem="9Za-Ud-e4E" secondAttribute="leading" constant="40" id="77v-mW-FmG"/>
-                            <constraint firstItem="cW5-A1-Scy" firstAttribute="top" secondItem="LRp-ZK-Djf" secondAttribute="top" id="EBN-Cz-MV6"/>
                             <constraint firstItem="9Za-Ud-e4E" firstAttribute="bottom" secondItem="eAs-4w-Iit" secondAttribute="bottom" constant="48" id="EE9-lk-RfH"/>
                             <constraint firstItem="nOx-Vp-GUn" firstAttribute="centerX" secondItem="LRp-ZK-Djf" secondAttribute="centerX" id="Pzm-aA-Cx8"/>
                             <constraint firstItem="nOx-Vp-GUn" firstAttribute="centerX" secondItem="ZHu-RY-4yy" secondAttribute="centerX" id="RaF-vq-k6x"/>
                             <constraint firstItem="nOx-Vp-GUn" firstAttribute="top" secondItem="9Za-Ud-e4E" secondAttribute="top" constant="284" id="cC3-5x-djA"/>
-                            <constraint firstItem="nOx-Vp-GUn" firstAttribute="centerX" secondItem="cW5-A1-Scy" secondAttribute="centerX" id="gAk-kp-llU"/>
                             <constraint firstItem="nOx-Vp-GUn" firstAttribute="centerX" secondItem="eAs-4w-Iit" secondAttribute="centerX" id="nVD-6p-pbC"/>
                             <constraint firstItem="ZHu-RY-4yy" firstAttribute="top" secondItem="nOx-Vp-GUn" secondAttribute="bottom" constant="35" id="wvz-rB-MU6"/>
                             <constraint firstItem="eAs-4w-Iit" firstAttribute="leading" secondItem="9Za-Ud-e4E" secondAttribute="leading" constant="93" id="yvm-Mr-Wkw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Za-Ud-e4E"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="eAs-4w-Iit" id="tW0-cy-Atk"/>
+                        <outlet property="labelAtas" destination="nOx-Vp-GUn" id="vB4-Xf-Xgw"/>
+                        <outlet property="orangeBackground" destination="cW5-A1-Scy" id="csU-J1-jb1"/>
+                        <outlet property="paperBoat" destination="ZHu-RY-4yy" id="GxR-rG-j29"/>
+                        <outlet property="tideBackground" destination="Fgz-AC-6yD" id="CLM-Lx-LaA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQ4-I4-bZg" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4184" y="-1158"/>
+            <point key="canvasLocation" x="4182.608695652174" y="-1158.4821428571429"/>
         </scene>
     </scenes>
     <resources>
@@ -2844,6 +2871,7 @@ kamu merasa tidak nyaman.</string>
         <image name="Dark_pink" width="17" height="17"/>
         <image name="Dermaga1" width="47" height="23"/>
         <image name="Grenn" width="17" height="17"/>
+        <image name="Group 3" width="414" height="839"/>
         <image name="Image_LandingPage_Kotak" width="366" height="382"/>
         <image name="Image_Otter_LandingPage" width="208" height="204"/>
         <image name="Kertas_Surat" width="366" height="530"/>
@@ -2861,10 +2889,11 @@ kamu merasa tidak nyaman.</string>
         <image name="Otter_Boat" width="375" height="227"/>
         <image name="Otter_berenang" width="147" height="73"/>
         <image name="Paper Boat" width="43" height="22"/>
-        <image name="Paper_Boat_Move1" width="249" height="123"/>
+        <image name="Paper_Boat" width="365" height="181"/>
         <image name="Primary Button" width="192" height="55"/>
         <image name="Purple" width="17" height="17"/>
         <image name="Rectangle-1" width="367" height="100"/>
+        <image name="Rectangle-2" width="414" height="896"/>
         <image name="Report_Button" width="25" height="22"/>
         <image name="Slider_Size" width="24" height="236"/>
         <image name="Slider_Size-1" width="24" height="236"/>
