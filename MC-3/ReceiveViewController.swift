@@ -33,6 +33,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
     var image: CKAsset?
     var imageURL: NSURL?
     var imagePath: URL?
+    var numIndex = 0
     
     
     
@@ -119,7 +120,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
     func withGenderReference() {
         let database = CKContainer.default().publicCloudDatabase
         let predicate = NSPredicate(format: "senderAge BETWEEN {\(self.agePreferenceMin), \(self.agePreferenceMax)} AND senderGender = \(self.genderPreference)")
-        print(senderGender)
+        print("withgenderpreference")
         
         
         
@@ -127,25 +128,29 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
         //bikin jd if genderpreference==0 {func a} else {funcb}
         let query = CKQuery(recordType: "perahuKertas", predicate: predicate)
         
-        query.sortDescriptors = [NSSortDescriptor(key: "sendingDate", ascending: true)]
+        //query.sortDescriptors = [NSSortDescriptor(key: "sendingDate", ascending: true)]
         
         
         //get message
         database.perform(query, inZoneWith: nil) { (records, error) in
             if let fetchedRecords = records {
                 self.inbox = fetchedRecords
+               
+                                   
                 DispatchQueue.main.async {
-                    
-                    
-                    
-                    let message = self.inbox[0].object(forKey: "message")
-                    let senderID = self.inbox[0].object(forKey: "creatorID")
+                    print(self.inbox)
+                     let count = self.inbox.count
+                                       let random = Int.random(in: 0..<count)
+                    self.numIndex = random
+                   
+                    let message = self.inbox[random].object(forKey: "message")
+                    let senderID = self.inbox[random].object(forKey: "creatorID")
                     self.getSenderID(sender: senderID as! String)
                     
                     self.messageLabel.text = message as! String
                     
                     
-                    let audioRecord = self.inbox[0].object(forKey: "audio")
+                    let audioRecord = self.inbox[random].object(forKey: "audio")
                     
                     self.audio = audioRecord as? CKAsset
                     
@@ -173,7 +178,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
                         
                     }
                     
-                    let imgRecord = self.inbox[0].object(forKey: "image")
+                    let imgRecord = self.inbox[random].object(forKey: "image")
                     self.image = imgRecord as? CKAsset
                     
                     
@@ -218,14 +223,14 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
         let database = CKContainer.default().publicCloudDatabase
         let predicate = NSPredicate(format: "senderAge BETWEEN {\(self.agePreferenceMin), \(self.agePreferenceMax)}")
         
-        
+        print("without gender preference")
         
         
         
         //bikin jd if genderpreference==0 {func a} else {funcb}
         let query = CKQuery(recordType: "perahuKertas", predicate: predicate)
         
-        query.sortDescriptors = [NSSortDescriptor(key: "sendingDate", ascending: true)]
+        //query.sortDescriptors = [NSSortDescriptor(key: "sendingDate", ascending: true)]
         
         
         //get message
@@ -233,16 +238,17 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
             if let fetchedRecords = records {
                 self.inbox = fetchedRecords
                 DispatchQueue.main.async {
-                    
-                    
-                    
-                    let message = self.inbox[0].object(forKey: "message")
-                    let senderID = self.inbox[0].object(forKey: "creatorID")
+                    let count = self.inbox.count
+                    let random = Int.random(in: 0..<count)
+                    self.numIndex = random
+                   
+                    let message = self.inbox[random].object(forKey: "message")
+                   let senderID = self.inbox[random].object(forKey: "creatorID")
                     self.getSenderID(sender: senderID as! String)
                     
                     self.messageLabel.text = message as! String
                     
-                    let audioRecord = self.inbox[0].object(forKey: "audio")
+                    let audioRecord = self.inbox[random].object(forKey: "audio")
                     
                     self.audio = audioRecord as? CKAsset
                     //add senderID to field in my record when replying
@@ -263,10 +269,36 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
                         self.audioPath = destinationPath!
                         
                     } catch {
-                        print("error without gender")
+                        print("error audio without gender")
                         
                     }
                     
+                    
+                    let imgRecord = self.inbox[random].object(forKey: "image")
+                    self.image = imgRecord as? CKAsset
+                    
+                    
+                    do {
+                        self.imageURL = self.image?.fileURL as NSURL?
+                        
+                        var imageData = try Data(contentsOf: (self.imageURL ?? NSURL()) as URL)
+                        
+                        let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+                        let destinationPath = NSURL(fileURLWithPath: documentsPath).appendingPathComponent("ReceivedImage.jpg", isDirectory: false)
+                        FileManager.default.createFile(atPath: destinationPath!.path, contents: imageData, attributes: nil)
+                        do {
+                            let imgNewData = try Data(contentsOf: destinationPath!)
+                        print("download image succeed")
+                        
+                        
+                        //self.imagePath = destinationPath!
+                        self.imageView.image = UIImage(data: imgNewData)
+                        print("do do ")
+                        } catch {print("bgst") }
+                        
+                    } catch {
+                        print("error download picture with gender")
+                    }
                     //RETURN ZERO
                     
                     
@@ -313,7 +345,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
         
         destinationVC.message = messageLabel.text!
         destinationVC.username = usernameLabel.text!
-        destinationVC.senderID = self.inbox[0].recordID.recordName as! String
+        destinationVC.senderID = self.inbox[numIndex].recordID.recordName as! String
         
         
     }

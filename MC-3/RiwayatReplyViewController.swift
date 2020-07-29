@@ -12,10 +12,14 @@ import CloudKit
 class RiwayatReplyViewController: UIViewController{
     var recordName = ""
     var inbox = [CKRecord]()
+    var message = ""
     @IBOutlet weak var riwayatReplyCollectionView: UICollectionView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         //print(recordName)
+        messageLabel.text = message
         riwayatReplyCollectionView.register(RiwayatReplyCollectionViewCell.nib(), forCellWithReuseIdentifier: "RiwayatReplyCollectionViewCell")
         riwayatReplyCollectionView.delegate = self
         riwayatReplyCollectionView.dataSource = self
@@ -57,6 +61,14 @@ extension RiwayatReplyViewController: UICollectionViewDelegate, UICollectionView
         let record = inbox[indexPath.row]
         print(inbox)
         cell.replyLabel.text = record.object(forKey: "reply") as! String
+        cell.usernameLabel.text = record.object(forKey: "replyNickname") as! String
+        
+        let date = record.creationDate
+        let formatter1 = DateFormatter()
+        formatter1.dateStyle = .short
+        print(formatter1.string(from: date!))
+        
+        cell.dateLabel.text = formatter1.string(from: date!)
         // buat masukin isinya dari mana
         //        let item = Member[indexPath.item]
         //        cell.imageView.image = item.imageName

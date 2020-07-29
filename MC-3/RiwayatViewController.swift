@@ -12,6 +12,7 @@ import CloudKit
 class RiwayatViewController: UIViewController{
     var inbox = [CKRecord]()
     var recordName = ""
+    var message = ""
     @IBOutlet weak var riwayatCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +78,8 @@ extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataS
         //print(inbox)
         //        cell.imageView.image = item.imageName
         cell.suratLabel.text = record.object(forKey: "message") as! String
+        
+        
         //        cell.label2.text = item.name
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapLikes(sender:)))
@@ -92,6 +95,8 @@ extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataS
             let cellOwner = tapLikes.view as! RiwayatCollectionCell
             //print(cellOwner.)
             recordName = cellOwner.recordName
+            message = cellOwner.suratLabel.text!
+            print(message)
 //print(recordName)
             
             
@@ -106,5 +111,6 @@ performSegue(withIdentifier: "riwayatToReply", sender: Any?.self)
         let destinationVC = segue.destination as! RiwayatReplyViewController
         
         destinationVC.recordName = recordName
+        destinationVC.message = message
     }
 }

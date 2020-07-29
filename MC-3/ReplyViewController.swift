@@ -8,13 +8,21 @@
 
 import UIKit
 import CloudKit
+import AVFoundation
 
-class ReplyViewController: UIViewController, UITextFieldDelegate {
+class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
     var senderID = ""
     var username = ""
     var message = ""
     var myUsername = ""
     var originID = ""
+    
+    //recording capabilities
+    var recordingSession: AVAudioSession!
+    var audioRecorder: AVAudioRecorder!
+    var filename = "Recording.m4a"
+    var soundPlayer = AVAudioPlayer()
+    var recorded = false
     
     
     //RECONNECT OUTLET
@@ -45,9 +53,27 @@ class ReplyViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //recordingsession
+        recordingSession = AVAudioSession.sharedInstance()
+        
+        do {
+            try recordingSession.setCategory(.playAndRecord, mode: .default)
+            try recordingSession.setActive(true)
+            recordingSession.requestRecordPermission() { [unowned self] allowed in
+                DispatchQueue.main.async {
+                    if allowed {
+                        //self.loadRecordingUI()
+                    } else {
+                        // failed to record!
+                    }
+                }
+            }
+        } catch {
+            // failed to record!
+        }
         
         print(senderID, username, message)
-
+        
         CKContainer.default().fetchUserRecordID { userID, error in
             if let userID = userID {
                 
@@ -65,7 +91,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate {
                         DispatchQueue.main.async {
                             print(records![0])
                             
-
+                            
                             self.myUsername = records![0].object(forKey: "username") as! String
                             print(self.myUsername)
                         }
@@ -75,7 +101,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate {
         }
         
         //MAKE REPLY
-
+        
         
         sliderSize.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi/2))
         recordButton.isHidden = false
@@ -100,7 +126,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate {
         initializeHideKeyboard()
         isiTextField.delegate = self
         textFieldShouldReturn(isiTextField)
-
+        
     }
     
     @IBAction func recordButton(_ sender: Any) {
@@ -182,13 +208,23 @@ class ReplyViewController: UIViewController, UITextFieldDelegate {
         let reply = isiTextField.text as! CKRecordValue
         let replyNickname = myUsername as CKRecordValue
         let originID = senderID as CKRecordValue
+        let image = self.canvasView.savePic2()
+        let imgPath = self.getDocumentsDirectory().appendingPathComponent("image.jpg")
+        
+        do {
+            
+            
+            try image.pngData()?.write(to: imgPath, options: .atomic) } catch { print("saving image error")}
+        
+        let imageRecord = CKAsset(fileURL: imgPath) as CKRecordValue
+        
         
         let database = CKContainer.default().publicCloudDatabase
         let newRecord = CKRecord(recordType: "perahuKertasReply")
         
         //HARUSNYA INI RECORDNAME DARI SENDERNYA
-      
-      
+        
+        newRecord.setValue(imageRecord, forKey: "image")
         newRecord.setObject(reply, forKey: "reply")
         newRecord.setObject(replyNickname, forKey: "replyNickname")
         newRecord.setObject(originID, forKey: "originID")
@@ -203,7 +239,68 @@ class ReplyViewController: UIViewController, UITextFieldDelegate {
             }
         }
         
-
+        
+    }
+    func startRecording() {
+        let audioFilename = getDocumentsDirectory().appendingPathComponent(filename)
+        
+        let settings = [
+            AVFormatIDKey: Int(kAudioFormatAppleLossless),
+            AVSampleRateKey: 48000,
+            AVNumberOfChannelsKey: 1,
+            AVEncoderBitRateKey: 320000,
+            AVEncoderAudioQualityKey: AVAudioQuality.max.rawValue
+        ]
+        
+        do {
+            audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
+            audioRecorder.delegate = self
+            audioRecorder.record()
+            
+            recordButton.setTitle("Tap to Stop", for: .normal)
+        } catch {
+            finishRecording(success: false)
+        }
+        
+        
+        
+    }
+    
+    func finishRecording(success: Bool) {
+        audioRecorder.stop()
+        audioRecorder = nil
+        recorded = true
+        if success {
+            recordButton.setTitle("Tap to Re-record", for: .normal)
+        } else {
+            recordButton.setTitle("Tap to Record", for: .normal)
+            // recording failed :(
+        }
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+        if !flag {
+            finishRecording(success: false)
+        }
+    }
+    func preparePlayer(){
+        var error: NSError?
+        let path = getDocumentsDirectory().appendingPathComponent(filename)
+        do {
+            soundPlayer = try AVAudioPlayer(contentsOf: path)
+            soundPlayer.delegate = self
+            soundPlayer.prepareToPlay()
+            soundPlayer.volume = 100
+            
+        } catch {
+            print(error)
+        }
+        
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -211,16 +308,37 @@ class ReplyViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     func initializeHideKeyboard(){
-    //Declare a Tap Gesture Recognizer which will trigger our dismissMyKeyboard() function
-    let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-    target: self,
-    action: #selector(dismissMyKeyboard))
-    //Add this tap gesture recognizer to the parent view
-    view.addGestureRecognizer(tap)
+        //Declare a Tap Gesture Recognizer which will trigger our dismissMyKeyboard() function
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissMyKeyboard))
+        //Add this tap gesture recognizer to the parent view
+        view.addGestureRecognizer(tap)
     }
     @objc func dismissMyKeyboard(){
-    //endEditing causes the view (or one of its embedded text fields) to resign the first responder status.
-    //In short- Dismiss the active keyboard.
-    view.endEditing(true)
+        //endEditing causes the view (or one of its embedded text fields) to resign the first responder status.
+        //In short- Dismiss the active keyboard.
+        view.endEditing(true)
     }
+}
+extension UIView{
+    func savePic2() -> UIImage{
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
+        
+        drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+        
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        if image != nil{
+            return image!
+        }
+        return UIImage()
+    }
+    
+    
+    
+    //pasang ini untuk let gambar nya
+    
+    
 }
