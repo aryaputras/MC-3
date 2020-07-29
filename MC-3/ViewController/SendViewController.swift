@@ -14,6 +14,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
     
     var age = 0
     var gender = 0
+    var recordButtonImage:String = "Mic_Thin"
     var profile = [CKRecord]()
     
     //recording capabilities
@@ -135,7 +136,14 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
         
     }
     @IBAction func recordingButton(_ sender: Any) {
-        startRecording()
+        if(recordButtonImage == "Mic_Thin"){
+            startRecording
+            recordButtonImage = "Mic_Thick"
+            recordingButton.setImage(UIImage(named: recordButtonImage),for: .normal)
+        }
+        else if(recordButtonImage == "Mic_Thick"){
+            finishRecording(success: true)
+        }
         
     }
     @IBAction func stopRecordingButton(_ sender: Any) {
