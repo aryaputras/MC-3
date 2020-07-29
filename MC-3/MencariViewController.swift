@@ -8,7 +8,7 @@ class MencariViewController: UIViewController {
     var recorder: AVAudioRecorder!
     var levelTimer = Timer()
 
-    let LEVEL_THRESHOLD: Float = -10.0
+    let LEVEL_THRESHOLD: Float = -12.0
     @IBOutlet weak var orangeBackground: UIImageView!
     @IBOutlet weak var paperBoat: UIImageView!
     @IBOutlet weak var tideBackground: UIImageView!
@@ -56,7 +56,7 @@ class MencariViewController: UIViewController {
         if isLoud == true {
             print("true")
             animate()
-            animate2()
+            
             let path = getDocumentsDirectory().appendingPathComponent("Recording.m4a")
            
             //The file recorded has been deleted
@@ -85,29 +85,26 @@ class MencariViewController: UIViewController {
           }
     
     func animate() {
-        UIView.animate(withDuration: 10.0) {
+        
+        UIView.animate(withDuration: 10, animations: {
             self.orangeBackground.transform = CGAffineTransform(translationX: 0, y: 250)
             self.tideBackground.transform = CGAffineTransform(translationX: 0, y: 250)
             self.paperBoat.transform = CGAffineTransform(translationX: 0, y: -300)
             self.paperBoat.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
             self.label.isHidden = true
             self.labelAtas.isHidden = true
-        }
-    }
-    func animate2(){
-        
-        UIView.animate(withDuration: 13){
-            self.paperBoat.transform = CGAffineTransform(rotationAngle: CGFloat(-1))
-            self.paperBoat.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-           
-        }
-        UIView.animate(withDuration: 16){
-            self.paperBoat.transform = CGAffineTransform(rotationAngle: CGFloat(1))
-            self.paperBoat.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
-        }
-        UIView.animate(withDuration: 19){
-            self.paperBoat.transform = CGAffineTransform(rotationAngle: CGFloat(-1))
-            self.paperBoat.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
+        }) { (finished) in
+            UIView.animate(withDuration: 3, animations: {
+                self.paperBoat.transform = CGAffineTransform(rotationAngle: CGFloat(-1))
+            }) { (finished) in
+                UIView.animate(withDuration: 3, animations: {
+                    self.paperBoat.transform = CGAffineTransform(rotationAngle: CGFloat(1))
+                }) { (finished) in
+                   self.performSegue(withIdentifier: "blowToHome", sender: self)
+                }
+            }
+            
+            
         }
     }
 

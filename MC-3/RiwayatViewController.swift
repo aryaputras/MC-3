@@ -11,11 +11,13 @@ import CloudKit
 
 class RiwayatViewController: UIViewController{
     var inbox = [CKRecord]()
+    var recordName = ""
     @IBOutlet weak var riwayatCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
         riwayatCollectionView.register(RiwayatCollectionCell.nib(),forCellWithReuseIdentifier: "RiwayatCollectionCell")
+        
         riwayatCollectionView.delegate = self
         riwayatCollectionView.dataSource = self
         
@@ -67,13 +69,42 @@ extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataS
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RiwayatCollectionCell", for: indexPath) as! RiwayatCollectionCell
         // buat masukin isinya dari mana
         let record = inbox[indexPath.row]
-        print(inbox)
+        //print(inbox)
         //        cell.imageView.image = item.imageName
         cell.suratLabel.text = record.object(forKey: "message") as! String
         //        cell.label2.text = item.name
+        
+        let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapLikes(sender:)))
+        tapRecognizer.numberOfTapsRequired = 1
+        cell.addGestureRecognizer(tapRecognizer)
+        cell.recordName = record.recordID.recordName
         return cell
+    }
+    @objc func tapLikes(sender: UITapGestureRecognizer?){
+        if let tapLikes = sender {
+            //print(tapLikes.superclass)
+            //print(tapLikes.view)
+            let cellOwner = tapLikes.view as! RiwayatCollectionCell
+            //print(cellOwner.)
+            recordName = cellOwner.recordName
+//print(recordName)
+            
+            
+performSegue(withIdentifier: "riwayatToReply", sender: Any?.self)
+            
+            //Make ID for each record and get from cellOwner.(ID) and pass it to CKModify  (ID) likes +1
+            
+           
+        }
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! RiwayatReplyViewController
+        
+        destinationVC.recordName = recordName
     }
 }

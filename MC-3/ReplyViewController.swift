@@ -16,6 +16,8 @@ class ReplyViewController: UIViewController, UITextFieldDelegate {
     var myUsername = ""
     var originID = ""
     
+    
+    //RECONNECT OUTLET
     @IBOutlet weak var sliderSize: UISlider!
     @IBOutlet weak var sliderimage: UIImageView!
     @IBOutlet weak var canvasView: canvasView!
@@ -184,6 +186,9 @@ class ReplyViewController: UIViewController, UITextFieldDelegate {
         let database = CKContainer.default().publicCloudDatabase
         let newRecord = CKRecord(recordType: "perahuKertasReply")
         
+        //HARUSNYA INI RECORDNAME DARI SENDERNYA
+      
+      
         newRecord.setObject(reply, forKey: "reply")
         newRecord.setObject(replyNickname, forKey: "replyNickname")
         newRecord.setObject(originID, forKey: "originID")

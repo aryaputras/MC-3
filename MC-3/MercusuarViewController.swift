@@ -10,6 +10,8 @@ import UIKit
 import CloudKit
 
 class MercusuarViewController: UIViewController{
+    var username = ""
+    var label = ""
     
     var records = [CKRecord]()
     @IBOutlet weak var mercusuarCollectionView: UICollectionView!
@@ -57,11 +59,14 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
         cell.replyLabel.text = record.object(forKey: "question") as? String
         cell.numberOfLikes.text = "\(likesNumber)"
         cell.userNameLabel.text = record.object(forKey: "username") as? String
+        // = record.recordID.recordName
+    
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapLikes(sender:)))
         tapRecognizer.numberOfTapsRequired = 2
         cell.addGestureRecognizer(tapRecognizer)
-        print(likesNumber)
+        cell.recordName = record.recordID.recordName
+        
         
         // buat masukin isinya dari mana
                 //let item = Member[indexPath.item]
@@ -75,11 +80,34 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
             //print(tapLikes.superclass)
             //print(tapLikes.view)
             let cellOwner = tapLikes.view as! MercusuarCollectionViewCell
-            print(cellOwner.replyLabel.text)
+            //print(cellOwner.)
+             print(cellOwner.recordName)
+            var likesNumber =  Int(cellOwner.numberOfLikes.text!)
+            likesNumber! += 1
             
+            let database = CKContainer.default().publicCloudDatabase
+            let record = CKRecord.ID(recordName: cellOwner.recordName)
+            let newRecord = CKRecord(recordType: "question", recordID: record)
+            
+            
+        newRecord.setValue(likesNumber, forKey: "likes")
+            
+            let operation = CKModifyRecordsOperation(recordsToSave: [newRecord], recordIDsToDelete: nil)
+            
+            operation.savePolicy = .changedKeys
+            
+            operation.modifyRecordsCompletionBlock = {
+                records, ids , error in
+                print(error)
+                //print(records)
+                
+            }
+            database.add(operation)
+            //RELOADDATA
             //Make ID for each record and get from cellOwner.(ID) and pass it to CKModify  (ID) likes +1
             
-           
+           mercusuarCollectionView.reloadData()
+        
         }
     }
 }

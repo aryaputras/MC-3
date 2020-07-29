@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4bU-yF-Ckv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JFL-LD-aeY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -2202,19 +2202,12 @@ s
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gRN-ON-1QW" customClass="RiwayatCollectionCell" customModule="MC_3" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="gRN-ON-1QW" customClass="RiwayatCollectionCell" customModule="MC_3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="100"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KyU-lD-mHO">
                                             <rect key="frame" x="0.0" y="0.0" width="366" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="OIQ-dQ-sTM">
-                                                    <rect key="frame" x="0.0" y="0.0" width="367" height="100"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                </imageView>
-                                            </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </collectionViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2240,7 +2233,7 @@ s
                     <navigationItem key="navigationItem" id="G6r-K7-UPM"/>
                     <connections>
                         <outlet property="riwayatCollectionView" destination="SyW-TE-lvF" id="AeY-rH-255"/>
-                        <segue destination="YPW-Fi-zs5" kind="show" id="JnG-O4-0Bo"/>
+                        <segue destination="YPW-Fi-zs5" kind="presentation" identifier="riwayatToReply" modalPresentationStyle="fullScreen" id="JnG-O4-0Bo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cdt-Oi-nV0" sceneMemberID="firstResponder"/>
@@ -2259,7 +2252,7 @@ s
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AYY-g3-arc">
-                                <rect key="frame" x="29" y="54" width="17" height="29"/>
+                                <rect key="frame" x="29" y="10" width="17" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="17" id="jIq-Ba-TkU"/>
                                 </constraints>
@@ -2270,22 +2263,22 @@ s
                                 </state>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Top_rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="qTv-AA-2Mq">
-                                <rect key="frame" x="24" y="104" width="366" height="264"/>
+                                <rect key="frame" x="24" y="60" width="366" height="264"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar 1" translatesAutoresizingMaskIntoConstraints="NO" id="5kU-Zh-FVb">
-                                <rect key="frame" x="46" y="123" width="41" height="41"/>
+                                <rect key="frame" x="46" y="79" width="41" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="41" id="WlZ-yP-kXe"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Username]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f7b-r9-OjN">
-                                <rect key="frame" x="107" y="133" width="91" height="21"/>
+                                <rect key="frame" x="107" y="89" width="91" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00/00/0000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaj-l2-38j">
-                                <rect key="frame" x="285" y="123" width="89" height="20"/>
+                                <rect key="frame" x="285" y="79" width="89" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="2IR-28-g1t"/>
                                 </constraints>
@@ -2294,7 +2287,7 @@ s
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9T-lk-LQH">
-                                <rect key="frame" x="89" y="160" width="282" height="180"/>
+                                <rect key="frame" x="89" y="116" width="282" height="180"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="seR-VW-c3i"/>
                                 </constraints>
@@ -2303,14 +2296,14 @@ s
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t7s-GS-Xbk">
-                                <rect key="frame" x="311" y="328" width="33" height="16"/>
+                                <rect key="frame" x="311" y="284" width="33" height="16"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="bubble.left.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="14"/>
                                 </state>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hYe-Oc-THD">
-                                <rect key="frame" x="29" y="376" width="366" height="505"/>
+                                <rect key="frame" x="29" y="332" width="366" height="598"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1cR-K5-umX">
                                     <size key="itemSize" width="342" height="128"/>
@@ -2333,7 +2326,7 @@ s
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogN-Nx-Or4">
-                                <rect key="frame" x="329" y="328" width="15" height="16"/>
+                                <rect key="frame" x="329" y="284" width="15" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="ZL4-qX-Isn"/>
                                 </constraints>
@@ -2435,7 +2428,7 @@ s
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GEy-V2-TJX" customClass="MercusuarCollectionViewCell" customModule="MC_3" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="GEy-V2-TJX" customClass="MercusuarCollectionViewCell" customModule="MC_3" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="177"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="NMm-de-bc4">
@@ -2657,7 +2650,6 @@ bebanmu melalui perahu kertas ini</string>
                                 </state>
                                 <connections>
                                     <action selector="NextAnimationButton:" destination="90D-xC-XfU" eventType="touchUpInside" id="HeB-Jt-bb4"/>
-                                    <segue destination="NGq-r8-fq1" kind="presentation" identifier="MelipatkeKirim" modalPresentationStyle="fullScreen" id="fvm-Jy-2P7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2699,6 +2691,7 @@ bebanmu melalui perahu kertas ini</string>
                         <outlet property="labelBawah" destination="Wh3-Xi-IcS" id="NUe-8t-lf7"/>
                         <outlet property="labelKalimat" destination="jqI-3M-DSq" id="Dhm-vF-62C"/>
                         <outlet property="shadowView" destination="OJB-KD-svf" id="Xno-Wp-kUN"/>
+                        <segue destination="NGq-r8-fq1" kind="presentation" identifier="MelipatkeKirim" modalPresentationStyle="fullScreen" id="Ro7-j6-iHB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ZG-2G-F5L" sceneMemberID="firstResponder"/>
@@ -2841,6 +2834,7 @@ kamu merasa tidak nyaman.</string>
                         <outlet property="orangeBackground" destination="cW5-A1-Scy" id="csU-J1-jb1"/>
                         <outlet property="paperBoat" destination="ZHu-RY-4yy" id="GxR-rG-j29"/>
                         <outlet property="tideBackground" destination="Fgz-AC-6yD" id="CLM-Lx-LaA"/>
+                        <segue destination="eEh-42-BzD" kind="presentation" identifier="blowToHome" modalPresentationStyle="fullScreen" id="cB6-Fp-qwu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQ4-I4-bZg" sceneMemberID="firstResponder"/>
@@ -2848,6 +2842,9 @@ kamu merasa tidak nyaman.</string>
             <point key="canvasLocation" x="4182.608695652174" y="-1158.4821428571429"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="P3E-d2-545"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Avatar 1" width="150" height="150"/>
         <image name="Avatar_Picutre" width="41" height="41"/>
@@ -2892,7 +2889,6 @@ kamu merasa tidak nyaman.</string>
         <image name="Paper_Boat" width="365" height="181"/>
         <image name="Primary Button" width="192" height="55"/>
         <image name="Purple" width="17" height="17"/>
-        <image name="Rectangle-1" width="367" height="100"/>
         <image name="Rectangle-2" width="414" height="896"/>
         <image name="Report_Button" width="25" height="22"/>
         <image name="Slider_Size" width="24" height="236"/>

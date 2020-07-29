@@ -15,7 +15,6 @@ class RiwayatReplyCollectionViewCell: UICollectionViewCell {
     @IBOutlet var dateLabel: UILabel!
     @IBOutlet var replyLabel: UILabel!
     @IBOutlet var reportButton: UIButton!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

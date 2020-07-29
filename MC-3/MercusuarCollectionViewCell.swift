@@ -17,6 +17,7 @@ class MercusuarCollectionViewCell: UICollectionViewCell {
     @IBOutlet var top3Label: UILabel!
     @IBOutlet var reportButton: UIButton!
     @IBOutlet weak var likesButton: UIButton!
+    var recordName = ""
     
     
     override func awakeFromNib() {

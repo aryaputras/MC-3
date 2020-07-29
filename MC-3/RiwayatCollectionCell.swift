@@ -14,7 +14,7 @@ class RiwayatCollectionCell: UICollectionViewCell {
     @IBOutlet var suratLabel: UILabel!
     @IBOutlet var replyCountLabel: UILabel!
     @IBOutlet var tanggalLabel: UILabel!
-    
+    var recordName = ""
     override func awakeFromNib() {
         super.awakeFromNib()
         
