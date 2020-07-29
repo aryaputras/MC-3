@@ -49,7 +49,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.isHidden = true
         //Recording
         recordingSession = AVAudioSession.sharedInstance()
         
@@ -68,7 +68,6 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
         } catch {
             // failed to record!
         }
-        
         
         
         initializeHideKeyboard()
@@ -132,7 +131,9 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
         
         
     }
-    
+    @IBAction func myUnwindSegue(unwindSegue: UIStoryboardSegue){
+        
+    }
     @IBAction func recordingButton(_ sender: Any) {
         startRecording()
         
@@ -232,18 +233,18 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
     
     
     @IBAction func doneAction(_ sender: Any) {
-         
+        
         CKContainer.default().fetchUserRecordID { userID, error in
             if let userID = userID {
                 //print(userID)
                 //save image
                 let image = self.canvasView.savePic()
-                  let imgPath = self.getDocumentsDirectory().appendingPathComponent("image.jpg")
+                let imgPath = self.getDocumentsDirectory().appendingPathComponent("image.jpg")
                 
                 //createfile
                 do {
-              
-                
+                    
+                    
                     try image.pngData()?.write(to: imgPath, options: .atomic) } catch { print("saving image error")}
                 
                 let creatorID = userID.recordName as CKRecordValue
@@ -255,7 +256,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
                 let genderRecord = self.gender as CKRecordValue
                 let newRecord = CKRecord(recordType: "perahuKertas")
                 let database = CKContainer.default().publicCloudDatabase
-              //  let image = self.canvasView.savePic()
+                //  let image = self.canvasView.savePic()
                 let imageRecord = CKAsset(fileURL: imgPath) as CKRecordValue
                 
                 if self.recorded == true {
@@ -264,7 +265,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
                     //let imageRecord = CKAsset(fileURL: imgp)
                     newRecord.setValue(audio, forKey: "audio")
                 }
-                 newRecord.setValue(imageRecord, forKey: "image")
+                newRecord.setValue(imageRecord, forKey: "image")
                 newRecord.setObject(genderRecord, forKey: "senderGender")
                 newRecord.setObject(ageRecord, forKey: "senderAge")
                 newRecord.setObject(story, forKey: "message")

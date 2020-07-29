@@ -15,50 +15,42 @@ class RiwayatViewController: UIViewController{
     @IBOutlet weak var riwayatCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.isHidden = true
         riwayatCollectionView.register(RiwayatCollectionCell.nib(),forCellWithReuseIdentifier: "RiwayatCollectionCell")
-        
         riwayatCollectionView.delegate = self
         riwayatCollectionView.dataSource = self
-        
         let database = CKContainer.default().publicCloudDatabase
-        
-                      CKContainer.default().fetchUserRecordID { userID, error in
-                    if let userID = userID {
-                        //print(userID)
-                     
+        CKContainer.default().fetchUserRecordID { userID, error in
+            if let userID = userID {
+                //print(userID)
+            }
+            //GETTING USER'S MESSAGES THAT GO OUT
+            let reference = CKRecord.Reference(recordID: userID!, action: .none)
+            let predicate = NSPredicate(format: "creatorID == %@", userID?.recordName ?? "")
+            let query = CKQuery(recordType: "perahuKertas", predicate: predicate)
+            
+            query.sortDescriptors = [NSSortDescriptor(key: "sendingDate", ascending: false)]
+            
+            database.perform(query, inZoneWith: nil) { (records, error) in
+                if let fetchedRecords = records {
+                    self.inbox = records!
+                    DispatchQueue.main.async {
+                        self.riwayatCollectionView.reloadData()
+                        
+                        //PRINT MESSAGE
+                        
+                        //print(records![0].object(forkey: "message")
+                        
+                        
+                        //PRINT RECORDNAME
+                        // print(records![0].recordID.recordName)
+                        
                     }
-                    
-                        //GETTING USER'S MESSAGES THAT GO OUT
-                    let reference = CKRecord.Reference(recordID: userID!, action: .none)
-                    let predicate = NSPredicate(format: "creatorID == %@", userID?.recordName ?? "")
-                    let query = CKQuery(recordType: "perahuKertas", predicate: predicate)
-                        
-                        query.sortDescriptors = [NSSortDescriptor(key: "sendingDate", ascending: false)]
-                        
-                    database.perform(query, inZoneWith: nil) { (records, error) in
-                            if let fetchedRecords = records {
-                                self.inbox = records!
-                                DispatchQueue.main.async {
-                                    self.riwayatCollectionView.reloadData()
-                                  
-                                    //PRINT MESSAGE
-                                    
-                                    //print(records![0].object(forkey: "message")
-                                    
-                                    
-                                    //PRINT RECORDNAME
-                                   // print(records![0].recordID.recordName)
-                              
-                                                         }
-                           
-                                
-                                
-                            }
-                        }
-                        
-                        
                 }
+            }
+        }
+    }
+    @IBAction func myUnwindSegue(unwindSegue: UIStoryboardSegue){
         
     }
 }
@@ -92,14 +84,14 @@ extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataS
             let cellOwner = tapLikes.view as! RiwayatCollectionCell
             //print(cellOwner.)
             recordName = cellOwner.recordName
-//print(recordName)
+            //print(recordName)
             
             
-performSegue(withIdentifier: "riwayatToReply", sender: Any?.self)
+            performSegue(withIdentifier: "riwayatToReply", sender: Any?.self)
             
             //Make ID for each record and get from cellOwner.(ID) and pass it to CKModify  (ID) likes +1
             
-           
+            
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

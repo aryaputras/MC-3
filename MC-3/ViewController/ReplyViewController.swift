@@ -16,7 +16,6 @@ class ReplyViewController: UIViewController, UITextFieldDelegate {
     var myUsername = ""
     var originID = ""
     
-    
     //RECONNECT OUTLET
     @IBOutlet weak var sliderSize: UISlider!
     @IBOutlet weak var sliderimage: UIImageView!
@@ -42,12 +41,11 @@ class ReplyViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var isiTextField: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.isHidden = true
         print(senderID, username, message)
-
+        
         CKContainer.default().fetchUserRecordID { userID, error in
             if let userID = userID {
                 
@@ -65,7 +63,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate {
                         DispatchQueue.main.async {
                             print(records![0])
                             
-
+                            
                             self.myUsername = records![0].object(forKey: "username") as! String
                             print(self.myUsername)
                         }
@@ -75,7 +73,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate {
         }
         
         //MAKE REPLY
-
+        
         
         sliderSize.transform = CGAffineTransform(rotationAngle: CGFloat(-Double.pi/2))
         recordButton.isHidden = false
@@ -100,7 +98,10 @@ class ReplyViewController: UIViewController, UITextFieldDelegate {
         initializeHideKeyboard()
         isiTextField.delegate = self
         textFieldShouldReturn(isiTextField)
-
+        
+    }
+    
+    @IBAction func myUnwindSegue(unwindSegue: UIStoryboardSegue){
     }
     
     @IBAction func recordButton(_ sender: Any) {
@@ -123,7 +124,6 @@ class ReplyViewController: UIViewController, UITextFieldDelegate {
         record1Label.isHidden = false
         record2Label.isHidden = false
         recordingButton.isHidden = false
-        
     }
     
     @IBAction func drawButton(_ sender: Any) {
@@ -174,25 +174,20 @@ class ReplyViewController: UIViewController, UITextFieldDelegate {
     @IBAction func purpleButton(_ sender: Any) {
         canvasView.strokeColor = #colorLiteral(red: 0.5280317664, green: 0.1064086631, blue: 0.7941021323, alpha: 1)
     }
-    
     @IBAction func sliderSize(_ sender: UISlider) {
         canvasView.strokeWidth = CGFloat(sender.value)
     }
+    
     @IBAction func selesaiTapped(_ sender: Any) {
         let reply = isiTextField.text as! CKRecordValue
         let replyNickname = myUsername as CKRecordValue
         let originID = senderID as CKRecordValue
-        
         let database = CKContainer.default().publicCloudDatabase
         let newRecord = CKRecord(recordType: "perahuKertasReply")
-        
         //HARUSNYA INI RECORDNAME DARI SENDERNYA
-      
-      
         newRecord.setObject(reply, forKey: "reply")
         newRecord.setObject(replyNickname, forKey: "replyNickname")
         newRecord.setObject(originID, forKey: "originID")
-        
         database.save(newRecord) { (records, error) in
             DispatchQueue.main.async {
                 if let error = error {
@@ -202,8 +197,6 @@ class ReplyViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-        
-
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -211,16 +204,16 @@ class ReplyViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     func initializeHideKeyboard(){
-    //Declare a Tap Gesture Recognizer which will trigger our dismissMyKeyboard() function
-    let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-    target: self,
-    action: #selector(dismissMyKeyboard))
-    //Add this tap gesture recognizer to the parent view
-    view.addGestureRecognizer(tap)
+        //Declare a Tap Gesture Recognizer which will trigger our dismissMyKeyboard() function
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissMyKeyboard))
+        //Add this tap gesture recognizer to the parent view
+        view.addGestureRecognizer(tap)
     }
     @objc func dismissMyKeyboard(){
-    //endEditing causes the view (or one of its embedded text fields) to resign the first responder status.
-    //In short- Dismiss the active keyboard.
-    view.endEditing(true)
+        //endEditing causes the view (or one of its embedded text fields) to resign the first responder status.
+        //In short- Dismiss the active keyboard.
+        view.endEditing(true)
     }
 }

@@ -15,7 +15,7 @@ class AskViewController: UIViewController {
     var username = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.isHidden = true
         //get userID
         CKContainer.default().fetchUserRecordID { userID, error in
             if let userID = userID {
@@ -25,19 +25,19 @@ class AskViewController: UIViewController {
         }
         // Do any additional setup after loading the view.
     }
-    @IBAction func selesaiButton(_ sender: Any) {
+    @IBAction func myUnwindSegue(unwindSegue: UIStoryboardSegue){
         
+    }
+    @IBAction func selesaiButton(_ sender: Any) {
         let usernameRecord = username as CKRecordValue
         let question = textfield.text as! CKRecordValue
         let likes = 0 as CKRecordValue
         
         let database = CKContainer.default().publicCloudDatabase
         let newRecord = CKRecord(recordType: "question")
-        
         newRecord.setObject(usernameRecord, forKey: "username")
         newRecord.setObject(question, forKey: "question")
         newRecord.setObject(likes, forKey: "likes")
-        
         database.save(newRecord) { (record, error) in
             DispatchQueue.main.async {
                 if let error = error {
@@ -47,7 +47,6 @@ class AskViewController: UIViewController {
                 }
             }
         }
-        
     }
     func fetchUsername() {
         let database = CKContainer.default().publicCloudDatabase
@@ -63,7 +62,6 @@ class AskViewController: UIViewController {
                     print(self.username)
                 }
                 //store in var
-                
             }
         }
     }
@@ -71,14 +69,4 @@ class AskViewController: UIViewController {
     func createQuestionRecord() {
         
     }
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }

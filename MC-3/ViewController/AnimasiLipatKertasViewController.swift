@@ -18,6 +18,7 @@ class AnimasiLipatKertasViewController: UIViewController {
     var imageNamed:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         let leftRecognizer = UISwipeGestureRecognizer(target: self, action:
             #selector(swipeGestureHandler(_:)))
         leftRecognizer.direction = .left
@@ -32,6 +33,8 @@ class AnimasiLipatKertasViewController: UIViewController {
         self.view.addGestureRecognizer(leftRecognizer)
         self.view.addGestureRecognizer(downRecognizer)
         self.view.addGestureRecognizer(rightRecognizer)
+    }
+    @IBAction func myUnwindSegue(unwindSegue: UIStoryboardSegue){
     }
     @IBAction func NextAnimationButton(_ sender: Any){
         if(imageNamed == ""){
@@ -117,7 +120,7 @@ class AnimasiLipatKertasViewController: UIViewController {
             }
         }
         if sender.direction == .right {
-          if imageNamed == "Lipat_kertas5"
+            if imageNamed == "Lipat_kertas5"
             {
                 kertasLipat.image = UIImage.init(named: "Lipat_kertas6")
                 imageNamed = "Lipat_kertas6"
@@ -181,6 +184,6 @@ class AnimasiLipatKertasViewController: UIViewController {
             }
         }
     }
-
-
+    
+    
 }

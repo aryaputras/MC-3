@@ -34,25 +34,16 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
     var imageURL: NSURL?
     var imagePath: URL?
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.isHidden = true
         //AUDIOSHIT
-        
-        
         //get user ID
-        
         CKContainer.default().fetchUserRecordID { userID, error in
             if let userID = userID {
-                
                 //print(userID.recordName)
                 self.userID = userID.recordName as! String
-                
                 self.getMyID { (ageMax, ageMin, arrOfGender) in
-                    
-                    
                     //SHOULD RETURN xx,xx WHICH IS ACTUAL THE PROFILE AGEPREFERENCE.
                     // print(self.agePreferenceMin, self.agePreferenceMax)
                     //let predicate = NSPredicate(value: true)
@@ -64,51 +55,32 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
                         self.withoutGenderReference()
                     } else {
                         self.withGenderReference()
-                        
                     }
-                    
-                    
                 }
-                
-                
             }
         }
-        
-        
-        
-        
-        
-        
-        
-        
+    }
+    @IBAction func myUnwindSegue(unwindSegue: UIStoryboardSegue){
         
     }
-    
     @IBAction func playTapped(_ sender: Any) {
         //  getDocumentsDirectory()
         preparePlayer()
         avPlayer.play()
-        //
-        
-        
-        
     }
     
     func preparePlayer() {
         let path = getDocumentsDirectory().appendingPathComponent("ReceivedAudio.m4a")
-        
         do {
             
             avPlayer = try AVAudioPlayer(contentsOf: path)
             avPlayer.delegate = self
             avPlayer.prepareToPlay()
             avPlayer.volume = 100
-            
             print(path)
         } catch {
             print("error1")
         }
-        
     }
     func getDocumentsDirectory() -> URL {
         var paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -163,7 +135,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
                         //  paths = documentsPath
                         print(destinationPath!)
                         self.audioPath = destinationPath!
-                       
+                        
                         
                         
                         
@@ -187,12 +159,12 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
                         FileManager.default.createFile(atPath: destinationPath!.path, contents: imageData, attributes: nil)
                         do {
                             let imgNewData = try Data(contentsOf: destinationPath!)
-                        print("download image succeed")
-                        
-                        
-                        //self.imagePath = destinationPath!
-                        self.imageView.image = UIImage(data: imgNewData)
-                        print("do do ")
+                            print("download image succeed")
+                            
+                            
+                            //self.imagePath = destinationPath!
+                            self.imageView.image = UIImage(data: imgNewData)
+                            print("do do ")
                         } catch {print("bgst") }
                         
                     } catch {
