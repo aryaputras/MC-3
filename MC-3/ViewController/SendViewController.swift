@@ -137,7 +137,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
     }
     @IBAction func recordingButton(_ sender: Any) {
         if(recordButtonImage == "Mic_Thin"){
-            startRecording
+            startRecording()
             recordButtonImage = "Mic_Thick"
             recordingButton.setImage(UIImage(named: recordButtonImage),for: .normal)
         }

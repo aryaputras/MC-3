@@ -318,7 +318,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
         destinationVC.message = messageLabel.text!
         destinationVC.username = usernameLabel.text!
         destinationVC.senderID = self.inbox[numIndex].recordID.recordName as! String
-        
+        destinationVC.imgMessage = imageView.image
         
     }
     func getSenderID(sender: String) {

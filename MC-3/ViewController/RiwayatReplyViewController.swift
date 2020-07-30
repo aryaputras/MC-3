@@ -79,7 +79,7 @@ extension RiwayatReplyViewController: UICollectionViewDelegate, UICollectionView
         
         //EXPERIMENTAL DOWNLOADING IMAGE
         let imgRecord = record.object(forKey: "image")
-        self.replyImageAsset = imgRecord as? CKAsset
+        self.replyImageAsset =  imgRecord as? CKAsset
         do {
             self.replyImageURL = self.replyImageAsset?.fileURL as NSURL?
             

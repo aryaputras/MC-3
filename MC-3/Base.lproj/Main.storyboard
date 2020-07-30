@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JFL-LD-aeY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eEh-42-BzD">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -798,21 +798,21 @@ kamu butuhkan</string>
                                 <rect key="frame" x="24" y="190" width="366" height="530"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8K-3V-x0m" customClass="canvasView" customModule="MC_3" customModuleProvider="target">
-                                <rect key="frame" x="76" y="275" width="288" height="384"/>
+                                <rect key="frame" x="76" y="255" width="288" height="404"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gI-5H-bJP">
-                                <rect key="frame" x="266" y="392" width="32" height="36"/>
+                                <rect key="frame" x="266" y="372" width="32" height="36"/>
                                 <state key="normal" title="Stop"/>
                                 <connections>
                                     <action selector="stopRecordingButton:" destination="05H-7O-M6E" eventType="touchUpInside" id="zmZ-qj-Q8t"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Slider_Size" translatesAutoresizingMaskIntoConstraints="NO" id="x5h-o6-n0W">
-                                <rect key="frame" x="44" y="382.5" width="24" height="236"/>
+                                <rect key="frame" x="44" y="362.5" width="24" height="236"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHu-ER-nhf">
-                                <rect key="frame" x="55" y="225" width="50" height="33"/>
+                                <rect key="frame" x="55" y="205" width="50" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Hapus">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -822,7 +822,7 @@ kamu butuhkan</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OV-PY-Low">
-                                <rect key="frame" x="312" y="225" width="55" height="33"/>
+                                <rect key="frame" x="312" y="205" width="55" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Selesai">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -831,9 +831,8 @@ kamu butuhkan</string>
                                     <action selector="doneAction:" destination="05H-7O-M6E" eventType="touchUpInside" id="VnK-4F-ZXj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3G-qO-PZg">
-                                <rect key="frame" x="29" y="54" width="17" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3G-qO-PZg">
+                                <rect key="frame" x="29" y="62" width="17" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="chevron.left" catalog="system">
@@ -844,7 +843,7 @@ kamu butuhkan</string>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ketuk untuk mulai menulis perahu kertasamu" borderStyle="line" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8EF-Zy-qCc">
-                                <rect key="frame" x="49" y="278" width="318" height="20"/>
+                                <rect key="frame" x="49" y="258" width="318" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="5rc-v3-XO7"/>
                                 </constraints>
@@ -957,14 +956,14 @@ kamu butuhkan</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Buat catatan suara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALW-xL-UPj">
-                                <rect key="frame" x="24" y="475" width="366" height="24"/>
+                                <rect key="frame" x="24" y="455" width="366" height="24"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tekan untuk mulai merekam suara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIH-oI-eBM">
-                                <rect key="frame" x="24" y="524" width="366" height="21"/>
+                                <rect key="frame" x="24" y="504" width="366" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -979,7 +978,7 @@ kamu butuhkan</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkW-fc-inn">
-                                <rect key="frame" x="161" y="363" width="97" height="97"/>
+                                <rect key="frame" x="161" y="343" width="97" height="97"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="Mic_Thin">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -989,7 +988,7 @@ kamu butuhkan</string>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="gEQ-si-ljD">
-                                <rect key="frame" x="-62" y="486" width="236" height="30"/>
+                                <rect key="frame" x="-62" y="466" width="236" height="30"/>
                                 <color key="tintColor" red="0.59777241950000004" green="0.80750650170000005" blue="0.8235349059" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="UG4-av-TTU"/>
@@ -1032,6 +1031,7 @@ kamu butuhkan</string>
                             <constraint firstItem="L1V-Tr-P1D" firstAttribute="top" secondItem="oga-Q6-dzf" secondAttribute="top" id="1ju-5m-r0K"/>
                             <constraint firstItem="tXm-Nh-ZL4" firstAttribute="trailing" secondItem="8EF-Zy-qCc" secondAttribute="trailing" constant="47" id="3d7-P7-bnL"/>
                             <constraint firstItem="5OV-PY-Low" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YHu-ER-nhf" secondAttribute="trailing" constant="8" symbolic="YES" id="5JM-sa-OJg"/>
+                            <constraint firstItem="j3G-qO-PZg" firstAttribute="leading" secondItem="tXm-Nh-ZL4" secondAttribute="leading" constant="29" id="5Rk-kk-vGr"/>
                             <constraint firstItem="L1V-Tr-P1D" firstAttribute="bottom" secondItem="dVc-nA-mvF" secondAttribute="bottom" id="6NX-WX-2cT"/>
                             <constraint firstItem="L1V-Tr-P1D" firstAttribute="bottom" secondItem="yq1-ez-a8q" secondAttribute="bottom" id="7Ih-zg-yYm"/>
                             <constraint firstItem="gEQ-si-ljD" firstAttribute="centerY" secondItem="x5h-o6-n0W" secondAttribute="centerY" id="7Tf-J8-IgZ"/>
@@ -1041,7 +1041,8 @@ kamu butuhkan</string>
                             <constraint firstItem="bkW-fc-inn" firstAttribute="leading" secondItem="x5h-o6-n0W" secondAttribute="trailing" constant="93" id="9Hn-VH-1dF"/>
                             <constraint firstItem="L1V-Tr-P1D" firstAttribute="bottom" secondItem="ROr-K4-uUa" secondAttribute="bottom" id="9fL-od-e2K"/>
                             <constraint firstItem="L1V-Tr-P1D" firstAttribute="top" secondItem="dVc-nA-mvF" secondAttribute="top" id="9ha-Ad-4Zi"/>
-                            <constraint firstItem="YHu-ER-nhf" firstAttribute="top" secondItem="tXm-Nh-ZL4" secondAttribute="top" constant="169" id="Bxy-fQ-RNh"/>
+                            <constraint firstItem="tXm-Nh-ZL4" firstAttribute="trailing" secondItem="j3G-qO-PZg" secondAttribute="trailing" constant="368" id="BcZ-Ab-sMI"/>
+                            <constraint firstItem="YHu-ER-nhf" firstAttribute="top" secondItem="nid-Pi-M93" secondAttribute="top" constant="15" id="Bxy-fQ-RNh"/>
                             <constraint firstItem="5OV-PY-Low" firstAttribute="baseline" secondItem="YHu-ER-nhf" secondAttribute="baseline" id="DAJ-j1-EuA"/>
                             <constraint firstItem="L1V-Tr-P1D" firstAttribute="top" secondItem="G4B-GQ-59L" secondAttribute="top" id="EE1-Mc-GrR"/>
                             <constraint firstItem="L1V-Tr-P1D" firstAttribute="bottom" secondItem="G4B-GQ-59L" secondAttribute="bottom" id="Hof-hQ-HtW"/>
@@ -1068,13 +1069,13 @@ kamu butuhkan</string>
                             <constraint firstItem="WNC-DV-mUO" firstAttribute="leading" secondItem="ROr-K4-uUa" secondAttribute="trailing" constant="19" id="Xpj-9W-96D"/>
                             <constraint firstItem="gEQ-si-ljD" firstAttribute="leading" secondItem="Ale-Ni-IS2" secondAttribute="leadingMargin" constant="-80" id="Yaz-gi-E12"/>
                             <constraint firstItem="ALW-xL-UPj" firstAttribute="centerX" secondItem="EsA-Ba-9n4" secondAttribute="centerX" id="Zaa-TJ-5te"/>
+                            <constraint firstItem="lvG-Xf-kdP" firstAttribute="top" secondItem="nid-Pi-M93" secondAttribute="bottom" constant="14" id="Zoj-ww-JG0"/>
                             <constraint firstItem="tXm-Nh-ZL4" firstAttribute="trailing" secondItem="gEQ-si-ljD" secondAttribute="trailing" constant="242" id="caX-2Y-B3U"/>
                             <constraint firstItem="EsA-Ba-9n4" firstAttribute="top" secondItem="G4B-GQ-59L" secondAttribute="bottom" constant="57" id="e8w-eK-2jG"/>
                             <constraint firstItem="L1V-Tr-P1D" firstAttribute="bottom" secondItem="ltS-G4-Xot" secondAttribute="bottom" id="eef-1j-CHP"/>
                             <constraint firstItem="ALW-xL-UPj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nid-Pi-M93" secondAttribute="leading" id="fTH-7P-agd"/>
                             <constraint firstItem="8EF-Zy-qCc" firstAttribute="trailing" secondItem="5OV-PY-Low" secondAttribute="trailing" id="ft9-Jq-Sto"/>
                             <constraint firstItem="ALW-xL-UPj" firstAttribute="centerX" secondItem="Ale-Ni-IS2" secondAttribute="centerX" id="gKt-6p-ZEa"/>
-                            <constraint firstItem="L1V-Tr-P1D" firstAttribute="top" secondItem="nid-Pi-M93" secondAttribute="bottom" constant="22" id="h9F-XD-Z3n"/>
                             <constraint firstItem="bkW-fc-inn" firstAttribute="top" secondItem="8EF-Zy-qCc" secondAttribute="bottom" constant="65" id="i5t-Du-lgC"/>
                             <constraint firstItem="L1V-Tr-P1D" firstAttribute="bottom" secondItem="oga-Q6-dzf" secondAttribute="bottom" id="iEy-nv-p50"/>
                             <constraint firstItem="gEQ-si-ljD" firstAttribute="top" secondItem="bkW-fc-inn" secondAttribute="bottom" constant="26" id="jtN-Kc-KUe"/>
@@ -1085,6 +1086,7 @@ kamu butuhkan</string>
                             <constraint firstItem="tXm-Nh-ZL4" firstAttribute="trailing" secondItem="4gI-5H-bJP" secondAttribute="trailing" constant="116" id="nj0-SP-buZ"/>
                             <constraint firstItem="tXm-Nh-ZL4" firstAttribute="bottom" secondItem="L1V-Tr-P1D" secondAttribute="bottom" constant="1" id="qCE-Fs-mU3"/>
                             <constraint firstAttribute="bottomMargin" secondItem="zsd-xI-zI9" secondAttribute="bottom" constant="-4" id="qDi-cf-g1C"/>
+                            <constraint firstItem="nid-Pi-M93" firstAttribute="top" secondItem="j3G-qO-PZg" secondAttribute="bottom" constant="107" id="rY3-lv-488"/>
                             <constraint firstItem="cIH-oI-eBM" firstAttribute="top" secondItem="gEQ-si-ljD" secondAttribute="bottom" constant="9" id="sJj-4K-D1j"/>
                             <constraint firstItem="O6N-wD-Q7g" firstAttribute="leading" secondItem="tXm-Nh-ZL4" secondAttribute="leading" constant="356" id="upi-n6-FQO"/>
                             <constraint firstItem="4gI-5H-bJP" firstAttribute="top" secondItem="8EF-Zy-qCc" secondAttribute="bottom" constant="94" id="uyM-gV-p6w"/>
@@ -2153,6 +2155,10 @@ s
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ANh-gM-OSc">
+                                <rect key="frame" x="39" y="189" width="334" height="162"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -2191,7 +2197,7 @@ s
                             <constraint firstItem="Xlb-V0-fr7" firstAttribute="centerX" secondItem="xyH-Pw-cl1" secondAttribute="centerX" constant="-5" id="U1p-Ch-LPz"/>
                             <constraint firstItem="EgK-SU-Ibf" firstAttribute="top" secondItem="bFB-w3-eVM" secondAttribute="top" id="U4z-yy-88j"/>
                             <constraint firstItem="EgK-SU-Ibf" firstAttribute="bottom" secondItem="Y6Q-aE-eek" secondAttribute="bottom" id="UIb-NP-eWr"/>
-                            <constraint firstItem="jAm-GM-LsU" firstAttribute="top" secondItem="dxt-hS-h8R" secondAttribute="bottom" constant="25" id="V29-xe-b3Z"/>
+                            <constraint firstItem="jAm-GM-LsU" firstAttribute="top" secondItem="Avv-dW-zTr" secondAttribute="bottom" constant="9.5" id="V29-xe-b3Z"/>
                             <constraint firstItem="bAQ-KZ-caC" firstAttribute="leading" secondItem="4Q2-8b-9YY" secondAttribute="leading" constant="46" id="VEM-Re-q6Q"/>
                             <constraint firstAttribute="bottom" secondItem="50R-Hh-q02" secondAttribute="bottom" constant="204.5" id="VOQ-qH-sKV"/>
                             <constraint firstItem="Xlb-V0-fr7" firstAttribute="centerX" secondItem="9Zz-Gc-aWw" secondAttribute="centerX" id="WNc-km-Vjt"/>
@@ -2254,7 +2260,9 @@ s
                         <outlet property="deleteButton" destination="GMn-qb-Dam" id="Yzp-ja-FU6"/>
                         <outlet property="drawButton" destination="bAQ-KZ-caC" id="Jvg-kL-3ww"/>
                         <outlet property="greenButton" destination="oa9-07-acV" id="vQK-iG-u9F"/>
+                        <outlet property="imageView" destination="ANh-gM-OSc" id="OK1-cm-zax"/>
                         <outlet property="isiTextField" destination="xyH-Pw-cl1" id="j9l-NL-eaC"/>
+                        <outlet property="messageLabel" destination="dxt-hS-h8R" id="Gpd-MQ-bP4"/>
                         <outlet property="orangeButton" destination="bFB-w3-eVM" id="tT2-zn-cyg"/>
                         <outlet property="purpleButton" destination="HgE-AZ-btO" id="iiw-41-m38"/>
                         <outlet property="record1Label" destination="Pof-2P-P9c" id="LZe-FX-Htq"/>
@@ -2265,6 +2273,7 @@ s
                         <outlet property="sliderSize" destination="CkK-5h-oAa" id="UcX-Kt-NpW"/>
                         <outlet property="sliderimage" destination="50R-Hh-q02" id="1Zf-0Y-kUf"/>
                         <outlet property="softPinkButton" destination="c3t-a0-ck2" id="hsw-AB-j7f"/>
+                        <outlet property="usernameLabel" destination="f5v-u2-7m4" id="TP1-iF-ks1"/>
                         <outlet property="whiteButton" destination="Y6Q-aE-eek" id="wda-Xo-X6g"/>
                         <outlet property="yellowButton" destination="EgK-SU-Ibf" id="99d-1h-aal"/>
                     </connections>
@@ -2272,7 +2281,7 @@ s
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Htv-Ik-wzn" sceneMemberID="firstResponder"/>
                 <exit id="XZm-Qd-2hk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="10941" y="2543"/>
+            <point key="canvasLocation" x="10940.579710144928" y="2542.6339285714284"/>
         </scene>
         <!--Riwayat View Controller-->
         <scene sceneID="g81-gx-lid">

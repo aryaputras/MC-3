@@ -16,6 +16,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
     var message = ""
     var myUsername = ""
     var originID = ""
+    var imgMessage: UIImage?
     
     //recording capabilities
     var recordingSession: AVAudioSession!
@@ -25,6 +26,9 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
     var recorded = false
     
     
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var messageLabel: UILabel!
     //RECONNECT OUTLET
     @IBOutlet weak var sliderSize: UISlider!
     @IBOutlet weak var sliderimage: UIImageView!
@@ -53,6 +57,9 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
     override func viewDidLoad() {
         super.viewDidLoad()
         //recordingsession
+        imageView.image = imgMessage
+        usernameLabel.text = username
+        messageLabel.text = message
         recordingSession = AVAudioSession.sharedInstance()
         
         do {
