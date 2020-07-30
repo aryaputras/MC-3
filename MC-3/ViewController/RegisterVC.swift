@@ -19,6 +19,8 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var regisUsername: UITextField!
     @IBOutlet weak var regisAge: UILabel!
     
+    @IBOutlet weak var buttonFemale: UIButton!
+    @IBOutlet weak var buttonMale: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -85,7 +87,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func buttonFemale(_ sender: Any) {
-        buttonMale.setImage(UIImage(named: "Button_Cewek_Tapped"),for: .normal)
+        buttonFemale.setImage(UIImage(named: "Button_Cewek_Tapped"),for: .normal)
         gender = 2
     }
     

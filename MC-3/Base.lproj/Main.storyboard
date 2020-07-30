@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cLq-li-GRl">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cLq-li-GRl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -153,6 +153,8 @@ tentang dirimu</string>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="buttonFemale" destination="znz-75-iWu" id="hoc-d3-uH8"/>
+                        <outlet property="buttonMale" destination="nmf-ye-YsU" id="aHq-PD-rwe"/>
                         <outlet property="regisAge" destination="026-sm-dPE" id="RwV-iB-hfS"/>
                         <outlet property="regisImage" destination="1ZP-Bu-ngw" id="Lx9-T8-ojP"/>
                         <outlet property="regisUsername" destination="TK8-NE-xJc" id="bXW-4p-OOm"/>
@@ -285,7 +287,7 @@ geser ke bawah  untuk menangkap satu.</string>
                     <tabBarItem key="tabBarItem" title="Item" image="Dermaga1" id="0yy-C2-r9I"/>
                     <navigationItem key="navigationItem" id="21x-Xi-3B5"/>
                     <connections>
-                        <outlet property="usernameLabel" destination="sTc-gm-LHZ" id="bd0-5e-vPD"/>
+                        <outlet property="usernameLabel" destination="sTc-gm-LHZ" id="quf-ai-oYu"/>
                         <segue destination="lmg-fm-10H" kind="presentation" identifier="swipeToReceive" modalPresentationStyle="fullScreen" id="Pj7-gd-Isc"/>
                         <segue destination="Ib3-wX-25M" kind="presentation" identifier="swipeToSend" modalPresentationStyle="fullScreen" id="9b2-eg-5M3"/>
                     </connections>
@@ -575,6 +577,9 @@ kamu butuhkan</string>
                     </view>
                     <navigationItem key="navigationItem" id="PBd-pK-msB"/>
                     <connections>
+                        <outlet property="buttonAll" destination="wDZ-Df-v2X" id="ayU-a1-U3A"/>
+                        <outlet property="buttonFemale" destination="g8s-z5-MfZ" id="RDV-Ue-2RU"/>
+                        <outlet property="buttonMale" destination="JJe-fZ-tCa" id="uFO-Qu-bjz"/>
                         <outlet property="rangeSlider" destination="USs-A1-a2e" id="AI2-gS-gfd"/>
                     </connections>
                 </viewController>
@@ -1125,7 +1130,7 @@ kamu butuhkan</string>
         <!--Item-->
         <scene sceneID="PHX-f3-p1d">
             <objects>
-                <viewController id="02J-wh-gZE" customClass="HomeViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="02J-wh-gZE" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3NW-41-JZV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1177,8 +1182,14 @@ kamu butuhkan</string>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="medium"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egy-1A-fuU">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HJe-fx-QRw">
+                                <rect key="frame" x="177" y="654" width="60" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egy-1A-fuU">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <segue destination="eEh-42-BzD" kind="show" id="P3E-d2-545"/>
@@ -1188,26 +1199,22 @@ kamu butuhkan</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Mnw-5Q-umr" firstAttribute="top" secondItem="2Xe-g7-WOT" secondAttribute="bottom" constant="26" id="3Xq-KU-9Bo"/>
-                            <constraint firstItem="H4x-Zh-HKk" firstAttribute="top" secondItem="Egy-1A-fuU" secondAttribute="top" id="7AJ-RV-lO9"/>
                             <constraint firstItem="H4x-Zh-HKk" firstAttribute="top" secondItem="3NW-41-JZV" secondAttribute="top" id="CWv-29-HLn"/>
                             <constraint firstItem="Mnw-5Q-umr" firstAttribute="centerX" secondItem="vqB-hd-S2e" secondAttribute="centerX" id="GCA-Km-lwS"/>
                             <constraint firstItem="Mnw-5Q-umr" firstAttribute="centerX" secondItem="nEH-3b-frY" secondAttribute="centerX" id="Gln-sL-m4X"/>
                             <constraint firstItem="jbu-0p-HjQ" firstAttribute="top" secondItem="3NW-41-JZV" secondAttribute="topMargin" constant="-46" id="L76-VL-sqT"/>
                             <constraint firstItem="H4x-Zh-HKk" firstAttribute="centerY" secondItem="jbu-0p-HjQ" secondAttribute="centerY" id="Qpi-UL-nEL"/>
                             <constraint firstItem="2Xe-g7-WOT" firstAttribute="centerX" secondItem="nEz-Iz-pyv" secondAttribute="centerX" id="ZOM-qf-ugs"/>
-                            <constraint firstItem="B5g-Vu-XEV" firstAttribute="centerX" secondItem="Egy-1A-fuU" secondAttribute="centerX" id="ZvE-ld-XAN"/>
                             <constraint firstAttribute="bottom" secondItem="2Xe-g7-WOT" secondAttribute="bottom" constant="364" id="bHZ-Cg-RM0"/>
                             <constraint firstItem="B5g-Vu-XEV" firstAttribute="centerX" secondItem="H4x-Zh-HKk" secondAttribute="centerX" id="bUb-x8-2Mb"/>
                             <constraint firstItem="nEH-3b-frY" firstAttribute="leading" secondItem="KnV-Ox-0Tp" secondAttribute="leading" constant="199" id="cFC-B6-v7c"/>
                             <constraint firstItem="B5g-Vu-XEV" firstAttribute="top" secondItem="q4z-G1-CM0" secondAttribute="bottom" constant="8" symbolic="YES" id="cJJ-nm-ZIe"/>
-                            <constraint firstItem="H4x-Zh-HKk" firstAttribute="bottom" secondItem="Egy-1A-fuU" secondAttribute="bottom" id="ea7-dA-QlH"/>
                             <constraint firstItem="B5g-Vu-XEV" firstAttribute="centerX" secondItem="nEz-Iz-pyv" secondAttribute="centerX" id="ga9-fk-Ktm"/>
                             <constraint firstItem="vqB-hd-S2e" firstAttribute="leading" secondItem="KnV-Ox-0Tp" secondAttribute="leading" constant="108" id="jQl-8w-6eL"/>
                             <constraint firstItem="B5g-Vu-XEV" firstAttribute="centerX" secondItem="q4z-G1-CM0" secondAttribute="centerX" id="lke-M4-D5S"/>
                             <constraint firstItem="B5g-Vu-XEV" firstAttribute="centerX" secondItem="jbu-0p-HjQ" secondAttribute="centerX" id="m3V-k6-OkG"/>
                             <constraint firstItem="B5g-Vu-XEV" firstAttribute="centerX" secondItem="3NW-41-JZV" secondAttribute="centerX" id="mN5-Bv-fuP"/>
                             <constraint firstItem="H4x-Zh-HKk" firstAttribute="leading" secondItem="jbu-0p-HjQ" secondAttribute="leading" id="sBK-oT-Nne"/>
-                            <constraint firstItem="H4x-Zh-HKk" firstAttribute="leading" secondItem="Egy-1A-fuU" secondAttribute="leading" id="uap-v5-oFm"/>
                             <constraint firstItem="nEz-Iz-pyv" firstAttribute="top" secondItem="B5g-Vu-XEV" secondAttribute="bottom" constant="26" id="vDo-jz-iNg"/>
                             <constraint firstItem="2Xe-g7-WOT" firstAttribute="top" secondItem="nEH-3b-frY" secondAttribute="bottom" constant="8" symbolic="YES" id="vbY-5n-wYu"/>
                             <constraint firstItem="KnV-Ox-0Tp" firstAttribute="bottom" secondItem="vqB-hd-S2e" secondAttribute="bottom" constant="69" id="xkG-nt-9B5"/>
@@ -1224,7 +1231,7 @@ kamu butuhkan</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7H-iI-Rt2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6709" y="2537"/>
+            <point key="canvasLocation" x="6708.6956521739139" y="2536.6071428571427"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="H4d-tE-Vuj">
@@ -1986,7 +1993,7 @@ s
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAQ-KZ-caC">
-                                <rect key="frame" x="46" y="659.5" width="21" height="125.5"/>
+                                <rect key="frame" x="46" y="659.5" width="21" height="71"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="scribble" catalog="system">
@@ -1997,7 +2004,7 @@ s
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0P-Pj-weQ">
-                                <rect key="frame" x="354" y="653" width="24" height="138.5"/>
+                                <rect key="frame" x="354" y="653" width="24" height="84"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="90"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="mic.fill" catalog="system">
@@ -2991,7 +2998,7 @@ kamu merasa tidak nyaman.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2Wt-Vh-GSG"/>
+        <segue reference="Djg-22-u3o"/>
         <segue reference="lfE-Ie-0Mh"/>
         <segue reference="5Xo-Ek-ILa"/>
     </inferredMetricsTieBreakers>
@@ -3053,6 +3060,7 @@ kamu merasa tidak nyaman.</string>
         <image name="arrow.up" catalog="system" width="120" height="128"/>
         <image name="bubble.left.fill" catalog="system" width="128" height="110"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
+        <image name="circle" catalog="system" width="128" height="121"/>
         <image name="clock.fill" catalog="system" width="128" height="121"/>
         <image name="forward.fill" catalog="system" width="128" height="79"/>
         <image name="laporkanpengguna" width="314" height="290"/>

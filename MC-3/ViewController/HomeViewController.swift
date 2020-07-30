@@ -13,6 +13,8 @@ import CloudKit
 class HomeViewController: UIViewController {
    
     @IBOutlet weak var usernameLabel: UILabel!
+    
+    var name = [CKRecord]()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
@@ -31,6 +33,7 @@ class HomeViewController: UIViewController {
              if let userID = userID {
                  //print(userID)
              }
+            let database = CKContainer.default().publicCloudDatabase
              let reference = CKRecord.Reference(recordID: userID!, action: .none)
              let predicate = NSPredicate(format: "creatorID == %@", userID?.recordName ?? "")
              let query = CKQuery(recordType: "profile", predicate: predicate)
@@ -40,8 +43,14 @@ class HomeViewController: UIViewController {
                      self.name = fetchedRecords
                      DispatchQueue.main.async {
                         
-                         let username = self.name[0].object(forKey: "username")
-                        usernameLabel.text = "Hai,\(username)"
+                        let username = self.name[0].object(forKey: "username") as! String
+                            print(username)
+                        
+                        
+                        
+                        
+                        self.usernameLabel.text = "Hai," + username
+                    
                         
                      }
                      //                        print(reference)
