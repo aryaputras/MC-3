@@ -8,6 +8,7 @@
 
 import UIKit
 import CloudKit
+import AVFoundation
 
 class MercusuarViewController: UIViewController{
     var username = ""
@@ -66,6 +67,8 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
         tapRecognizer.numberOfTapsRequired = 2
         cell.addGestureRecognizer(tapRecognizer)
         cell.recordName = record.recordID.recordName
+        
+        print(record)
         
         
         // buat masukin isinya dari mana

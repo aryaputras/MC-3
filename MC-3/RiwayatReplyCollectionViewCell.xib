@@ -30,6 +30,10 @@
                             <constraint firstAttribute="width" constant="341" id="krW-xe-fKU"/>
                         </constraints>
                     </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZkB-RK-0pW">
+                        <rect key="frame" x="45" y="57" width="310" height="165"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Username]" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Oj-03-IeI">
                         <rect key="frame" x="38" y="3" width="91" height="24"/>
                         <constraints>
@@ -90,11 +94,12 @@
             <connections>
                 <outlet property="avatarImage" destination="lLz-Uw-UFt" id="hn9-GU-VFH"/>
                 <outlet property="dateLabel" destination="1lQ-Dx-EFh" id="4Gp-iF-Q5i"/>
+                <outlet property="imageView" destination="ZkB-RK-0pW" id="EDd-xg-yVc"/>
                 <outlet property="replyLabel" destination="hob-mv-mAk" id="1Yq-WS-Una"/>
                 <outlet property="reportButton" destination="AsB-k8-x01" id="RY6-Oc-Q6e"/>
                 <outlet property="usernameLabel" destination="0Oj-03-IeI" id="BpQ-v5-0MU"/>
             </connections>
-            <point key="canvasLocation" x="137.68115942028987" y="146.65178571428569"/>
+            <point key="canvasLocation" x="137.68115942028987" y="145.98214285714286"/>
         </collectionViewCell>
     </objects>
     <resources>

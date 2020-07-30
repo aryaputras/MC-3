@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class RiwayatCollectionCell: UICollectionViewCell {
     
@@ -15,6 +16,9 @@ class RiwayatCollectionCell: UICollectionViewCell {
     @IBOutlet var replyCountLabel: UILabel!
     @IBOutlet var tanggalLabel: UILabel!
     var recordName = ""
+    var recordID :CKRecord.ID?
+    var image: UIImage?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         

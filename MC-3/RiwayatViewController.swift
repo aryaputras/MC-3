@@ -10,9 +10,16 @@ import UIKit
 import CloudKit
 
 class RiwayatViewController: UIViewController{
-    var inbox = [CKRecord]()
+    var inboxRecord = [CKRecord]()
     var recordName = ""
     var message = ""
+    var originRecordID: CKRecord.ID?
+    var image: UIImage?
+    var imageAsset: CKAsset?
+    var imageURL: NSURL?
+    var imagePath: URL?
+    
+    
     @IBOutlet weak var riwayatCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,49 +31,52 @@ class RiwayatViewController: UIViewController{
         
         let database = CKContainer.default().publicCloudDatabase
         
-                      CKContainer.default().fetchUserRecordID { userID, error in
-                    if let userID = userID {
-                        //print(userID)
-                     
+        CKContainer.default().fetchUserRecordID { userID, error in
+            if let userID = userID {
+                //print(userID)
+                
+            }
+            
+            //GETTING USER'S MESSAGES THAT GO OUT
+            let reference = CKRecord.Reference(recordID: userID!, action: .none)
+            let predicate = NSPredicate(format: "creatorID == %@", userID?.recordName ?? "")
+            let query = CKQuery(recordType: "perahuKertas", predicate: predicate)
+            
+            query.sortDescriptors = [NSSortDescriptor(key: "sendingDate", ascending: false)]
+            
+            database.perform(query, inZoneWith: nil) { (records, error) in
+                if let fetchedRecords = records {
+                    self.inboxRecord = records!
+                    DispatchQueue.main.async {
+                       
+                        
+                        
+                        self.riwayatCollectionView.reloadData()
+                        
+                        //PRINT MESSAGE
+                        
+                        //print(records![0].object(forkey: "message")
+                        
+                        
+                        //PRINT RECORDNAME
+                        // print(records![0].recordID.recordName)
+                        
                     }
                     
-                        //GETTING USER'S MESSAGES THAT GO OUT
-                    let reference = CKRecord.Reference(recordID: userID!, action: .none)
-                    let predicate = NSPredicate(format: "creatorID == %@", userID?.recordName ?? "")
-                    let query = CKQuery(recordType: "perahuKertas", predicate: predicate)
-                        
-                        query.sortDescriptors = [NSSortDescriptor(key: "sendingDate", ascending: false)]
-                        
-                    database.perform(query, inZoneWith: nil) { (records, error) in
-                            if let fetchedRecords = records {
-                                self.inbox = records!
-                                DispatchQueue.main.async {
-                                    self.riwayatCollectionView.reloadData()
-                                  
-                                    //PRINT MESSAGE
-                                    
-                                    //print(records![0].object(forkey: "message")
-                                    
-                                    
-                                    //PRINT RECORDNAME
-                                   // print(records![0].recordID.recordName)
-                              
-                                                         }
-                           
-                                
-                                
-                            }
-                        }
-                        
-                        
+                    
+                    
                 }
+            }
+            
+            
+        }
         
     }
 }
 extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //barang di collectionnya biasa pake counter
-        return self.inbox.count
+        return self.inboxRecord.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -74,18 +84,45 @@ extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataS
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "RiwayatCollectionCell", for: indexPath) as! RiwayatCollectionCell
         // buat masukin isinya dari mana
-        let record = inbox[indexPath.row]
+        let record = inboxRecord[indexPath.row]
         //print(inbox)
         //        cell.imageView.image = item.imageName
         cell.suratLabel.text = record.object(forKey: "message") as! String
         
-        
+        //EXPERIMENTAL DOWNLOADING IMAGE
+        let imgRecord = record.object(forKey: "image")
+                                                  self.imageAsset = imgRecord as? CKAsset
+                               do {
+                                   self.imageURL = self.imageAsset?.fileURL as NSURL?
+                                   
+                                   var imageData = try Data(contentsOf: (self.imageURL ?? NSURL()) as URL)
+                                   
+                                   let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+                                   let destinationPath = NSURL(fileURLWithPath: documentsPath).appendingPathComponent("ReceivedImage.jpg", isDirectory: false)
+                                   FileManager.default.createFile(atPath: destinationPath!.path, contents: imageData, attributes: nil)
+                                   do {
+                                       let imgNewData = try Data(contentsOf: destinationPath!)
+                                       print("download image succeed")
+                                       
+                                       
+                                       //self.imagePath = destinationPath!
+                                       self.image = UIImage(data: imgNewData)
+                                       print("do do ")
+                                   } catch {print("bgst") }
+                                   
+                               } catch {
+                                   print("error download picture with gender")
+                               }
         //        cell.label2.text = item.name
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapLikes(sender:)))
         tapRecognizer.numberOfTapsRequired = 1
         cell.addGestureRecognizer(tapRecognizer)
         cell.recordName = record.recordID.recordName
+        cell.recordID = record.recordID
+        cell.image = image
+        
+        print(image)
         return cell
     }
     @objc func tapLikes(sender: UITapGestureRecognizer?){
@@ -96,21 +133,26 @@ extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataS
             //print(cellOwner.)
             recordName = cellOwner.recordName
             message = cellOwner.suratLabel.text!
+            originRecordID = cellOwner.recordID
+            image = cellOwner.image
+            
             print(message)
-//print(recordName)
+            //print(recordName)
             
             
-performSegue(withIdentifier: "riwayatToReply", sender: Any?.self)
+            performSegue(withIdentifier: "riwayatToReply", sender: Any?.self)
             
             //Make ID for each record and get from cellOwner.(ID) and pass it to CKModify  (ID) likes +1
             
-           
+            
         }
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destinationVC = segue.destination as! RiwayatReplyViewController
         
+        destinationVC.senderImage = image
         destinationVC.recordName = recordName
         destinationVC.message = message
+        destinationVC.originRecordID = originRecordID
     }
 }
