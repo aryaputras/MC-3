@@ -8,6 +8,7 @@
 
 import UIKit
 import CloudKit
+import AVFoundation
 
 class RiwayatViewController: UIViewController{
     var inboxRecord = [CKRecord]()
@@ -19,6 +20,12 @@ class RiwayatViewController: UIViewController{
     var imageURL: NSURL?
     var imagePath: URL?
     
+    var audio: CKAsset?
+       var audioPlayerItem: AVPlayerItem?
+       var avPlayer = AVAudioPlayer()
+       var audioURL: NSURL?
+       var audioAsset: AVAsset?
+       var audioPath: URL?
     
     @IBOutlet weak var riwayatCollectionView: UICollectionView!
     override func viewDidLoad() {
@@ -102,6 +109,34 @@ extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataS
                                } catch {
                                    print("error download picture with gender")
                                }
+        let audioRecord = record.object(forKey: "audio")
+                      
+                      self.audio = audioRecord as? CKAsset
+                      
+                      do {
+                          self.audioURL = self.audio?.fileURL as NSURL?
+                          
+                          
+                          //downloadaudio
+                          let audioData = try Data(contentsOf: (self.audioURL ?? NSURL()) as URL)
+                          print(audioData)
+                          let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+                          let destinationPath = NSURL(fileURLWithPath: documentsPath).appendingPathComponent("ReceivedAudio.m4a", isDirectory: false)
+                          FileManager.default.createFile(atPath: destinationPath!.path, contents:audioData, attributes:nil)
+                          print("download audio succeed")
+                          //  paths = documentsPath
+                          print(destinationPath!)
+                          self.audioPath = destinationPath!
+                          
+                          
+                          
+                          
+                          
+                      } catch {
+                          print("error download audio with gender")
+                          
+                      }
+                      
         //        cell.label2.text = item.name
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapLikes(sender:)))
@@ -143,5 +178,7 @@ extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataS
         destinationVC.recordName = recordName
         destinationVC.message = message
         destinationVC.originRecordID = originRecordID
+        destinationVC.audioOriginPath = self.audioPath
+    
     }
 }

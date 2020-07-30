@@ -7,8 +7,17 @@
 //
 
 import UIKit
+import AVFoundation
+import CloudKit
 
-class RiwayatReplyCollectionViewCell: UICollectionViewCell {
+class RiwayatReplyCollectionViewCell: UICollectionViewCell, AVAudioPlayerDelegate {
+    
+    var audio: CKAsset?
+       var audioPlayerItem: AVPlayerItem?
+       var avPlayer = AVAudioPlayer()
+       var audioURL: NSURL?
+       var audioAsset: AVAsset?
+       var audioPath: URL?
     
     @IBOutlet var avatarImage: UIImageView!
     @IBOutlet var usernameLabel: UILabel!
@@ -22,8 +31,31 @@ class RiwayatReplyCollectionViewCell: UICollectionViewCell {
     }
     
     @IBAction func playButtonReply(_ sender: Any) {
+        preparePlayer()
+               avPlayer.play()
     }
     static func nib() -> UINib {
         return UINib(nibName: "RiwayatReplyCollectionViewCell", bundle: nil)
     }
+    func preparePlayer() {
+        let path = getDocumentsDirectory().appendingPathComponent("ReceivedAudio.m4a")
+        do {
+            
+            avPlayer = try AVAudioPlayer(contentsOf: path)
+            avPlayer.delegate = self
+            avPlayer.prepareToPlay()
+            avPlayer.volume = 100
+            print(path)
+        } catch {
+            print("error1")
+        }
+    }
+    
+    func getDocumentsDirectory() -> URL {
+           var paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+           
+           
+           return paths[0]
+       }
+
 }

@@ -110,12 +110,12 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
                         self.profile = fetchedRecords
                         DispatchQueue.main.async {
                             //get sender age
-                            self.age = self.profile[0].object(forKey: "age") as! Int
+                            self.age = self.profile[0].object(forKey: "senderAge") as! Int
                             
                             
                             
                             //get sender gender
-                            self.gender = self.profile[0].object(forKey: "gender") as! Int
+                            self.gender = self.profile[0].object(forKey: "senderGender") as! Int
                             
                             
                             

@@ -8,8 +8,9 @@
 
 import UIKit
 import CloudKit
+import AVFoundation
 
-class RiwayatReplyViewController: UIViewController{
+class RiwayatReplyViewController: UIViewController, AVAudioPlayerDelegate{
     var recordName = ""
     var inbox = [CKRecord]()
     var message = ""
@@ -19,6 +20,17 @@ class RiwayatReplyViewController: UIViewController{
     var replyImageAsset: CKAsset?
     var replyImageURL: NSURL?
     var replyImagePath: URL?
+    
+    //audio capabilities
+    var audio: CKAsset?
+      var audioPlayerItem: AVPlayerItem?
+      var avPlayer = AVAudioPlayer()
+      var audioURL: NSURL?
+      var audioAsset: AVAsset?
+      var audioPath: URL?
+    
+    var audioOriginPath: URL?
+    
     
     @IBOutlet weak var riwayatReplyCollectionView: UICollectionView!
     @IBOutlet weak var usernameLabel: UILabel!
@@ -53,6 +65,7 @@ class RiwayatReplyViewController: UIViewController{
                 DispatchQueue.main.async {
                     //code
                     //print(self.inbox)
+                    
                     self.riwayatReplyCollectionView.reloadData()
                 }
             }
@@ -60,6 +73,8 @@ class RiwayatReplyViewController: UIViewController{
     }
     
     @IBAction func playButton(_ sender: Any) {
+        preparePlayer()
+        avPlayer.play()
     }
     @IBAction func myUnwindSegue(unwindSegue: UIStoryboardSegue){
         
@@ -100,6 +115,34 @@ extension RiwayatReplyViewController: UICollectionViewDelegate, UICollectionView
                 print("do do ")
             } catch {print("bgst") }
             
+            let audioRecord = record.object(forKey: "audio")
+                               
+                               self.audio = audioRecord as? CKAsset
+                               
+                               do {
+                                   self.audioURL = self.audio?.fileURL as NSURL?
+                                   
+                                   
+                                   //downloadaudio
+                                   let audioData = try Data(contentsOf: (self.audioURL ?? NSURL()) as URL)
+                                   print(audioData)
+                                   let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+                                   let destinationPath = NSURL(fileURLWithPath: documentsPath).appendingPathComponent("ReceivedAudio.m4a", isDirectory: false)
+                                   FileManager.default.createFile(atPath: destinationPath!.path, contents:audioData, attributes:nil)
+                                   print("download audio succeed")
+                                   //  paths = documentsPath
+                                   print(destinationPath!)
+                                   self.audioPath = destinationPath!
+                                   
+                                   
+                                   
+                                   
+                                   
+                               } catch {
+                                   print("error download audio with gender")
+                                   
+                               }
+            
         } catch {
             print("error download picture with gender")
         }
@@ -118,5 +161,26 @@ extension RiwayatReplyViewController: UICollectionViewDelegate, UICollectionView
         //        cell.label2.text = item.name
         return cell
     }
+    func preparePlayer() {
+        let path = getDocumentsDirectory().appendingPathComponent("ReceivedAudio.m4a")
+        do {
+            
+            avPlayer = try AVAudioPlayer(contentsOf: audioOriginPath!)
+            avPlayer.delegate = self
+            avPlayer.prepareToPlay()
+            avPlayer.volume = 100
+            print(path)
+        } catch {
+            print("error1")
+        }
+    }
+    func getDocumentsDirectory() -> URL {
+        var paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        
+        
+        return paths[0]
+    }
+   
+
     
 }

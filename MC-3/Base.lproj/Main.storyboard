@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JFL-LD-aeY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cLq-li-GRl">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -167,20 +167,20 @@ tentang dirimu</string>
             <objects>
                 <viewController id="eEh-42-BzD" customClass="HomeViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dss-cW-l8u">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_LandingPage" translatesAutoresizingMaskIntoConstraints="NO" id="qzx-ZU-R6J">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image_LandingPage_Kotak" translatesAutoresizingMaskIntoConstraints="NO" id="Psf-b4-y42">
-                                <rect key="frame" x="24" y="191" width="366" height="389"/>
+                                <rect key="frame" x="24" y="245" width="366" height="389"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="389" id="bvH-zg-sHh"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hai, [Username] !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTc-gm-LHZ">
-                                <rect key="frame" x="24" y="211" width="366" height="34"/>
+                                <rect key="frame" x="24" y="265" width="366" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="78W-df-UKS"/>
                                 </constraints>
@@ -192,13 +192,13 @@ tentang dirimu</string>
                                 </variation>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image_Otter_LandingPage" translatesAutoresizingMaskIntoConstraints="NO" id="uEf-f8-9ur">
-                                <rect key="frame" x="177" y="480" width="237" height="230"/>
+                                <rect key="frame" x="177" y="534" width="237" height="230"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="230" id="408-SE-kJb"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVl-I6-gvc">
-                                <rect key="frame" x="40" y="260.5" width="322" height="223.5"/>
+                                <rect key="frame" x="40" y="314.5" width="322" height="223.5"/>
                                 <string key="text">Hari ini berat ya?
 Tenang, kamu tidak sendirian.
 Ada Ottis di sini.
@@ -212,14 +212,14 @@ geser ke bawah  untuk menangkap satu.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7tW-7A-W1k">
-                                <rect key="frame" x="146" y="453" width="17" height="14"/>
+                                <rect key="frame" x="146" y="507" width="17" height="14"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="wYg-kB-t4c"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ottis, The Otter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3t-dP-Jyz">
-                                <rect key="frame" x="40" y="534" width="123" height="21"/>
+                                <rect key="frame" x="40" y="588" width="123" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Ydz-AW-odH"/>
                                 </constraints>
@@ -249,7 +249,7 @@ geser ke bawah  untuk menangkap satu.</string>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gcD-1j-h2B">
-                                <rect key="frame" x="167" y="445" width="14" height="14"/>
+                                <rect key="frame" x="167" y="499" width="14" height="14"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="tYS-1p-ho9"/>
@@ -469,7 +469,7 @@ kamu butuhkan</string>
                                 <state key="normal" image="Primary Button"/>
                                 <connections>
                                     <action selector="buttonNext:" destination="6Rj-Wh-IKd" eventType="touchUpInside" id="K2L-YD-edc"/>
-                                    <segue destination="cLq-li-GRl" kind="show" identifier="io" id="Djg-22-u3o"/>
+                                    <segue destination="cLq-li-GRl" kind="presentation" identifier="io" modalPresentationStyle="fullScreen" id="Djg-22-u3o"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USs-A1-a2e" customClass="RangeSeekSlider" customModule="RangeSeekSlider">
@@ -586,11 +586,11 @@ kamu butuhkan</string>
             <objects>
                 <viewController id="7Fd-qT-mtD" customClass="ProfileVC" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dm5-4f-igj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="g6g-EU-N6Q">
-                                <rect key="frame" x="0.5" y="0.0" width="413" height="916"/>
+                                <rect key="frame" x="0.5" y="0.0" width="413" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noy-ue-TQa">
                                 <rect key="frame" x="30" y="54" width="17" height="29"/>
@@ -605,19 +605,19 @@ kamu butuhkan</string>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kotak_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="3kr-ee-5HC">
-                                <rect key="frame" x="24" y="429" width="366" height="334"/>
+                                <rect key="frame" x="24" y="461" width="366" height="334"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar 1" translatesAutoresizingMaskIntoConstraints="NO" id="2VE-QZ-aAc">
-                                <rect key="frame" x="132" y="254" width="150" height="150"/>
+                                <rect key="frame" x="132" y="286" width="150" height="108"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Paper Boat" translatesAutoresizingMaskIntoConstraints="NO" id="Ays-WA-CiJ">
-                                <rect key="frame" x="114" y="643" width="43" height="22"/>
+                                <rect key="frame" x="114" y="633" width="43" height="22"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Paper Boat" translatesAutoresizingMaskIntoConstraints="NO" id="REH-nG-zNz">
-                                <rect key="frame" x="281" y="643" width="43" height="22"/>
+                                <rect key="frame" x="281" y="633" width="43" height="22"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hai, [Username] !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ECX-Uj-Rd6">
-                                <rect key="frame" x="140.5" y="447" width="133" height="22"/>
+                                <rect key="frame" x="140.5" y="437" width="133" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="22" id="2WC-Tl-ccA"/>
                                 </constraints>
@@ -626,7 +626,7 @@ kamu butuhkan</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sudah mengarungi lautan sejak:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vuH-0M-OJA">
-                                <rect key="frame" x="83.5" y="519" width="244" height="34"/>
+                                <rect key="frame" x="83.5" y="509" width="244" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="Lyb-W3-pxa"/>
                                 </constraints>
@@ -635,7 +635,7 @@ kamu butuhkan</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Ubah username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="CDM-60-8c5">
-                                <rect key="frame" x="143" y="483" width="128" height="20"/>
+                                <rect key="frame" x="143" y="473" width="128" height="20"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="s5L-2F-yTx"/>
@@ -645,7 +645,7 @@ kamu butuhkan</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sudah Mengirim:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgs-Ky-fXK">
-                                <rect key="frame" x="25" y="606" width="184" height="21"/>
+                                <rect key="frame" x="25" y="596" width="184" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="dWY-yy-8jW"/>
                                 </constraints>
@@ -655,53 +655,53 @@ kamu butuhkan</string>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sudah Menerima:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q6L-81-8Gd">
-                                <rect key="frame" x="206" y="606" width="184" height="21"/>
+                                <rect key="frame" x="206" y="596" width="184" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="33" translatesAutoresizingMaskIntoConstraints="NO" id="NsL-aV-pUB">
-                                <rect key="frame" x="98" y="643" width="8" height="22"/>
+                                <rect key="frame" x="98" y="633" width="8" height="22"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="33" translatesAutoresizingMaskIntoConstraints="NO" id="nmy-k3-7dI">
-                                <rect key="frame" x="265" y="643" width="8" height="22"/>
+                                <rect key="frame" x="265" y="633" width="8" height="22"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10 juli 2020" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XuA-jN-RRv">
-                                <rect key="frame" x="161" y="561" width="88.5" height="30"/>
+                                <rect key="frame" x="161" y="551" width="88.5" height="30"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lGr-2H-PaE">
-                                <rect key="frame" x="90.5" y="306" width="25" height="26"/>
+                                <rect key="frame" x="90.5" y="338" width="25" height="26"/>
                                 <state key="normal" image="Triangle"/>
                                 <connections>
                                     <action selector="ButtonLeft:" destination="7Fd-qT-mtD" eventType="touchUpInside" id="Etk-3L-a9c"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFI-Xq-x3k">
-                                <rect key="frame" x="298" y="306" width="25" height="26"/>
+                                <rect key="frame" x="298" y="338" width="25" height="26"/>
                                 <state key="normal" image="Triangle_Kanan"/>
                                 <connections>
                                     <action selector="ButtonRight:" destination="7Fd-qT-mtD" eventType="touchUpInside" id="qcG-hd-5MB"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0H7-3y-EjO">
-                                <rect key="frame" x="149" y="699" width="112.5" height="55"/>
+                                <rect key="frame" x="149" y="689" width="112.5" height="55"/>
                                 <state key="normal" image="Button_Simpan"/>
                                 <connections>
                                     <action selector="ButtonSave:" destination="7Fd-qT-mtD" eventType="touchUpInside" id="LJG-lq-etE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Profil" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C8s-dH-Ohd">
-                                <rect key="frame" x="168" y="201" width="78" height="33"/>
+                                <rect key="frame" x="168" y="233" width="78" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="33" id="VWB-yB-gZS"/>
                                 </constraints>
@@ -1126,14 +1126,14 @@ kamu butuhkan</string>
             <objects>
                 <viewController id="02J-wh-gZE" customClass="HomeViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3NW-41-JZV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_LandingPage" translatesAutoresizingMaskIntoConstraints="NO" id="H4x-Zh-HKk">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbu-0p-HjQ">
-                                <rect key="frame" x="0.0" y="10" width="414" height="876"/>
+                                <rect key="frame" x="0.0" y="42" width="414" height="812"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geser ke atas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B5g-Vu-XEV">
@@ -1149,19 +1149,19 @@ kamu butuhkan</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Geser ke bawah" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Xe-g7-WOT">
-                                <rect key="frame" x="137.5" y="454" width="139" height="24"/>
+                                <rect key="frame" x="137.5" y="508" width="139" height="24"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Untuk menangkap sebuah perahu kertas." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mnw-5Q-umr">
-                                <rect key="frame" x="50" y="504" width="315" height="21"/>
+                                <rect key="frame" x="50" y="558" width="315" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sentuh untuk melanjutkan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vqB-hd-S2e">
-                                <rect key="frame" x="108" y="669" width="199" height="21"/>
+                                <rect key="frame" x="108" y="723" width="199" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1172,7 +1172,7 @@ kamu butuhkan</string>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="medium"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nEH-3b-frY">
-                                <rect key="frame" x="199" y="427" width="17" height="18"/>
+                                <rect key="frame" x="199" y="481" width="17" height="18"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="medium"/>
                             </imageView>
@@ -1730,7 +1730,7 @@ perahu kertas!</string>
                 <navigationController id="IeK-NG-l4j" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mercusuar" image="Mercusuar1" id="Q2C-YT-vGW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GbM-SJ-eMX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -1747,7 +1747,7 @@ perahu kertas!</string>
                 <navigationController id="GXr-iX-n5N" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Dermaga" image="Dermaga1" id="uW4-IQ-F60"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qfB-HO-zFi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -1764,7 +1764,7 @@ perahu kertas!</string>
                 <navigationController id="4qg-7r-5yO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Riwayat" image="clock.fill" catalog="system" id="GFC-vg-2hK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eHZ-ID-J1h">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -2280,21 +2280,21 @@ s
             <objects>
                 <viewController id="JFL-LD-aeY" customClass="RiwayatViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y4G-Cd-s2a">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="vpk-ay-bwG">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perahu Kertasku" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FY1-xO-KsI">
-                                <rect key="frame" x="109" y="162" width="198" height="34"/>
+                                <rect key="frame" x="109" y="194" width="198" height="34"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fFU-PU-NPB">
-                                <rect key="frame" x="24" y="229" width="366" height="546"/>
+                                <rect key="frame" x="24" y="261" width="366" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9lH-5s-nKH">
                                     <size key="itemSize" width="128" height="128"/>
@@ -2495,14 +2495,14 @@ s
             <objects>
                 <viewController id="4bU-yF-Ckv" customClass="MercusuarViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qck-kU-3Zj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="veP-nw-ppW">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cur-eL-TNU">
-                                <rect key="frame" x="20" y="22" width="43.5" height="34"/>
+                                <rect key="frame" x="20" y="54" width="43.5" height="34"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="chevron.left" catalog="system">
@@ -2510,7 +2510,7 @@ s
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mercusuar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKm-aT-52W">
-                                <rect key="frame" x="142.5" y="45" width="129" height="34"/>
+                                <rect key="frame" x="142.5" y="77" width="129" height="34"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -2518,7 +2518,7 @@ s
                                 <size key="shadowOffset" width="1" height="0.0"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djt-pD-CgU">
-                                <rect key="frame" x="374" y="22" width="25" height="34"/>
+                                <rect key="frame" x="374" y="54" width="25" height="34"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="plus.circle" catalog="system">
@@ -2530,7 +2530,7 @@ s
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="GyH-35-NqV">
-                                <rect key="frame" x="0.0" y="136" width="414" height="195"/>
+                                <rect key="frame" x="0.0" y="168" width="414" height="195"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="195" id="vDC-oC-1Aw"/>
                                 </constraints>
@@ -2563,7 +2563,7 @@ s
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="riw-mK-wzG">
-                                <rect key="frame" x="0.0" y="351" width="414" height="545"/>
+                                <rect key="frame" x="0.0" y="383" width="414" height="513"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hlo-Ky-mua">
                                     <size key="itemSize" width="128" height="157"/>
@@ -2621,17 +2621,17 @@ s
             <objects>
                 <viewController id="pID-2n-Qvf" customClass="AskViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XW0-XD-85U">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="qUW-q9-vvb">
                                 <rect key="frame" x="0.5" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kertas_Surat" translatesAutoresizingMaskIntoConstraints="NO" id="57x-Rm-3ni">
-                                <rect key="frame" x="24.5" y="98" width="366" height="530"/>
+                                <rect key="frame" x="24.5" y="152" width="366" height="530"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ketuk untuk mulai menulis perahu kertasamu" borderStyle="line" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TAd-U8-48M">
-                                <rect key="frame" x="49" y="290" width="317" height="20"/>
+                                <rect key="frame" x="49" y="322" width="317" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="tdQ-bp-Ooo"/>
                                 </constraints>
@@ -2640,7 +2640,7 @@ s
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CN6-s6-a3Q">
-                                <rect key="frame" x="311" y="237" width="55" height="33"/>
+                                <rect key="frame" x="311" y="269" width="55" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Selesai">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -2662,7 +2662,7 @@ s
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sI2-wd-7aR">
-                                <rect key="frame" x="55" y="237" width="50" height="33"/>
+                                <rect key="frame" x="55" y="269" width="50" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Hapus">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -2976,7 +2976,7 @@ kamu merasa tidak nyaman.</string>
                         <outlet property="orangeBackground" destination="cW5-A1-Scy" id="csU-J1-jb1"/>
                         <outlet property="paperBoat" destination="ZHu-RY-4yy" id="GxR-rG-j29"/>
                         <outlet property="tideBackground" destination="Fgz-AC-6yD" id="CLM-Lx-LaA"/>
-                        <segue destination="eEh-42-BzD" kind="show" identifier="blowToHome" id="cB6-Fp-qwu"/>
+                        <segue destination="cLq-li-GRl" kind="presentation" identifier="blowToHome" modalPresentationStyle="fullScreen" id="2Wt-Vh-GSG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQ4-I4-bZg" sceneMemberID="firstResponder"/>
@@ -2986,8 +2986,8 @@ kamu merasa tidak nyaman.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="2Wt-Vh-GSG"/>
         <segue reference="Pj7-gd-Isc"/>
-        <segue reference="P3E-d2-545"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Avatar 1" width="150" height="150"/>
