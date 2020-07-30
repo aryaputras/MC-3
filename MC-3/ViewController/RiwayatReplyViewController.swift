@@ -59,6 +59,8 @@ class RiwayatReplyViewController: UIViewController{
         }
     }
     
+    @IBAction func playButton(_ sender: Any) {
+    }
     @IBAction func myUnwindSegue(unwindSegue: UIStoryboardSegue){
         
     }
@@ -108,6 +110,7 @@ extension RiwayatReplyViewController: UICollectionViewDelegate, UICollectionView
         //print(formatter1.string(from: date!))
         cell.imageView.image = replyImage
         cell.dateLabel.text = formatter1.string(from: date!)
+        //print(formatter1.string(from: date!))
         // buat masukin isinya dari mana
         //        let item = Member[indexPath.item]
         //        cell.imageView.image = item.imageName

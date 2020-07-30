@@ -110,8 +110,13 @@ extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataS
         cell.recordName = record.recordID.recordName
         cell.recordID = record.recordID
         cell.image = image
+        let date = record.creationDate
+               let formatter1 = DateFormatter()
+               formatter1.dateStyle = .short
+        cell.tanggalLabel.text = formatter1.string(from: date!)
         
-        print(image)
+        
+        //print(image)
         return cell
     }
     @objc func tapLikes(sender: UITapGestureRecognizer?){

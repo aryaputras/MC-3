@@ -21,6 +21,8 @@ class RiwayatReplyCollectionViewCell: UICollectionViewCell {
         // Initialization code
     }
     
+    @IBAction func playButtonReply(_ sender: Any) {
+    }
     static func nib() -> UINib {
         return UINib(nibName: "RiwayatReplyCollectionViewCell", bundle: nil)
     }

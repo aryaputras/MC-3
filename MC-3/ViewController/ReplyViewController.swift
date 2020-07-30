@@ -246,7 +246,12 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
         let database = CKContainer.default().publicCloudDatabase
         let newRecord = CKRecord(recordType: "perahuKertasReply")
         //HARUSNYA INI RECORDNAME DARI SENDERNYA
-
+        if self.recorded == true {
+                          let path = self.getDocumentsDirectory().appendingPathComponent(self.filename)
+                          let audio =  CKAsset(fileURL: path) as CKRecordValue
+                          //let imageRecord = CKAsset(fileURL: imgp)
+                          newRecord.setValue(audio, forKey: "audio")
+                      }
         newRecord.setValue(imageRecord, forKey: "image")
 //ADD NEWRECORD AUDIO CAPABILITIES
         newRecord.setObject(reply, forKey: "reply")
