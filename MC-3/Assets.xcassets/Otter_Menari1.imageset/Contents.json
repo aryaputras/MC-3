@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Otter_Menari1.png",
+      "filename" : "Otter_Menari.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Otter_Menari1@2x.png",
+      "filename" : "Otter_Menari@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Otter_Menari1@3x.png",
+      "filename" : "Otter_Menari@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

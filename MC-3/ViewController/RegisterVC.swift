@@ -80,10 +80,12 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func buttonMale(_ sender: Any) {
+        buttonMale.setImage(UIImage(named: "Button_Cowok_Tapped"),for: .normal)
         gender = 1
     }
     
     @IBAction func buttonFemale(_ sender: Any) {
+        buttonMale.setImage(UIImage(named: "Button_Cewek_Tapped"),for: .normal)
         gender = 2
     }
     

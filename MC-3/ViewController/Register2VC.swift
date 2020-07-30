@@ -34,14 +34,17 @@ class Register2VC: UIViewController {
     
     
     @IBAction func buttonMale(_ sender: Any) {
+        buttonMale.setImage(UIImage(named: "Button_Cowok_Tapped"),for: .normal)
         genderPrefer = 1
     }
     
     @IBAction func buttonFemale(_ sender: Any) {
+        buttonMale.setImage(UIImage(named: "Button_Cewek_Tapped"),for: .normal)
         genderPrefer = 2
     }
     
     @IBAction func buttonAll(_ sender: Any) {
+        buttonMale.setImage(UIImage(named: "Button_Semua_Tapped"),for: .normal)
         genderPrefer = 0
     }
     
