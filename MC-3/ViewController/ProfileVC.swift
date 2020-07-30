@@ -22,72 +22,53 @@ class ProfileVC: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            
+        self.navigationController?.navigationBar.isHidden = true
         let database = CKContainer.default().publicCloudDatabase
-        
         initializeHideKeyboard()
         profileUsername.delegate = self
         textFieldShouldReturn(profileUsername)
-        
-        
-        
         //EXPERIMENTAL
-        
-              CKContainer.default().fetchUserRecordID { userID, error in
+        CKContainer.default().fetchUserRecordID { userID, error in
             if let userID = userID {
                 //print(userID)
-             
             }
-            
             let reference = CKRecord.Reference(recordID: userID!, action: .none)
             let predicate = NSPredicate(format: "creatorID == %@", userID?.recordName ?? "")
             let query = CKQuery(recordType: "profile", predicate: predicate)
-                
-                query.sortDescriptors = [NSSortDescriptor(key: "signUpDate", ascending: false)]
-                
+            query.sortDescriptors = [NSSortDescriptor(key: "signUpDate", ascending: false)]
             database.perform(query, inZoneWith: nil) { (records, error) in
-                    if let fetchedRecords = records {
-                        self.name = fetchedRecords
-                        DispatchQueue.main.async {
-                            print(self.name)
-                            
-                            
+                if let fetchedRecords = records {
+                    self.name = fetchedRecords
+                    DispatchQueue.main.async {
+                        print(self.name)
                         let username = self.name[0].object(forKey: "username")
                         self.haiUser.text = "hai, \(username!)!"
-                           
                         let creationDate = self.name[0].object(forKey: "signUpDate")
                         self.since.text = "\(creationDate!)"
-                            
                         let avatarImage = self.name[0].object(forKey: "avatar")
                         self.profileImage.image = UIImage(named: avatarImage as! String)
-                            
-                                                 }
-//                        print(reference)
-//                        print(query)
-//                        print(predicate)
-//                        print(fetchedRecords)
-                        
-                        //print(self.name)
-                   
-                        
                         
                     }
+                    //                        print(reference)
+                    //                        print(query)
+                    //                        print(predicate)
+                    //                        print(fetchedRecords)
+                    //print(self.name)
                 }
-                
-                
+            }
         }
-
         //EXPERIMENTAL
-
         // Do any additional setup after loading the view.
     }
-
     
-     @IBAction func ButtonLeft(_ sender: Any) {
+    @IBAction func myUnwindSegue(unwindSegue: UIStoryboardSegue){
+    }
+    
+    @IBAction func ButtonLeft(_ sender: Any) {
         if index != 0
         {
-        index-=1
-               profileImage.image = UIImage(imageLiteralResourceName: ImageName[index])
+            index-=1
+            profileImage.image = UIImage(imageLiteralResourceName: ImageName[index])
         }
         else if index == 0{
             index = 3
@@ -98,15 +79,15 @@ class ProfileVC: UIViewController, UITextFieldDelegate {
     @IBAction func ButtonRight(_ sender: Any) {
         if index != 3
         {
-        index+=1
-               profileImage.image = UIImage(imageLiteralResourceName: ImageName[index])
+            index+=1
+            profileImage.image = UIImage(imageLiteralResourceName: ImageName[index])
         }
         else if index == 3 {
             index = 0
             profileImage.image = UIImage(imageLiteralResourceName: ImageName[index])
         }
     }
-
+    
     @IBAction func ButtonSave(_ sender: Any) {
         
     }
@@ -116,17 +97,17 @@ class ProfileVC: UIViewController, UITextFieldDelegate {
         return false
     }
     func initializeHideKeyboard(){
-    //Declare a Tap Gesture Recognizer which will trigger our dismissMyKeyboard() function
-    let tap: UITapGestureRecognizer = UITapGestureRecognizer(
-    target: self,
-    action: #selector(dismissMyKeyboard))
-    //Add this tap gesture recognizer to the parent view
-    view.addGestureRecognizer(tap)
+        //Declare a Tap Gesture Recognizer which will trigger our dismissMyKeyboard() function
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissMyKeyboard))
+        //Add this tap gesture recognizer to the parent view
+        view.addGestureRecognizer(tap)
     }
     @objc func dismissMyKeyboard(){
-    //endEditing causes the view (or one of its embedded text fields) to resign the first responder status.
-    //In short- Dismiss the active keyboard.
-    view.endEditing(true)
+        //endEditing causes the view (or one of its embedded text fields) to resign the first responder status.
+        //In short- Dismiss the active keyboard.
+        view.endEditing(true)
     }
     
 }

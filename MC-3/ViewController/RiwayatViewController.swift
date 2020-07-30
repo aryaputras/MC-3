@@ -23,20 +23,16 @@ class RiwayatViewController: UIViewController{
     @IBOutlet weak var riwayatCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.isHidden = true
         riwayatCollectionView.register(RiwayatCollectionCell.nib(),forCellWithReuseIdentifier: "RiwayatCollectionCell")
-        
         riwayatCollectionView.delegate = self
         riwayatCollectionView.dataSource = self
-        
         let database = CKContainer.default().publicCloudDatabase
-        
+
         CKContainer.default().fetchUserRecordID { userID, error in
             if let userID = userID {
                 //print(userID)
-                
             }
-            
             //GETTING USER'S MESSAGES THAT GO OUT
             let reference = CKRecord.Reference(recordID: userID!, action: .none)
             let predicate = NSPredicate(format: "creatorID == %@", userID?.recordName ?? "")
@@ -56,23 +52,16 @@ class RiwayatViewController: UIViewController{
                         //PRINT MESSAGE
                         
                         //print(records![0].object(forkey: "message")
-                        
-                        
-                        //PRINT RECORDNAME
-                        // print(records![0].recordID.recordName)
-                        
                     }
-                    
-                    
-                    
                 }
             }
-            
-            
         }
+    }
+    @IBAction func myUnwindSegue(unwindSegue: UIStoryboardSegue){
         
     }
 }
+
 extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         //barang di collectionnya biasa pake counter
@@ -135,11 +124,6 @@ extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataS
             message = cellOwner.suratLabel.text!
             originRecordID = cellOwner.recordID
             image = cellOwner.image
-            
-            print(message)
-            //print(recordName)
-            
-            
             performSegue(withIdentifier: "riwayatToReply", sender: Any?.self)
             
             //Make ID for each record and get from cellOwner.(ID) and pass it to CKModify  (ID) likes +1

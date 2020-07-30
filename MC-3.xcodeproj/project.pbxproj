@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		485FB635A1D58525A4AF548B /* Pods_MC_3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F704762A03EF5AAF2AF16004 /* Pods_MC_3.framework */; };
+		49172D6624D191FB00393123 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49172D6524D191FB00393123 /* TabBarController.swift */; };
 		4954B65B24C6B9AB003A35AA /* SendAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4954B65A24C6B9AB003A35AA /* SendAnimationViewController.swift */; };
 		498209D124C5891B00A5FDD5 /* RiwayatCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 498209CF24C5891B00A5FDD5 /* RiwayatCollectionCell.swift */; };
 		498209D224C5891B00A5FDD5 /* RiwayatCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 498209D024C5891B00A5FDD5 /* RiwayatCollectionCell.xib */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		243819C0866D882BB9761732 /* Pods-MC-3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC-3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MC-3/Pods-MC-3.debug.xcconfig"; sourceTree = "<group>"; };
+		49172D6524D191FB00393123 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		4954B65A24C6B9AB003A35AA /* SendAnimationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendAnimationViewController.swift; sourceTree = "<group>"; };
 		498209CF24C5891B00A5FDD5 /* RiwayatCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiwayatCollectionCell.swift; sourceTree = "<group>"; };
 		498209D024C5891B00A5FDD5 /* RiwayatCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RiwayatCollectionCell.xib; sourceTree = "<group>"; };
@@ -96,6 +98,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		49C37FEA24D1B64E00F83819 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				49F705E224C96B2E00EF7CF6 /* RiwayatReplyCollectionViewCell.swift */,
+				49F705E324C96B2E00EF7CF6 /* RiwayatReplyCollectionViewCell.xib */,
+				498209CF24C5891B00A5FDD5 /* RiwayatCollectionCell.swift */,
+				498209D024C5891B00A5FDD5 /* RiwayatCollectionCell.xib */,
+				49F705DE24C9650400EF7CF6 /* MercusuarCollectionViewCell.swift */,
+				49F705DF24C9650400EF7CF6 /* MercusuarCollectionViewCell.xib */,
+			);
+			path = Xib;
+			sourceTree = "<group>";
+		};
+		49C37FEB24D1B66200F83819 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				49E7A37C24D0174500702E4F /* AnimasiLipatKertasViewController.swift */,
+				C0B587EC24CAADC300E5851F /* AskViewController.swift */,
+				C0C6F8F724CD72AB00218D3D /* HomeViewController.swift */,
+				C0C6F8EE24CAD7AC00218D3D /* MencariViewController.swift */,
+				C0C6F8F024CBFBC300218D3D /* MencariBenerViewController.swift */,
+				4990E96124C9765700CFA1A8 /* MercusuarViewController.swift */,
+				49DD0D5324C2F59500425052 /* ProfileVC.swift */,
+				4990E98724C9951900CFA1A8 /* ReplyViewController.swift */,
+				49DD0D5524C2F5A400425052 /* RegisterVC.swift */,
+				49DD0D5724C2F65600425052 /* Register2VC.swift */,
+				C08FBBB024C588EA002F6E9D /* ReceiveViewController.swift */,
+				4990E96324C9768900CFA1A8 /* RiwayatViewController.swift */,
+				4990E96524C9769700CFA1A8 /* RiwayatReplyViewController.swift */,
+				4954B65A24C6B9AB003A35AA /* SendAnimationViewController.swift */,
+				C08FBBAE24C5854C002F6E9D /* SendViewController.swift */,
+				C04B3E6C24C1917700707D0F /* ViewController.swift */,
+				49B4F52424CADB9D002C9143 /* WriteMercusuarViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		5387EA08A48F26A6D5AB7971 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,36 +168,16 @@
 				C04B3E7F24C191B200707D0F /* MC-3.entitlements */,
 				C04B3E6824C1917700707D0F /* AppDelegate.swift */,
 				C032542124C5F77000AFC520 /* MICDELETELATERViewController.swift */,
+				49172D6524D191FB00393123 /* TabBarController.swift */,
 				C04B3E6E24C1917700707D0F /* Main.storyboard */,
-				49E7A37C24D0174500702E4F /* AnimasiLipatKertasViewController.swift */,
-				49B4F52424CADB9D002C9143 /* WriteMercusuarViewController.swift */,
-				C0C6F8EE24CAD7AC00218D3D /* MencariViewController.swift */,
-				C0C6F8F724CD72AB00218D3D /* HomeViewController.swift */,
 				4990E98B24C999BD00CFA1A8 /* canvasView.swift */,
-				4990E98724C9951900CFA1A8 /* ReplyViewController.swift */,
-				C0B587EC24CAADC300E5851F /* AskViewController.swift */,
-				C0C6F8F024CBFBC300218D3D /* MencariBenerViewController.swift */,
 				C04B3E6A24C1917700707D0F /* SceneDelegate.swift */,
-				C04B3E6C24C1917700707D0F /* ViewController.swift */,
-				49DD0D5324C2F59500425052 /* ProfileVC.swift */,
-				49DD0D5524C2F5A400425052 /* RegisterVC.swift */,
-				49DD0D5724C2F65600425052 /* Register2VC.swift */,
-				4990E96324C9768900CFA1A8 /* RiwayatViewController.swift */,
-				4990E96524C9769700CFA1A8 /* RiwayatReplyViewController.swift */,
-				4990E96124C9765700CFA1A8 /* MercusuarViewController.swift */,
-				49F705E224C96B2E00EF7CF6 /* RiwayatReplyCollectionViewCell.swift */,
-				49F705E324C96B2E00EF7CF6 /* RiwayatReplyCollectionViewCell.xib */,
-				498209CF24C5891B00A5FDD5 /* RiwayatCollectionCell.swift */,
-				498209D024C5891B00A5FDD5 /* RiwayatCollectionCell.xib */,
-				49F705DE24C9650400EF7CF6 /* MercusuarCollectionViewCell.swift */,
-				49F705DF24C9650400EF7CF6 /* MercusuarCollectionViewCell.xib */,
-				4954B65A24C6B9AB003A35AA /* SendAnimationViewController.swift */,
-				C08FBBAE24C5854C002F6E9D /* SendViewController.swift */,
+				49C37FEB24D1B66200F83819 /* ViewController */,
+				49C37FEA24D1B64E00F83819 /* Xib */,
 				C04B3E7424C1917800707D0F /* Assets.xcassets */,
 				C04B3E7624C1917800707D0F /* LaunchScreen.storyboard */,
 				C04B3E7924C1917800707D0F /* Info.plist */,
 				C04B3E7124C1917700707D0F /* MC_3.xcdatamodeld */,
-				C08FBBB024C588EA002F6E9D /* ReceiveViewController.swift */,
 			);
 			path = "MC-3";
 			sourceTree = "<group>";
@@ -287,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				49DD0D5824C2F65600425052 /* Register2VC.swift in Sources */,
+				49172D6624D191FB00393123 /* TabBarController.swift in Sources */,
 				4990E98824C9951900CFA1A8 /* ReplyViewController.swift in Sources */,
 				C08FBBB124C588EA002F6E9D /* ReceiveViewController.swift in Sources */,
 				49DD0D5424C2F59500425052 /* ProfileVC.swift in Sources */,

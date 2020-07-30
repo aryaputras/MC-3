@@ -29,6 +29,7 @@ class RiwayatReplyViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
         //print(recordName)
         // print(originRecordID)
         //query the original record
@@ -39,16 +40,11 @@ class RiwayatReplyViewController: UIViewController{
         riwayatReplyCollectionView.register(RiwayatReplyCollectionViewCell.nib(), forCellWithReuseIdentifier: "RiwayatReplyCollectionViewCell")
         riwayatReplyCollectionView.delegate = self
         riwayatReplyCollectionView.dataSource = self
-        
         let database = CKContainer.default().publicCloudDatabase
-        
         let recordIDName = recordName
-        
         let predicate = NSPredicate(format: "originID == '\(recordName)'")
         let predicateAll = NSPredicate(value: true)
-        
         let query = CKQuery(recordType: "perahuKertasReply", predicate: predicate)
-        
         //query.sortDescriptors = [NSSortDescriptor(key: "replyDate", ascending: false)]
         database.perform(query, inZoneWith: nil) { (records, error) in
             if let fetchedRecords = records {
@@ -61,8 +57,9 @@ class RiwayatReplyViewController: UIViewController{
                 }
             }
         }
-        
-        
+    }
+    
+    @IBAction func myUnwindSegue(unwindSegue: UIStoryboardSegue){
         
     }
 }

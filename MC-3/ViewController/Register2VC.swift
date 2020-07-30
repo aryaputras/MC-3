@@ -28,10 +28,10 @@ class Register2VC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
-
+        
+        
     }
-   
+    
     
     @IBAction func buttonMale(_ sender: Any) {
         genderPrefer = 1
@@ -44,8 +44,8 @@ class Register2VC: UIViewController {
     @IBAction func buttonAll(_ sender: Any) {
         genderPrefer = 0
     }
-
-   
+    
+    
     @IBAction func dadadada(_ sender: RangeSeekSlider) {
         
         agePreferMin = Int(sender.selectedMinValue)
@@ -55,22 +55,22 @@ class Register2VC: UIViewController {
     
     @IBAction func buttonNext(_ sender: Any) {
         
-          CKContainer.default().fetchUserRecordID { userID, error in
-        if let userID = userID {
-            //print(userID)
-            let nameRecord = self.name as CKRecordValue
-            let ageRecord = self.age as CKRecordValue
-            let genderRecord = self.gender as CKRecordValue
-            let agePreferMinRecord = self.agePreferMin as CKRecordValue
-            let agePreferMaxRecord = self.agePreferMax as CKRecordValue
-            let genderPreferRecord = self.genderPrefer as CKRecordValue
-            let avatarRecord = self.avatar as CKRecordValue
-            let creatorID = userID.recordName as CKRecordValue
-            let date = Date() as CKRecordValue
-           
-          
-
-                            
+        CKContainer.default().fetchUserRecordID { userID, error in
+            if let userID = userID {
+                //print(userID)
+                let nameRecord = self.name as CKRecordValue
+                let ageRecord = self.age as CKRecordValue
+                let genderRecord = self.gender as CKRecordValue
+                let agePreferMinRecord = self.agePreferMin as CKRecordValue
+                let agePreferMaxRecord = self.agePreferMax as CKRecordValue
+                let genderPreferRecord = self.genderPrefer as CKRecordValue
+                let avatarRecord = self.avatar as CKRecordValue
+                let creatorID = userID.recordName as CKRecordValue
+                let date = Date() as CKRecordValue
+                
+                
+                
+                
                 let newRecord = CKRecord(recordType: "profile")
                 
                 let database = CKContainer.default().publicCloudDatabase
@@ -93,21 +93,21 @@ class Register2VC: UIViewController {
                             
                         } else {
                             print("record was saved")
-                          
+                            
                         }
                     }
                 }
             } }
         
-       
+        
         
     }
     
-           
-           
-//
-
-//
-//
-
+    
+    
+    //
+    
+    //
+    //
+    
 }
