@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import CloudKit
+
 
 class HomeViewController: UIViewController {
-    
+   
+    @IBOutlet weak var usernameLabel: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
@@ -23,6 +26,32 @@ class HomeViewController: UIViewController {
         view.addGestureRecognizer(swipeDown)
         // Do any additional setup after loading the view.
         
+        //Get Username
+        CKContainer.default().fetchUserRecordID { userID, error in
+             if let userID = userID {
+                 //print(userID)
+             }
+             let reference = CKRecord.Reference(recordID: userID!, action: .none)
+             let predicate = NSPredicate(format: "creatorID == %@", userID?.recordName ?? "")
+             let query = CKQuery(recordType: "profile", predicate: predicate)
+             query.sortDescriptors = [NSSortDescriptor(key: "signUpDate", ascending: false)]
+             database.perform(query, inZoneWith: nil) { (records, error) in
+                 if let fetchedRecords = records {
+                     self.name = fetchedRecords
+                     DispatchQueue.main.async {
+                        
+                         let username = self.name[0].object(forKey: "username")
+                        usernameLabel.text = "Hai,\(username)"
+                        
+                     }
+                     //                        print(reference)
+                     //                        print(query)
+                     //                        print(predicate)
+                     //                        print(fetchedRecords)
+                     //print(self.name)
+                 }
+             }
+         }
         
     }
     @IBAction func myUnwindSegue(unwindSegue: UIStoryboardSegue){
