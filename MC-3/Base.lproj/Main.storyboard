@@ -1216,6 +1216,10 @@ kamu butuhkan</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="Dermaga1" id="EX4-Fy-Lmk"/>
                     <navigationItem key="navigationItem" id="Haf-Yf-Nbo"/>
+                    <connections>
+                        <segue destination="Ib3-wX-25M" kind="presentation" identifier="swipeToSend" modalPresentationStyle="fullScreen" id="5Xo-Ek-ILa"/>
+                        <segue destination="lmg-fm-10H" kind="presentation" modalPresentationStyle="fullScreen" id="lfE-Ie-0Mh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7H-iI-Rt2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1981,7 +1985,7 @@ s
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAQ-KZ-caC">
-                                <rect key="frame" x="46" y="659.5" width="21" height="71"/>
+                                <rect key="frame" x="46" y="659.5" width="21" height="125.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="scribble" catalog="system">
@@ -1992,7 +1996,7 @@ s
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0P-Pj-weQ">
-                                <rect key="frame" x="354" y="653" width="24" height="84"/>
+                                <rect key="frame" x="354" y="653" width="24" height="138.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="90"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="mic.fill" catalog="system">
@@ -2987,7 +2991,8 @@ kamu merasa tidak nyaman.</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="2Wt-Vh-GSG"/>
-        <segue reference="Pj7-gd-Isc"/>
+        <segue reference="lfE-Ie-0Mh"/>
+        <segue reference="5Xo-Ek-ILa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Avatar 1" width="150" height="150"/>
