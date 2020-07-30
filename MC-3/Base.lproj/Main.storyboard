@@ -1217,6 +1217,10 @@ kamu butuhkan</string>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" image="Dermaga1" id="EX4-Fy-Lmk"/>
                     <navigationItem key="navigationItem" id="Haf-Yf-Nbo"/>
+                    <connections>
+                        <segue destination="Ib3-wX-25M" kind="presentation" identifier="swipeToSend" modalPresentationStyle="fullScreen" id="5Xo-Ek-ILa"/>
+                        <segue destination="lmg-fm-10H" kind="presentation" modalPresentationStyle="fullScreen" id="lfE-Ie-0Mh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F7H-iI-Rt2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2988,7 +2992,8 @@ kamu merasa tidak nyaman.</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="2Wt-Vh-GSG"/>
-        <segue reference="Pj7-gd-Isc"/>
+        <segue reference="lfE-Ie-0Mh"/>
+        <segue reference="5Xo-Ek-ILa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Avatar 1" width="150" height="150"/>
