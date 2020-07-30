@@ -136,6 +136,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
         
     }
     @IBAction func recordingButton(_ sender: Any) {
+        
         if(recordButtonImage == "Mic_Thin"){
             startRecording()
             recordButtonImage = "Mic_Thick"
@@ -143,19 +144,19 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
         }
         else if(recordButtonImage == "Mic_Thick"){
             finishRecording(success: true)
+            recordButtonImage = "Mic_Thin"
+            recordingButton.setImage(UIImage(named: recordButtonImage), for: .normal)
         }
         
     }
-    @IBAction func stopRecordingButton(_ sender: Any) {
-        finishRecording(success: true)
-    }
-    
+
     
     @IBAction func playButton(_ sender: Any) {
         preparePlayer()
         soundPlayer.play()
     }
     @IBAction func recordButton(_ sender: Any) {
+        textField.text = ""
         recordButton.isHidden = true
         drawButton.isHidden = true
         sliderSize.isHidden = true
@@ -185,6 +186,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
     }
     
     @IBAction func drawButton(_ sender: Any) {
+        textField.text = ""
         recordButton.isHidden = true
         drawButton.isHidden = true
         sliderSize.isHidden = false

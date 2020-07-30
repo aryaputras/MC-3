@@ -285,8 +285,8 @@ geser ke bawah  untuk menangkap satu.</string>
                     <tabBarItem key="tabBarItem" title="Item" image="Dermaga1" id="0yy-C2-r9I"/>
                     <navigationItem key="navigationItem" id="21x-Xi-3B5"/>
                     <connections>
-                        <segue destination="lmg-fm-10H" kind="show" identifier="swipeToReceive" id="Pj7-gd-Isc"/>
-                        <segue destination="Ib3-wX-25M" kind="show" identifier="swipeToSend" id="9b2-eg-5M3"/>
+                        <segue destination="lmg-fm-10H" kind="presentation" identifier="swipeToReceive" modalPresentationStyle="fullScreen" id="Pj7-gd-Isc"/>
+                        <segue destination="Ib3-wX-25M" kind="presentation" identifier="swipeToSend" modalPresentationStyle="fullScreen" id="9b2-eg-5M3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z9X-Ga-1QL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -788,31 +788,24 @@ kamu butuhkan</string>
             <objects>
                 <viewController id="05H-7O-M6E" customClass="SendViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ale-Ni-IS2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="4qT-su-eaC">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kertas_Surat" translatesAutoresizingMaskIntoConstraints="NO" id="nid-Pi-M93">
-                                <rect key="frame" x="24" y="190" width="366" height="530"/>
+                                <rect key="frame" x="24" y="244" width="366" height="530"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8K-3V-x0m" customClass="canvasView" customModule="MC_3" customModuleProvider="target">
-                                <rect key="frame" x="76" y="255" width="288" height="404"/>
+                                <rect key="frame" x="76" y="309" width="288" height="404"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gI-5H-bJP">
-                                <rect key="frame" x="266" y="372" width="32" height="36"/>
-                                <state key="normal" title="Stop"/>
-                                <connections>
-                                    <action selector="stopRecordingButton:" destination="05H-7O-M6E" eventType="touchUpInside" id="zmZ-qj-Q8t"/>
-                                </connections>
-                            </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Slider_Size" translatesAutoresizingMaskIntoConstraints="NO" id="x5h-o6-n0W">
-                                <rect key="frame" x="44" y="362.5" width="24" height="236"/>
+                                <rect key="frame" x="44" y="416.5" width="24" height="236"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHu-ER-nhf">
-                                <rect key="frame" x="55" y="205" width="50" height="33"/>
+                                <rect key="frame" x="55" y="259" width="50" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Hapus">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -822,7 +815,7 @@ kamu butuhkan</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5OV-PY-Low">
-                                <rect key="frame" x="312" y="205" width="55" height="33"/>
+                                <rect key="frame" x="312" y="259" width="55" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" title="Selesai">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -831,19 +824,8 @@ kamu butuhkan</string>
                                     <action selector="doneAction:" destination="05H-7O-M6E" eventType="touchUpInside" id="VnK-4F-ZXj"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3G-qO-PZg">
-                                <rect key="frame" x="29" y="62" width="17" height="21"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="chevron.left" catalog="system">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                                <connections>
-                                    <segue destination="6r5-dG-ake" kind="unwind" unwindAction="myUnwindSegueWithUnwindSegue:" id="x0J-O4-l0S"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="ketuk untuk mulai menulis perahu kertasamu" borderStyle="line" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8EF-Zy-qCc">
-                                <rect key="frame" x="49" y="258" width="318" height="20"/>
+                                <rect key="frame" x="49" y="312" width="318" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="5rc-v3-XO7"/>
                                 </constraints>
@@ -852,7 +834,7 @@ kamu butuhkan</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvG-Xf-kdP">
-                                <rect key="frame" x="41" y="734" width="21" height="29"/>
+                                <rect key="frame" x="41" y="788" width="21" height="78"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="scribble" catalog="system">
@@ -863,7 +845,7 @@ kamu butuhkan</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ltS-G4-Xot">
-                                <rect key="frame" x="58" y="742" width="17" height="16"/>
+                                <rect key="frame" x="58" y="845" width="17" height="16"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="White">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -873,7 +855,7 @@ kamu butuhkan</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G4B-GQ-59L">
-                                <rect key="frame" x="94" y="742" width="17" height="16"/>
+                                <rect key="frame" x="94" y="845" width="17" height="16"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="Black">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -883,7 +865,7 @@ kamu butuhkan</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dVc-nA-mvF">
-                                <rect key="frame" x="129" y="742" width="17" height="16"/>
+                                <rect key="frame" x="129" y="845" width="17" height="16"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="Blue">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -893,7 +875,7 @@ kamu butuhkan</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yq1-ez-a8q">
-                                <rect key="frame" x="163.5" y="742" width="17" height="16"/>
+                                <rect key="frame" x="163.5" y="845" width="17" height="16"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="Grenn">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -903,7 +885,7 @@ kamu butuhkan</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1V-Tr-P1D">
-                                <rect key="frame" x="198.5" y="742" width="17" height="16"/>
+                                <rect key="frame" x="198.5" y="845" width="17" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="Sq0-Wg-igB"/>
                                 </constraints>
@@ -916,7 +898,7 @@ kamu butuhkan</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oga-Q6-dzf">
-                                <rect key="frame" x="233.5" y="742" width="17" height="16"/>
+                                <rect key="frame" x="233.5" y="845" width="17" height="16"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="Orange">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -926,7 +908,7 @@ kamu butuhkan</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qdc-97-n2W">
-                                <rect key="frame" x="268" y="742" width="17" height="16"/>
+                                <rect key="frame" x="268" y="845" width="17" height="16"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="Soft_pink">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -936,7 +918,7 @@ kamu butuhkan</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ROr-K4-uUa">
-                                <rect key="frame" x="303" y="742" width="17" height="16"/>
+                                <rect key="frame" x="303" y="845" width="17" height="16"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="Dark_pink">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -946,7 +928,7 @@ kamu butuhkan</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNC-DV-mUO">
-                                <rect key="frame" x="339" y="742" width="17" height="16"/>
+                                <rect key="frame" x="339" y="845" width="17" height="16"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="Purple">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -956,20 +938,20 @@ kamu butuhkan</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Buat catatan suara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALW-xL-UPj">
-                                <rect key="frame" x="24" y="455" width="366" height="24"/>
+                                <rect key="frame" x="24" y="509" width="366" height="24"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tekan untuk mulai merekam suara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIH-oI-eBM">
-                                <rect key="frame" x="24" y="504" width="366" height="21"/>
+                                <rect key="frame" x="24" y="558" width="366" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tiup untuk menghanyutkan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EsA-Ba-9n4">
-                                <rect key="frame" x="102" y="815" width="210" height="99"/>
+                                <rect key="frame" x="102" y="918" width="210" height="99"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="99" id="4GJ-2o-yUg"/>
                                 </constraints>
@@ -978,7 +960,7 @@ kamu butuhkan</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkW-fc-inn">
-                                <rect key="frame" x="161" y="343" width="97" height="97"/>
+                                <rect key="frame" x="161" y="397" width="97" height="97"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="Mic_Thin">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -988,7 +970,7 @@ kamu butuhkan</string>
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="gEQ-si-ljD">
-                                <rect key="frame" x="-62" y="466" width="236" height="30"/>
+                                <rect key="frame" x="-62" y="520" width="236" height="30"/>
                                 <color key="tintColor" red="0.59777241950000004" green="0.80750650170000005" blue="0.8235349059" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="UG4-av-TTU"/>
@@ -1003,7 +985,7 @@ kamu butuhkan</string>
                                 </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zsd-xI-zI9">
-                                <rect key="frame" x="354" y="734" width="24" height="29"/>
+                                <rect key="frame" x="354" y="788" width="24" height="78"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="90"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="mic.fill" catalog="system">
@@ -1015,11 +997,22 @@ kamu butuhkan</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O6N-wD-Q7g">
-                                <rect key="frame" x="356" y="674" width="22" height="22"/>
+                                <rect key="frame" x="356" y="728" width="22" height="22"/>
                                 <color key="tintColor" red="0.08235294118" green="0.45790237189999999" blue="0.50981366630000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="play.fill" catalog="system"/>
                                 <connections>
                                     <action selector="playButton:" destination="05H-7O-M6E" eventType="touchUpInside" id="ORx-1S-xni"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3G-qO-PZg">
+                                <rect key="frame" x="28" y="57" width="17" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="chevron.left" catalog="system">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <segue destination="6r5-dG-ake" kind="unwind" unwindAction="myUnwindSegueWithUnwindSegue:" id="x0J-O4-l0S"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1051,7 +1044,6 @@ kamu butuhkan</string>
                             <constraint firstItem="8EF-Zy-qCc" firstAttribute="top" secondItem="YHu-ER-nhf" secondAttribute="bottom" constant="20" id="KbT-e2-9In"/>
                             <constraint firstAttribute="bottom" secondItem="T8K-3V-x0m" secondAttribute="bottom" constant="183" id="LZI-AR-KOd"/>
                             <constraint firstItem="ltS-G4-Xot" firstAttribute="leading" secondItem="tXm-Nh-ZL4" secondAttribute="leading" constant="58" id="NbV-dP-uIs"/>
-                            <constraint firstItem="ALW-xL-UPj" firstAttribute="top" secondItem="4gI-5H-bJP" secondAttribute="bottom" constant="47" id="Orm-yN-x8A"/>
                             <constraint firstItem="dVc-nA-mvF" firstAttribute="leading" secondItem="G4B-GQ-59L" secondAttribute="trailing" constant="18" id="OzM-63-12v"/>
                             <constraint firstItem="tXm-Nh-ZL4" firstAttribute="trailing" secondItem="O6N-wD-Q7g" secondAttribute="trailing" constant="36" id="PS6-09-1hS"/>
                             <constraint firstItem="qdc-97-n2W" firstAttribute="leading" secondItem="oga-Q6-dzf" secondAttribute="trailing" constant="17.5" id="Qbp-wg-mR3"/>
@@ -1081,15 +1073,12 @@ kamu butuhkan</string>
                             <constraint firstItem="gEQ-si-ljD" firstAttribute="top" secondItem="bkW-fc-inn" secondAttribute="bottom" constant="26" id="jtN-Kc-KUe"/>
                             <constraint firstItem="zsd-xI-zI9" firstAttribute="top" secondItem="lvG-Xf-kdP" secondAttribute="top" id="mFi-KU-FZJ"/>
                             <constraint firstItem="L1V-Tr-P1D" firstAttribute="top" secondItem="qdc-97-n2W" secondAttribute="top" id="mVo-cg-zuu"/>
-                            <constraint firstItem="4gI-5H-bJP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="bkW-fc-inn" secondAttribute="trailing" constant="8" symbolic="YES" id="mzK-O7-F0a"/>
                             <constraint firstItem="tXm-Nh-ZL4" firstAttribute="trailing" secondItem="WNC-DV-mUO" secondAttribute="trailing" constant="58" id="nTz-kD-Djy"/>
-                            <constraint firstItem="tXm-Nh-ZL4" firstAttribute="trailing" secondItem="4gI-5H-bJP" secondAttribute="trailing" constant="116" id="nj0-SP-buZ"/>
                             <constraint firstItem="tXm-Nh-ZL4" firstAttribute="bottom" secondItem="L1V-Tr-P1D" secondAttribute="bottom" constant="1" id="qCE-Fs-mU3"/>
                             <constraint firstAttribute="bottomMargin" secondItem="zsd-xI-zI9" secondAttribute="bottom" constant="-4" id="qDi-cf-g1C"/>
                             <constraint firstItem="nid-Pi-M93" firstAttribute="top" secondItem="j3G-qO-PZg" secondAttribute="bottom" constant="107" id="rY3-lv-488"/>
                             <constraint firstItem="cIH-oI-eBM" firstAttribute="top" secondItem="gEQ-si-ljD" secondAttribute="bottom" constant="9" id="sJj-4K-D1j"/>
                             <constraint firstItem="O6N-wD-Q7g" firstAttribute="leading" secondItem="tXm-Nh-ZL4" secondAttribute="leading" constant="356" id="upi-n6-FQO"/>
-                            <constraint firstItem="4gI-5H-bJP" firstAttribute="top" secondItem="8EF-Zy-qCc" secondAttribute="bottom" constant="94" id="uyM-gV-p6w"/>
                             <constraint firstItem="8EF-Zy-qCc" firstAttribute="leading" secondItem="tXm-Nh-ZL4" secondAttribute="leading" constant="49" id="v25-Xe-GKU"/>
                             <constraint firstItem="L1V-Tr-P1D" firstAttribute="leading" secondItem="yq1-ez-a8q" secondAttribute="trailing" constant="18" id="vEd-cu-rLI"/>
                             <constraint firstItem="L1V-Tr-P1D" firstAttribute="top" secondItem="yq1-ez-a8q" secondAttribute="top" id="xPQ-lc-kLN"/>
@@ -1124,7 +1113,7 @@ kamu butuhkan</string>
                         <outlet property="textField" destination="8EF-Zy-qCc" id="kLM-Q1-vpU"/>
                         <outlet property="whiteButton" destination="ltS-G4-Xot" id="6AE-mW-pT5"/>
                         <outlet property="yellowButton" destination="L1V-Tr-P1D" id="yUq-9W-l0W"/>
-                        <segue destination="90D-xC-XfU" kind="show" identifier="sendToBlow" id="sk5-X7-utM"/>
+                        <segue destination="90D-xC-XfU" kind="presentation" identifier="sendToBlow" modalPresentationStyle="fullScreen" id="sk5-X7-utM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wen-7j-Gzz" sceneMemberID="firstResponder"/>
@@ -1237,7 +1226,7 @@ kamu butuhkan</string>
             <objects>
                 <viewController id="Ib3-wX-25M" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DAw-PV-4zu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="kRn-4y-sfO">
@@ -1303,13 +1292,13 @@ kamu butuhkan</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Tuliskan curahan hati terdalammu!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhj-u0-ZOX">
-                                <rect key="frame" x="50" y="363" width="314" height="47.5"/>
+                                <rect key="frame" x="50" y="363" width="314" height="22"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hindari:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jNf-8Q-yox">
-                                <rect key="frame" x="170" y="426.5" width="76" height="27"/>
+                                <rect key="frame" x="170" y="401" width="76" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="BLG-zt-HhT"/>
                                 </constraints>
@@ -1318,7 +1307,7 @@ kamu butuhkan</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kVv-oL-zSX">
-                                <rect key="frame" x="50" y="465.5" width="314" height="64.5"/>
+                                <rect key="frame" x="50" y="440" width="314" height="90"/>
                                 <string key="text">Konten dewasa/seksual
 Godaan tanpa ijin
 Bullying/rasisme</string>
@@ -1336,7 +1325,7 @@ Bullying/rasisme</string>
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="05H-7O-M6E" kind="show" id="pcf-lP-Ouw"/>
+                                    <segue destination="05H-7O-M6E" kind="presentation" modalPresentationStyle="fullScreen" id="pcf-lP-Ouw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LBM-3F-MLF">
@@ -1414,7 +1403,7 @@ Bullying/rasisme</string>
             <objects>
                 <viewController id="lmg-fm-10H" customClass="MencariBenerViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kd7-kp-mxU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="UN6-fq-hVa">
@@ -1433,41 +1422,41 @@ Bullying/rasisme</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mencari Perahu Kertas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orc-dn-8aI">
-                                <rect key="frame" x="73" y="206" width="271" height="34"/>
+                                <rect key="frame" x="73" y="194" width="271" height="34"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goyangkan Device-mu Untuk Mencari Perahu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6r-mi-c3o">
-                                <rect key="frame" x="78" y="669" width="258" height="15"/>
+                                <rect key="frame" x="78" y="772" width="258" height="15"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGM-Up-oUo">
-                                <rect key="frame" x="202" y="385.5" width="143" height="71"/>
+                                <rect key="frame" x="202" y="412.5" width="143" height="71"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="Mini_Paper_Boat">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4P-q8-CkT">
-                                <rect key="frame" x="72" y="292" width="143" height="71"/>
+                                <rect key="frame" x="72" y="319" width="143" height="71"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="Mini_Paper_Boat">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8G-G0-ZhE">
-                                <rect key="frame" x="120" y="504" width="143" height="71"/>
+                                <rect key="frame" x="120" y="607" width="143" height="71"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="Mini_Paper_Boat">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Otter_berenang" translatesAutoresizingMaskIntoConstraints="NO" id="Wzz-lm-nEZ">
-                                <rect key="frame" x="249" y="248" width="145" height="73"/>
+                                <rect key="frame" x="249" y="236" width="145" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="145" id="6pd-wW-kpH"/>
                                 </constraints>
@@ -1495,7 +1484,7 @@ Bullying/rasisme</string>
                     </view>
                     <navigationItem key="navigationItem" id="OX2-6v-oJ4"/>
                     <connections>
-                        <segue destination="5D7-EV-M7R" kind="show" identifier="mencariToMenangkap" id="ZkE-Bg-WQ2"/>
+                        <segue destination="5D7-EV-M7R" kind="presentation" identifier="mencariToMenangkap" modalPresentationStyle="fullScreen" id="ZkE-Bg-WQ2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYW-tD-6bk" sceneMemberID="firstResponder"/>
@@ -1508,7 +1497,7 @@ Bullying/rasisme</string>
             <objects>
                 <viewController id="5D7-EV-M7R" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NOp-5J-odr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="DDa-Md-l32">
@@ -1527,13 +1516,13 @@ Bullying/rasisme</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e7q-wu-8L2">
-                                <rect key="frame" x="24.5" y="446" width="365" height="181"/>
+                                <rect key="frame" x="24.5" y="434" width="365" height="181"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="Big_Paper_Boat">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="ukp-1A-eOK" kind="show" id="mwP-IH-gmR"/>
+                                    <segue destination="ukp-1A-eOK" kind="presentation" modalPresentationStyle="fullScreen" id="mwP-IH-gmR"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Otter_Boat" translatesAutoresizingMaskIntoConstraints="NO" id="xf4-ZU-2Pf">
@@ -1541,7 +1530,7 @@ Bullying/rasisme</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1c-lo-hM9">
-                                <rect key="frame" x="51" y="340" width="314" height="68"/>
+                                <rect key="frame" x="51" y="328" width="314" height="68"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="68" id="26x-Za-A1w"/>
                                 </constraints>
@@ -1553,7 +1542,7 @@ perahu kertas!</string>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tekan perahu untuk membaca isi suratnya." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jms-kC-lrN">
-                                <rect key="frame" x="78" y="317" width="258" height="15"/>
+                                <rect key="frame" x="78" y="305" width="258" height="15"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1586,7 +1575,7 @@ perahu kertas!</string>
             <objects>
                 <viewController id="ukp-1A-eOK" customClass="ReceiveViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d7y-Dh-gdr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="eZt-LS-gaM">
@@ -1613,11 +1602,11 @@ perahu kertas!</string>
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="dZW-pK-S8h" kind="show" id="NEB-wr-H12"/>
+                                    <segue destination="dZW-pK-S8h" kind="presentation" modalPresentationStyle="fullScreen" id="NEB-wr-H12"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8pK-wv-9mK">
-                                <rect key="frame" x="29" y="54" width="17" height="29"/>
+                                <rect key="frame" x="29" y="42" width="17" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="29" id="CfV-6I-zl0"/>
                                 </constraints>
@@ -1656,7 +1645,7 @@ perahu kertas!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1MY-JD-nTe">
-                                <rect key="frame" x="29" y="589" width="47" height="47"/>
+                                <rect key="frame" x="29" y="589" width="47" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="47" id="1AH-SA-GkE"/>
                                 </constraints>
@@ -1798,7 +1787,7 @@ perahu kertas!</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kertas_Surat-1" translatesAutoresizingMaskIntoConstraints="NO" id="1or-Im-xrf">
-                                <rect key="frame" x="24" y="283" width="366" height="351"/>
+                                <rect key="frame" x="24" y="332" width="366" height="351"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Isi surat" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4P-dE-hNo">
                                 <rect key="frame" x="43" y="377" width="330" height="176"/>
@@ -1817,7 +1806,7 @@ perahu kertas!</string>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iS7-PF-tb2">
-                                <rect key="frame" x="103" y="667" width="208" height="55"/>
+                                <rect key="frame" x="103" y="716" width="208" height="55"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="Beri_Dukungan_Button">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -1834,26 +1823,26 @@ perahu kertas!</string>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Atau tiup untuk menghanyutkannya kembali" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XGg-gh-jC7">
-                                <rect key="frame" x="85" y="747" width="246" height="15"/>
+                                <rect key="frame" x="85" y="796" width="246" height="15"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZcG-yV-lfb">
-                                <rect key="frame" x="0.0" y="-55" width="414" height="898"/>
+                                <rect key="frame" x="0.0" y="-55" width="414" height="947"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="laporkanpengguna" translatesAutoresizingMaskIntoConstraints="NO" id="btA-sQ-vRs">
                                 <rect key="frame" x="50" y="303" width="314" height="290"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wdh-0k-iFL">
-                                <rect key="frame" x="230" y="522" width="96" height="57"/>
+                                <rect key="frame" x="230" y="571" width="96" height="57"/>
                                 <connections>
                                     <segue destination="y7E-qJ-JoE" kind="show" id="KHA-EC-imX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GaC-qs-gFG">
-                                <rect key="frame" x="95" y="522" width="96" height="57"/>
+                                <rect key="frame" x="95" y="571" width="96" height="57"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="96" id="BSe-01-Bwy"/>
                                     <constraint firstAttribute="height" constant="57" id="ztK-Fk-pQj"/>
@@ -1915,7 +1904,7 @@ perahu kertas!</string>
             <objects>
                 <viewController id="dZW-pK-S8h" customClass="ReplyViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JmL-gt-cVi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="9Zz-Gc-aWw">
@@ -1928,17 +1917,17 @@ perahu kertas!</string>
                                 <rect key="frame" x="24" y="116.5" width="366" height="250"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar_Picutre" translatesAutoresizingMaskIntoConstraints="NO" id="ik2-fj-Jan">
-                                <rect key="frame" x="39" y="140" width="41" height="41"/>
+                                <rect key="frame" x="39" y="128" width="41" height="41"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Username]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5v-u2-7m4">
-                                <rect key="frame" x="91" y="150" width="91" height="21"/>
+                                <rect key="frame" x="91" y="138" width="91" height="21"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Isi surat" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxt-hS-h8R">
-                                <rect key="frame" x="44" y="197" width="334" height="154"/>
+                                <rect key="frame" x="44" y="185" width="334" height="154"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="154" id="eiy-3A-CPv"/>
                                 </constraints>
@@ -1967,11 +1956,11 @@ s
                                 <color key="tintColor" red="0.082352941176470587" green="0.45790237189999999" blue="0.50981366630000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" image="play.fill" catalog="system"/>
                                 <connections>
-                                    <action selector="playTapped:" destination="dZW-pK-S8h" eventType="touchUpInside" id="yGo-gg-589"/>
+                                    <action selector="startPlay:" destination="dZW-pK-S8h" eventType="touchUpInside" id="91L-e3-gt5"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Pw-If-xbv">
-                                <rect key="frame" x="29" y="54" width="17" height="29"/>
+                                <rect key="frame" x="29" y="42" width="17" height="29"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="chevron.left" catalog="system">
@@ -1992,7 +1981,7 @@ s
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bAQ-KZ-caC">
-                                <rect key="frame" x="46" y="659.5" width="21" height="22"/>
+                                <rect key="frame" x="46" y="659.5" width="21" height="71"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="scribble" catalog="system">
@@ -2003,7 +1992,7 @@ s
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0P-Pj-weQ">
-                                <rect key="frame" x="354" y="653" width="24" height="35"/>
+                                <rect key="frame" x="354" y="653" width="24" height="84"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="90"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="mic.fill" catalog="system">
@@ -2033,6 +2022,9 @@ s
                                 <state key="normal" image="Mic_Thin">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="startRecord:" destination="dZW-pK-S8h" eventType="touchUpInside" id="teP-aX-Hc2"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Slider_Size-1" translatesAutoresizingMaskIntoConstraints="NO" id="50R-Hh-q02">
                                 <rect key="frame" x="40" y="465" width="24" height="172"/>
@@ -2705,14 +2697,14 @@ s
             <objects>
                 <viewController id="90D-xC-XfU" customClass="AnimasiLipatKertasViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2IE-Tp-aTD">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="UNz-ro-RC9">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lipat_kertas1" translatesAutoresizingMaskIntoConstraints="NO" id="JGx-9g-FCP">
-                                <rect key="frame" x="24" y="126" width="366" height="502"/>
+                                <rect key="frame" x="24" y="229" width="366" height="502"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auf-MW-als">
                                 <rect key="frame" x="355" y="54" width="35" height="29"/>
@@ -2724,7 +2716,7 @@ s
                                 </state>
                             </button>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OJB-KD-svf">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="796"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="899"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5CX-uI-iJo">
@@ -2746,13 +2738,13 @@ bebanmu melalui perahu kertas ini</string>
                                 <size key="shadowOffset" width="1" height="0.0"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Ombak" translatesAutoresizingMaskIntoConstraints="NO" id="092-YZ-Lei">
-                                <rect key="frame" x="0.0" y="516" width="414" height="280"/>
+                                <rect key="frame" x="0.0" y="619" width="414" height="280"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="280" id="mz7-aY-IFX"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sentuh untuk melanjutkan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jqI-3M-DSq">
-                                <rect key="frame" x="108" y="690" width="200" height="21"/>
+                                <rect key="frame" x="108" y="793" width="200" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -2819,7 +2811,7 @@ bebanmu melalui perahu kertas ini</string>
                         <outlet property="labelBawah" destination="Wh3-Xi-IcS" id="NUe-8t-lf7"/>
                         <outlet property="labelKalimat" destination="jqI-3M-DSq" id="Dhm-vF-62C"/>
                         <outlet property="shadowView" destination="OJB-KD-svf" id="Xno-Wp-kUN"/>
-                        <segue destination="NGq-r8-fq1" kind="show" identifier="MelipatkeKirim" id="Ro7-j6-iHB"/>
+                        <segue destination="NGq-r8-fq1" kind="presentation" identifier="MelipatkeKirim" modalPresentationStyle="fullScreen" id="Ro7-j6-iHB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ZG-2G-F5L" sceneMemberID="firstResponder"/>
@@ -2844,10 +2836,10 @@ bebanmu melalui perahu kertas ini</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Report" translatesAutoresizingMaskIntoConstraints="NO" id="C9Y-th-SyK">
-                                <rect key="frame" x="24" y="299" width="366" height="351"/>
+                                <rect key="frame" x="24" y="243" width="366" height="351"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iqo-gU-UDF">
-                                <rect key="frame" x="103" y="689" width="208" height="55"/>
+                                <rect key="frame" x="103" y="633" width="208" height="55"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="Cari_Lagi_Button">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -2857,7 +2849,7 @@ bebanmu melalui perahu kertas ini</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3S-gE-mY2">
-                                <rect key="frame" x="100" y="361" width="216" height="56"/>
+                                <rect key="frame" x="100" y="305" width="216" height="112"/>
                                 <string key="text">Perahu Kertas Ini Telah
 Dilaporkan</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
@@ -2907,11 +2899,11 @@ kamu merasa tidak nyaman.</string>
             <objects>
                 <viewController id="NGq-r8-fq1" customClass="MencariViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LRp-ZK-Djf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZC-Qs-nFQ">
-                                <rect key="frame" x="0.0" y="12" width="414" height="818"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle-2" translatesAutoresizingMaskIntoConstraints="NO" id="cW5-A1-Scy">
                                         <rect key="frame" x="0.0" y="-250" width="414" height="896"/>
@@ -2937,10 +2929,10 @@ kamu merasa tidak nyaman.</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Paper_Boat" translatesAutoresizingMaskIntoConstraints="NO" id="ZHu-RY-4yy">
-                                <rect key="frame" x="24" y="433" width="366" height="181"/>
+                                <rect key="frame" x="24" y="421" width="366" height="181"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apakah kamu sudah siap menghanyutkan bebanmu?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOx-Vp-GUn">
-                                <rect key="frame" x="40" y="340" width="334" height="58"/>
+                                <rect key="frame" x="40" y="328" width="334" height="58"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="58" id="2gO-em-ikm"/>
                                 </constraints>
@@ -2949,7 +2941,7 @@ kamu merasa tidak nyaman.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jika ya, tiup perahu kertas ini." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAs-4w-Iit">
-                                <rect key="frame" x="93" y="690" width="228" height="21"/>
+                                <rect key="frame" x="93" y="793" width="228" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

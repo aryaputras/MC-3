@@ -17,6 +17,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
     var myUsername = ""
     var originID = ""
     var imgMessage: UIImage?
+    var recordButtonImage:String = "Mic_Thin"
     
     //recording capabilities
     var recordingSession: AVAudioSession!
@@ -141,6 +142,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
     }
     
     @IBAction func recordButton(_ sender: Any) {
+        isiTextField.text = ""
         recordButton.isHidden = true
         drawButton.isHidden = true
         sliderSize.isHidden = true
@@ -163,6 +165,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
     }
     
     @IBAction func drawButton(_ sender: Any) {
+        isiTextField.text = ""          
         recordButton.isHidden = true
         drawButton.isHidden = true
         sliderSize.isHidden = false
@@ -214,6 +217,20 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
         canvasView.strokeWidth = CGFloat(sender.value)
     }
     
+    @IBAction func startRecord(_ sender: Any) {
+        if(recordButtonImage == "Mic_Thin"){
+            startRecording()
+            recordButtonImage = "Mic_Thick"
+            recordingButton.setImage(UIImage(named: recordButtonImage),for: .normal)
+        }
+        else if(recordButtonImage == "Mic_Thick"){
+            finishRecording(success: true)
+            recordButtonImage = "Mic_Thin"
+            recordingButton.setImage(UIImage(named: recordButtonImage), for: .normal)
+        }
+    }
+    
+
     @IBAction func selesaiTapped(_ sender: Any) {
         let reply = isiTextField.text as! CKRecordValue
         let replyNickname = myUsername as CKRecordValue
@@ -231,7 +248,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
         //HARUSNYA INI RECORDNAME DARI SENDERNYA
 
         newRecord.setValue(imageRecord, forKey: "image")
-
+//ADD NEWRECORD AUDIO CAPABILITIES
         newRecord.setObject(reply, forKey: "reply")
         newRecord.setObject(replyNickname, forKey: "replyNickname")
         newRecord.setObject(originID, forKey: "originID")
@@ -245,6 +262,10 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
             }
         }
         
+    }
+    @IBAction func startPlay(_ sender: Any) {
+        preparePlayer()
+        soundPlayer.play()
     }
     func startRecording() {
         let audioFilename = getDocumentsDirectory().appendingPathComponent(filename)
