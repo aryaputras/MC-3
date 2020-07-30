@@ -14,18 +14,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-
-        let defaults = NSUserDefaults.standardUserDefaults()
-         if defaults.objectForKey("isFirstTime") == nil {
-              defaults.setObject("No", forKey:"isFirstTime")
-              let storyboard = UIStoryboard(name: "Main", bundle: nil) //Write your storyboard name
-              let viewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController") as! ViewController
-              self.window.rootViewController = viewController
-              self.window.makeKeyAndVisible()
-         }
-        return true
-    }
+//    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+//
+//        let defaults = UserDefaults.standard
+//        if defaults.object(forKey: "isFirstTime") == nil {
+//            defaults.set("No", forKey:"isFirstTime")
+//              let storyboard = UIStoryboard(name: "Main", bundle: nil) //Write your storyboard name
+//            let viewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! ViewController
+//              //self.window.rootViewController = viewController
+//              self.window.makeKeyAndVisible()
+//         }
+//        return true
+//    }
 
     // MARK: UISceneSession Lifecycle
 
