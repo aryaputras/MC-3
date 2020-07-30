@@ -25,6 +25,9 @@ class Register2VC: UIViewController {
     
     @IBOutlet weak var rangeSlider: RangeSeekSlider!
     
+    @IBOutlet weak var buttonFemale: UIButton!
+    @IBOutlet weak var buttonMale: UIButton!
+    @IBOutlet weak var buttonAll: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,17 +37,18 @@ class Register2VC: UIViewController {
     
     
     @IBAction func buttonMale(_ sender: Any) {
+        
         buttonMale.setImage(UIImage(named: "Button_Cowok_Tapped"),for: .normal)
         genderPrefer = 1
     }
     
     @IBAction func buttonFemale(_ sender: Any) {
-        buttonMale.setImage(UIImage(named: "Button_Cewek_Tapped"),for: .normal)
+        buttonFemale.setImage(UIImage(named: "Button_Cewek_Tapped"),for: .normal)
         genderPrefer = 2
     }
     
     @IBAction func buttonAll(_ sender: Any) {
-        buttonMale.setImage(UIImage(named: "Button_Semua_Tapped"),for: .normal)
+        buttonAll.setImage(UIImage(named: "Button_Semua_Tapped"),for: .normal)
         genderPrefer = 0
     }
     
