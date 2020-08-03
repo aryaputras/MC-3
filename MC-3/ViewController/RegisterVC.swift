@@ -11,6 +11,8 @@ import CloudKit
 
 
 class RegisterVC: UIViewController, UITextFieldDelegate {
+    var GenderCowoisOn:Bool = false
+    var GenderCeweisOn:Bool = false
     var gender : Int = 0
     var age : Int = 19
     var imageName : [String] = ["Avatar 1","Avatar 2","Avatar 3","Avatar 4"]
@@ -82,12 +84,14 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func buttonMale(_ sender: Any) {
-        buttonMale.setImage(UIImage(named: "Button_Cowok_Tapped"),for: .normal)
+        GenderCowoisOn.toogle()
+        setButtonBackGround(view: sender, on: #imageLiteral(resourceName: "button_Cowok_Tapped"), off:  #imageLiteral(resourceName: "Button_Cowo"), onOffStatus: GenderCowoisOn)
         gender = 1
     }
     
     @IBAction func buttonFemale(_ sender: Any) {
-        buttonFemale.setImage(UIImage(named: "Button_Cewek_Tapped"),for: .normal)
+        GenderCeweisOn.toogle()
+        setButtonBackGround(view: sender, on: #imageLiteral(resourceName: "button_Cewek_Tapped"), off:  #imageLiteral(resourceName: "Button_Cewe"), onOffStatus: GenderCeweisOn)
         gender = 2
     }
     
@@ -97,6 +101,19 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
         
         
         
+    }
+    
+    func setButtonBackGround(view: UIButton, on: UIImage, off: UIImage, onOffStatus: Bool ) {
+        switch onOffStatus {
+        case true:
+            // Chnage backgroundImage to hart image
+            view.setImage(on, for: .normal)
+            // Test
+            print("Button Pressed")
+        default:
+            view.setImage(off, for: .normal)
+                print("Button Unpressed")
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

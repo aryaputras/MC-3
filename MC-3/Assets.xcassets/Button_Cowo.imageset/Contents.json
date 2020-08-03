@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Button_Cowo.png",
+      "filename" : "Button_Male_Off.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Button_Cowo@2x.png",
+      "filename" : "Button_Male_Off@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Button_Cowo@3x.png",
+      "filename" : "Button_Male_Off@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
