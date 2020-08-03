@@ -49,6 +49,7 @@ class AnimasiLipatKertasViewController: UIViewController {
             self.borderOmbak.isHidden = true
             self.labelKalimat.isHidden = true
             imageNamed = "Lipat_kertas1"
+            kertasLipat.image = UIImage.init(named: imageNamed)
         }
         if(imageNamed == "Lipat_kertas3"){
             self.labelAtas.isHidden = true
@@ -57,6 +58,7 @@ class AnimasiLipatKertasViewController: UIViewController {
             self.borderOmbak.isHidden = true
             self.labelKalimat.isHidden = true
             imageNamed = "Lipat_kertas4"
+            kertasLipat.image = UIImage.init(named: imageNamed)
         }
         if(imageNamed == "Lipat_kertas7"){
             self.labelAtas.isHidden = true
@@ -65,6 +67,7 @@ class AnimasiLipatKertasViewController: UIViewController {
             self.borderOmbak.isHidden = true
             self.labelKalimat.isHidden = true
             imageNamed = "Lipat_kertas8"
+            kertasLipat.image = UIImage.init(named: imageNamed)
         }
         if(imageNamed == "Selesai"){
             performSegue(withIdentifier: "MelipatkeKirim", sender: Any?.self)

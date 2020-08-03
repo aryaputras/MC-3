@@ -98,18 +98,7 @@ class MencariViewController: UIViewController {
             self.label.isHidden = true
             self.labelAtas.isHidden = true
         }) { (finished) in
-            UIView.animate(withDuration: 3, animations: {
-                self.paperBoat.transform = CGAffineTransform(rotationAngle: CGFloat(-1))
-            }) { (finished) in
-                UIView.animate(withDuration: 3, animations: {
-                    self.paperBoat.transform = CGAffineTransform(rotationAngle: CGFloat(1))
-                }) { (finished) in
                     self.performSegue(withIdentifier: "blowToHome", sender: self)
-                }
-            }
-            
-            
         }
     }
-    
 }
