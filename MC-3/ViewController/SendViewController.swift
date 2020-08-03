@@ -92,6 +92,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
         record1Label.isHidden = true
         record2Label.isHidden = true
         recordingButton.isHidden = true
+        playRecordButton.isHidden = true
         
         initializeHideKeyboard()
         textField.delegate = self
@@ -177,7 +178,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
         record1Label.isHidden = false
         record2Label.isHidden = false
         recordingButton.isHidden = false
-        
+        playRecordButton.isHidden = false
         
         //IN START RECORDING, CHANGELABEL
         
@@ -206,6 +207,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
         record1Label.isHidden = true
         record2Label.isHidden = true
         recordingButton.isHidden = true
+        playRecordButton.isHidden = true
     }
     
     
