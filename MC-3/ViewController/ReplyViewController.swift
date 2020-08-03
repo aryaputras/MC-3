@@ -44,6 +44,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
     @IBOutlet weak var purpleButton: UIButton!
     @IBOutlet weak var orangeButton: UIButton!
     
+    @IBOutlet weak var playRecordButton: UIButton!
     @IBOutlet weak var record1Label: UILabel!
     @IBOutlet weak var record2Label: UILabel!
     @IBOutlet weak var recordingButton: UIButton!
@@ -130,6 +131,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
         record1Label.isHidden = true
         record2Label.isHidden = true
         recordingButton.isHidden = true
+        playRecordButton.isHidden = true
         
         initializeHideKeyboard()
         isiTextField.delegate = self
@@ -162,6 +164,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
         record1Label.isHidden = false
         record2Label.isHidden = false
         recordingButton.isHidden = false
+        playRecordButton.isHidden = false
     }
     
     @IBAction func drawButton(_ sender: Any) {
@@ -184,6 +187,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
         record1Label.isHidden = true
         record2Label.isHidden = true
         recordingButton.isHidden = true
+        playRecordButton.isHidden = true
     }
     
     @IBAction func whiteButton(_ sender: Any) {

@@ -31,7 +31,7 @@ class Register2VC: UIViewController {
     @IBOutlet weak var buttonAll: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.isHidden = true
         
         
     }

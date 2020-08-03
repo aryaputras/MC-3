@@ -25,7 +25,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var buttonMale: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.isHidden = true
         initializeHideKeyboard()
         regisUsername.delegate = self
         textFieldShouldReturn(regisUsername)
