@@ -34,7 +34,7 @@ class HomeViewController: UIViewController {
                  //print(userID)
              }
             let database = CKContainer.default().publicCloudDatabase
-             let reference = CKRecord.Reference(recordID: userID!, action: .none)
+             //let reference = CKRecord.Reference(recordID: userID!, action: .none)
              let predicate = NSPredicate(format: "creatorID == %@", userID?.recordName ?? "")
              let query = CKQuery(recordType: "profile", predicate: predicate)
              query.sortDescriptors = [NSSortDescriptor(key: "signUpDate", ascending: false)]

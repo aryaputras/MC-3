@@ -10,7 +10,7 @@ import UIKit
 import CloudKit
 import RangeSeekSlider
 
-//BUG, BUTTON HANTU!
+
 class Register2VC: UIViewController {
     var genderPrefer = 0
     var agePreferMin = 0

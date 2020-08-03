@@ -211,6 +211,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
                 self.inbox = fetchedRecords
                 DispatchQueue.main.async {
                     let count = self.inbox.count
+                    
                     let random = Int.random(in: 0..<count)
                     self.numIndex = random
                    
