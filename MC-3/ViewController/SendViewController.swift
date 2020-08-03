@@ -32,6 +32,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
     @IBOutlet weak var recordingButton: UIButton!
     @IBOutlet weak var record1Label: UILabel!
     @IBOutlet weak var record2Label: UILabel!
+    @IBOutlet weak var playRecordButton: UIButton!
     
     @IBOutlet weak var textField: UITextField!
     
