@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "button_Cewek_Tapped.png",
+      "filename" : "Button_Female_On.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "button_Cewek_Tapped@2x.png",
+      "filename" : "Button_Female_On@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "button_Cewek_Tapped@3x.png",
+      "filename" : "Button_Female_On@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

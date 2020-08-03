@@ -15,13 +15,14 @@ class Register2VC: UIViewController {
     var genderPrefer = 0
     var agePreferMin = 0
     var agePreferMax = 0
-    
+    var GenderCowokisOn:Bool = false
+    var GenderCewekisOn:Bool = false
+    var GenderSemuaisOn:Bool = false
     
     var age = 0
     var name = ""
     var gender = 0
     var avatar = ""
-    
     
     @IBOutlet weak var rangeSlider: RangeSeekSlider!
     
@@ -37,18 +38,20 @@ class Register2VC: UIViewController {
     
     
     @IBAction func buttonMale(_ sender: Any) {
-        
-        buttonMale.setImage(UIImage(named: "Button_Cowok_Tapped"),for: .normal)
+        GenderCowokisOn.toggle()
+        setButtonBackGround(view: sender, on: #imageLiteral(resourceName: "button_Cowok_Tapped"), off:  #imageLiteral(resourceName: "Button_Cowo"), onOffStatus: GenderCowokisOn)
         genderPrefer = 1
     }
     
     @IBAction func buttonFemale(_ sender: Any) {
-        buttonFemale.setImage(UIImage(named: "Button_Cewek_Tapped"),for: .normal)
+        GenderCewekisOn.toggle()
+        setButtonBackGround(view: sender, on: #imageLiteral(resourceName: "button_Cewek_Tapped"), off:  #imageLiteral(resourceName: "Button_Cewe"), onOffStatus: GenderCewekisOn)
         genderPrefer = 2
     }
     
     @IBAction func buttonAll(_ sender: Any) {
-        buttonAll.setImage(UIImage(named: "Button_Semua_Tapped"),for: .normal)
+        GenderSemuaisOn.toggle()
+        setButtonBackGround(view: sender, on: #imageLiteral(resourceName: "button_Semua_Tapped"), off:  #imageLiteral(resourceName: "Button_Semua"), onOffStatus: GenderSemuaisOn)
         genderPrefer = 0
     }
     
@@ -104,17 +107,22 @@ class Register2VC: UIViewController {
                         }
                     }
                 }
-            } }
-        
-        
-        
+            }
+        }
     }
     
-    
-    
-    //
-    
-    //
-    //
+    func setButtonBackGround(view: UIButton, on: UIImage, off: UIImage, onOffStatus: Bool ) {
+        switch onOffStatus {
+        case true:
+            // Chnage backgroundImage to hart image
+            view.setImage(on, for: .normal)
+            // Test
+            print("Button Pressed")
+        default:
+            view.setImage(off, for: .normal)
+                print("Button Unpressed")
+        }
+    }
+
     
 }

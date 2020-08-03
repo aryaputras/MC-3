@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Button_Cewe.png",
+      "filename" : "Button_Female_Off.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Button_Cewe@2x.png",
+      "filename" : "Button_Female_Off@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Button_Cewe@3x.png",
+      "filename" : "Button_Female_Off@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
