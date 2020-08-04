@@ -84,14 +84,14 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func buttonMale(_ sender: Any) {
-        GenderCowoisOn.toogle()
-        setButtonBackGround(view: sender, on: #imageLiteral(resourceName: "button_Cowok_Tapped"), off:  #imageLiteral(resourceName: "Button_Cowo"), onOffStatus: GenderCowoisOn)
+        GenderCowoisOn.toggle()
+        setButtonBackGround(view: sender as! UIButton, on: #imageLiteral(resourceName: "button_Cowok_Tapped"), off:  #imageLiteral(resourceName: "Button_Cowo"), onOffStatus: GenderCowoisOn)
         gender = 1
     }
     
     @IBAction func buttonFemale(_ sender: Any) {
-        GenderCeweisOn.toogle()
-        setButtonBackGround(view: sender, on: #imageLiteral(resourceName: "button_Cewek_Tapped"), off:  #imageLiteral(resourceName: "Button_Cewe"), onOffStatus: GenderCeweisOn)
+        GenderCeweisOn.toggle()
+        setButtonBackGround(view: sender as! UIButton, on: #imageLiteral(resourceName: "button_Cewek_Tapped"), off:  #imageLiteral(resourceName: "Button_Cewe"), onOffStatus: GenderCeweisOn)
         gender = 2
     }
     

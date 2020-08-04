@@ -39,19 +39,19 @@ class Register2VC: UIViewController {
     
     @IBAction func buttonMale(_ sender: Any) {
         GenderCowokisOn.toggle()
-        setButtonBackGround(view: sender, on: #imageLiteral(resourceName: "button_Cowok_Tapped"), off:  #imageLiteral(resourceName: "Button_Cowo"), onOffStatus: GenderCowokisOn)
+        setButtonBackGround(view: sender as! UIButton, on: #imageLiteral(resourceName: "button_Cowok_Tapped"), off:  #imageLiteral(resourceName: "Button_Cowo"), onOffStatus: GenderCowokisOn)
         genderPrefer = 1
     }
     
     @IBAction func buttonFemale(_ sender: Any) {
         GenderCewekisOn.toggle()
-        setButtonBackGround(view: sender, on: #imageLiteral(resourceName: "button_Cewek_Tapped"), off:  #imageLiteral(resourceName: "Button_Cewe"), onOffStatus: GenderCewekisOn)
+        setButtonBackGround(view: sender as! UIButton, on: #imageLiteral(resourceName: "button_Cewek_Tapped"), off:  #imageLiteral(resourceName: "Button_Cewe"), onOffStatus: GenderCewekisOn)
         genderPrefer = 2
     }
     
     @IBAction func buttonAll(_ sender: Any) {
         GenderSemuaisOn.toggle()
-        setButtonBackGround(view: sender, on: #imageLiteral(resourceName: "button_Semua_Tapped"), off:  #imageLiteral(resourceName: "Button_Semua"), onOffStatus: GenderSemuaisOn)
+        setButtonBackGround(view: sender as! UIButton, on: #imageLiteral(resourceName: "button_Semua_Tapped"), off:  #imageLiteral(resourceName: "Button_Semua"), onOffStatus: GenderSemuaisOn)
         genderPrefer = 0
     }
     

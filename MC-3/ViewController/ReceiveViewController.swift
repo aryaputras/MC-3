@@ -312,14 +312,16 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
             }
         }
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let destinationVC = segue.destination as! ReplyViewController
+        if let destinationVC = segue.destination as? ReplyViewController {
         
         destinationVC.message = messageLabel.text!
         destinationVC.username = usernameLabel.text!
-        destinationVC.senderID = self.inbox[numIndex].recordID.recordName as! String
+        destinationVC.senderID = self.inbox[numIndex].recordID.recordName
         destinationVC.imgMessage = imageView.image
+        }
         
     }
     func getSenderID(sender: String) {

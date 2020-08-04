@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="VMA-GH-yfh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WI6-hV-SwP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -531,6 +531,12 @@ kamu butuhkan</string>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="enableStep" value="YES"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="step">
                                         <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedMinValue">
+                                        <real key="value" value="17"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="selectedMaxValue">
+                                        <real key="value" value="45"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
@@ -2011,6 +2017,7 @@ perahu kertas!</string>
                                 </state>
                                 <connections>
                                     <action selector="selesaiTapped:" destination="dZW-pK-S8h" eventType="touchUpInside" id="GPm-Nv-Con"/>
+                                    <segue destination="cLq-li-GRl" kind="presentation" modalPresentationStyle="fullScreen" id="1x8-wH-9WD"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buat catatan suara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pof-2P-P9c">
@@ -3037,9 +3044,9 @@ kamu merasa tidak nyaman.</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Oiv-I1-eQT"/>
-        <segue reference="Djg-22-u3o"/>
-        <segue reference="Pj7-gd-Isc"/>
-        <segue reference="9b2-eg-5M3"/>
+        <segue reference="1x8-wH-9WD"/>
+        <segue reference="lfE-Ie-0Mh"/>
+        <segue reference="5Xo-Ek-ILa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Avatar 1" width="150" height="150"/>
