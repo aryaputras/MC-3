@@ -97,6 +97,30 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
                 likesIsON = false
                 likesIsON.toggle()
                 setButtonBackGround(view: cellOwner.likesButton!, on: #imageLiteral(resourceName: "Ikan_isi"), off:  #imageLiteral(resourceName: "Ikan"), onOffStatus: likesIsON)
+                
+                
+                   let database = CKContainer.default().publicCloudDatabase
+                   let record = CKRecord.ID(recordName: cellOwner.recordName)
+                   let newRecord = CKRecord(recordType: "question", recordID: record)
+                   
+                   
+                   newRecord.setValue(likesNumber, forKey: "likes")
+                   
+                   let operation = CKModifyRecordsOperation(recordsToSave: [newRecord], recordIDsToDelete: nil)
+                   
+                   operation.savePolicy = .changedKeys
+                   
+                   operation.modifyRecordsCompletionBlock = {
+                       records, ids , error in
+                       print(error)
+                       //print(records)
+                       
+                   }
+                   database.add(operation)
+                   //RELOADDATA
+                   //Make ID for each record and get from cellOwner.(ID) and pass it to CKModify  (ID) likes +1
+                   
+                   mercusuarCollectionView.reloadData()
             }
             if likesIsON == true {
                 // ini kalo dia hidup dimatiin dan likesnya ngurang
@@ -107,31 +131,33 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
                 likesIsON = true
                 likesIsON.toggle()
                 setButtonBackGround(view: cellOwner.likesButton!, on: #imageLiteral(resourceName: "Ikan_isi"), off:  #imageLiteral(resourceName: "Ikan"), onOffStatus: likesIsON)
-            }
-            
-            
-            let database = CKContainer.default().publicCloudDatabase
-            let record = CKRecord.ID(recordName: cellOwner.recordName)
-            let newRecord = CKRecord(recordType: "question", recordID: record)
-            
-            
-            newRecord.setValue(likesNumber, forKey: "likes")
-            
-            let operation = CKModifyRecordsOperation(recordsToSave: [newRecord], recordIDsToDelete: nil)
-            
-            operation.savePolicy = .changedKeys
-            
-            operation.modifyRecordsCompletionBlock = {
-                records, ids , error in
-                print(error)
-                //print(records)
                 
+                
+                   let database = CKContainer.default().publicCloudDatabase
+                   let record = CKRecord.ID(recordName: cellOwner.recordName)
+                   let newRecord = CKRecord(recordType: "question", recordID: record)
+                   
+                   
+                   newRecord.setValue(likesNumber, forKey: "likes")
+                   
+                   let operation = CKModifyRecordsOperation(recordsToSave: [newRecord], recordIDsToDelete: nil)
+                   
+                   operation.savePolicy = .changedKeys
+                   
+                   operation.modifyRecordsCompletionBlock = {
+                       records, ids , error in
+                       print(error)
+                       //print(records)
+                       
+                   }
+                   database.add(operation)
+                   //RELOADDATA
+                   //Make ID for each record and get from cellOwner.(ID) and pass it to CKModify  (ID) likes +1
+                   
+                   mercusuarCollectionView.reloadData()
             }
-            database.add(operation)
-            //RELOADDATA
-            //Make ID for each record and get from cellOwner.(ID) and pass it to CKModify  (ID) likes +1
             
-            mercusuarCollectionView.reloadData()
+   
             
         }
     }

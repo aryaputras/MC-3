@@ -13,8 +13,8 @@ import RangeSeekSlider
 
 class Register2VC: UIViewController {
     var genderPrefer = 0
-    var agePreferMin = 0
-    var agePreferMax = 0
+    var agePreferMin = 17
+    var agePreferMax = 45
     var GenderCowokisOn:Bool = false
     var GenderCewekisOn:Bool = false
     var GenderSemuaisOn:Bool = false

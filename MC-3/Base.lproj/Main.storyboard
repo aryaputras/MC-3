@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WI6-hV-SwP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WI6-hV-SwP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -308,7 +308,6 @@ geser ke bawah  untuk menangkap satu.</string>
             <objects>
                 <navigationController id="WI6-hV-SwP" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Bve-Yi-T4Y">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -1774,7 +1773,6 @@ perahu kertas!</string>
                 <navigationController id="IeK-NG-l4j" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Mercusuar" image="Mercusuar1" id="Q2C-YT-vGW"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GbM-SJ-eMX">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -1791,7 +1789,6 @@ perahu kertas!</string>
                 <navigationController id="GXr-iX-n5N" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Dermaga" image="Dermaga1" id="uW4-IQ-F60"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qfB-HO-zFi">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -1808,7 +1805,6 @@ perahu kertas!</string>
                 <navigationController id="4qg-7r-5yO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Riwayat" image="clock.fill" catalog="system" id="GFC-vg-2hK"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eHZ-ID-J1h">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
