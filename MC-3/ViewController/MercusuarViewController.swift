@@ -34,7 +34,7 @@ class MercusuarViewController: UIViewController{
                 self.records = fetchedRecords
                 DispatchQueue.main.async {
                     self.mercusuarCollectionView.reloadData()
-                    print(fetchedRecords)
+                    //print(fetchedRecords)
                 }
                 
             }
@@ -68,7 +68,7 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
         cell.addGestureRecognizer(tapRecognizer)
         cell.recordName = record.recordID.recordName
         
-        print(record)
+        //print(record)
         
         
         // buat masukin isinya dari mana
@@ -84,26 +84,29 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
             //print(tapLikes.view)
             let cellOwner = tapLikes.view as! MercusuarCollectionViewCell
             //print(cellOwner.)
-            print(cellOwner.recordName)
-            if(likesIsON == false){
+            //print(cellOwner.recordName)
+            
+            var likesNumber =  Int(cellOwner.numberOfLikes.text!)
+            
+            if likesIsON == false {
                 // ini kalo dia mati dinyalain dan likesnya nambah
-                var likesNumber =  Int(cellOwner.numberOfLikes.text!)
+                
                 likesNumber! += 1
-                self.mercusuarCollectionView.numberOfLikes.text = "\(likesNumber)"
-                print(likesNumber)
+                cellOwner.numberOfLikes.text = "\(likesNumber ?? 99)"
+                print(likesNumber!)
                 likesIsON = false
                 likesIsON.toggle()
-                setButtonBackGround(view: self.mercusuarCollectionView.likesButton as! UIButton, on: #imageLiteral(resourceName: "Ikan_isi"), off:  #imageLiteral(resourceName: "Ikan"), onOffStatus: likesIsON)
+                setButtonBackGround(view: cellOwner.likesButton!, on: #imageLiteral(resourceName: "Ikan_isi"), off:  #imageLiteral(resourceName: "Ikan"), onOffStatus: likesIsON)
             }
-            if(likesIsON == true){
+            if likesIsON == true {
                 // ini kalo dia hidup dimatiin dan likesnya ngurang
-                var likesNumber =  Int(cellOwner.numberOfLikes.text!)
+               
                 likesNumber! -= 1
-                self.mercusuarCollectionView.numberOfLikes.text = "\(likesNumber)"
-                print(likesNumber)
+                cellOwner.numberOfLikes.text = "\(likesNumber ?? 99)"
+                print(likesNumber!)
                 likesIsON = true
                 likesIsON.toggle()
-                setButtonBackGround(view: self.mercusuarCollectionView.likesButton as! UIButton, on: #imageLiteral(resourceName: "Ikan_isi"), off:  #imageLiteral(resourceName: "Ikan"), onOffStatus: likesIsON)
+                setButtonBackGround(view: cellOwner.likesButton!, on: #imageLiteral(resourceName: "Ikan_isi"), off:  #imageLiteral(resourceName: "Ikan"), onOffStatus: likesIsON)
             }
             
             
