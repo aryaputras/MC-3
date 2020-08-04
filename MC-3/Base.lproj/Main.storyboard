@@ -2552,23 +2552,15 @@ perahu kertas!</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mercusuar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKm-aT-52W">
-                                <rect key="frame" x="142.5" y="87" width="129" height="34"/>
+                                <rect key="frame" x="142.5" y="100" width="129" height="34"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="0.0"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cur-eL-TNU">
-                                <rect key="frame" x="20" y="64" width="43.5" height="34"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="chevron.left" catalog="system">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djt-pD-CgU">
-                                <rect key="frame" x="374" y="64" width="25" height="34"/>
+                                <rect key="frame" x="374" y="99" width="25" height="34"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="plus.circle" catalog="system">
@@ -2636,22 +2628,18 @@ perahu kertas!</string>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="GyH-35-NqV" firstAttribute="top" secondItem="jKm-aT-52W" secondAttribute="bottom" constant="47" id="0BX-GY-Lbc"/>
                             <constraint firstItem="GyH-35-NqV" firstAttribute="trailing" secondItem="riw-mK-wzG" secondAttribute="trailing" id="0aU-uo-ebL"/>
-                            <constraint firstItem="Djt-pD-CgU" firstAttribute="top" secondItem="Cur-eL-TNU" secondAttribute="top" id="3Il-eg-TOE"/>
-                            <constraint firstItem="jKm-aT-52W" firstAttribute="centerX" secondItem="veP-nw-ppW" secondAttribute="centerX" id="7FI-jw-0h8"/>
-                            <constraint firstItem="jKm-aT-52W" firstAttribute="leading" secondItem="Cur-eL-TNU" secondAttribute="trailing" constant="79" id="98S-dX-2nU"/>
                             <constraint firstItem="GyH-35-NqV" firstAttribute="leading" secondItem="riw-mK-wzG" secondAttribute="leading" id="9bS-4Z-cae"/>
+                            <constraint firstItem="jKm-aT-52W" firstAttribute="top" secondItem="qkf-7q-n0e" secondAttribute="top" constant="12" id="EWi-bo-KuW"/>
                             <constraint firstItem="GyH-35-NqV" firstAttribute="leading" secondItem="veP-nw-ppW" secondAttribute="leading" id="Gud-cG-Efr"/>
-                            <constraint firstItem="Djt-pD-CgU" firstAttribute="bottom" secondItem="Cur-eL-TNU" secondAttribute="bottom" id="KB1-Hy-qBs"/>
                             <constraint firstItem="GyH-35-NqV" firstAttribute="trailing" secondItem="veP-nw-ppW" secondAttribute="trailing" id="Q4o-JK-1se"/>
-                            <constraint firstItem="Cur-eL-TNU" firstAttribute="leading" secondItem="Qck-kU-3Zj" secondAttribute="leadingMargin" id="Xnp-Zy-HK0"/>
+                            <constraint firstItem="jKm-aT-52W" firstAttribute="centerX" secondItem="Qck-kU-3Zj" secondAttribute="centerX" id="ZHD-rr-51a"/>
                             <constraint firstItem="riw-mK-wzG" firstAttribute="top" secondItem="GyH-35-NqV" secondAttribute="bottom" constant="20" id="aVZ-iZ-nqB"/>
-                            <constraint firstItem="GyH-35-NqV" firstAttribute="top" secondItem="Cur-eL-TNU" secondAttribute="bottom" constant="70" id="dyS-1b-EB6"/>
-                            <constraint firstItem="jKm-aT-52W" firstAttribute="centerX" secondItem="Qck-kU-3Zj" secondAttribute="centerX" id="iwZ-ta-gOR"/>
-                            <constraint firstItem="jKm-aT-52W" firstAttribute="top" secondItem="Qck-kU-3Zj" secondAttribute="topMargin" constant="-1" id="nEy-l1-wnY"/>
+                            <constraint firstItem="jKm-aT-52W" firstAttribute="centerX" secondItem="GyH-35-NqV" secondAttribute="centerX" id="jkO-w0-AvJ"/>
                             <constraint firstItem="veP-nw-ppW" firstAttribute="top" secondItem="Qck-kU-3Zj" secondAttribute="top" id="pPQ-ep-1Ow"/>
+                            <constraint firstItem="Djt-pD-CgU" firstAttribute="top" secondItem="jKm-aT-52W" secondAttribute="top" constant="-1" id="sUG-Yg-FQ6"/>
                             <constraint firstItem="riw-mK-wzG" firstAttribute="bottom" secondItem="veP-nw-ppW" secondAttribute="bottom" id="vqf-JF-LSW"/>
+                            <constraint firstItem="GyH-35-NqV" firstAttribute="top" secondItem="jKm-aT-52W" secondAttribute="bottom" constant="34" id="w6y-tS-2Hv"/>
                             <constraint firstItem="qkf-7q-n0e" firstAttribute="trailing" secondItem="Djt-pD-CgU" secondAttribute="trailing" constant="15" id="wUd-AN-Srl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qkf-7q-n0e"/>
