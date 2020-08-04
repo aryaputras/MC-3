@@ -84,12 +84,22 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func buttonMale(_ sender: Any) {
+        if(GenderCeweisOn == true){
+            GenderCeweisOn = true
+            GenderCeweisOn.toggle()
+            setButtonBackGround(view: buttonFemale as! UIButton, on:#imageLiteral(resourceName: "button_Cewek_Tapped") ,off:#imageLiteral(resourceName: "Button_Cewe") ,onOffStatus:GenderCeweisOn)
+        }
         GenderCowoisOn.toggle()
         setButtonBackGround(view: sender as! UIButton, on: #imageLiteral(resourceName: "button_Cowok_Tapped"), off:  #imageLiteral(resourceName: "Button_Cowo"), onOffStatus: GenderCowoisOn)
         gender = 1
     }
     
     @IBAction func buttonFemale(_ sender: Any) {
+        if(GenderCowoisOn == true){
+            GenderCowoisOn = true
+            GenderCowoisOn.toggle()
+            setButtonBackGround(view: buttonMale as! UIButton, on: #imageLiteral(resourceName: "button_Cowok_Tapped"), off:  #imageLiteral(resourceName: "Button_Cowo"), onOffStatus: GenderCowoisOn)
+        }
         GenderCeweisOn.toggle()
         setButtonBackGround(view: sender as! UIButton, on: #imageLiteral(resourceName: "button_Cewek_Tapped"), off:  #imageLiteral(resourceName: "Button_Cewe"), onOffStatus: GenderCeweisOn)
         gender = 2
@@ -112,7 +122,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
             print("Button Pressed")
         default:
             view.setImage(off, for: .normal)
-                print("Button Unpressed")
+            print("Button Unpressed")
         }
     }
     

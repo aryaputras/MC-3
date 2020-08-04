@@ -13,7 +13,7 @@ import AVFoundation
 class MercusuarViewController: UIViewController{
     var username = ""
     var label = ""
-    
+    var likesIsON:Bool = false
     var records = [CKRecord]()
     @IBOutlet weak var mercusuarCollectionView: UICollectionView!
     override func viewDidLoad() {
@@ -85,8 +85,27 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
             let cellOwner = tapLikes.view as! MercusuarCollectionViewCell
             //print(cellOwner.)
             print(cellOwner.recordName)
-            var likesNumber =  Int(cellOwner.numberOfLikes.text!)
-            likesNumber! += 1
+            if(likesIsON == false){
+                // ini kalo dia mati dinyalain dan likesnya nambah
+                var likesNumber =  Int(cellOwner.numberOfLikes.text!)
+                likesNumber! += 1
+                self.mercusuarCollectionView.numberOfLikes.text = "\(likesNumber)"
+                print(likesNumber)
+                likesIsON = false
+                likesIsON.toggle()
+                setButtonBackGround(view: self.mercusuarCollectionView.likesButton as! UIButton, on: #imageLiteral(resourceName: "Ikan_isi"), off:  #imageLiteral(resourceName: "Ikan"), onOffStatus: likesIsON)
+            }
+            if(likesIsON == true){
+                // ini kalo dia hidup dimatiin dan likesnya ngurang
+                var likesNumber =  Int(cellOwner.numberOfLikes.text!)
+                likesNumber! -= 1
+                self.mercusuarCollectionView.numberOfLikes.text = "\(likesNumber)"
+                print(likesNumber)
+                likesIsON = true
+                likesIsON.toggle()
+                setButtonBackGround(view: self.mercusuarCollectionView.likesButton as! UIButton, on: #imageLiteral(resourceName: "Ikan_isi"), off:  #imageLiteral(resourceName: "Ikan"), onOffStatus: likesIsON)
+            }
+            
             
             let database = CKContainer.default().publicCloudDatabase
             let record = CKRecord.ID(recordName: cellOwner.recordName)
@@ -111,6 +130,19 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
             
             mercusuarCollectionView.reloadData()
             
+        }
+    }
+    
+    func setButtonBackGround(view: UIButton, on: UIImage, off: UIImage, onOffStatus: Bool ) {
+        switch onOffStatus {
+        case true:
+            // Chnage backgroundImage to hart image
+            view.setImage(on, for: .normal)
+            // Test
+            print("Button Pressed")
+        default:
+            view.setImage(off, for: .normal)
+                print("Button Unpressed")
         }
     }
 }
