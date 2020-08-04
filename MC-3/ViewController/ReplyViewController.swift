@@ -220,7 +220,11 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
     @IBAction func sliderSize(_ sender: UISlider) {
         canvasView.strokeWidth = CGFloat(sender.value)
     }
-    
+    @IBAction func deleteButton(_ sender: UIButton!) {
+    if canvasView.isHidden == false {
+        canvasView.clearDraw()
+    }
+    }
     @IBAction func startRecord(_ sender: Any) {
         if(recordButtonImage == "Mic_Thin"){
             startRecording()
