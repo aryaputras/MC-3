@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -51,7 +51,7 @@
                             <constraint firstAttribute="width" constant="44" id="9qP-mD-6Af"/>
                             <constraint firstAttribute="height" constant="44" id="SVM-gn-H5u"/>
                         </constraints>
-                        <state key="normal" image="Ikan_isi"/>
+                        <state key="normal" image="Ikan"/>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="101" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LtU-pZ-2Xc">
                         <rect key="frame" x="124" y="110.5" width="28" height="20"/>
@@ -117,7 +117,7 @@
     </objects>
     <resources>
         <image name="Avatar 1" width="150" height="150"/>
-        <image name="Ikan_isi" width="20" height="12"/>
+        <image name="Ikan" width="20" height="12"/>
         <image name="exclamationmark.triangle" catalog="system" width="128" height="112"/>
     </resources>
 </document>

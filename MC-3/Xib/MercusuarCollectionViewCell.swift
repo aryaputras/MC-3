@@ -16,7 +16,7 @@ class MercusuarCollectionViewCell: UICollectionViewCell {
     @IBOutlet var numberOfLikes: UILabel!
     @IBOutlet var top3Label: UILabel!
     @IBOutlet var reportButton: UIButton!
-    @IBOutlet weak var likesButton: UIButton!
+    @IBOutlet var likesButton: UIButton!
     var recordName = ""
     
     
@@ -37,13 +37,4 @@ class MercusuarCollectionViewCell: UICollectionViewCell {
         
     }
 }
-//extension likesButton: UIGestureRecognizerDelegate {
-//    func handleTap(_ gesture: UITapGestureRecognizer){
-//        if(like == false){
-//        print("doubletapped")
-//        }
-//        else {
-//            print("Nothing happen")
-//        }
-//    }
-//}
+
