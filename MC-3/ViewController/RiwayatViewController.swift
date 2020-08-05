@@ -26,6 +26,8 @@ class RiwayatViewController: UIViewController{
     var audioURL: NSURL?
     var audioAsset: AVAsset?
     var audioPath: URL?
+    var date: String?
+    var replyCountRecord = ""
     
     @IBOutlet weak var riwayatCollectionView: UICollectionView!
     override func viewDidLoad() {
@@ -151,6 +153,20 @@ extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataS
             formatter1.dateStyle = .short
             cell.tanggalLabel.text = formatter1.string(from: date!)
             
+            let database = CKContainer.default().publicCloudDatabase
+            let predicate = NSPredicate(format: "originID == '\(cell.recordName)'")
+            let query = CKQuery(recordType: "perahuKertasReply", predicate: predicate)
+            
+            database.perform(query, inZoneWith: nil) { (records, error) in
+                if let fetchedRecords = records {
+                    self.replyCountRecord = "\(fetchedRecords.count)"
+                DispatchQueue.main.async {
+                    cell.replyCountLabel.text = self.replyCountRecord
+                }
+            }
+            }
+            
+            
         }
         //print(image)
         return cell
@@ -165,6 +181,7 @@ extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataS
             message = cellOwner.suratLabel.text!
             originRecordID = cellOwner.recordID
             image = cellOwner.image
+            date = cellOwner.tanggalLabel.text
             performSegue(withIdentifier: "riwayatToReply", sender: Any?.self)
             
             //Make ID for each record and get from cellOwner.(ID) and pass it to CKModify  (ID) likes +1
@@ -180,6 +197,7 @@ extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataS
         destinationVC.message = message
         destinationVC.originRecordID = originRecordID
         destinationVC.audioOriginPath = self.audioPath
+        destinationVC.date = date
         
     }
 }

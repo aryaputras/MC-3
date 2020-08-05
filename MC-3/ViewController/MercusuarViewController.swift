@@ -123,6 +123,7 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
                    //Make ID for each record and get from cellOwner.(ID) and pass it to CKModify  (ID) likes +1
                    
                    mercusuarCollectionView.reloadData()
+                
             }
             if likesIsON == true {
                 // ini kalo dia hidup dimatiin dan likesnya ngurang

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WI6-hV-SwP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WI6-hV-SwP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -11,7 +11,7 @@
         <!--RegisterVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RegisterVC" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RegisterVC" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -168,22 +168,22 @@ tentang dirimu</string>
         <!--Item-->
         <scene sceneID="Iww-gM-wLr">
             <objects>
-                <viewController id="eEh-42-BzD" customClass="HomeViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eEh-42-BzD" customClass="HomeViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dss-cW-l8u">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_LandingPage" translatesAutoresizingMaskIntoConstraints="NO" id="qzx-ZU-R6J">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image_LandingPage_Kotak" translatesAutoresizingMaskIntoConstraints="NO" id="Psf-b4-y42">
-                                <rect key="frame" x="24" y="240" width="366" height="389"/>
+                                <rect key="frame" x="24" y="245" width="366" height="389"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="389" id="bvH-zg-sHh"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hai, [Username] !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTc-gm-LHZ">
-                                <rect key="frame" x="24" y="260" width="366" height="34"/>
+                                <rect key="frame" x="24" y="265" width="366" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="78W-df-UKS"/>
                                 </constraints>
@@ -197,13 +197,13 @@ tentang dirimu</string>
                                 </variation>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image_Otter_LandingPage" translatesAutoresizingMaskIntoConstraints="NO" id="uEf-f8-9ur">
-                                <rect key="frame" x="177" y="529" width="237" height="230"/>
+                                <rect key="frame" x="177" y="534" width="237" height="230"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="230" id="408-SE-kJb"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVl-I6-gvc">
-                                <rect key="frame" x="40" y="309.5" width="322" height="223.5"/>
+                                <rect key="frame" x="40" y="314.5" width="322" height="223.5"/>
                                 <string key="text">Hari ini berat ya?
 Tenang, kamu tidak sendirian.
 Ada Ottis di sini.
@@ -217,7 +217,7 @@ geser ke bawah  untuk menangkap satu.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ottis, The Otter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3t-dP-Jyz">
-                                <rect key="frame" x="40" y="583" width="123" height="21"/>
+                                <rect key="frame" x="40" y="588" width="123" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Ydz-AW-odH"/>
                                 </constraints>
@@ -252,14 +252,14 @@ geser ke bawah  untuk menangkap satu.</string>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gcD-1j-h2B">
-                                <rect key="frame" x="164" y="496" width="14" height="14"/>
+                                <rect key="frame" x="164" y="501" width="14" height="14"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="tYS-1p-ho9"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7tW-7A-W1k">
-                                <rect key="frame" x="146" y="407" width="17" height="14"/>
+                                <rect key="frame" x="146" y="461" width="17" height="14"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="Wcv-Qn-4Le"/>
@@ -324,7 +324,7 @@ geser ke bawah  untuk menangkap satu.</string>
         <!--View Controller-->
         <scene sceneID="fjO-dp-kQP">
             <objects>
-                <viewController id="VMA-GH-yfh" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VMA-GH-yfh" customClass="ViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jWD-cq-H4g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -395,7 +395,7 @@ Mau sampai kapan perihmu itu?</string>
         <!--View Controller-->
         <scene sceneID="Ww8-WF-M3n">
             <objects>
-                <viewController id="3XC-eA-ciK" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3XC-eA-ciK" customClass="ViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jud-9m-zuh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -466,7 +466,7 @@ Kalau kamu sudah siap, mari kita mulai perjalanan perahu kertasmu</string>
         <!--Register2VC-->
         <scene sceneID="qa7-r7-mqu">
             <objects>
-                <viewController id="6Rj-Wh-IKd" customClass="Register2VC" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Rj-Wh-IKd" customClass="Register2VC" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Itk-fK-Imh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -623,7 +623,7 @@ kamu butuhkan</string>
         <!--ProfileVC-->
         <scene sceneID="gSM-c1-AAV">
             <objects>
-                <viewController id="7Fd-qT-mtD" customClass="ProfileVC" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7Fd-qT-mtD" customClass="ProfileVC" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dm5-4f-igj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -823,7 +823,7 @@ kamu butuhkan</string>
         <!--Send View Controller-->
         <scene sceneID="L6R-LO-3iE">
             <objects>
-                <viewController id="05H-7O-M6E" customClass="SendViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="05H-7O-M6E" customClass="SendViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ale-Ni-IS2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -834,7 +834,7 @@ kamu butuhkan</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kertas_Surat" translatesAutoresizingMaskIntoConstraints="NO" id="nid-Pi-M93">
                                 <rect key="frame" x="24" y="244" width="366" height="530"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8K-3V-x0m" customClass="canvasView" customModule="MC_3" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8K-3V-x0m" customClass="canvasView" customModule="Fiu" customModuleProvider="target">
                                 <rect key="frame" x="76" y="309" width="288" height="370"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -1164,7 +1164,7 @@ kamu butuhkan</string>
         <!--Item-->
         <scene sceneID="PHX-f3-p1d">
             <objects>
-                <viewController id="02J-wh-gZE" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="02J-wh-gZE" customClass="ViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3NW-41-JZV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1270,7 +1270,7 @@ kamu butuhkan</string>
         <!--View Controller-->
         <scene sceneID="H4d-tE-Vuj">
             <objects>
-                <viewController id="Ib3-wX-25M" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ib3-wX-25M" customClass="ViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DAw-PV-4zu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1447,7 +1447,7 @@ Bullying/rasisme</string>
         <!--Mencari Bener View Controller-->
         <scene sceneID="dXA-e0-FhK">
             <objects>
-                <viewController id="lmg-fm-10H" customClass="MencariBenerViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lmg-fm-10H" customClass="MencariBenerViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kd7-kp-mxU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1541,7 +1541,7 @@ Bullying/rasisme</string>
         <!--View Controller-->
         <scene sceneID="NAX-Bh-9kS">
             <objects>
-                <viewController id="5D7-EV-M7R" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5D7-EV-M7R" customClass="ViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NOp-5J-odr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1619,7 +1619,7 @@ perahu kertas!</string>
         <!--Receive View Controller-->
         <scene sceneID="zE1-YM-dn8">
             <objects>
-                <viewController id="ukp-1A-eOK" customClass="ReceiveViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ukp-1A-eOK" customClass="ReceiveViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d7y-Dh-gdr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1756,7 +1756,7 @@ perahu kertas!</string>
         <!--HOME-->
         <scene sceneID="IX1-Li-SYz">
             <objects>
-                <tabBarController storyboardIdentifier="HOME" title="HOME" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cLq-li-GRl" customClass="TabBarController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HOME" title="HOME" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cLq-li-GRl" customClass="TabBarController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="7a2-oR-ize"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3q6-Yn-EPW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -1827,7 +1827,7 @@ perahu kertas!</string>
         <!--View Controller-->
         <scene sceneID="Rec-t6-UlM">
             <objects>
-                <viewController id="WEf-Aq-8Jd" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WEf-Aq-8Jd" customClass="ViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dCg-uP-NCF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1950,7 +1950,7 @@ perahu kertas!</string>
         <!--Reply View Controller-->
         <scene sceneID="Cmh-wH-Ift">
             <objects>
-                <viewController id="dZW-pK-S8h" customClass="ReplyViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dZW-pK-S8h" customClass="ReplyViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JmL-gt-cVi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1986,7 +1986,7 @@ perahu kertas!</string>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQg-Nv-dp2" customClass="canvasView" customModule="MC_3" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQg-Nv-dp2" customClass="canvasView" customModule="Fiu" customModuleProvider="target">
                                 <rect key="frame" x="40" y="477" width="334" height="211"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -2335,7 +2335,7 @@ perahu kertas!</string>
         <!--Riwayat View Controller-->
         <scene sceneID="g81-gx-lid">
             <objects>
-                <viewController id="JFL-LD-aeY" customClass="RiwayatViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JFL-LD-aeY" customClass="RiwayatViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y4G-Cd-s2a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2361,7 +2361,7 @@ perahu kertas!</string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="u4U-iS-9iS" customClass="RiwayatCollectionCell" customModule="MC_3" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="u4U-iS-9iS" customClass="RiwayatCollectionCell" customModule="Fiu" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mRs-WT-xXi">
@@ -2399,7 +2399,7 @@ perahu kertas!</string>
         <!--Riwayat Reply View Controller-->
         <scene sceneID="EKx-ud-18M">
             <objects>
-                <viewController id="YPW-Fi-zs5" customClass="RiwayatReplyViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YPW-Fi-zs5" customClass="RiwayatReplyViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eju-rM-b4O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2476,7 +2476,7 @@ perahu kertas!</string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Yh7-Ys-6Cp" customClass="RiwayatReplyCollectionViewCell" customModule="MC_3" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Yh7-Ys-6Cp" customClass="RiwayatReplyCollectionViewCell" customModule="Fiu" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="242"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="w01-Kb-uKd">
@@ -2540,7 +2540,9 @@ perahu kertas!</string>
                     </view>
                     <navigationItem key="navigationItem" id="PSN-Ta-M21"/>
                     <connections>
+                        <outlet property="dateLabel" destination="aaj-l2-38j" id="ldG-0q-og2"/>
                         <outlet property="messageLabel" destination="p9T-lk-LQH" id="pxs-mb-tqS"/>
+                        <outlet property="replyCounter" destination="ogN-Nx-Or4" id="Cl1-6W-TUO"/>
                         <outlet property="riwayatReplyCollectionView" destination="d5C-wN-xvc" id="Lp4-hv-xn6"/>
                         <outlet property="senderImageView" destination="Lwf-Zf-yv3" id="dWK-bz-XcT"/>
                         <outlet property="usernameLabel" destination="f7b-r9-OjN" id="7KH-IQ-U9z"/>
@@ -2554,7 +2556,7 @@ perahu kertas!</string>
         <!--Mercusuar View Controller-->
         <scene sceneID="Gyo-uz-o0k">
             <objects>
-                <viewController id="4bU-yF-Ckv" customClass="MercusuarViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4bU-yF-Ckv" customClass="MercusuarViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qck-kU-3Zj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2626,7 +2628,7 @@ perahu kertas!</string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YOs-Vn-TaS" customClass="MercusuarCollectionViewCell" customModule="MC_3" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YOs-Vn-TaS" customClass="MercusuarCollectionViewCell" customModule="Fiu" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="157"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="wCb-PX-8wY">
@@ -2667,7 +2669,7 @@ perahu kertas!</string>
         <!--Ask View Controller-->
         <scene sceneID="iOt-k9-b4O">
             <objects>
-                <viewController id="pID-2n-Qvf" customClass="AskViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pID-2n-Qvf" customClass="AskViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XW0-XD-85U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2749,7 +2751,7 @@ perahu kertas!</string>
         <!--Animasi Lipat Kertas View Controller-->
         <scene sceneID="VI7-Hh-oLD">
             <objects>
-                <viewController id="90D-xC-XfU" customClass="AnimasiLipatKertasViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="90D-xC-XfU" customClass="AnimasiLipatKertasViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2IE-Tp-aTD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2883,7 +2885,7 @@ bebanmu melalui perahu kertas ini</string>
         <!--View Controller-->
         <scene sceneID="9Mr-5f-PYW">
             <objects>
-                <viewController id="y7E-qJ-JoE" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="y7E-qJ-JoE" customClass="ViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k59-WL-Uty">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2953,7 +2955,7 @@ kamu merasa tidak nyaman.</string>
         <!--Mencari View Controller-->
         <scene sceneID="9kz-bD-aNe">
             <objects>
-                <viewController id="NGq-r8-fq1" customClass="MencariViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NGq-r8-fq1" customClass="MencariViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LRp-ZK-Djf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -3043,9 +3045,8 @@ kamu merasa tidak nyaman.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="P3E-d2-545"/>
         <segue reference="1x8-wH-9WD"/>
-        <segue reference="Pj7-gd-Isc"/>
+        <segue reference="lfE-Ie-0Mh"/>
         <segue reference="9b2-eg-5M3"/>
     </inferredMetricsTieBreakers>
     <resources>
