@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let defaults = UserDefaults.standard
 //        if defaults.object(forKey: "isFirstTime") == nil {
 //            defaults.set("No", forKey:"isFirstTime")
-            let viewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! ViewController
+ //           let viewController = storyboard.instantiateViewController(withIdentifier: "HomeViewController") as! ViewController
 //              //self.window.rootViewController = viewController
 //              self.window.makeKeyAndVisible()
 //         }
