@@ -57,6 +57,18 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
         let record = records[indexPath.row]
         
         let likesNumber = record.object(forKey: "likes") as! Int
+        if (indexPath == 0){
+            cell.top3Label.text = "1"
+        }
+        else if(indexPath == 1){
+            cell.top3Label.text = "2"
+        }
+        else if(indexPath == 2){
+            cell.top3Label.text = "3"
+        }
+        else if (indexPath >= 3) {
+            cell.top3Label.text = ""
+        }
         cell.replyLabel.text = record.object(forKey: "question") as? String
         cell.numberOfLikes.text = "\(likesNumber)"
         cell.userNameLabel.text = record.object(forKey: "username") as? String
