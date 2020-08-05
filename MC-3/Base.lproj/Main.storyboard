@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WI6-hV-SwP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WI6-hV-SwP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -170,38 +170,40 @@ tentang dirimu</string>
             <objects>
                 <viewController id="eEh-42-BzD" customClass="HomeViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dss-cW-l8u">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_LandingPage" translatesAutoresizingMaskIntoConstraints="NO" id="qzx-ZU-R6J">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image_LandingPage_Kotak" translatesAutoresizingMaskIntoConstraints="NO" id="Psf-b4-y42">
-                                <rect key="frame" x="24" y="245" width="366" height="389"/>
+                                <rect key="frame" x="24" y="240" width="366" height="389"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="389" id="bvH-zg-sHh"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hai, [Username] !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTc-gm-LHZ">
-                                <rect key="frame" x="24" y="265" width="366" height="34"/>
+                                <rect key="frame" x="24" y="260" width="366" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="78W-df-UKS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="0.0"/>
                                 <variation key="heightClass=regular-widthClass=compact">
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
                                 </variation>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image_Otter_LandingPage" translatesAutoresizingMaskIntoConstraints="NO" id="uEf-f8-9ur">
-                                <rect key="frame" x="177" y="534" width="237" height="230"/>
+                                <rect key="frame" x="177" y="529" width="237" height="230"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="230" id="408-SE-kJb"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVl-I6-gvc">
-                                <rect key="frame" x="40" y="314.5" width="322" height="223.5"/>
+                                <rect key="frame" x="40" y="309.5" width="322" height="223.5"/>
                                 <string key="text">Hari ini berat ya?
 Tenang, kamu tidak sendirian.
 Ada Ottis di sini.
@@ -215,7 +217,7 @@ geser ke bawah  untuk menangkap satu.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ottis, The Otter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3t-dP-Jyz">
-                                <rect key="frame" x="40" y="588" width="123" height="21"/>
+                                <rect key="frame" x="40" y="583" width="123" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Ydz-AW-odH"/>
                                 </constraints>
@@ -250,14 +252,14 @@ geser ke bawah  untuk menangkap satu.</string>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gcD-1j-h2B">
-                                <rect key="frame" x="164" y="501" width="14" height="14"/>
+                                <rect key="frame" x="164" y="496" width="14" height="14"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="tYS-1p-ho9"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7tW-7A-W1k">
-                                <rect key="frame" x="146" y="461" width="17" height="14"/>
+                                <rect key="frame" x="146" y="407" width="17" height="14"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="Wcv-Qn-4Le"/>
@@ -1985,7 +1987,7 @@ perahu kertas!</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQg-Nv-dp2" customClass="canvasView" customModule="MC_3" customModuleProvider="target">
-                                <rect key="frame" x="40" y="397" width="334" height="291"/>
+                                <rect key="frame" x="40" y="477" width="334" height="211"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ANh-gM-OSc">
@@ -2194,6 +2196,9 @@ perahu kertas!</string>
                                 <state key="normal" title="Hapus">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteButton:" destination="dZW-pK-S8h" eventType="touchUpInside" id="sh6-80-7lK"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="line" placeholder="ketuk untuk mulai menulis perahu kertasmu" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="xyH-Pw-cl1">
                                 <rect key="frame" x="52" y="477" width="320" height="24"/>
@@ -2218,7 +2223,7 @@ perahu kertas!</string>
                             <constraint firstAttribute="bottom" secondItem="Pof-2P-P9c" secondAttribute="bottom" constant="277.5" id="6U9-zv-Plb"/>
                             <constraint firstItem="f5v-u2-7m4" firstAttribute="leading" secondItem="ik2-fj-Jan" secondAttribute="trailing" constant="11" id="6ef-IA-O8J"/>
                             <constraint firstItem="dxt-hS-h8R" firstAttribute="leading" secondItem="4Q2-8b-9YY" secondAttribute="leading" constant="44" id="6sP-mT-cjL"/>
-                            <constraint firstItem="RQg-Nv-dp2" firstAttribute="top" secondItem="dxt-hS-h8R" secondAttribute="bottom" constant="58" id="7JQ-OO-FSi"/>
+                            <constraint firstItem="RQg-Nv-dp2" firstAttribute="top" secondItem="dxt-hS-h8R" secondAttribute="bottom" constant="138" id="7JQ-OO-FSi"/>
                             <constraint firstItem="50R-Hh-q02" firstAttribute="centerX" secondItem="CkK-5h-oAa" secondAttribute="centerX" id="7OB-FT-IyG"/>
                             <constraint firstItem="EgK-SU-Ibf" firstAttribute="bottom" secondItem="yAx-nm-KBR" secondAttribute="bottom" id="8Zk-o3-v0L"/>
                             <constraint firstItem="Pof-2P-P9c" firstAttribute="top" secondItem="Xlb-V0-fr7" secondAttribute="bottom" constant="15" id="904-ks-X0i"/>
@@ -2231,7 +2236,7 @@ perahu kertas!</string>
                             <constraint firstItem="g0P-Pj-weQ" firstAttribute="leading" secondItem="nf3-PG-ZEJ" secondAttribute="trailing" constant="33" id="EiB-i9-0Dh"/>
                             <constraint firstItem="3Pw-If-xbv" firstAttribute="top" secondItem="4Q2-8b-9YY" secondAttribute="top" constant="10" id="Ela-a6-bnp"/>
                             <constraint firstItem="4Q2-8b-9YY" firstAttribute="trailing" secondItem="b7l-sM-l5X" secondAttribute="trailing" constant="41" id="FlI-gx-460"/>
-                            <constraint firstItem="RQg-Nv-dp2" firstAttribute="top" secondItem="JmL-gt-cVi" secondAttribute="top" constant="397" id="GfO-lR-lqI"/>
+                            <constraint firstItem="RQg-Nv-dp2" firstAttribute="top" secondItem="JmL-gt-cVi" secondAttribute="top" constant="477" id="GfO-lR-lqI"/>
                             <constraint firstItem="bFB-w3-eVM" firstAttribute="leading" secondItem="EgK-SU-Ibf" secondAttribute="trailing" constant="18" id="HE2-mC-uww"/>
                             <constraint firstItem="RQg-Nv-dp2" firstAttribute="centerX" secondItem="JmL-gt-cVi" secondAttribute="centerX" id="JHH-Yt-6vu"/>
                             <constraint firstItem="2QE-N2-FNG" firstAttribute="leading" secondItem="Y6Q-aE-eek" secondAttribute="trailing" constant="18" id="Kch-ro-m9Y"/>
@@ -2254,7 +2259,7 @@ perahu kertas!</string>
                             <constraint firstItem="RQg-Nv-dp2" firstAttribute="centerX" secondItem="Xlb-V0-fr7" secondAttribute="centerX" id="VP2-oF-ukT"/>
                             <constraint firstItem="EgK-SU-Ibf" firstAttribute="top" secondItem="bFB-w3-eVM" secondAttribute="top" id="WRc-8l-NLV"/>
                             <constraint firstItem="bAQ-KZ-caC" firstAttribute="top" secondItem="jAm-GM-LsU" secondAttribute="bottom" constant="25" id="Wq6-I4-vsQ"/>
-                            <constraint firstItem="RQg-Nv-dp2" firstAttribute="top" secondItem="Avv-dW-zTr" secondAttribute="bottom" constant="30.5" id="X16-bx-Jk8"/>
+                            <constraint firstItem="RQg-Nv-dp2" firstAttribute="top" secondItem="Avv-dW-zTr" secondAttribute="bottom" constant="110.5" id="X16-bx-Jk8"/>
                             <constraint firstAttribute="trailing" secondItem="nf3-PG-ZEJ" secondAttribute="trailing" constant="93" id="X3a-Hs-9KK"/>
                             <constraint firstItem="RQg-Nv-dp2" firstAttribute="centerX" secondItem="Avv-dW-zTr" secondAttribute="centerX" id="XZm-J7-Acn"/>
                             <constraint firstItem="4Q2-8b-9YY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="f5v-u2-7m4" secondAttribute="trailing" symbolic="YES" id="Xi5-dj-umk"/>
@@ -2289,7 +2294,7 @@ perahu kertas!</string>
                             <constraint firstItem="EgK-SU-Ibf" firstAttribute="bottom" secondItem="Y6Q-aE-eek" secondAttribute="bottom" id="xNo-db-iFh"/>
                             <constraint firstItem="CkK-5h-oAa" firstAttribute="leading" secondItem="JmL-gt-cVi" secondAttribute="leadingMargin" constant="-47" id="xR1-Fa-v9a"/>
                             <constraint firstItem="RQg-Nv-dp2" firstAttribute="leading" secondItem="50R-Hh-q02" secondAttribute="leading" id="xfl-hn-NkZ"/>
-                            <constraint firstItem="RQg-Nv-dp2" firstAttribute="top" secondItem="ANh-gM-OSc" secondAttribute="bottom" constant="46" id="xuc-ps-I0x"/>
+                            <constraint firstItem="RQg-Nv-dp2" firstAttribute="top" secondItem="ANh-gM-OSc" secondAttribute="bottom" constant="126" id="xuc-ps-I0x"/>
                             <constraint firstItem="RQg-Nv-dp2" firstAttribute="centerX" secondItem="9Zz-Gc-aWw" secondAttribute="centerX" id="yCe-EX-PRX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Q2-8b-9YY"/>
@@ -2343,7 +2348,8 @@ perahu kertas!</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="shadowOffset" width="1" height="0.0"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fFU-PU-NPB">
                                 <rect key="frame" x="24" y="261" width="366" height="568"/>
@@ -3037,9 +3043,10 @@ kamu merasa tidak nyaman.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5Xi-BN-Ky8"/>
-        <segue reference="lfE-Ie-0Mh"/>
-        <segue reference="5Xo-Ek-ILa"/>
+        <segue reference="P3E-d2-545"/>
+        <segue reference="1x8-wH-9WD"/>
+        <segue reference="Pj7-gd-Isc"/>
+        <segue reference="9b2-eg-5M3"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Avatar 1" width="150" height="150"/>

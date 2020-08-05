@@ -15,7 +15,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.navigationBar.isHidden = true
     }
-    
+    @IBAction func myUnwindSegue(unwindSegue: UIStoryboardSegue){
+         
+     }
 }
 
 

@@ -23,7 +23,7 @@ struct TouchPointAndColor  {
 class canvasView: UIView {
     
     var lines = [TouchPointAndColor]()
-    var strokeWidth: CGFloat = 1.0
+    var strokeWidth: CGFloat = 5.0
     var strokeColor: UIColor = .black
     var strokeOpacity:  CGFloat = 1.0
     override func draw(_ rect: CGRect) {
