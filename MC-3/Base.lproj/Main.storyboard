@@ -864,6 +864,10 @@ kamu butuhkan</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Slider_Size" translatesAutoresizingMaskIntoConstraints="NO" id="x5h-o6-n0W">
                                 <rect key="frame" x="44" y="416.5" width="24" height="236"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8K-3V-x0m" customClass="canvasView" customModule="Fiu" customModuleProvider="target">
+                                <rect key="frame" x="34" y="387" width="344" height="223"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHu-ER-nhf">
                                 <rect key="frame" x="55" y="259" width="50" height="33"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
@@ -1078,10 +1082,6 @@ kamu butuhkan</string>
                                     <action selector="playButton:" destination="05H-7O-M6E" eventType="touchUpInside" id="ORx-1S-xni"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8K-3V-x0m" customClass="canvasView" customModule="Fiu" customModuleProvider="target">
-                                <rect key="frame" x="34" y="387" width="344" height="223"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -3184,7 +3184,7 @@ kamu merasa tidak nyaman.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gnY-OO-XfW"/>
+        <segue reference="Wrf-De-64x"/>
         <segue reference="G0s-w8-mvn"/>
         <segue reference="lfE-Ie-0Mh"/>
         <segue reference="5Xo-Ek-ILa"/>
