@@ -93,6 +93,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
         record2Label.isHidden = true
         recordingButton.isHidden = true
         playRecordButton.isHidden = true
+        deleteButton.isHidden = true
         
         initializeHideKeyboard()
         textField.delegate = self
@@ -159,6 +160,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
     }
     @IBAction func recordButton(_ sender: Any) {
         textField.text = ""
+        deleteButton.isHidden = true
         recordButton.isHidden = true
         drawButton.isHidden = true
         sliderSize.isHidden = true
@@ -180,6 +182,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
         recordingButton.isHidden = false
         playRecordButton.isHidden = false
         
+        
         //IN START RECORDING, CHANGELABEL
         
         
@@ -189,6 +192,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
     
     @IBAction func drawButton(_ sender: Any) {
         textField.text = ""
+        deleteButton.isHidden = false
         recordButton.isHidden = true
         drawButton.isHidden = true
         sliderSize.isHidden = false

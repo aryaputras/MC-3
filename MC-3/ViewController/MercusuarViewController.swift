@@ -142,7 +142,11 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
                    
                    
                    newRecord.setValue(likesNumber, forKey: "likes")
-                   
+
+ //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME
+                
+                
+                
                    let operation = CKModifyRecordsOperation(recordsToSave: [newRecord], recordIDsToDelete: nil)
                    
                    operation.savePolicy = .changedKeys
@@ -153,7 +157,15 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
                        //print(records)
                        
                    }
+                
                    database.add(operation)
+                
+                
+                
+//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME
+                
+                
+                
                    //RELOADDATA
                    //Make ID for each record and get from cellOwner.(ID) and pass it to CKModify  (ID) likes +1
                    
