@@ -239,7 +239,8 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
     }
     
 
-    @IBAction func selesaiTapped(_ sender: Any) {
+    @IBAction func selesaiTapped(_ sender: UIButton) {
+        sender.isHidden = true
         selesaiButton.isHidden = true
         let reply = isiTextField.text as! CKRecordValue
         let replyNickname = myUsername as CKRecordValue

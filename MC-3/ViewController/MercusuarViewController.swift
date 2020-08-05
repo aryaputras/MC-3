@@ -15,6 +15,8 @@ class MercusuarViewController: UIViewController{
     var label = ""
     var likesIsON:Bool = false
     var records = [CKRecord]()
+    var newLikes = ""
+    
     @IBOutlet weak var mercusuarCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,29 +58,40 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
         cell.frame.size = CGSize(width: 414, height: 172)
         let record = records[indexPath.row]
         
-        let likesNumber = record.object(forKey: "likes") as! Int
-        if (indexPath == 0){
+        let likesNumber = record.object(forKey: "likesLog") as! [String]
+        
+        
+        
+        
+        
+        if (indexPath.row == 0){
             cell.top3Label.text = "1"
         }
-        else if(indexPath == 1){
+        else if(indexPath.row == 1){
             cell.top3Label.text = "2"
         }
-        else if(indexPath == 2){
+        else if(indexPath.row == 2){
             cell.top3Label.text = "3"
         }
-        else if (indexPath >= 3) {
+        else if (indexPath.row >= 3) {
             cell.top3Label.text = ""
         }
         cell.replyLabel.text = record.object(forKey: "question") as? String
-        cell.numberOfLikes.text = "\(likesNumber)"
+        cell.numberOfLikes.text = "\(likesNumber.count)"
         cell.userNameLabel.text = record.object(forKey: "username") as? String
         // = record.recordID.recordName
+        
         
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(tapLikes(sender:)))
         tapRecognizer.numberOfTapsRequired = 2
         cell.addGestureRecognizer(tapRecognizer)
         cell.recordName = record.recordID.recordName
+        
+        cell.likesLog = record.object(forKey: "likesLog") as! [String]
+        
+        
+        
         
         //print(record)
         
@@ -97,28 +110,41 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
             let cellOwner = tapLikes.view as! MercusuarCollectionViewCell
             //print(cellOwner.)
             //print(cellOwner.recordName)
-            
-            var likesNumber =  Int(cellOwner.numberOfLikes.text!)
+            print()
+            var likesNumber =  cellOwner.likesLog.count
             
             if likesIsON == false {
                 // ini kalo dia mati dinyalain dan likesnya nambah
                 
-                likesNumber! += 1
+                //likesNumber! += 1
                 
-                cellOwner.numberOfLikes.text = "\(likesNumber ?? 99)"
+                //cellOwner.numberOfLikes.text = "\(likesNumber)"
                 
-                print(likesNumber!)
+                //print(likesNumber!)
+                
                 likesIsON = false
                 likesIsON.toggle()
                 setButtonBackGround(view: cellOwner.likesButton!, on: #imageLiteral(resourceName: "Ikan_isi"), off:  #imageLiteral(resourceName: "Ikan"), onOffStatus: likesIsON)
                 
-                
+                CKContainer.default().fetchUserRecordID { userID, error in
+                if let userID = userID {
                    let database = CKContainer.default().publicCloudDatabase
                    let record = CKRecord.ID(recordName: cellOwner.recordName)
                    let newRecord = CKRecord(recordType: "question", recordID: record)
-                   
-                   
-                   newRecord.setValue(likesNumber, forKey: "likes")
+                var likesLog = cellOwner.likesLog
+                    
+                    
+                    if likesLog.contains(userID.recordName){
+                        print("you already liked this")
+                    } else {
+                        likesLog.append(userID.recordName)
+                    }
+                
+                
+                let newLikesLog = likesLog
+                    self.newLikes = "\(newLikesLog.count)"
+                print(newLikesLog)
+                   newRecord.setValue(newLikesLog, forKey: "likesLog")
                    
                    let operation = CKModifyRecordsOperation(recordsToSave: [newRecord], recordIDsToDelete: nil)
                    
@@ -128,60 +154,33 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
                        records, ids , error in
                        print(error)
                        //print(records)
+                    DispatchQueue.main.async {
+                       
+                        cellOwner.numberOfLikes.text = self.newLikes
+                        
+                         self.mercusuarCollectionView.reloadData()
+                    }
                        
                    }
                    database.add(operation)
                    //RELOADDATA
                    //Make ID for each record and get from cellOwner.(ID) and pass it to CKModify  (ID) likes +1
-                   
-                   mercusuarCollectionView.reloadData()
+                    
+                    
+                    }
+                }
                 
             }
             if likesIsON == true {
                 // ini kalo dia hidup dimatiin dan likesnya ngurang
                
-                likesNumber! -= 1
-                cellOwner.numberOfLikes.text = "\(likesNumber ?? 99)"
-                print(likesNumber!)
+                //likesNumber! -= 1
+                //CellOwner.numberOfLikes.text = "\(likesNumber ?? 99)"
+                //print(likesNumber!)
                 likesIsON = true
                 likesIsON.toggle()
                 setButtonBackGround(view: cellOwner.likesButton!, on: #imageLiteral(resourceName: "Ikan_isi"), off:  #imageLiteral(resourceName: "Ikan"), onOffStatus: likesIsON)
-                
-                
-                   let database = CKContainer.default().publicCloudDatabase
-                   let record = CKRecord.ID(recordName: cellOwner.recordName)
-                   let newRecord = CKRecord(recordType: "question", recordID: record)
-                   
-                   
-                   newRecord.setValue(likesNumber, forKey: "likes")
-
- //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME //OLD SCHEME
-                
-                
-                
-                   let operation = CKModifyRecordsOperation(recordsToSave: [newRecord], recordIDsToDelete: nil)
-                   
-                   operation.savePolicy = .changedKeys
-                   
-                   operation.modifyRecordsCompletionBlock = {
-                       records, ids , error in
-                       print(error)
-                       //print(records)
-                       
-                   }
-                
-                   database.add(operation)
-                
-                
-                
-//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME//NEW SCHEME
-                
-                
-                
-                   //RELOADDATA
-                   //Make ID for each record and get from cellOwner.(ID) and pass it to CKModify  (ID) likes +1
-                   
-                   mercusuarCollectionView.reloadData()
+                                   mercusuarCollectionView.reloadData()
             }
             
    

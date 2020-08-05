@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class MercusuarCollectionViewCell: UICollectionViewCell {
     
@@ -18,6 +19,8 @@ class MercusuarCollectionViewCell: UICollectionViewCell {
     @IBOutlet var reportButton: UIButton!
     @IBOutlet var likesButton: UIButton!
     var recordName = ""
+    var recordID: CKRecord.ID?
+    var likesLog = [""]
     
     
     override func awakeFromNib() {
