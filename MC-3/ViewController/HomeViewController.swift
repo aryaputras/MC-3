@@ -38,13 +38,17 @@ class HomeViewController: UIViewController {
              let predicate = NSPredicate(format: "creatorID == %@", userID?.recordName ?? "")
              let query = CKQuery(recordType: "profile", predicate: predicate)
              query.sortDescriptors = [NSSortDescriptor(key: "signUpDate", ascending: false)]
+            
+            let queryOp = CKQueryOperation(query: query)
+            queryOp.resultsLimit = 1
+            
              database.perform(query, inZoneWith: nil) { (records, error) in
                  if let fetchedRecords = records {
                      self.name = fetchedRecords
                      DispatchQueue.main.async {
                         
                         let username = self.name[0].object(forKey: "username") as! String
-                            print(username)
+                            //print(username)
                         
                         
                         

@@ -91,7 +91,8 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
     }
     func withGenderReference() {
         let database = CKContainer.default().publicCloudDatabase
-        let predicate = NSPredicate(format: "senderAge BETWEEN {\(self.agePreferenceMin), \(self.agePreferenceMax)} AND senderGender = \(self.genderPreference)")
+        let predicate = NSPredicate(format: "senderAge BETWEEN {\(self.agePreferenceMin), \(self.agePreferenceMax)} AND senderGender = \(self.genderPreference) AND creatorID != '\(self.userID)'")
+        
         print("withgenderpreference")
         
         
@@ -119,7 +120,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
                     let senderID = self.inbox[random].object(forKey: "creatorID")
                     self.getSenderID(sender: senderID as! String)
                     
-                    self.messageLabel.text = message as! String
+                    self.messageLabel.text = message as? String
                     
                     
                     let audioRecord = self.inbox[random].object(forKey: "audio")
@@ -193,7 +194,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
     }
     func withoutGenderReference() {
         let database = CKContainer.default().publicCloudDatabase
-        let predicate = NSPredicate(format: "senderAge BETWEEN {\(self.agePreferenceMin), \(self.agePreferenceMax)}")
+        let predicate = NSPredicate(format: "senderAge BETWEEN {\(self.agePreferenceMin), \(self.agePreferenceMax)} AND creatorID != '\(self.userID)'")
         
         print("without gender preference")
         

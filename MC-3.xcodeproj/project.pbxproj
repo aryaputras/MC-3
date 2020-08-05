@@ -65,7 +65,7 @@
 		49F705E324C96B2E00EF7CF6 /* RiwayatReplyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RiwayatReplyCollectionViewCell.xib; sourceTree = "<group>"; };
 		53DEC19971A47E29A1EF7C75 /* Pods-MC-3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MC-3.release.xcconfig"; path = "Pods/Target Support Files/Pods-MC-3/Pods-MC-3.release.xcconfig"; sourceTree = "<group>"; };
 		C032542124C5F77000AFC520 /* MICDELETELATERViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MICDELETELATERViewController.swift; sourceTree = "<group>"; };
-		C04B3E6524C1917700707D0F /* MC-3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "MC-3.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C04B3E6524C1917700707D0F /* Fiu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fiu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C04B3E6824C1917700707D0F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C04B3E6A24C1917700707D0F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C04B3E6C24C1917700707D0F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,7 +157,7 @@
 		C04B3E6624C1917700707D0F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C04B3E6524C1917700707D0F /* MC-3.app */,
+				C04B3E6524C1917700707D0F /* Fiu.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 			);
 			name = "MC-3";
 			productName = "MC-3";
-			productReference = C04B3E6524C1917700707D0F /* MC-3.app */;
+			productReference = C04B3E6524C1917700707D0F /* Fiu.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -487,7 +487,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Academy.MC-3";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Fiu;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -511,7 +511,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Academy.MC-3";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Fiu;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
