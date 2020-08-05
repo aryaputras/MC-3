@@ -250,7 +250,7 @@ class SendViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerDe
     
     
     @IBAction func doneAction(_ sender: Any) {
-        
+        doneButton.isHidden = true
         CKContainer.default().fetchUserRecordID { userID, error in
             if let userID = userID {
                 //print(userID)
