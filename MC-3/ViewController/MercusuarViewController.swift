@@ -92,7 +92,9 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
                 // ini kalo dia mati dinyalain dan likesnya nambah
                 
                 likesNumber! += 1
+                
                 cellOwner.numberOfLikes.text = "\(likesNumber ?? 99)"
+                
                 print(likesNumber!)
                 likesIsON = false
                 likesIsON.toggle()

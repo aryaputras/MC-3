@@ -134,6 +134,8 @@ class Register2VC: UIViewController {
                         } else {
                             print("record was saved")
                             
+                            self.performSegue(withIdentifier: "savingProfile", sender: Any?.self)
+                            
                         }
                     }
                 }

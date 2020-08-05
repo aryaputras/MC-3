@@ -48,6 +48,8 @@ class ProfileVC: UIViewController, UITextFieldDelegate {
                         let avatarImage = self.name[0].object(forKey: "avatar")
                         self.profileImage.image = UIImage(named: avatarImage as! String)
                         
+                        
+                        
                     }
                     //                        print(reference)
                     //                        print(query)
@@ -89,7 +91,34 @@ class ProfileVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func ButtonSave(_ sender: Any) {
-        
+        CKContainer.default().fetchUserRecordID { userID, error in
+            if let userID = userID {
+                let database = CKContainer.default().publicCloudDatabase
+                let nameRecord = self.profileUsername.text! as CKRecordValue
+                
+                
+                let avatarName = self.ImageName[self.index]
+                let record = CKRecord.ID(recordName: self.name[0].recordID.recordName)
+                let newRecord = CKRecord(recordType: "profile", recordID: record)
+                
+                
+                
+                newRecord.setValue(nameRecord, forKey: "username")
+                newRecord.setValue(avatarName, forKey: "avatar")
+
+                let operation = CKModifyRecordsOperation(recordsToSave: [newRecord], recordIDsToDelete: nil)
+                
+                operation.savePolicy = .changedKeys
+                
+                operation.modifyRecordsCompletionBlock = {
+                    records, ids , error in
+                    print(error)
+                    //print(records)
+                    
+                }
+                database.add(operation)
+            }
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
