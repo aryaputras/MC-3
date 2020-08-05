@@ -2051,7 +2051,7 @@ perahu kertas!</string>
                                 </state>
                                 <connections>
                                     <action selector="selesaiTapped:" destination="dZW-pK-S8h" eventType="touchUpInside" id="GPm-Nv-Con"/>
-                                    <segue destination="cLq-li-GRl" kind="presentation" modalPresentationStyle="fullScreen" id="1x8-wH-9WD"/>
+                                    <segue destination="Y1T-VP-7SO" kind="presentation" modalPresentationStyle="fullScreen" id="Wrf-De-64x"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buat catatan suara" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pof-2P-P9c">
@@ -3088,9 +3088,104 @@ kamu merasa tidak nyaman.</string>
             </objects>
             <point key="canvasLocation" x="9770" y="1758"/>
         </scene>
+        <!--Mencari View Controller-->
+        <scene sceneID="w6g-2l-kwj">
+            <objects>
+                <viewController id="Y1T-VP-7SO" customClass="MencariViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zR0-AU-qHW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yOe-ij-f1j">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle-2" translatesAutoresizingMaskIntoConstraints="NO" id="uY6-dP-9XX">
+                                        <rect key="frame" x="0.0" y="-250" width="414" height="896"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 3" translatesAutoresizingMaskIntoConstraints="NO" id="vhf-cs-CXC">
+                                        <rect key="frame" x="0.0" y="60" width="414" height="838"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U8O-68-nwM">
+                                        <rect key="frame" x="29" y="54" width="17" height="29"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal" image="chevron.left" catalog="system">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="kaH-pn-Kqf" kind="unwind" unwindAction="myUnwindSegueWithUnwindSegue:" id="0Ji-ot-UJ4"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jika ya, tiup perahu kertas ini." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WRP-5C-qec">
+                                        <rect key="frame" x="93" y="799" width="228" height="14.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="vhf-cs-CXC" firstAttribute="top" secondItem="yOe-ij-f1j" secondAttribute="top" constant="60" id="6SB-3m-P3k"/>
+                                    <constraint firstAttribute="bottom" secondItem="U8O-68-nwM" secondAttribute="bottom" constant="813" id="7TJ-vs-ALg"/>
+                                    <constraint firstAttribute="trailing" secondItem="U8O-68-nwM" secondAttribute="trailing" constant="368" id="RLd-rV-krh"/>
+                                    <constraint firstAttribute="bottom" secondItem="WRP-5C-qec" secondAttribute="bottom" constant="82.5" id="Sys-Oo-3uv"/>
+                                    <constraint firstItem="WRP-5C-qec" firstAttribute="leading" secondItem="yOe-ij-f1j" secondAttribute="leading" constant="93" id="TrI-hf-vJV"/>
+                                    <constraint firstItem="uY6-dP-9XX" firstAttribute="top" secondItem="yOe-ij-f1j" secondAttribute="top" constant="-250" id="UBb-RS-DfZ"/>
+                                    <constraint firstItem="WRP-5C-qec" firstAttribute="centerX" secondItem="yOe-ij-f1j" secondAttribute="centerX" id="b1Q-0h-FTQ"/>
+                                    <constraint firstItem="WRP-5C-qec" firstAttribute="centerX" secondItem="vhf-cs-CXC" secondAttribute="centerX" id="f38-uJ-4gQ"/>
+                                    <constraint firstItem="WRP-5C-qec" firstAttribute="centerX" secondItem="uY6-dP-9XX" secondAttribute="centerX" id="tmW-9D-OzC"/>
+                                    <constraint firstItem="U8O-68-nwM" firstAttribute="top" secondItem="yOe-ij-f1j" secondAttribute="top" constant="54" id="uJx-Sc-dgm"/>
+                                    <constraint firstItem="U8O-68-nwM" firstAttribute="leading" secondItem="yOe-ij-f1j" secondAttribute="leading" constant="29" id="xKx-Nk-SsZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="vhf-cs-CXC" secondAttribute="bottom" constant="-2" id="yf2-9U-Y1q"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Big_Paper_Boat" translatesAutoresizingMaskIntoConstraints="NO" id="QwA-Nt-yQ3">
+                                <rect key="frame" x="24" y="421" width="366" height="181"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Apakah kamu sudah siap menghanyutkan balasanmu?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rOi-gU-ftr">
+                                <rect key="frame" x="7" y="309" width="400" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="JTv-Z0-36x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yOe-ij-f1j" firstAttribute="centerY" secondItem="zR0-AU-qHW" secondAttribute="centerY" id="3ZR-Jr-Qoo"/>
+                            <constraint firstItem="yOe-ij-f1j" firstAttribute="top" secondItem="zR0-AU-qHW" secondAttribute="topMargin" constant="-44" id="J39-cC-sSA"/>
+                            <constraint firstItem="QwA-Nt-yQ3" firstAttribute="centerX" secondItem="rOi-gU-ftr" secondAttribute="centerX" id="JgO-88-1z4"/>
+                            <constraint firstItem="rOi-gU-ftr" firstAttribute="leading" secondItem="vhc-Tg-Dsk" secondAttribute="leading" constant="40" id="Via-hi-RRq"/>
+                            <constraint firstItem="QwA-Nt-yQ3" firstAttribute="top" secondItem="rOi-gU-ftr" secondAttribute="bottom" constant="42" id="e5j-Bl-d5h"/>
+                            <constraint firstItem="rOi-gU-ftr" firstAttribute="centerX" secondItem="zR0-AU-qHW" secondAttribute="centerX" id="i91-FE-gIP"/>
+                            <constraint firstItem="yOe-ij-f1j" firstAttribute="leading" secondItem="vhc-Tg-Dsk" secondAttribute="leading" id="kdI-rs-bwL"/>
+                            <constraint firstItem="QwA-Nt-yQ3" firstAttribute="leading" secondItem="vhc-Tg-Dsk" secondAttribute="leading" constant="24" id="oz3-ja-CHy"/>
+                            <constraint firstItem="rOi-gU-ftr" firstAttribute="top" secondItem="vhc-Tg-Dsk" secondAttribute="top" constant="265" id="tUa-ob-yWZ"/>
+                            <constraint firstItem="QwA-Nt-yQ3" firstAttribute="centerX" secondItem="yOe-ij-f1j" secondAttribute="centerX" id="xtE-tj-2ew"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="vhc-Tg-Dsk"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AZv-Db-mRr"/>
+                    <connections>
+                        <outlet property="label" destination="WRP-5C-qec" id="CTr-TD-6Mv"/>
+                        <outlet property="labelAtas" destination="rOi-gU-ftr" id="F2A-0L-vIe"/>
+                        <outlet property="orangeBackground" destination="uY6-dP-9XX" id="8qB-MF-fzq"/>
+                        <outlet property="paperBoat" destination="QwA-Nt-yQ3" id="2yo-xB-Bb9"/>
+                        <outlet property="tideBackground" destination="vhf-cs-CXC" id="Y3R-n8-hcZ"/>
+                        <segue destination="cLq-li-GRl" kind="presentation" identifier="blowToHome" modalPresentationStyle="fullScreen" id="G0s-w8-mvn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NUG-F9-ga8" sceneMemberID="firstResponder"/>
+                <exit id="kaH-pn-Kqf" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="11746" y="2537"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2Wt-Vh-GSG"/>
+        <segue reference="gnY-OO-XfW"/>
+        <segue reference="G0s-w8-mvn"/>
         <segue reference="lfE-Ie-0Mh"/>
         <segue reference="5Xo-Ek-ILa"/>
     </inferredMetricsTieBreakers>
