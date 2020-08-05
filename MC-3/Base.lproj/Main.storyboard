@@ -498,7 +498,6 @@ kamu butuhkan</string>
                                 <state key="normal" image="Primary Button"/>
                                 <connections>
                                     <action selector="buttonNext:" destination="6Rj-Wh-IKd" eventType="touchUpInside" id="K2L-YD-edc"/>
-                                    <segue destination="cLq-li-GRl" kind="presentation" identifier="io" modalPresentationStyle="fullScreen" id="Djg-22-u3o"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="USs-A1-a2e" customClass="RangeSeekSlider" customModule="RangeSeekSlider">
@@ -613,6 +612,7 @@ kamu butuhkan</string>
                         <outlet property="buttonFemale" destination="g8s-z5-MfZ" id="RDV-Ue-2RU"/>
                         <outlet property="buttonMale" destination="JJe-fZ-tCa" id="uFO-Qu-bjz"/>
                         <outlet property="rangeSlider" destination="USs-A1-a2e" id="AI2-gS-gfd"/>
+                        <segue destination="cLq-li-GRl" kind="presentation" identifier="savingProfile" modalPresentationStyle="fullScreen" id="5Xi-BN-Ky8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zx9-I2-hst" sceneMemberID="firstResponder"/>
@@ -1752,10 +1752,10 @@ perahu kertas!</string>
             </objects>
             <point key="canvasLocation" x="10171.014492753624" y="2542.6339285714284"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--HOME-->
         <scene sceneID="IX1-Li-SYz">
             <objects>
-                <tabBarController id="cLq-li-GRl" customClass="TabBarController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HOME" title="HOME" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cLq-li-GRl" customClass="TabBarController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="7a2-oR-ize"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3q6-Yn-EPW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -2773,7 +2773,7 @@ perahu kertas!</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="UNz-ro-RC9">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lipat_kertas1" translatesAutoresizingMaskIntoConstraints="NO" id="JGx-9g-FCP">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Lipat_kertas1" translatesAutoresizingMaskIntoConstraints="NO" id="JGx-9g-FCP">
                                 <rect key="frame" x="24" y="229" width="366" height="502"/>
                             </imageView>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OJB-KD-svf">

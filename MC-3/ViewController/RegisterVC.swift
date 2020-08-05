@@ -17,6 +17,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     var age : Int = 19
     var imageName : [String] = ["Avatar 1","Avatar 2","Avatar 3","Avatar 4"]
     var index = 0
+    
     @IBOutlet weak var regisImage: UIImageView!
     @IBOutlet weak var regisUsername: UITextField!
     @IBOutlet weak var regisAge: UILabel!
