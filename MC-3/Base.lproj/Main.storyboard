@@ -11,7 +11,7 @@
         <!--RegisterVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="RegisterVC" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RegisterVC" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -39,7 +39,7 @@ tentang dirimu</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TK8-NE-xJc">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nama alias" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TK8-NE-xJc">
                                 <rect key="frame" x="54" y="460" width="308" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -61,8 +61,8 @@ tentang dirimu</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gendermu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJm-gu-tfV">
-                                <rect key="frame" x="167" y="621" width="82.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jenis kelaminmu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJm-gu-tfV">
+                                <rect key="frame" x="142.5" y="621" width="131.5" height="20.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -80,7 +80,6 @@ tentang dirimu</string>
                                 <state key="normal" image="Primary Button"/>
                                 <connections>
                                     <action selector="buttonNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qYL-C1-Hsp"/>
-                                    <segue destination="6Rj-Wh-IKd" kind="show" identifier="x" id="XEi-Ck-I8h"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbF-zj-HCO">
@@ -119,12 +118,23 @@ tentang dirimu</string>
                                     <action selector="buttonFemale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p4V-De-SRd"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Tolong jangan bikin anda krisis identitas*" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YYe-zB-WsI">
+                                <rect key="frame" x="7" y="814" width="400" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="1" height="0.0"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="QgS-bf-mam" secondAttribute="centerX" id="4Uj-ef-jql"/>
+                            <constraint firstItem="YYe-zB-WsI" firstAttribute="centerX" secondItem="w4Z-uP-Wgn" secondAttribute="centerX" id="7Xa-kH-BYG"/>
                             <constraint firstItem="nmf-ye-YsU" firstAttribute="top" secondItem="znz-75-iWu" secondAttribute="top" id="8QH-oV-VdM"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="AKp-FV-lYb"/>
+                            <constraint firstItem="YYe-zB-WsI" firstAttribute="top" secondItem="w4Z-uP-Wgn" secondAttribute="bottom" constant="8" id="At2-mj-0Qx"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="IJm-gu-tfV" secondAttribute="centerX" id="DBD-qC-c9Z"/>
                             <constraint firstItem="026-sm-dPE" firstAttribute="centerY" secondItem="dXN-4D-GTy" secondAttribute="centerY" id="FSF-cP-d4A"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="w4Z-uP-Wgn" secondAttribute="bottom" constant="56" id="NUV-ch-5j3"/>
@@ -140,11 +150,13 @@ tentang dirimu</string>
                             <constraint firstAttribute="bottom" secondItem="TK8-NE-xJc" secondAttribute="bottom" constant="402" id="Ysw-xg-BGK"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="w4Z-uP-Wgn" secondAttribute="centerX" constant="1" id="aZy-AR-Gud"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="1" id="bAz-mx-CMM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YYe-zB-WsI" secondAttribute="bottom" constant="27" id="btp-lv-NC2"/>
                             <constraint firstItem="aln-6j-PTd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="104" id="eHW-fw-mhs"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="026-sm-dPE" secondAttribute="centerX" id="ffh-yb-cXN"/>
                             <constraint firstItem="w4Z-uP-Wgn" firstAttribute="top" secondItem="nmf-ye-YsU" secondAttribute="bottom" constant="21" id="h3q-nD-9hT"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="1ZP-Bu-ngw" secondAttribute="centerX" constant="1" id="k5v-be-2RS"/>
                             <constraint firstItem="znz-75-iWu" firstAttribute="leading" secondItem="nmf-ye-YsU" secondAttribute="trailing" constant="57" id="sFz-ud-PBl"/>
+                            <constraint firstItem="YYe-zB-WsI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="7" id="sUc-jd-4ne"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="WBa-1l-fhA" secondAttribute="centerX" id="spQ-4x-LcW"/>
                             <constraint firstItem="026-sm-dPE" firstAttribute="top" secondItem="WBa-1l-fhA" secondAttribute="bottom" constant="15.5" id="uM1-3N-PZH"/>
                             <constraint firstItem="026-sm-dPE" firstAttribute="centerY" secondItem="dBo-w7-QIE" secondAttribute="centerY" id="whk-MX-RIW"/>
@@ -159,6 +171,8 @@ tentang dirimu</string>
                         <outlet property="regisAge" destination="026-sm-dPE" id="RwV-iB-hfS"/>
                         <outlet property="regisImage" destination="1ZP-Bu-ngw" id="Lx9-T8-ojP"/>
                         <outlet property="regisUsername" destination="TK8-NE-xJc" id="bXW-4p-OOm"/>
+                        <outlet property="warningLabel" destination="YYe-zB-WsI" id="iNn-LU-3b0"/>
+                        <segue destination="6Rj-Wh-IKd" kind="show" identifier="x" id="wdO-T0-Zok"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -168,7 +182,7 @@ tentang dirimu</string>
         <!--Item-->
         <scene sceneID="Iww-gM-wLr">
             <objects>
-                <viewController id="eEh-42-BzD" customClass="HomeViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eEh-42-BzD" customClass="HomeViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dss-cW-l8u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -323,7 +337,7 @@ geser ke bawah  untuk menangkap satu.</string>
         <!--View Controller-->
         <scene sceneID="fjO-dp-kQP">
             <objects>
-                <viewController id="VMA-GH-yfh" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="VMA-GH-yfh" customClass="ViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jWD-cq-H4g">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -394,7 +408,7 @@ Mau sampai kapan perihmu itu?</string>
         <!--View Controller-->
         <scene sceneID="Ww8-WF-M3n">
             <objects>
-                <viewController id="3XC-eA-ciK" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3XC-eA-ciK" customClass="ViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jud-9m-zuh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -465,7 +479,7 @@ Kalau kamu sudah siap, mari kita mulai perjalanan perahu kertasmu</string>
         <!--Register2VC-->
         <scene sceneID="qa7-r7-mqu">
             <objects>
-                <viewController id="6Rj-Wh-IKd" customClass="Register2VC" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="6Rj-Wh-IKd" customClass="Register2VC" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Itk-fK-Imh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -485,7 +499,7 @@ kamu butuhkan</string>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rentang Usia Mereka" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqx-e6-IGy">
-                                <rect key="frame" x="123" y="274" width="170" height="21"/>
+                                <rect key="frame" x="123" y="274" width="170.5" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="qQK-py-2Hx"/>
                                 </constraints>
@@ -546,8 +560,8 @@ kamu butuhkan</string>
                                     <action selector="rangeSliderAction:" destination="6Rj-Wh-IKd" eventType="valueChanged" id="DPQ-PZ-3lA"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Gender mereka" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IU-Z7-BJD">
-                                <rect key="frame" x="147" y="406" width="122" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jenis kelamin mereka" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IU-Z7-BJD">
+                                <rect key="frame" x="107" y="406" width="200" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="aHo-MJ-pta"/>
                                 </constraints>
@@ -576,32 +590,45 @@ kamu butuhkan</string>
                                     <action selector="buttonMale:" destination="6Rj-Wh-IKd" eventType="touchUpInside" id="0oJ-4w-79O"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Error label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N7B-QO-XJB">
+                                <rect key="frame" x="7" y="821" width="400" height="21"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="1" height="0.0"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="USs-A1-a2e" firstAttribute="top" secondItem="7aR-Zz-DsQ" secondAttribute="bottom" constant="76" id="26m-Ey-RoF"/>
                             <constraint firstItem="Ryg-MJ-1gC" firstAttribute="trailing" secondItem="g8s-z5-MfZ" secondAttribute="trailing" constant="107" id="3cv-g1-rYK"/>
+                            <constraint firstItem="Ryg-MJ-1gC" firstAttribute="bottom" secondItem="N7B-QO-XJB" secondAttribute="bottom" constant="20" id="3ed-OI-qeH"/>
                             <constraint firstItem="oqx-e6-IGy" firstAttribute="top" secondItem="Itk-fK-Imh" secondAttribute="top" constant="274" id="59a-bo-BUE"/>
                             <constraint firstItem="USs-A1-a2e" firstAttribute="leading" secondItem="Ryg-MJ-1gC" secondAttribute="leading" constant="87" id="5hR-Ez-QPk"/>
                             <constraint firstItem="wDZ-Df-v2X" firstAttribute="centerX" secondItem="USs-A1-a2e" secondAttribute="centerX" id="CKq-BH-Vrp"/>
                             <constraint firstItem="oqx-e6-IGy" firstAttribute="top" secondItem="7aR-Zz-DsQ" secondAttribute="bottom" constant="59" id="DfS-3a-FQ4"/>
-                            <constraint firstItem="7IU-Z7-BJD" firstAttribute="centerX" secondItem="UqZ-xp-quk" secondAttribute="centerX" constant="1" id="HBI-EX-H0G"/>
+                            <constraint firstItem="7IU-Z7-BJD" firstAttribute="centerX" secondItem="UqZ-xp-quk" secondAttribute="centerX" id="HBI-EX-H0G"/>
                             <constraint firstItem="7IU-Z7-BJD" firstAttribute="top" secondItem="Itk-fK-Imh" secondAttribute="top" constant="406" id="N4X-s0-U09"/>
-                            <constraint firstItem="7IU-Z7-BJD" firstAttribute="centerX" secondItem="7aR-Zz-DsQ" secondAttribute="centerX" id="Rz1-Fy-gfG"/>
-                            <constraint firstItem="7IU-Z7-BJD" firstAttribute="leading" secondItem="Ryg-MJ-1gC" secondAttribute="leading" constant="147" id="SUH-H1-y6a"/>
-                            <constraint firstItem="7IU-Z7-BJD" firstAttribute="centerX" secondItem="gnp-qc-ojy" secondAttribute="centerX" constant="1" id="WV9-P5-SQg"/>
+                            <constraint firstItem="7IU-Z7-BJD" firstAttribute="centerX" secondItem="7aR-Zz-DsQ" secondAttribute="centerX" constant="-1.25" id="Rz1-Fy-gfG"/>
+                            <constraint firstItem="7IU-Z7-BJD" firstAttribute="leading" secondItem="Ryg-MJ-1gC" secondAttribute="leading" constant="107" id="SUH-H1-y6a"/>
+                            <constraint firstItem="7IU-Z7-BJD" firstAttribute="centerX" secondItem="gnp-qc-ojy" secondAttribute="centerX" id="WV9-P5-SQg"/>
                             <constraint firstItem="gnp-qc-ojy" firstAttribute="centerX" secondItem="USs-A1-a2e" secondAttribute="centerX" id="aNX-Z4-ZqK"/>
                             <constraint firstItem="Ryg-MJ-1gC" firstAttribute="bottom" secondItem="UqZ-xp-quk" secondAttribute="bottom" constant="49" id="eIM-RZ-RUb"/>
                             <constraint firstItem="UqZ-xp-quk" firstAttribute="centerX" secondItem="USs-A1-a2e" secondAttribute="centerX" id="gFP-5G-JjM"/>
+                            <constraint firstItem="N7B-QO-XJB" firstAttribute="centerX" secondItem="UqZ-xp-quk" secondAttribute="centerX" id="h0w-Lq-jCm"/>
                             <constraint firstItem="wDZ-Df-v2X" firstAttribute="top" secondItem="g8s-z5-MfZ" secondAttribute="bottom" constant="26" id="jgK-xQ-yU4"/>
                             <constraint firstItem="7IU-Z7-BJD" firstAttribute="top" secondItem="USs-A1-a2e" secondAttribute="bottom" constant="55" id="kIq-AX-eOw"/>
                             <constraint firstItem="oqx-e6-IGy" firstAttribute="leading" secondItem="Ryg-MJ-1gC" secondAttribute="leading" constant="123" id="kxm-Mz-5qk"/>
                             <constraint firstItem="oqx-e6-IGy" firstAttribute="centerX" secondItem="7aR-Zz-DsQ" secondAttribute="centerX" id="ldX-JR-JLb"/>
-                            <constraint firstItem="7IU-Z7-BJD" firstAttribute="centerX" secondItem="Itk-fK-Imh" secondAttribute="centerX" constant="1" id="mqc-jR-Quy"/>
+                            <constraint firstItem="7IU-Z7-BJD" firstAttribute="centerX" secondItem="Itk-fK-Imh" secondAttribute="centerX" id="mqc-jR-Quy"/>
+                            <constraint firstItem="N7B-QO-XJB" firstAttribute="top" secondItem="UqZ-xp-quk" secondAttribute="bottom" constant="8" id="nfE-um-Ofm"/>
+                            <constraint firstItem="N7B-QO-XJB" firstAttribute="leading" secondItem="Ryg-MJ-1gC" secondAttribute="leading" constant="7" id="nyO-ca-WYn"/>
                             <constraint firstItem="gnp-qc-ojy" firstAttribute="top" secondItem="Itk-fK-Imh" secondAttribute="top" id="pv3-Bu-72W"/>
                             <constraint firstItem="g8s-z5-MfZ" firstAttribute="top" secondItem="JJe-fZ-tCa" secondAttribute="top" id="qFg-s8-2fy"/>
                             <constraint firstItem="g8s-z5-MfZ" firstAttribute="top" secondItem="7IU-Z7-BJD" secondAttribute="bottom" constant="18" id="rd9-9m-RtY"/>
-                            <constraint firstItem="7IU-Z7-BJD" firstAttribute="centerX" secondItem="wDZ-Df-v2X" secondAttribute="centerX" constant="1" id="sYV-4C-l8P"/>
+                            <constraint firstItem="7IU-Z7-BJD" firstAttribute="centerX" secondItem="wDZ-Df-v2X" secondAttribute="centerX" id="sYV-4C-l8P"/>
                             <constraint firstItem="g8s-z5-MfZ" firstAttribute="leading" secondItem="JJe-fZ-tCa" secondAttribute="trailing" constant="57" id="wgd-nd-FPi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ryg-MJ-1gC"/>
@@ -612,7 +639,8 @@ kamu butuhkan</string>
                         <outlet property="buttonFemale" destination="g8s-z5-MfZ" id="RDV-Ue-2RU"/>
                         <outlet property="buttonMale" destination="JJe-fZ-tCa" id="uFO-Qu-bjz"/>
                         <outlet property="rangeSlider" destination="USs-A1-a2e" id="AI2-gS-gfd"/>
-                        <segue destination="cLq-li-GRl" kind="presentation" identifier="savingProfile" modalPresentationStyle="fullScreen" id="5Xi-BN-Ky8"/>
+                        <outlet property="warningLabel" destination="N7B-QO-XJB" id="kCg-LX-0gd"/>
+                        <segue destination="cLq-li-GRl" kind="presentation" identifier="savingProfile" modalPresentationStyle="fullScreen" id="EO2-Pw-c19"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zx9-I2-hst" sceneMemberID="firstResponder"/>
@@ -622,7 +650,7 @@ kamu butuhkan</string>
         <!--ProfileVC-->
         <scene sceneID="gSM-c1-AAV">
             <objects>
-                <viewController id="7Fd-qT-mtD" customClass="ProfileVC" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="7Fd-qT-mtD" customClass="ProfileVC" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dm5-4f-igj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -822,7 +850,7 @@ kamu butuhkan</string>
         <!--Send View Controller-->
         <scene sceneID="L6R-LO-3iE">
             <objects>
-                <viewController id="05H-7O-M6E" customClass="SendViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="05H-7O-M6E" customClass="SendViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ale-Ni-IS2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1050,7 +1078,7 @@ kamu butuhkan</string>
                                     <action selector="playButton:" destination="05H-7O-M6E" eventType="touchUpInside" id="ORx-1S-xni"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8K-3V-x0m" customClass="canvasView" customModule="MC_3" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T8K-3V-x0m" customClass="canvasView" customModule="Fiu" customModuleProvider="target">
                                 <rect key="frame" x="34" y="387" width="344" height="223"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -1163,7 +1191,7 @@ kamu butuhkan</string>
         <!--Item-->
         <scene sceneID="PHX-f3-p1d">
             <objects>
-                <viewController id="02J-wh-gZE" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="02J-wh-gZE" customClass="ViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3NW-41-JZV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1269,7 +1297,7 @@ kamu butuhkan</string>
         <!--View Controller-->
         <scene sceneID="H4d-tE-Vuj">
             <objects>
-                <viewController id="Ib3-wX-25M" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ib3-wX-25M" customClass="ViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DAw-PV-4zu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1445,7 +1473,7 @@ Bullying/rasisme</string>
         <!--Mencari Bener View Controller-->
         <scene sceneID="dXA-e0-FhK">
             <objects>
-                <viewController id="lmg-fm-10H" customClass="MencariBenerViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lmg-fm-10H" customClass="MencariBenerViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kd7-kp-mxU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1540,7 +1568,7 @@ Bullying/rasisme</string>
         <!--View Controller-->
         <scene sceneID="NAX-Bh-9kS">
             <objects>
-                <viewController id="5D7-EV-M7R" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5D7-EV-M7R" customClass="ViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NOp-5J-odr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1618,7 +1646,7 @@ perahu kertas!</string>
         <!--Receive View Controller-->
         <scene sceneID="zE1-YM-dn8">
             <objects>
-                <viewController id="ukp-1A-eOK" customClass="ReceiveViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ukp-1A-eOK" customClass="ReceiveViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="d7y-Dh-gdr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1755,7 +1783,7 @@ perahu kertas!</string>
         <!--HOME-->
         <scene sceneID="IX1-Li-SYz">
             <objects>
-                <tabBarController storyboardIdentifier="HOME" title="HOME" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cLq-li-GRl" customClass="TabBarController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HOME" title="HOME" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cLq-li-GRl" customClass="TabBarController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="7a2-oR-ize"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3q6-Yn-EPW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -1826,7 +1854,7 @@ perahu kertas!</string>
         <!--View Controller-->
         <scene sceneID="Rec-t6-UlM">
             <objects>
-                <viewController id="WEf-Aq-8Jd" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WEf-Aq-8Jd" customClass="ViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dCg-uP-NCF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1949,7 +1977,7 @@ perahu kertas!</string>
         <!--Reply View Controller-->
         <scene sceneID="Cmh-wH-Ift">
             <objects>
-                <viewController id="dZW-pK-S8h" customClass="ReplyViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dZW-pK-S8h" customClass="ReplyViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JmL-gt-cVi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1985,7 +2013,7 @@ perahu kertas!</string>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQg-Nv-dp2" customClass="canvasView" customModule="MC_3" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQg-Nv-dp2" customClass="canvasView" customModule="Fiu" customModuleProvider="target">
                                 <rect key="frame" x="40" y="477" width="334" height="211"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
@@ -2334,7 +2362,7 @@ perahu kertas!</string>
         <!--Riwayat View Controller-->
         <scene sceneID="g81-gx-lid">
             <objects>
-                <viewController id="JFL-LD-aeY" customClass="RiwayatViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="JFL-LD-aeY" customClass="RiwayatViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y4G-Cd-s2a">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2352,7 +2380,7 @@ perahu kertas!</string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="u4U-iS-9iS" customClass="RiwayatCollectionCell" customModule="MC_3" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="u4U-iS-9iS" customClass="RiwayatCollectionCell" customModule="Fiu" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mRs-WT-xXi">
@@ -2398,7 +2426,7 @@ perahu kertas!</string>
         <!--Riwayat Reply View Controller-->
         <scene sceneID="EKx-ud-18M">
             <objects>
-                <viewController id="YPW-Fi-zs5" customClass="RiwayatReplyViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YPW-Fi-zs5" customClass="RiwayatReplyViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eju-rM-b4O">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2499,7 +2527,7 @@ perahu kertas!</string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Yh7-Ys-6Cp" customClass="RiwayatReplyCollectionViewCell" customModule="MC_3" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Yh7-Ys-6Cp" customClass="RiwayatReplyCollectionViewCell" customModule="Fiu" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="366" height="242"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="w01-Kb-uKd">
@@ -2569,7 +2597,7 @@ perahu kertas!</string>
         <!--Mercusuar View Controller-->
         <scene sceneID="Gyo-uz-o0k">
             <objects>
-                <viewController id="4bU-yF-Ckv" customClass="MercusuarViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="4bU-yF-Ckv" customClass="MercusuarViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qck-kU-3Zj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2644,7 +2672,7 @@ perahu kertas!</string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YOs-Vn-TaS" customClass="MercusuarCollectionViewCell" customModule="MC_3" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="YOs-Vn-TaS" customClass="MercusuarCollectionViewCell" customModule="Fiu" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="M2a-i3-cRF">
@@ -2686,7 +2714,7 @@ perahu kertas!</string>
         <!--Ask View Controller-->
         <scene sceneID="iOt-k9-b4O">
             <objects>
-                <viewController id="pID-2n-Qvf" customClass="AskViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pID-2n-Qvf" customClass="AskViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XW0-XD-85U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2765,7 +2793,7 @@ perahu kertas!</string>
         <!--Animasi Lipat Kertas View Controller-->
         <scene sceneID="VI7-Hh-oLD">
             <objects>
-                <viewController id="90D-xC-XfU" customClass="AnimasiLipatKertasViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="90D-xC-XfU" customClass="AnimasiLipatKertasViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2IE-Tp-aTD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2899,7 +2927,7 @@ bebanmu melalui perahu kertas ini</string>
         <!--View Controller-->
         <scene sceneID="9Mr-5f-PYW">
             <objects>
-                <viewController id="y7E-qJ-JoE" customClass="ViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="y7E-qJ-JoE" customClass="ViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k59-WL-Uty">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2969,7 +2997,7 @@ kamu merasa tidak nyaman.</string>
         <!--Mencari View Controller-->
         <scene sceneID="9kz-bD-aNe">
             <objects>
-                <viewController id="NGq-r8-fq1" customClass="MencariViewController" customModule="MC_3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="NGq-r8-fq1" customClass="MencariViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LRp-ZK-Djf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2977,13 +3005,11 @@ kamu merasa tidak nyaman.</string>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MZC-Qs-nFQ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Rectangle-2" translatesAutoresizingMaskIntoConstraints="NO" id="cW5-A1-Scy">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle-2" translatesAutoresizingMaskIntoConstraints="NO" id="cW5-A1-Scy">
                                         <rect key="frame" x="0.0" y="-250" width="414" height="896"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Group 3" translatesAutoresizingMaskIntoConstraints="NO" id="Fgz-AC-6yD">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 3" translatesAutoresizingMaskIntoConstraints="NO" id="Fgz-AC-6yD">
                                         <rect key="frame" x="0.0" y="60" width="414" height="838"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9I-Bv-Sdf">
                                         <rect key="frame" x="29" y="54" width="17" height="29"/>
@@ -2996,9 +3022,8 @@ kamu merasa tidak nyaman.</string>
                                             <segue destination="eks-7t-EbW" kind="unwind" unwindAction="myUnwindSegueWithUnwindSegue:" id="8uU-qi-Oo6"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jika ya, tiup perahu kertas ini." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAs-4w-Iit">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jika ya, tiup perahu kertas ini." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eAs-4w-Iit">
                                         <rect key="frame" x="93" y="799" width="228" height="14.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -3007,18 +3032,26 @@ kamu merasa tidak nyaman.</string>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="n9I-Bv-Sdf" secondAttribute="trailing" constant="368" id="7dm-DA-kOt"/>
+                                    <constraint firstItem="Fgz-AC-6yD" firstAttribute="top" secondItem="MZC-Qs-nFQ" secondAttribute="top" constant="60" id="AUJ-0T-qT3"/>
+                                    <constraint firstItem="cW5-A1-Scy" firstAttribute="top" secondItem="MZC-Qs-nFQ" secondAttribute="top" constant="-250" id="H9h-KV-3Vl"/>
+                                    <constraint firstItem="eAs-4w-Iit" firstAttribute="centerX" secondItem="Fgz-AC-6yD" secondAttribute="centerX" id="Jvy-JJ-UH8"/>
+                                    <constraint firstItem="eAs-4w-Iit" firstAttribute="leading" secondItem="MZC-Qs-nFQ" secondAttribute="leading" constant="93" id="RTl-qU-K6h"/>
+                                    <constraint firstItem="eAs-4w-Iit" firstAttribute="centerX" secondItem="MZC-Qs-nFQ" secondAttribute="centerX" id="Tdw-cc-UWq"/>
                                     <constraint firstAttribute="bottom" secondItem="n9I-Bv-Sdf" secondAttribute="bottom" constant="813" id="Yqw-wd-COV"/>
+                                    <constraint firstItem="eAs-4w-Iit" firstAttribute="centerX" secondItem="cW5-A1-Scy" secondAttribute="centerX" id="kgy-3O-Iy5"/>
                                     <constraint firstItem="n9I-Bv-Sdf" firstAttribute="top" secondItem="MZC-Qs-nFQ" secondAttribute="top" constant="54" id="mhy-LA-TGv"/>
+                                    <constraint firstAttribute="bottom" secondItem="Fgz-AC-6yD" secondAttribute="bottom" constant="-2" id="pLw-Lw-P0r"/>
                                     <constraint firstItem="n9I-Bv-Sdf" firstAttribute="leading" secondItem="MZC-Qs-nFQ" secondAttribute="leading" constant="29" id="x3S-Vq-BF1"/>
+                                    <constraint firstAttribute="bottom" secondItem="eAs-4w-Iit" secondAttribute="bottom" constant="82.5" id="zbY-7v-hto"/>
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Big_Paper_Boat" translatesAutoresizingMaskIntoConstraints="NO" id="ZHu-RY-4yy">
                                 <rect key="frame" x="24" y="421" width="366" height="181"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Apakah kamu sudah siap menghanyutkan bebanmu?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOx-Vp-GUn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Apakah kamu sudah siap menghanyutkan bebanmu?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nOx-Vp-GUn">
                                 <rect key="frame" x="40" y="309" width="334" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="58" id="2gO-em-ikm"/>
+                                    <constraint firstAttribute="height" constant="70" id="2gO-em-ikm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -3033,8 +3066,8 @@ kamu merasa tidak nyaman.</string>
                             <constraint firstItem="ZHu-RY-4yy" firstAttribute="centerX" secondItem="nOx-Vp-GUn" secondAttribute="centerX" id="O0Y-xP-qVN"/>
                             <constraint firstItem="nOx-Vp-GUn" firstAttribute="centerX" secondItem="LRp-ZK-Djf" secondAttribute="centerX" id="Pzm-aA-Cx8"/>
                             <constraint firstItem="MZC-Qs-nFQ" firstAttribute="centerY" secondItem="LRp-ZK-Djf" secondAttribute="centerY" id="YLS-ze-AhH"/>
-                            <constraint firstItem="nOx-Vp-GUn" firstAttribute="top" secondItem="9Za-Ud-e4E" secondAttribute="top" constant="284" id="cC3-5x-djA"/>
-                            <constraint firstItem="ZHu-RY-4yy" firstAttribute="top" secondItem="nOx-Vp-GUn" secondAttribute="bottom" constant="35" id="dK5-lW-agm"/>
+                            <constraint firstItem="nOx-Vp-GUn" firstAttribute="top" secondItem="9Za-Ud-e4E" secondAttribute="top" constant="265" id="cC3-5x-djA"/>
+                            <constraint firstItem="ZHu-RY-4yy" firstAttribute="top" secondItem="nOx-Vp-GUn" secondAttribute="bottom" constant="42" id="dK5-lW-agm"/>
                             <constraint firstItem="MZC-Qs-nFQ" firstAttribute="leading" secondItem="9Za-Ud-e4E" secondAttribute="leading" id="flo-Eq-u00"/>
                             <constraint firstItem="ZHu-RY-4yy" firstAttribute="centerX" secondItem="MZC-Qs-nFQ" secondAttribute="centerX" id="hjv-7B-Oxl"/>
                         </constraints>
@@ -3057,7 +3090,6 @@ kamu merasa tidak nyaman.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sk5-X7-utM"/>
         <segue reference="2Wt-Vh-GSG"/>
         <segue reference="lfE-Ie-0Mh"/>
         <segue reference="5Xo-Ek-ILa"/>

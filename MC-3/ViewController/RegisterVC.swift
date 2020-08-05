@@ -18,6 +18,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     var imageName : [String] = ["Avatar 1","Avatar 2","Avatar 3","Avatar 4"]
     var index = 0
     
+    @IBOutlet weak var warningLabel: UILabel!
     @IBOutlet weak var regisImage: UIImageView!
     @IBOutlet weak var regisUsername: UITextField!
     @IBOutlet weak var regisAge: UILabel!
@@ -26,6 +27,7 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var buttonMale: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
+        warningLabel.isHidden = true
         self.navigationController?.navigationBar.isHidden = true
         initializeHideKeyboard()
         regisUsername.delegate = self
@@ -107,11 +109,16 @@ class RegisterVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func buttonNext(_ sender: Any) {
-        
-        //  print(imageName[index])
-        
-        
-        
+        // validasi nama dan gender saja karena image dan umur sudah ada defaultnya
+        if regisUsername.text == ""{
+            warningLabel.isHidden = false
+            warningLabel.text = "*Tolong isi nama alias dulu*"
+        }else if gender == 0 {
+            warningLabel.isHidden = false
+            warningLabel.text = "*Tolong pilih jenis kelamin anda*"
+        }else{
+            performSegue(withIdentifier: "x", sender: UIButton.self)
+        }
     }
     
     func setButtonBackGround(view: UIButton, on: UIImage, off: UIImage, onOffStatus: Bool ) {
