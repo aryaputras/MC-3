@@ -33,6 +33,7 @@ class RiwayatReplyViewController: UIViewController, AVAudioPlayerDelegate{
     var audioOriginPath: URL?
     
     
+    @IBOutlet weak var avatarSenderView: UIImageView!
     @IBOutlet weak var riwayatReplyCollectionView: UICollectionView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
@@ -76,6 +77,29 @@ class RiwayatReplyViewController: UIViewController, AVAudioPlayerDelegate{
                 }
             }
             
+        }
+        
+        CKContainer.default().fetchUserRecordID { userID, error in
+            if let userID = userID {
+                //print(userID)
+            }
+            let reference = CKRecord.Reference(recordID: userID!, action: .none)
+            let predicate = NSPredicate(format: "creatorID == %@", userID?.recordName ?? "")
+            let query = CKQuery(recordType: "profile", predicate: predicate)
+            query.sortDescriptors = [NSSortDescriptor(key: "signUpDate", ascending: false)]
+            database.perform(query, inZoneWith: nil) { (records, error) in
+                if let fetchedRecords = records {
+                    DispatchQueue.main.async {
+                       
+                        self.usernameLabel.text = fetchedRecords[0].object(forKey: "username") as! String
+                        let avatarImage = fetchedRecords[0].object(forKey: "avatar")
+                        self.avatarSenderView.image = UIImage(named: avatarImage as! String)
+                        
+                        
+                    }
+                
+                }
+            }
         }
         
     }

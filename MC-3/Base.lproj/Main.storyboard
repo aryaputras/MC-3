@@ -2577,6 +2577,7 @@ perahu kertas!</string>
                     </view>
                     <navigationItem key="navigationItem" id="PSN-Ta-M21"/>
                     <connections>
+                        <outlet property="avatarSenderView" destination="5kU-Zh-FVb" id="9ux-Lj-IDH"/>
                         <outlet property="dateLabel" destination="aaj-l2-38j" id="6dx-tf-9oD"/>
                         <outlet property="messageLabel" destination="p9T-lk-LQH" id="pxs-mb-tqS"/>
                         <outlet property="replyCounter" destination="ogN-Nx-Or4" id="UmE-VD-XL6"/>
