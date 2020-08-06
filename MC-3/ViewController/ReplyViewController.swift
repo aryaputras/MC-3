@@ -241,7 +241,13 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
         }
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let destinationVC = segue.destination as! MencariViewController
+        
+        destinationVC.labelAtas.text = "Apakah kamu sudah siap menghanyutkan balasanmu?"
+    }
+    
     @IBAction func selesaiTapped(_ sender: UIButton) {
         sender.isHidden = true
         selesaiButton.isHidden = true
