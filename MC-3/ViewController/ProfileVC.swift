@@ -59,6 +59,26 @@ class ProfileVC: UIViewController, UITextFieldDelegate {
                 }
             }
         }
+        
+        CKContainer.default().fetchUserRecordID { userID, error in
+            if let userID = userID {
+                //print(userID)
+            }
+            let predicate = NSPredicate(format: "creatorID == %@", userID?.recordName ?? "")
+            let query = CKQuery(recordType: "perahuKertas", predicate: predicate)
+            database.perform(query, inZoneWith: nil) { (records, error) in
+                if let fetchedRecords = records {
+                    DispatchQueue.main.async {
+                        self.sendCounter.text = "\(fetchedRecords.count)"
+                    }
+                    //                        print(reference)
+                    //                        print(query)
+                    //                        print(predicate)
+                    //                        print(fetchedRecords)
+                    //print(self.name)
+                }
+            }
+        }
         //EXPERIMENTAL
         // Do any additional setup after loading the view.
     }

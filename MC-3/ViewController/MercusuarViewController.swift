@@ -110,80 +110,69 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
             let cellOwner = tapLikes.view as! MercusuarCollectionViewCell
             //print(cellOwner.)
             //print(cellOwner.recordName)
-            print()
+            //print()
             var likesNumber =  cellOwner.likesLog.count
             
-            if likesIsON == false {
-                // ini kalo dia mati dinyalain dan likesnya nambah
-                
-                //likesNumber! += 1
-                
-                //cellOwner.numberOfLikes.text = "\(likesNumber)"
-                
-                //print(likesNumber!)
-                
-                likesIsON = false
-                likesIsON.toggle()
-                setButtonBackGround(view: cellOwner.likesButton!, on: #imageLiteral(resourceName: "Ikan_isi"), off:  #imageLiteral(resourceName: "Ikan"), onOffStatus: likesIsON)
+           
+                print("false,,\(likesIsON)")
                 
                 CKContainer.default().fetchUserRecordID { userID, error in
-                if let userID = userID {
-                   let database = CKContainer.default().publicCloudDatabase
-                   let record = CKRecord.ID(recordName: cellOwner.recordName)
-                   let newRecord = CKRecord(recordType: "question", recordID: record)
-                var likesLog = cellOwner.likesLog
-                    
-                    
-                    if likesLog.contains(userID.recordName){
-                        print("you already liked this")
-                    } else {
-                        likesLog.append(userID.recordName)
-                    }
-                
-                
-                let newLikesLog = likesLog
-                    self.newLikes = "\(newLikesLog.count)"
-                print(newLikesLog)
-                   newRecord.setValue(newLikesLog, forKey: "likesLog")
-                   
-                   let operation = CKModifyRecordsOperation(recordsToSave: [newRecord], recordIDsToDelete: nil)
-                   
-                   operation.savePolicy = .changedKeys
-                   
-                   operation.modifyRecordsCompletionBlock = {
-                       records, ids , error in
-                       print(error)
-                       //print(records)
-                    DispatchQueue.main.async {
-                       
-                        cellOwner.numberOfLikes.text = self.newLikes
+                    if let userID = userID {
+                        let database = CKContainer.default().publicCloudDatabase
+                        let record = CKRecord.ID(recordName: cellOwner.recordName)
+                        let newRecord = CKRecord(recordType: "question", recordID: record)
+                        var likesLog = cellOwner.likesLog
                         
-                         self.mercusuarCollectionView.reloadData()
-                    }
-                       
-                   }
-                   database.add(operation)
-                   //RELOADDATA
-                   //Make ID for each record and get from cellOwner.(ID) and pass it to CKModify  (ID) likes +1
-                    
-                    
+                        
+                        if likesLog.contains(userID.recordName){
+                            print("you already liked this")
+                            likesLog.removeAll { $0 == "\(userID.recordName)" }
+                        } else {
+                            likesLog.append(userID.recordName)
+                            print("ok liked!")
+                        }
+                        
+                        
+                        let newLikesLog = likesLog
+                        self.newLikes = "\(newLikesLog.count)"
+                        DispatchQueue.main.async {
+                            
+                            
+                            cellOwner.numberOfLikes.text = self.newLikes
+                        }
+                        print(newLikesLog)
+                        
+                        newRecord.setValue(newLikesLog, forKey: "likesLog")
+                        
+                        let operation = CKModifyRecordsOperation(recordsToSave: [newRecord], recordIDsToDelete: nil)
+                        
+                        operation.savePolicy = .changedKeys
+                        
+                        operation.modifyRecordsCompletionBlock = {
+                            records, ids , error in
+                            print(error)
+                            //print(records)
+                            DispatchQueue.main.async {
+                         
+                            }
+                            
+                        }
+                        database.add(operation)
+                        
                     }
                 }
                 
-            }
-            if likesIsON == true {
+            
+            
                 // ini kalo dia hidup dimatiin dan likesnya ngurang
-               
+                
                 //likesNumber! -= 1
                 //CellOwner.numberOfLikes.text = "\(likesNumber ?? 99)"
                 //print(likesNumber!)
-                likesIsON = true
-                likesIsON.toggle()
-                setButtonBackGround(view: cellOwner.likesButton!, on: #imageLiteral(resourceName: "Ikan_isi"), off:  #imageLiteral(resourceName: "Ikan"), onOffStatus: likesIsON)
-                                   mercusuarCollectionView.reloadData()
-            }
             
-   
+            
+            
+            
             
         }
     }
@@ -192,12 +181,20 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
         switch onOffStatus {
         case true:
             // Chnage backgroundImage to hart image
-            view.setImage(on, for: .normal)
+            DispatchQueue.main.async {
+                
+                
+                view.setImage(on, for: .normal)
+            }
             // Test
             print("Button Pressed")
         default:
-            view.setImage(off, for: .normal)
+            DispatchQueue.main.async {
+                
+                
+                view.setImage(off, for: .normal)
                 print("Button Unpressed")
+            }
         }
     }
 }

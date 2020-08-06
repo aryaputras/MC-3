@@ -50,7 +50,7 @@ class RiwayatReplyViewController: UIViewController, AVAudioPlayerDelegate{
         //query the original record
         
         senderImageView.image = senderImage
-        dateLabel.text = date
+        dateLabel.text = date ?? ""
         messageLabel.text = message
         riwayatReplyCollectionView.register(RiwayatReplyCollectionViewCell.nib(), forCellWithReuseIdentifier: "RiwayatReplyCollectionViewCell")
         riwayatReplyCollectionView.delegate = self
