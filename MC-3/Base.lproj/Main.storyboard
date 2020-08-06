@@ -1190,7 +1190,7 @@ kamu butuhkan</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wen-7j-Gzz" sceneMemberID="firstResponder"/>
                 <exit id="6r5-dG-ake" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="8195.652173913044" y="1757.8125"/>
+            <point key="canvasLocation" x="8638" y="1777"/>
         </scene>
         <!--Item-->
         <scene sceneID="PHX-f3-p1d">
@@ -1472,7 +1472,7 @@ Bullying/rasisme</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f4C-UF-Iph" sceneMemberID="firstResponder"/>
                 <exit id="9Vh-pa-SXm" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="7474" y="1758"/>
+            <point key="canvasLocation" x="7712" y="1758"/>
         </scene>
         <!--Mencari Bener View Controller-->
         <scene sceneID="dXA-e0-FhK">
@@ -2951,7 +2951,7 @@ bebanmu melalui perahu kertas ini</string>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="9006" y="1758"/>
+            <point key="canvasLocation" x="9361" y="1777"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9Mr-5f-PYW">
@@ -3115,11 +3115,11 @@ kamu merasa tidak nyaman.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQ4-I4-bZg" sceneMemberID="firstResponder"/>
                 <exit id="eks-7t-EbW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="9770" y="1758"/>
+            <point key="canvasLocation" x="10171" y="1777"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2iC-19-ZdK"/>
+        <segue reference="Oiv-I1-eQT"/>
         <segue reference="2Wt-Vh-GSG"/>
         <segue reference="Pj7-gd-Isc"/>
         <segue reference="9b2-eg-5M3"/>
