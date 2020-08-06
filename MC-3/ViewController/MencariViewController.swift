@@ -7,7 +7,7 @@ class MencariViewController: UIViewController {
     
     var recorder: AVAudioRecorder!
     var levelTimer = Timer()
-    
+    var labelAtasText = "Apakah kamu sudah siap menghanyutkan bebanmu?"
     let LEVEL_THRESHOLD: Float = -12.0
     @IBOutlet weak var orangeBackground: UIImageView!
     @IBOutlet weak var paperBoat: UIImageView!
@@ -16,6 +16,7 @@ class MencariViewController: UIViewController {
     @IBOutlet weak var labelAtas: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        labelAtas.text = labelAtasText
         self.navigationController?.navigationBar.isHidden = true
         let documents = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
         let url = documents.appendingPathComponent("record.caf")
@@ -99,6 +100,7 @@ class MencariViewController: UIViewController {
             self.labelAtas.isHidden = true
         }) { (finished) in
                     self.performSegue(withIdentifier: "blowToHome", sender: self)
+            self.recorder.stop()
         }
     }
 }

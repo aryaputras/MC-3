@@ -19,6 +19,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
     var imgMessage: UIImage?
     var recordButtonImage:String = "Mic_Thin"
     var senderAvatarName = ""
+    var myAvatarName = ""
     
     //recording capabilities
     var recordingSession: AVAudioSession!
@@ -106,6 +107,8 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
                             
                             self.myUsername = records![0].object(forKey: "username") as! String
                             print(self.myUsername)
+                            
+                            self.myAvatarName = records![0].object(forKey: "avatar") as! String
                         }
                     }
                 }
@@ -246,7 +249,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
         if let destinationVC = segue.destination as? MencariViewController
         {
         
-        destinationVC.labelAtas.text = "Apakah kamu sudah siap menghanyutkan balasanmu?"
+            destinationVC.labelAtasText = "Apakah kamu sudah siap menghanyutkan balasanmu?"
         }
     }
     
@@ -271,8 +274,12 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
                           let path = self.getDocumentsDirectory().appendingPathComponent(self.filename)
                           let audio =  CKAsset(fileURL: path) as CKRecordValue
                           //let imageRecord = CKAsset(fileURL: imgp)
+           
                           newRecord.setValue(audio, forKey: "audio")
                       }
+         let avatarRecord = self.myAvatarName as CKRecordValue
+        
+        newRecord.setObject(avatarRecord, forKey: "Avatar")
         newRecord.setValue(imageRecord, forKey: "image")
 //ADD NEWRECORD AUDIO CAPABILITIES
         newRecord.setObject(reply, forKey: "reply")
@@ -284,6 +291,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
                     print("error")
                 } else {
                     print("record was saved")
+                    self.performSegue(withIdentifier: "replyToBlow", sender: Any.self)
                 }
             }
         }

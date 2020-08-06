@@ -198,6 +198,9 @@ extension RiwayatReplyViewController: UICollectionViewDelegate, UICollectionView
         //        cell.imageView.image = item.imageName
         //        cell.label1.text = item.role
         //        cell.label2.text = item.name
+        let avatar = record.object(forKey: "Avatar") as! String
+        
+        cell.avatarImage.image = UIImage(named: avatar ?? "Avatar 1")
         return cell
     }
     func preparePlayer() {
