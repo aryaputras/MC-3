@@ -21,7 +21,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
     //audio niup
     var recorder: AVAudioRecorder!
     var levelTimer = Timer()
-    let LEVEL_THRESHOLD: Float = -10.0
+    let LEVEL_THRESHOLD: Float = -3
     
     var inbox = [CKRecord]()
     var inboxProfile = [CKRecord]()
@@ -112,6 +112,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
         let isLoud = level > LEVEL_THRESHOLD
         if isLoud == true {
             performSegue(withIdentifier: "blowBacktoShake", sender: Any?.self)
+            recorder.stop()
         }
         // do whatever you want with isLoud
     }
