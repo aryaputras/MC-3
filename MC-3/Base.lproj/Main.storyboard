@@ -554,10 +554,7 @@ kamu butuhkan</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="adadada:" destination="6Rj-Wh-IKd" eventType="touchUpOutside" id="kMd-t1-Mcq"/>
                                     <action selector="dadadada:" destination="6Rj-Wh-IKd" eventType="touchUpInside" id="i3R-ZY-iYW"/>
-                                    <action selector="daddadd:forEvent:" destination="6Rj-Wh-IKd" eventType="editingChanged" id="Fjj-g5-hVQ"/>
-                                    <action selector="rangeSliderAction:" destination="6Rj-Wh-IKd" eventType="valueChanged" id="DPQ-PZ-3lA"/>
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jenis kelamin mereka" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IU-Z7-BJD">
@@ -1764,6 +1761,7 @@ perahu kertas!</string>
                     </view>
                     <navigationItem key="navigationItem" id="7Ir-ay-Jgr"/>
                     <connections>
+                        <outlet property="avatarView" destination="NYE-pT-Shi" id="NSc-3y-rld"/>
                         <outlet property="imageView" destination="SWK-Ua-XZv" id="1fC-Zr-Yot"/>
                         <outlet property="messageLabel" destination="KxB-3d-KMV" id="ptm-F4-IeH"/>
                         <outlet property="usernameLabel" destination="ccz-g5-X9g" id="9sD-GM-23T"/>
@@ -2322,6 +2320,7 @@ perahu kertas!</string>
                     </view>
                     <navigationItem key="navigationItem" id="dDQ-s9-ehq"/>
                     <connections>
+                        <outlet property="avatarView" destination="ik2-fj-Jan" id="vHZ-Vl-k1z"/>
                         <outlet property="blackButton" destination="2QE-N2-FNG" id="4Or-DT-REy"/>
                         <outlet property="blueButton" destination="yAx-nm-KBR" id="vz3-y8-HBO"/>
                         <outlet property="canvasView" destination="RQg-Nv-dp2" id="id8-rV-x5W"/>
@@ -3181,7 +3180,7 @@ kamu merasa tidak nyaman.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="G0s-w8-mvn"/>
+        <segue reference="EO2-Pw-c19"/>
         <segue reference="lfE-Ie-0Mh"/>
         <segue reference="5Xo-Ek-ILa"/>
     </inferredMetricsTieBreakers>

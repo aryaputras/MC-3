@@ -12,6 +12,7 @@ import AVFoundation
 
 class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
     
+    @IBOutlet weak var avatarView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
@@ -34,6 +35,8 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
     var imageURL: NSURL?
     var imagePath: URL?
     var numIndex = 0
+    var senderAvatarName = ""
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -322,6 +325,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
         destinationVC.username = usernameLabel.text!
         destinationVC.senderID = self.inbox[numIndex].recordID.recordName
         destinationVC.imgMessage = imageView.image
+        destinationVC.senderAvatarName = senderAvatarName
         }
         
     }
@@ -341,7 +345,8 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
                     let username = self.inboxProfile[0].object(forKey: "username")
                     //print(username)
                     self.usernameLabel.text = username as! String
-                    
+                    self.senderAvatarName = self.inboxProfile[0].object(forKey: "avatar") as! String
+                    self.avatarView.image = UIImage(named: self.senderAvatarName)
                     
                     //get sender age
                     

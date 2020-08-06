@@ -18,6 +18,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
     var originID = ""
     var imgMessage: UIImage?
     var recordButtonImage:String = "Mic_Thin"
+    var senderAvatarName = ""
     
     //recording capabilities
     var recordingSession: AVAudioSession!
@@ -27,6 +28,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
     var recorded = false
     
     
+    @IBOutlet weak var avatarView: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
@@ -62,6 +64,7 @@ class ReplyViewController: UIViewController, UITextFieldDelegate, AVAudioPlayerD
         imageView.image = imgMessage
         usernameLabel.text = username
         messageLabel.text = message
+        avatarView.image = UIImage(named: senderAvatarName)
         recordingSession = AVAudioSession.sharedInstance()
         
         do {

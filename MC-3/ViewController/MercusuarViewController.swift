@@ -57,6 +57,7 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MercusuarCollectionViewCell", for: indexPath) as! MercusuarCollectionViewCell
         cell.frame.size = CGSize(width: 414, height: 172)
         let record = records[indexPath.row]
+        cell.tag = indexPath.row
         
         let likesNumber = record.object(forKey: "likesLog") as! [String]
         
@@ -103,6 +104,8 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
                      print("you already liked this")
                     DispatchQueue.main.async {
                     cell.likesButton.imageView?.image = #imageLiteral(resourceName: "Ikan_isi")
+                        
+                    
                     }
                  } else {
                    
@@ -124,6 +127,7 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
         //        cell.imageView.image = item.imageName
         //        cell.label1.text = item.role
         //        cell.label2.text = item.name
+        
         return cell
     }
     @objc func tapLikes(sender: UITapGestureRecognizer?){
@@ -151,13 +155,19 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
                             print("you already liked this")
                             likesLog.removeAll { $0 == "\(userID.recordName)" }
                             DispatchQueue.main.async {
-                                                       cellOwner.likesButton.imageView?.image = #imageLiteral(resourceName: "Ikan")
-                                                       }
+                                cellOwner.likesButton.imageView?.image = #imageLiteral(resourceName: "Ikan")
+                                
+                                self.records[cellOwner.tag].setValue(likesLog, forKey: "likesLog")
+                                
+                            }
                         } else {
                             likesLog.append(userID.recordName)
                             print("ok liked!")
                             DispatchQueue.main.async {
-                            cellOwner.likesButton.imageView?.image = #imageLiteral(resourceName: "Ikan_isi")
+                                cellOwner.likesButton.imageView?.image = #imageLiteral(resourceName: "Ikan_isi")
+                                
+                                self.records[cellOwner.tag].setValue(likesLog, forKey: "likesLog")
+                                
                             }
                         }
                         
