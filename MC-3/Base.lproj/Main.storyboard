@@ -1479,7 +1479,7 @@ Bullying/rasisme</string>
             <objects>
                 <viewController id="lmg-fm-10H" customClass="MencariBenerViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kd7-kp-mxU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="UN6-fq-hVa">
@@ -1498,40 +1498,40 @@ Bullying/rasisme</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goyangkan Device-mu Untuk Menangkap Perahu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r6r-mi-c3o">
-                                <rect key="frame" x="57" y="772" width="300" height="15"/>
+                                <rect key="frame" x="57" y="718" width="300" height="15"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGM-Up-oUo">
-                                <rect key="frame" x="202" y="412.5" width="143" height="71"/>
+                                <rect key="frame" x="202" y="385.5" width="143" height="71"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="Mini_Paper_Boat">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o4P-q8-CkT">
-                                <rect key="frame" x="72" y="319" width="143" height="71"/>
+                                <rect key="frame" x="72" y="292" width="143" height="71"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="Mini_Paper_Boat">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K8G-G0-ZhE">
-                                <rect key="frame" x="120" y="607" width="143" height="71"/>
+                                <rect key="frame" x="120" y="553" width="143" height="71"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <state key="normal" image="Mini_Paper_Boat">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Otter_berenang" translatesAutoresizingMaskIntoConstraints="NO" id="Wzz-lm-nEZ">
-                                <rect key="frame" x="249" y="236" width="145" height="73"/>
+                                <rect key="frame" x="249" y="192" width="145" height="73"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="145" id="6pd-wW-kpH"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mencari Perahu Kertas" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orc-dn-8aI">
-                                <rect key="frame" x="71" y="66" width="272" height="34"/>
+                                <rect key="frame" x="71" y="22" width="272" height="34"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -1774,9 +1774,11 @@ perahu kertas!</string>
                     </view>
                     <navigationItem key="navigationItem" id="7Ir-ay-Jgr"/>
                     <connections>
+                        <outlet property="avatarView" destination="NYE-pT-Shi" id="KYY-AY-SV7"/>
                         <outlet property="imageView" destination="SWK-Ua-XZv" id="1fC-Zr-Yot"/>
                         <outlet property="messageLabel" destination="KxB-3d-KMV" id="ptm-F4-IeH"/>
                         <outlet property="usernameLabel" destination="ccz-g5-X9g" id="9sD-GM-23T"/>
+                        <segue destination="lmg-fm-10H" kind="show" identifier="blowBacktoShake" id="cYd-ed-PzV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kba-Ci-14G" sceneMemberID="firstResponder"/>
@@ -3115,13 +3117,13 @@ kamu merasa tidak nyaman.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQ4-I4-bZg" sceneMemberID="firstResponder"/>
                 <exit id="eks-7t-EbW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="9770" y="1758"/>
+            <point key="canvasLocation" x="10171" y="1777"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="2iC-19-ZdK"/>
         <segue reference="2Wt-Vh-GSG"/>
-        <segue reference="Pj7-gd-Isc"/>
+        <segue reference="cYd-ed-PzV"/>
         <segue reference="9b2-eg-5M3"/>
     </inferredMetricsTieBreakers>
     <resources>

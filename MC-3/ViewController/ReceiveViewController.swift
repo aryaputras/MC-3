@@ -9,6 +9,7 @@
 import UIKit
 import CloudKit
 import AVFoundation
+import CoreAudio
 
 class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
     
@@ -16,6 +17,11 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    //audio niup
+    var recorder: AVAudioRecorder!
+    var levelTimer = Timer()
+    let LEVEL_THRESHOLD: Float = -10.0
+    
     var inbox = [CKRecord]()
     var inboxProfile = [CKRecord]()
     var agePreferenceMin = 0
@@ -40,6 +46,37 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //audio niup segue
+        let documents = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
+        let url = documents.appendingPathComponent("record.caf")
+
+        let recordSettings: [String: Any] = [
+            AVFormatIDKey:              kAudioFormatAppleIMA4,
+            AVSampleRateKey:            44100.0,
+            AVNumberOfChannelsKey:      2,
+            AVEncoderBitRateKey:        12800,
+            AVLinearPCMBitDepthKey:     16,
+            AVEncoderAudioQualityKey:   AVAudioQuality.max.rawValue
+        ]
+
+        let audioSession = AVAudioSession.sharedInstance()
+        do {
+            try audioSession.setCategory(AVAudioSession.Category.playAndRecord)
+            try audioSession.setActive(true)
+            try recorder = AVAudioRecorder(url:url, settings: recordSettings)
+
+        } catch {
+            return
+        }
+
+        recorder.prepareToRecord()
+        recorder.isMeteringEnabled = true
+        recorder.record()
+
+        levelTimer = Timer.scheduledTimer(timeInterval: 0.02, target: self, selector: #selector(levelTimerCallback), userInfo: nil, repeats: true)
+        //sampai sini
+        
+        
         self.navigationController?.navigationBar.isHidden = true
         //AUDIOSHIT
         //get user ID
@@ -64,6 +101,23 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
             }
         }
     }
+    //tiup
+    @objc func levelTimerCallback() {
+        recorder.updateMeters()
+
+        let level = recorder.averagePower(forChannel: 0)
+        let isLoud = level > LEVEL_THRESHOLD
+        if isLoud == true {
+            performSegue(withIdentifier: "blowBacktoShake", sender: Any?.self)
+        }
+        // do whatever you want with isLoud
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    //
     @IBAction func myUnwindSegue(unwindSegue: UIStoryboardSegue){
         
     }
