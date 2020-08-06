@@ -109,7 +109,7 @@ class AnimasiLipatKertasViewController: UIViewController {
             }
             if imageNamed == "Lipat_kertas16"
             {
-                kertasLipat.image = UIImage.init(named: "Paper_Boat")
+                kertasLipat.image = UIImage.init(named: "Lipat_kertas17")
                 imageNamed = "Selesai"
                 self.labelAtas.text = "Kamu Berhasil!"
                 self.labelBawah.text = "Aku sangat bangga padamu!"
