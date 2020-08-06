@@ -1698,6 +1698,10 @@ perahu kertas!</string>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar_Picutre" translatesAutoresizingMaskIntoConstraints="NO" id="NYE-pT-Shi">
                                 <rect key="frame" x="43" y="309" width="41" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="41" id="F7h-we-wMQ"/>
+                                    <constraint firstAttribute="height" constant="41" id="b9a-hf-qDS"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="[Username]" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ccz-g5-X9g">
                                 <rect key="frame" x="95" y="319" width="150" height="21"/>
@@ -1744,31 +1748,31 @@ perahu kertas!</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="SWK-Ua-XZv" firstAttribute="centerX" secondItem="jAd-zr-fOJ" secondAttribute="centerX" id="14q-xy-iI1"/>
-                            <constraint firstItem="KxB-3d-KMV" firstAttribute="top" secondItem="NYE-pT-Shi" secondAttribute="bottom" constant="15" id="7O0-qE-SqI"/>
                             <constraint firstItem="1MY-JD-nTe" firstAttribute="leading" secondItem="8pK-wv-9mK" secondAttribute="leading" constant="9" id="8vA-YR-6AW"/>
                             <constraint firstItem="SgB-wZ-0ge" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ccz-g5-X9g" secondAttribute="trailing" symbolic="YES" id="9Kb-cZ-F1Y"/>
                             <constraint firstItem="1MY-JD-nTe" firstAttribute="leading" secondItem="SgB-wZ-0ge" secondAttribute="leading" constant="29" id="BC5-ZV-mm0"/>
-                            <constraint firstItem="ccz-g5-X9g" firstAttribute="centerY" secondItem="NYE-pT-Shi" secondAttribute="centerY" id="CuP-J2-82Y"/>
                             <constraint firstItem="eZt-LS-gaM" firstAttribute="top" secondItem="d7y-Dh-gdr" secondAttribute="top" id="F5Y-W2-lPl"/>
+                            <constraint firstItem="ccz-g5-X9g" firstAttribute="centerY" secondItem="NYE-pT-Shi" secondAttribute="centerY" id="HlO-wZ-Alx"/>
                             <constraint firstItem="SgB-wZ-0ge" firstAttribute="trailing" secondItem="KxB-3d-KMV" secondAttribute="trailing" constant="41" id="KvS-Vi-34e"/>
                             <constraint firstItem="SgB-wZ-0ge" firstAttribute="trailing" secondItem="8pK-wv-9mK" secondAttribute="trailing" constant="350" id="LBy-zy-d6m"/>
                             <constraint firstItem="jAd-zr-fOJ" firstAttribute="top" secondItem="d7y-Dh-gdr" secondAttribute="top" constant="280" id="LqE-Rm-3li"/>
                             <constraint firstItem="1MY-JD-nTe" firstAttribute="top" secondItem="KxB-3d-KMV" secondAttribute="bottom" id="Mea-YD-aQR"/>
+                            <constraint firstItem="jAd-zr-fOJ" firstAttribute="top" secondItem="NYE-pT-Shi" secondAttribute="bottom" constant="-70" id="U8h-92-e66"/>
                             <constraint firstItem="Nzp-jg-MmB" firstAttribute="top" secondItem="hAl-7I-bJW" secondAttribute="bottom" constant="24" id="V8r-FF-eVl"/>
                             <constraint firstItem="KxB-3d-KMV" firstAttribute="top" secondItem="d7y-Dh-gdr" secondAttribute="top" constant="365" id="WTO-4b-rw9"/>
                             <constraint firstItem="8pK-wv-9mK" firstAttribute="top" secondItem="d7y-Dh-gdr" secondAttribute="topMargin" constant="17" id="Xty-t1-FPF"/>
                             <constraint firstItem="SWK-Ua-XZv" firstAttribute="centerX" secondItem="eZt-LS-gaM" secondAttribute="centerX" id="Y2e-qJ-NYq"/>
                             <constraint firstItem="hAl-7I-bJW" firstAttribute="top" secondItem="jAd-zr-fOJ" secondAttribute="bottom" constant="54" id="d9t-1W-jMd"/>
+                            <constraint firstItem="ccz-g5-X9g" firstAttribute="leading" secondItem="NYE-pT-Shi" secondAttribute="trailing" constant="11" id="dKg-56-8iZ"/>
                             <constraint firstItem="SgB-wZ-0ge" firstAttribute="bottom" secondItem="1MY-JD-nTe" secondAttribute="bottom" constant="240" id="dZl-FC-h3P"/>
                             <constraint firstItem="SWK-Ua-XZv" firstAttribute="centerX" secondItem="d7y-Dh-gdr" secondAttribute="centerX" id="esF-4b-qCb"/>
                             <constraint firstItem="KxB-3d-KMV" firstAttribute="leading" secondItem="SgB-wZ-0ge" secondAttribute="leading" constant="43" id="f06-PT-yEO"/>
                             <constraint firstItem="1MY-JD-nTe" firstAttribute="top" secondItem="SWK-Ua-XZv" secondAttribute="bottom" constant="8" symbolic="YES" id="f1O-en-cTd"/>
                             <constraint firstItem="SWK-Ua-XZv" firstAttribute="centerX" secondItem="hAl-7I-bJW" secondAttribute="centerX" id="fZ1-u4-pQ6"/>
-                            <constraint firstItem="ccz-g5-X9g" firstAttribute="leading" secondItem="NYE-pT-Shi" secondAttribute="trailing" constant="11" id="gAA-0j-DIQ"/>
                             <constraint firstItem="SWK-Ua-XZv" firstAttribute="leading" secondItem="SgB-wZ-0ge" secondAttribute="leading" constant="35" id="m2S-xB-Yug"/>
+                            <constraint firstItem="SWK-Ua-XZv" firstAttribute="top" secondItem="NYE-pT-Shi" secondAttribute="bottom" constant="8" symbolic="YES" id="my7-Iv-gJH"/>
+                            <constraint firstItem="jAd-zr-fOJ" firstAttribute="leading" secondItem="NYE-pT-Shi" secondAttribute="trailing" constant="-60" id="oHi-8V-q4K"/>
                             <constraint firstItem="SWK-Ua-XZv" firstAttribute="centerX" secondItem="Nzp-jg-MmB" secondAttribute="centerX" id="pep-Bt-dCe"/>
-                            <constraint firstItem="SWK-Ua-XZv" firstAttribute="top" secondItem="NYE-pT-Shi" secondAttribute="bottom" constant="8" symbolic="YES" id="qRV-g0-j79"/>
-                            <constraint firstItem="KxB-3d-KMV" firstAttribute="leading" secondItem="NYE-pT-Shi" secondAttribute="leading" id="yfT-Ba-sPV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SgB-wZ-0ge"/>
                     </view>
