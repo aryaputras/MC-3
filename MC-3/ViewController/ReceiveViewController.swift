@@ -17,6 +17,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var dukunganButton: UIButton!
     //audio niup
     var recorder: AVAudioRecorder!
     var levelTimer = Timer()
@@ -46,6 +47,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dukunganButton.isHidden = true
         //audio niup segue
         let documents = URL(fileURLWithPath: NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.userDomainMask, true)[0])
         let url = documents.appendingPathComponent("record.caf")
@@ -100,6 +102,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
                 }
             }
         }
+        
     }
     //tiup
     @objc func levelTimerCallback() {
@@ -237,7 +240,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
                     
                     
                     //RETURN ZERO
-                    
+                    self.dukunganButton.isHidden = false
                     
                     
                     
@@ -333,7 +336,7 @@ class ReceiveViewController: UIViewController, AVAudioPlayerDelegate {
                     //RETURN ZERO
                     
                     
-                    
+                    self.dukunganButton.isHidden = false
                     
                 }
                 
