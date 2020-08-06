@@ -3115,11 +3115,11 @@ kamu merasa tidak nyaman.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQ4-I4-bZg" sceneMemberID="firstResponder"/>
                 <exit id="eks-7t-EbW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="10171" y="1777"/>
+            <point key="canvasLocation" x="9770" y="1758"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Oiv-I1-eQT"/>
+        <segue reference="2iC-19-ZdK"/>
         <segue reference="2Wt-Vh-GSG"/>
         <segue reference="Pj7-gd-Isc"/>
         <segue reference="9b2-eg-5M3"/>
