@@ -1779,6 +1779,7 @@ perahu kertas!</string>
                     <navigationItem key="navigationItem" id="7Ir-ay-Jgr"/>
                     <connections>
                         <outlet property="avatarView" destination="NYE-pT-Shi" id="KYY-AY-SV7"/>
+                        <outlet property="dukunganButton" destination="hAl-7I-bJW" id="0aS-AA-GSa"/>
                         <outlet property="imageView" destination="SWK-Ua-XZv" id="1fC-Zr-Yot"/>
                         <outlet property="messageLabel" destination="KxB-3d-KMV" id="ptm-F4-IeH"/>
                         <outlet property="usernameLabel" destination="ccz-g5-X9g" id="9sD-GM-23T"/>
