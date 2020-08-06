@@ -91,6 +91,29 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
         cell.likesLog = record.object(forKey: "likesLog") as! [String]
         
         
+
+        //GET IT WERKIN
+        CKContainer.default().fetchUserRecordID { userID, error in
+             if let userID = userID {
+               
+                 var likesLog = cell.likesLog
+                 
+                 
+                 if likesLog.contains(userID.recordName){
+                     print("you already liked this")
+                    DispatchQueue.main.async {
+                    cell.likesButton.imageView?.image = #imageLiteral(resourceName: "Ikan_isi")
+                    }
+                 } else {
+                   
+                     print("not liked yet")
+                    DispatchQueue.main.async {
+                    cell.likesButton.imageView?.image = #imageLiteral(resourceName: "Ikan")
+                    }
+                 }
+    
+             }
+         }
         
         
         //print(record)
@@ -127,9 +150,15 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
                         if likesLog.contains(userID.recordName){
                             print("you already liked this")
                             likesLog.removeAll { $0 == "\(userID.recordName)" }
+                            DispatchQueue.main.async {
+                                                       cellOwner.likesButton.imageView?.image = #imageLiteral(resourceName: "Ikan")
+                                                       }
                         } else {
                             likesLog.append(userID.recordName)
                             print("ok liked!")
+                            DispatchQueue.main.async {
+                            cellOwner.likesButton.imageView?.image = #imageLiteral(resourceName: "Ikan_isi")
+                            }
                         }
                         
                         

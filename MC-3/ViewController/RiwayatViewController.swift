@@ -176,7 +176,8 @@ extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataS
             cell.addGestureRecognizer(tapRecognizer)
             cell.recordName = record.recordID.recordName
             cell.recordID = record.recordID
-            cell.image = UIImage(named: imageString!)
+            cell.image = image
+            cell.avatarImage.image = UIImage(named: imageString!)
             let date = record.creationDate
             let formatter1 = DateFormatter()
             formatter1.dateStyle = .short
