@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WI6-hV-SwP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WI6-hV-SwP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -554,7 +554,10 @@ kamu butuhkan</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
+                                    <action selector="adadada:" destination="6Rj-Wh-IKd" eventType="touchUpOutside" id="kMd-t1-Mcq"/>
                                     <action selector="dadadada:" destination="6Rj-Wh-IKd" eventType="touchUpInside" id="i3R-ZY-iYW"/>
+                                    <action selector="daddadd:forEvent:" destination="6Rj-Wh-IKd" eventType="editingChanged" id="Fjj-g5-hVQ"/>
+                                    <action selector="rangeSliderAction:" destination="6Rj-Wh-IKd" eventType="valueChanged" id="DPQ-PZ-3lA"/>
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jenis kelamin mereka" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7IU-Z7-BJD">
@@ -724,16 +727,14 @@ kamu butuhkan</string>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="33" translatesAutoresizingMaskIntoConstraints="NO" id="NsL-aV-pUB">
-                                <rect key="frame" x="75" y="633" width="31" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="33" translatesAutoresizingMaskIntoConstraints="NO" id="NsL-aV-pUB">
+                                <rect key="frame" x="98" y="633" width="8" height="22"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="33" translatesAutoresizingMaskIntoConstraints="NO" id="nmy-k3-7dI">
-                                <rect key="frame" x="244" y="633" width="29" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="33" translatesAutoresizingMaskIntoConstraints="NO" id="nmy-k3-7dI">
+                                <rect key="frame" x="265" y="633" width="8" height="22"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -781,9 +782,13 @@ kamu butuhkan</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="2VE-QZ-aAc" firstAttribute="top" secondItem="C8s-dH-Ohd" secondAttribute="bottom" constant="157" id="0AM-h0-oyd"/>
+                            <constraint firstItem="Ays-WA-CiJ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="NsL-aV-pUB" secondAttribute="trailing" constant="8" symbolic="YES" id="0yH-1z-G7B"/>
+                            <constraint firstItem="Ays-WA-CiJ" firstAttribute="centerY" secondItem="nmy-k3-7dI" secondAttribute="centerY" id="2Fb-nY-aAD"/>
                             <constraint firstItem="g6g-EU-N6Q" firstAttribute="centerY" secondItem="ECX-Uj-Rd6" secondAttribute="centerY" id="4FP-WQ-cNe"/>
                             <constraint firstItem="2VE-QZ-aAc" firstAttribute="leading" secondItem="lGr-2H-PaE" secondAttribute="trailing" constant="16.5" id="5nH-A5-Wvg"/>
+                            <constraint firstItem="Ays-WA-CiJ" firstAttribute="centerY" secondItem="NsL-aV-pUB" secondAttribute="centerY" id="7xW-wv-Brw"/>
                             <constraint firstAttribute="bottom" secondItem="Sgs-Ky-fXK" secondAttribute="bottom" constant="279" id="BYk-Mg-PNB"/>
+                            <constraint firstItem="Ays-WA-CiJ" firstAttribute="bottom" secondItem="nmy-k3-7dI" secondAttribute="bottom" id="Dap-LE-OuV"/>
                             <constraint firstItem="MFI-Xq-x3k" firstAttribute="top" secondItem="lGr-2H-PaE" secondAttribute="top" id="DdE-3Q-sfv"/>
                             <constraint firstItem="XuA-jN-RRv" firstAttribute="leading" secondItem="LEe-PI-5Zt" secondAttribute="leading" constant="24" id="E2M-lo-TQa"/>
                             <constraint firstItem="q6L-81-8Gd" firstAttribute="trailing" secondItem="3kr-ee-5HC" secondAttribute="trailing" id="EJI-dX-VFT"/>
@@ -795,19 +800,22 @@ kamu butuhkan</string>
                             <constraint firstItem="Sgs-Ky-fXK" firstAttribute="baseline" secondItem="q6L-81-8Gd" secondAttribute="baseline" id="Lu1-uB-Llb"/>
                             <constraint firstItem="CDM-60-8c5" firstAttribute="leading" secondItem="LEe-PI-5Zt" secondAttribute="leading" constant="143" id="MfZ-nZ-Xax"/>
                             <constraint firstItem="LEe-PI-5Zt" firstAttribute="trailing" secondItem="Sgs-Ky-fXK" secondAttribute="trailing" constant="205" id="OOc-ew-9jY"/>
+                            <constraint firstItem="REH-nG-zNz" firstAttribute="leading" secondItem="nmy-k3-7dI" secondAttribute="trailing" constant="8" symbolic="YES" id="PSd-EW-66m"/>
                             <constraint firstItem="MFI-Xq-x3k" firstAttribute="top" secondItem="LEe-PI-5Zt" secondAttribute="top" constant="250" id="Q9v-Wb-F4D"/>
                             <constraint firstItem="ECX-Uj-Rd6" firstAttribute="centerX" secondItem="2VE-QZ-aAc" secondAttribute="centerX" id="Qq8-ya-dAp"/>
+                            <constraint firstItem="Ays-WA-CiJ" firstAttribute="bottom" secondItem="NsL-aV-pUB" secondAttribute="bottom" id="S3k-3O-fJu"/>
                             <constraint firstItem="CDM-60-8c5" firstAttribute="top" secondItem="ECX-Uj-Rd6" secondAttribute="bottom" constant="14" id="WT1-sD-xhw"/>
                             <constraint firstItem="2VE-QZ-aAc" firstAttribute="centerX" secondItem="dm5-4f-igj" secondAttribute="centerX" id="XYg-m6-tm7"/>
                             <constraint firstItem="Sgs-Ky-fXK" firstAttribute="firstBaseline" secondItem="q6L-81-8Gd" secondAttribute="firstBaseline" id="YA8-lZ-R2y"/>
                             <constraint firstItem="vuH-0M-OJA" firstAttribute="leading" secondItem="XuA-jN-RRv" secondAttribute="leading" id="bND-Ov-zER"/>
+                            <constraint firstItem="NsL-aV-pUB" firstAttribute="leading" secondItem="LEe-PI-5Zt" secondAttribute="leading" constant="98" id="bWK-OS-fUd"/>
                             <constraint firstItem="vuH-0M-OJA" firstAttribute="top" secondItem="CDM-60-8c5" secondAttribute="bottom" constant="16" id="bko-Rr-fdA"/>
                             <constraint firstItem="XuA-jN-RRv" firstAttribute="top" secondItem="vuH-0M-OJA" secondAttribute="bottom" constant="8" symbolic="YES" id="bla-t3-nCK"/>
                             <constraint firstItem="LEe-PI-5Zt" firstAttribute="trailing" secondItem="vuH-0M-OJA" secondAttribute="trailing" constant="22" id="cOT-Qf-jfn"/>
                             <constraint firstItem="Ays-WA-CiJ" firstAttribute="top" secondItem="Sgs-Ky-fXK" secondAttribute="bottom" constant="16" id="dOB-Fj-jZC"/>
                             <constraint firstItem="C8s-dH-Ohd" firstAttribute="centerX" secondItem="2VE-QZ-aAc" secondAttribute="centerX" constant="-2" id="dxw-4o-pO7"/>
                             <constraint firstItem="3kr-ee-5HC" firstAttribute="top" secondItem="MFI-Xq-x3k" secondAttribute="bottom" constant="97" id="evP-DM-ckW"/>
-                            <constraint firstItem="REH-nG-zNz" firstAttribute="leading" secondItem="Ays-WA-CiJ" secondAttribute="trailing" constant="124" id="gtk-15-vbU"/>
+                            <constraint firstItem="nmy-k3-7dI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ays-WA-CiJ" secondAttribute="trailing" constant="8" symbolic="YES" id="fQJ-Og-c32"/>
                             <constraint firstItem="C8s-dH-Ohd" firstAttribute="leading" secondItem="LEe-PI-5Zt" secondAttribute="leading" constant="166" id="jaZ-09-85R"/>
                             <constraint firstItem="REH-nG-zNz" firstAttribute="top" secondItem="q6L-81-8Gd" secondAttribute="bottom" constant="16" id="kZO-oX-WNR"/>
                             <constraint firstItem="Ays-WA-CiJ" firstAttribute="leading" secondItem="dm5-4f-igj" secondAttribute="leading" constant="114" id="keG-JF-3TC"/>
@@ -818,6 +826,7 @@ kamu butuhkan</string>
                             <constraint firstItem="LEe-PI-5Zt" firstAttribute="trailing" secondItem="q6L-81-8Gd" secondAttribute="trailing" constant="24" id="s5X-31-Plz"/>
                             <constraint firstItem="ECX-Uj-Rd6" firstAttribute="top" secondItem="2VE-QZ-aAc" secondAttribute="bottom" constant="43" id="scm-yG-KSl"/>
                             <constraint firstItem="0H7-3y-EjO" firstAttribute="centerX" secondItem="XuA-jN-RRv" secondAttribute="centerX" constant="-2.25" id="xkk-DO-1II"/>
+                            <constraint firstAttribute="trailing" secondItem="nmy-k3-7dI" secondAttribute="trailing" constant="141" id="y97-Ie-1Es"/>
                             <constraint firstItem="ECX-Uj-Rd6" firstAttribute="centerY" secondItem="dm5-4f-igj" secondAttribute="centerY" id="yKe-2J-Tc8"/>
                             <constraint firstItem="g6g-EU-N6Q" firstAttribute="centerX" secondItem="3kr-ee-5HC" secondAttribute="centerX" id="zcl-Jl-rX1"/>
                         </constraints>
@@ -1761,7 +1770,6 @@ perahu kertas!</string>
                     </view>
                     <navigationItem key="navigationItem" id="7Ir-ay-Jgr"/>
                     <connections>
-                        <outlet property="avatarView" destination="NYE-pT-Shi" id="NSc-3y-rld"/>
                         <outlet property="imageView" destination="SWK-Ua-XZv" id="1fC-Zr-Yot"/>
                         <outlet property="messageLabel" destination="KxB-3d-KMV" id="ptm-F4-IeH"/>
                         <outlet property="usernameLabel" destination="ccz-g5-X9g" id="9sD-GM-23T"/>
@@ -2320,7 +2328,6 @@ perahu kertas!</string>
                     </view>
                     <navigationItem key="navigationItem" id="dDQ-s9-ehq"/>
                     <connections>
-                        <outlet property="avatarView" destination="ik2-fj-Jan" id="vHZ-Vl-k1z"/>
                         <outlet property="blackButton" destination="2QE-N2-FNG" id="4Or-DT-REy"/>
                         <outlet property="blueButton" destination="yAx-nm-KBR" id="vz3-y8-HBO"/>
                         <outlet property="canvasView" destination="RQg-Nv-dp2" id="id8-rV-x5W"/>
@@ -2576,10 +2583,7 @@ perahu kertas!</string>
                     </view>
                     <navigationItem key="navigationItem" id="PSN-Ta-M21"/>
                     <connections>
-                        <outlet property="avatarSenderView" destination="5kU-Zh-FVb" id="9ux-Lj-IDH"/>
-                        <outlet property="dateLabel" destination="aaj-l2-38j" id="6dx-tf-9oD"/>
                         <outlet property="messageLabel" destination="p9T-lk-LQH" id="pxs-mb-tqS"/>
-                        <outlet property="replyCounter" destination="ogN-Nx-Or4" id="UmE-VD-XL6"/>
                         <outlet property="riwayatReplyCollectionView" destination="d5C-wN-xvc" id="Lp4-hv-xn6"/>
                         <outlet property="senderImageView" destination="Lwf-Zf-yv3" id="dWK-bz-XcT"/>
                         <outlet property="usernameLabel" destination="f7b-r9-OjN" id="7KH-IQ-U9z"/>
@@ -3180,7 +3184,7 @@ kamu merasa tidak nyaman.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="EO2-Pw-c19"/>
+        <segue reference="G0s-w8-mvn"/>
         <segue reference="lfE-Ie-0Mh"/>
         <segue reference="5Xo-Ek-ILa"/>
     </inferredMetricsTieBreakers>
