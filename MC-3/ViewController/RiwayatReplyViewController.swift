@@ -23,19 +23,23 @@ class RiwayatReplyViewController: UIViewController, AVAudioPlayerDelegate{
     
     //audio capabilities
     var audio: CKAsset?
-      var audioPlayerItem: AVPlayerItem?
-      var avPlayer = AVAudioPlayer()
-      var audioURL: NSURL?
-      var audioAsset: AVAsset?
-      var audioPath: URL?
+    var audioPlayerItem: AVPlayerItem?
+    var avPlayer = AVAudioPlayer()
+    var audioURL: NSURL?
+    var audioAsset: AVAsset?
+    var audioPath: URL?
+    var date: String?
     
     var audioOriginPath: URL?
     
     
+    @IBOutlet weak var avatarSenderView: UIImageView!
     @IBOutlet weak var riwayatReplyCollectionView: UICollectionView!
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var messageLabel: UILabel!
     @IBOutlet weak var senderImageView: UIImageView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var replyCounter: UILabel!
     
     
     
@@ -47,7 +51,7 @@ class RiwayatReplyViewController: UIViewController, AVAudioPlayerDelegate{
         //query the original record
         
         senderImageView.image = senderImage
-        
+        dateLabel.text = date ?? ""
         messageLabel.text = message
         riwayatReplyCollectionView.register(RiwayatReplyCollectionViewCell.nib(), forCellWithReuseIdentifier: "RiwayatReplyCollectionViewCell")
         riwayatReplyCollectionView.delegate = self
@@ -55,8 +59,10 @@ class RiwayatReplyViewController: UIViewController, AVAudioPlayerDelegate{
         let database = CKContainer.default().publicCloudDatabase
         let recordIDName = recordName
         let predicate = NSPredicate(format: "originID == '\(recordName)'")
+        
         let predicateAll = NSPredicate(value: true)
         let query = CKQuery(recordType: "perahuKertasReply", predicate: predicate)
+        
         //query.sortDescriptors = [NSSortDescriptor(key: "replyDate", ascending: false)]
         database.perform(query, inZoneWith: nil) { (records, error) in
             if let fetchedRecords = records {
@@ -65,11 +71,37 @@ class RiwayatReplyViewController: UIViewController, AVAudioPlayerDelegate{
                 DispatchQueue.main.async {
                     //code
                     //print(self.inbox)
+                    self.replyCounter.text = "\(self.inbox.count)"
                     
                     self.riwayatReplyCollectionView.reloadData()
                 }
             }
+            
         }
+        
+        CKContainer.default().fetchUserRecordID { userID, error in
+            if let userID = userID {
+                //print(userID)
+            }
+            let reference = CKRecord.Reference(recordID: userID!, action: .none)
+            let predicate = NSPredicate(format: "creatorID == %@", userID?.recordName ?? "")
+            let query = CKQuery(recordType: "profile", predicate: predicate)
+            query.sortDescriptors = [NSSortDescriptor(key: "signUpDate", ascending: false)]
+            database.perform(query, inZoneWith: nil) { (records, error) in
+                if let fetchedRecords = records {
+                    DispatchQueue.main.async {
+                       
+                        self.usernameLabel.text = fetchedRecords[0].object(forKey: "username") as! String
+                        let avatarImage = fetchedRecords[0].object(forKey: "avatar")
+                        self.avatarSenderView.image = UIImage(named: avatarImage as! String)
+                        
+                        
+                    }
+                
+                }
+            }
+        }
+        
     }
     
     @IBAction func playButton(_ sender: Any) {
@@ -91,8 +123,15 @@ extension RiwayatReplyViewController: UICollectionViewDelegate, UICollectionView
         
         let record = inbox[indexPath.row]
         //print(inbox)
-        cell.replyLabel.text = record.object(forKey: "reply") as! String
-        cell.usernameLabel.text = record.object(forKey: "replyNickname") as! String
+        cell.replyLabel.text = record.object(forKey: "reply") as? String
+        cell.usernameLabel.text = record.object(forKey: "replyNickname") as? String
+        
+        
+        
+        
+        
+        
+        
         
         //EXPERIMENTAL DOWNLOADING IMAGE
         let imgRecord = record.object(forKey: "image")
@@ -112,36 +151,36 @@ extension RiwayatReplyViewController: UICollectionViewDelegate, UICollectionView
                 
                 //self.imagePath = destinationPath!
                 self.replyImage = UIImage(data: imgNewData)
-                print("do do ")
+                //print("do do ")
             } catch {print("bgst") }
             
             let audioRecord = record.object(forKey: "audio")
-                               
-                               self.audio = audioRecord as? CKAsset
-                               
-                               do {
-                                   self.audioURL = self.audio?.fileURL as NSURL?
-                                   
-                                   
-                                   //downloadaudio
-                                   let audioData = try Data(contentsOf: (self.audioURL ?? NSURL()) as URL)
-                                   print(audioData)
-                                   let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
-                                   let destinationPath = NSURL(fileURLWithPath: documentsPath).appendingPathComponent("ReceivedAudio.m4a", isDirectory: false)
-                                   FileManager.default.createFile(atPath: destinationPath!.path, contents:audioData, attributes:nil)
-                                   print("download audio succeed")
-                                   //  paths = documentsPath
-                                   print(destinationPath!)
-                                   self.audioPath = destinationPath!
-                                   
-                                   
-                                   
-                                   
-                                   
-                               } catch {
-                                   print("error download audio with gender")
-                                   
-                               }
+            
+            self.audio = audioRecord as? CKAsset
+            
+            do {
+                self.audioURL = self.audio?.fileURL as NSURL?
+                
+                
+                //downloadaudio
+                let audioData = try Data(contentsOf: (self.audioURL ?? NSURL()) as URL)
+                print(audioData)
+                let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
+                let destinationPath = NSURL(fileURLWithPath: documentsPath).appendingPathComponent("ReceivedAudio.m4a", isDirectory: false)
+                FileManager.default.createFile(atPath: destinationPath!.path, contents:audioData, attributes:nil)
+                print("download audio succeed")
+                //  paths = documentsPath
+                //print(destinationPath!)
+                self.audioPath = destinationPath!
+                
+                
+                
+                
+                
+            } catch {
+                print("error download audio with gender")
+                
+            }
             
         } catch {
             print("error download picture with gender")
@@ -169,7 +208,7 @@ extension RiwayatReplyViewController: UICollectionViewDelegate, UICollectionView
             avPlayer.delegate = self
             avPlayer.prepareToPlay()
             avPlayer.volume = 100
-            print(path)
+            //print(path)
         } catch {
             print("error1")
         }
@@ -180,7 +219,7 @@ extension RiwayatReplyViewController: UICollectionViewDelegate, UICollectionView
         
         return paths[0]
     }
-   
-
+    
+    
     
 }

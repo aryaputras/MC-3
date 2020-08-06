@@ -19,6 +19,7 @@ class RiwayatViewController: UIViewController{
     var imageAsset: CKAsset?
     var imageURL: NSURL?
     var imagePath: URL?
+    var imageString: String?
     
     var audio: CKAsset?
     var audioPlayerItem: AVPlayerItem?
@@ -26,6 +27,8 @@ class RiwayatViewController: UIViewController{
     var audioURL: NSURL?
     var audioAsset: AVAsset?
     var audioPath: URL?
+    var date: String?
+    var replyCountRecord = ""
     
     @IBOutlet weak var riwayatCollectionView: UICollectionView!
     override func viewDidLoad() {
@@ -63,6 +66,30 @@ class RiwayatViewController: UIViewController{
                 }
             }
         }
+        CKContainer.default().fetchUserRecordID { userID, error in
+            if let userID = userID {
+                //print(userID)
+            }
+          
+            let predicate = NSPredicate(format: "creatorID == %@", userID?.recordName ?? "")
+            let query = CKQuery(recordType: "profile", predicate: predicate)
+            query.sortDescriptors = [NSSortDescriptor(key: "signUpDate", ascending: false)]
+            database.perform(query, inZoneWith: nil) { (records, error) in
+                if let fetchedRecords = records {
+                
+                    DispatchQueue.main.async {
+                     
+                        let avatarImage = fetchedRecords[0].object(forKey: "avatar")
+                        self.imageString = avatarImage as? String
+                        
+                         self.riwayatCollectionView.reloadData()
+                        print(avatarImage)
+                        
+                    }
+                   
+                }
+            }
+        }
     }
     @IBAction func myUnwindSegue(unwindSegue: UIStoryboardSegue){
         
@@ -85,6 +112,10 @@ extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataS
             //        cell.imageView.image = item.imageName
             
             cell.suratLabel.text = record.object(forKey: "message") as? String ?? " "
+            
+            
+            
+            
             
             //EXPERIMENTAL DOWNLOADING IMAGE
             let imgRecord = record.object(forKey: "image")
@@ -146,10 +177,25 @@ extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataS
             cell.recordName = record.recordID.recordName
             cell.recordID = record.recordID
             cell.image = image
+            cell.avatarImage.image = UIImage(named: imageString!)
             let date = record.creationDate
             let formatter1 = DateFormatter()
             formatter1.dateStyle = .short
             cell.tanggalLabel.text = formatter1.string(from: date!)
+            
+            let database = CKContainer.default().publicCloudDatabase
+            let predicate = NSPredicate(format: "originID == '\(cell.recordName)'")
+            let query = CKQuery(recordType: "perahuKertasReply", predicate: predicate)
+            
+            database.perform(query, inZoneWith: nil) { (records, error) in
+                if let fetchedRecords = records {
+                    self.replyCountRecord = "\(fetchedRecords.count)"
+                DispatchQueue.main.async {
+                    cell.replyCountLabel.text = self.replyCountRecord
+                }
+            }
+            }
+            
             
         }
         //print(image)
@@ -165,6 +211,7 @@ extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataS
             message = cellOwner.suratLabel.text!
             originRecordID = cellOwner.recordID
             image = cellOwner.image
+            date = cellOwner.tanggalLabel.text
             performSegue(withIdentifier: "riwayatToReply", sender: Any?.self)
             
             //Make ID for each record and get from cellOwner.(ID) and pass it to CKModify  (ID) likes +1
@@ -180,6 +227,7 @@ extension RiwayatViewController: UICollectionViewDelegate, UICollectionViewDataS
         destinationVC.message = message
         destinationVC.originRecordID = originRecordID
         destinationVC.audioOriginPath = self.audioPath
+        destinationVC.date = date
         
     }
 }
