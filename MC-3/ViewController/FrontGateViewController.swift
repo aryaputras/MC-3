@@ -53,7 +53,15 @@ class FrontGateViewController: UIViewController {
     }
 
     /// Logs out or attempts to log in when the user taps the button.
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
 
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        navigationController?.setNavigationBarHidden(tr, animated: animated)
+//    }
     @IBAction func tapButton(_ sender: UIButton) {
     
     
