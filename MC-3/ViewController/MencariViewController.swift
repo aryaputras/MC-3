@@ -91,8 +91,8 @@ class MencariViewController: UIViewController {
     func animate() {
         
         UIView.animate(withDuration: 10, animations: {
-            self.orangeBackground.transform = CGAffineTransform(translationX: 0, y: 250)
-            self.tideBackground.transform = CGAffineTransform(translationX: 0, y: 250)
+            self.orangeBackground.transform = CGAffineTransform(translationX: 0, y: 415)
+            self.tideBackground.transform = CGAffineTransform(translationX: 0, y: 415)
             self.paperBoat.transform = CGAffineTransform(translationX: 0, y: -300)
             self.paperBoat.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
             self.label.isHidden = true

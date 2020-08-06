@@ -53,7 +53,7 @@ class HomeViewController: UIViewController {
                         
                         
                         
-                        self.usernameLabel.text = "Hai," + username
+                        self.usernameLabel.text = "Hai, " + username
                     
                         
                      }
