@@ -2701,7 +2701,7 @@ perahu kertas!</string>
                                     <constraint firstAttribute="height" constant="195" id="vDC-oC-1Aw"/>
                                 </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lyF-9J-XXX">
-                                    <size key="itemSize" width="366" height="126"/>
+                                    <size key="itemSize" width="364" height="126"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -3160,7 +3160,7 @@ kamu merasa tidak nyaman.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="CNY-6n-FqC"/>
+        <segue reference="Oiv-I1-eQT"/>
         <segue reference="EO2-Pw-c19"/>
         <segue reference="cYd-ed-PzV"/>
         <segue reference="5Xo-Ek-ILa"/>
