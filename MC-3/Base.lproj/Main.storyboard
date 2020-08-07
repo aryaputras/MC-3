@@ -47,13 +47,13 @@ tentang dirimu</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usiamu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WBa-1l-fhA">
-                                <rect key="frame" x="179.5" y="511" width="57.5" height="20.5"/>
+                                <rect key="frame" x="179.5" y="518" width="57.5" height="20.5"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="19" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="026-sm-dPE">
-                                <rect key="frame" x="198.5" y="547" width="19" height="21"/>
+                                <rect key="frame" x="198.5" y="554" width="19" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="foc-eh-lGV"/>
                                 </constraints>
@@ -62,7 +62,7 @@ tentang dirimu</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jenis kelaminmu" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJm-gu-tfV">
-                                <rect key="frame" x="142.5" y="621" width="131.5" height="20.5"/>
+                                <rect key="frame" x="142.5" y="604" width="131.5" height="20.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -91,28 +91,28 @@ tentang dirimu</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBo-w7-QIE">
-                                <rect key="frame" x="242.5" y="540.5" width="34" height="34"/>
+                                <rect key="frame" x="242.5" y="547.5" width="34" height="34"/>
                                 <state key="normal" image="Button_Plus"/>
                                 <connections>
                                     <action selector="buttonPlus:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NAr-Nw-6TN"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dXN-4D-GTy">
-                                <rect key="frame" x="140.5" y="540.5" width="34" height="34"/>
+                                <rect key="frame" x="140.5" y="547.5" width="34" height="34"/>
                                 <state key="normal" image="Button_Minus"/>
                                 <connections>
                                     <action selector="buttonMin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6Xb-be-6sO"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nmf-ye-YsU">
-                                <rect key="frame" x="108" y="659" width="71" height="71"/>
+                                <rect key="frame" x="108" y="642" width="71" height="71"/>
                                 <state key="normal" image="Button_Cowo"/>
                                 <connections>
                                     <action selector="buttonMale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jq6-02-R8H"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znz-75-iWu">
-                                <rect key="frame" x="236" y="659" width="71" height="71"/>
+                                <rect key="frame" x="236" y="642" width="71" height="71"/>
                                 <state key="normal" image="Button_Cewe"/>
                                 <connections>
                                     <action selector="buttonFemale:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p4V-De-SRd"/>
@@ -139,10 +139,10 @@ tentang dirimu</string>
                             <constraint firstItem="026-sm-dPE" firstAttribute="centerY" secondItem="dXN-4D-GTy" secondAttribute="centerY" id="FSF-cP-d4A"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="w4Z-uP-Wgn" secondAttribute="bottom" constant="57" id="NUV-ch-5j3"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="aln-6j-PTd" secondAttribute="centerX" constant="1" id="OK1-aO-OEN"/>
-                            <constraint firstItem="IJm-gu-tfV" firstAttribute="top" secondItem="026-sm-dPE" secondAttribute="bottom" constant="53" id="OmF-Hm-NqT"/>
+                            <constraint firstItem="IJm-gu-tfV" firstAttribute="top" secondItem="026-sm-dPE" secondAttribute="bottom" constant="29" id="OmF-Hm-NqT"/>
                             <constraint firstItem="nmf-ye-YsU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="PLe-jx-uGn"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="wvD-Ie-Bkw" secondAttribute="centerX" constant="1" id="QOx-hr-GJ3"/>
-                            <constraint firstItem="WBa-1l-fhA" firstAttribute="top" secondItem="TK8-NE-xJc" secondAttribute="bottom" constant="17" id="UgW-SU-ZFy"/>
+                            <constraint firstItem="WBa-1l-fhA" firstAttribute="top" secondItem="TK8-NE-xJc" secondAttribute="bottom" constant="24" id="UgW-SU-ZFy"/>
                             <constraint firstItem="dBo-w7-QIE" firstAttribute="leading" secondItem="026-sm-dPE" secondAttribute="trailing" constant="25" id="WYR-db-VKD"/>
                             <constraint firstItem="dXN-4D-GTy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140.5" id="XBT-Da-MNY"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="top" secondItem="QgS-bf-mam" secondAttribute="bottom" constant="16" id="XDW-Me-wyH"/>
@@ -153,7 +153,7 @@ tentang dirimu</string>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YYe-zB-WsI" secondAttribute="bottom" constant="27" id="btp-lv-NC2"/>
                             <constraint firstItem="aln-6j-PTd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="104" id="eHW-fw-mhs"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="026-sm-dPE" secondAttribute="centerX" id="ffh-yb-cXN"/>
-                            <constraint firstItem="w4Z-uP-Wgn" firstAttribute="top" secondItem="nmf-ye-YsU" secondAttribute="bottom" constant="20" id="h3q-nD-9hT"/>
+                            <constraint firstItem="w4Z-uP-Wgn" firstAttribute="top" secondItem="nmf-ye-YsU" secondAttribute="bottom" constant="37" id="h3q-nD-9hT"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="1ZP-Bu-ngw" secondAttribute="centerX" constant="1" id="k5v-be-2RS"/>
                             <constraint firstItem="znz-75-iWu" firstAttribute="leading" secondItem="nmf-ye-YsU" secondAttribute="trailing" constant="57" id="sFz-ud-PBl"/>
                             <constraint firstItem="YYe-zB-WsI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sUc-jd-4ne"/>
@@ -184,20 +184,20 @@ tentang dirimu</string>
             <objects>
                 <viewController id="eEh-42-BzD" customClass="HomeViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dss-cW-l8u">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_LandingPage" translatesAutoresizingMaskIntoConstraints="NO" id="qzx-ZU-R6J">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image_LandingPage_Kotak" translatesAutoresizingMaskIntoConstraints="NO" id="Psf-b4-y42">
-                                <rect key="frame" x="24" y="270" width="366" height="389"/>
+                                <rect key="frame" x="24" y="275" width="366" height="389"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="389" id="bvH-zg-sHh"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hai, [Username] !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sTc-gm-LHZ">
-                                <rect key="frame" x="24" y="290" width="366" height="34"/>
+                                <rect key="frame" x="24" y="295" width="366" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="34" id="78W-df-UKS"/>
                                 </constraints>
@@ -210,13 +210,13 @@ tentang dirimu</string>
                                 </variation>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image_Otter_LandingPage" translatesAutoresizingMaskIntoConstraints="NO" id="uEf-f8-9ur">
-                                <rect key="frame" x="177" y="579" width="237" height="230"/>
+                                <rect key="frame" x="177" y="584" width="237" height="230"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="230" id="408-SE-kJb"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JVl-I6-gvc">
-                                <rect key="frame" x="40" y="339.5" width="322" height="223.5"/>
+                                <rect key="frame" x="40" y="344.5" width="322" height="223.5"/>
                                 <string key="text">Hari ini berat ya?
 Tenang, kamu tidak sendirian.
 Ada Ottis di sini.
@@ -230,7 +230,7 @@ geser ke bawah  untuk menangkap satu.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ottis, The Otter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3t-dP-Jyz">
-                                <rect key="frame" x="40" y="613" width="123" height="21"/>
+                                <rect key="frame" x="40" y="618" width="123" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Ydz-AW-odH"/>
                                 </constraints>
@@ -239,14 +239,14 @@ geser ke bawah  untuk menangkap satu.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.down" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gcD-1j-h2B">
-                                <rect key="frame" x="164" y="526" width="14" height="14"/>
+                                <rect key="frame" x="164" y="531" width="14" height="14"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="tYS-1p-ho9"/>
                                 </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.up" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="7tW-7A-W1k">
-                                <rect key="frame" x="146" y="437" width="17" height="14"/>
+                                <rect key="frame" x="146" y="491" width="17" height="14"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="16" id="Wcv-Qn-4Le"/>
@@ -3161,8 +3161,8 @@ kamu merasa tidak nyaman.</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="CNY-6n-FqC"/>
-        <segue reference="2Wt-Vh-GSG"/>
-        <segue reference="lfE-Ie-0Mh"/>
+        <segue reference="EO2-Pw-c19"/>
+        <segue reference="cYd-ed-PzV"/>
         <segue reference="5Xo-Ek-ILa"/>
     </inferredMetricsTieBreakers>
     <resources>
