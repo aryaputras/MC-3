@@ -97,9 +97,9 @@ class AnimasiLipatKertasViewController: UIViewController {
             }
             if imageNamed == "Lipat_kertas11"
             {
-                kertasLipat.image = UIImage.init(named: "Lipat_kertas13")
-                imageNamed = "Lipat_kertas13"
-                print("11To13")
+                kertasLipat.image = UIImage.init(named: "Lipat_kertas12")
+                imageNamed = "Lipat_kertas12"
+                print("11To12")
             }
             if imageNamed == "Lipat_kertas15"
             {
@@ -143,7 +143,7 @@ class AnimasiLipatKertasViewController: UIViewController {
             }
             if imageNamed == "Lipat_kertas16"
             {
-                kertasLipat.image = UIImage.init(named: "Paper_Boat")
+                kertasLipat.image = UIImage.init(named: "Lipat_kertas17")
                 imageNamed = "Selesai"
                 self.labelAtas.text = "Kamu Berhasil!"
                 self.labelBawah.text = "Aku sangat bangga padamu!"
@@ -171,6 +171,13 @@ class AnimasiLipatKertasViewController: UIViewController {
                 self.labelKalimat.isHidden = false
                 print("1To3")
             }
+            if imageNamed == "Lipat_kertas12"
+            {
+                imageNamed = "Lipat_kertas13"
+                kertasLipat.image = UIImage.init(named: imageNamed)
+                print("13To14")
+                
+            }
         }
         if sender.direction == .up {
             if imageNamed == "Lipat_kertas8"
@@ -181,9 +188,15 @@ class AnimasiLipatKertasViewController: UIViewController {
             }
             if imageNamed == "Lipat_kertas13"
             {
+                kertasLipat.image = UIImage.init(named: "Lipat_kertas14")
+                imageNamed = "Lipat_kertas14"
+                print("13To14")
+            }
+            if imageNamed == "Lipat_kertas14"
+            {
                 kertasLipat.image = UIImage.init(named: "Lipat_kertas15")
                 imageNamed = "Lipat_kertas15"
-                print("13To15")
+                print("14To15")
             }
         }
     }
