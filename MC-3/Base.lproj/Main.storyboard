@@ -18,6 +18,10 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_ProfileRegis" translatesAutoresizingMaskIntoConstraints="NO" id="wvD-Ie-Bkw">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="ggK-dT-NEP"/>
+                                    <constraint firstAttribute="height" constant="896" id="uKC-hq-u00"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aln-6j-PTd">
                                 <rect key="frame" x="90" y="192" width="234" height="67"/>
@@ -344,6 +348,10 @@ geser ke bawah  untuk menangkap satu.</string>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Onboarding_1" translatesAutoresizingMaskIntoConstraints="NO" id="34E-AX-7Jo">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="896" id="GH8-yD-vbL"/>
+                                    <constraint firstAttribute="width" constant="414" id="Kdk-nw-Vp2"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ini tentang kamu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qGS-9H-452">
                                 <rect key="frame" x="24" y="564" width="224" height="34"/>
@@ -385,12 +393,12 @@ Mau sampai kapan perihmu itu?</string>
                             <constraint firstItem="juZ-Dy-j8I" firstAttribute="leading" secondItem="qGS-9H-452" secondAttribute="leading" id="H38-b2-4qH"/>
                             <constraint firstItem="qGS-9H-452" firstAttribute="top" secondItem="MZ2-RD-Dxz" secondAttribute="top" constant="476" id="JSy-Ug-SeU"/>
                             <constraint firstItem="34E-AX-7Jo" firstAttribute="leading" secondItem="MZ2-RD-Dxz" secondAttribute="leading" id="RYk-q3-4H9"/>
-                            <constraint firstItem="92R-TS-Hfw" firstAttribute="top" secondItem="juZ-Dy-j8I" secondAttribute="bottom" constant="69" id="XV3-24-txR"/>
                             <constraint firstItem="yQP-hX-zng" firstAttribute="bottom" secondItem="MZ2-RD-Dxz" secondAttribute="bottom" id="Xfr-VK-79n"/>
                             <constraint firstItem="juZ-Dy-j8I" firstAttribute="centerX" secondItem="92R-TS-Hfw" secondAttribute="centerX" id="ZHH-0n-NDr"/>
                             <constraint firstItem="juZ-Dy-j8I" firstAttribute="centerX" secondItem="yQP-hX-zng" secondAttribute="centerX" constant="-1" id="axX-kS-9hJ"/>
                             <constraint firstAttribute="bottom" secondItem="34E-AX-7Jo" secondAttribute="bottom" id="fGM-h6-6V2"/>
                             <constraint firstItem="34E-AX-7Jo" firstAttribute="top" secondItem="jWD-cq-H4g" secondAttribute="top" id="fgi-ma-gOG"/>
+                            <constraint firstItem="92R-TS-Hfw" firstAttribute="bottom" secondItem="34E-AX-7Jo" secondAttribute="bottom" constant="-40" id="m0c-ma-LRg"/>
                             <constraint firstItem="juZ-Dy-j8I" firstAttribute="centerX" secondItem="34E-AX-7Jo" secondAttribute="centerX" id="qMj-ux-DJR"/>
                             <constraint firstItem="MZ2-RD-Dxz" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qGS-9H-452" secondAttribute="trailing" symbolic="YES" id="u5J-Qm-4Qh"/>
                             <constraint firstItem="yQP-hX-zng" firstAttribute="leading" secondItem="MZ2-RD-Dxz" secondAttribute="leading" constant="188" id="uvN-Bu-alY"/>
@@ -415,6 +423,10 @@ Mau sampai kapan perihmu itu?</string>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Onboarding2" translatesAutoresizingMaskIntoConstraints="NO" id="T8O-K8-Pgh">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="896" id="WoO-R6-6ar"/>
+                                    <constraint firstAttribute="width" constant="414" id="f7r-12-LMZ"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Besar kecil ceritamu" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUi-wN-XFf">
                                 <rect key="frame" x="24" y="564" width="275" height="34"/>
@@ -457,12 +469,12 @@ Kalau kamu sudah siap, mari kita mulai perjalanan perahu kertasmu</string>
                             <constraint firstItem="Tg9-Da-0GH" firstAttribute="centerX" secondItem="jud-9m-zuh" secondAttribute="centerX" id="6bl-Vu-6JJ"/>
                             <constraint firstItem="Tg9-Da-0GH" firstAttribute="centerX" secondItem="zG4-xS-Rxc" secondAttribute="centerX" constant="-1" id="6kW-Js-5Qx"/>
                             <constraint firstItem="gUi-wN-XFf" firstAttribute="top" secondItem="sA3-DT-cXR" secondAttribute="top" constant="476" id="J0n-Ej-Hob"/>
-                            <constraint firstItem="ayt-2R-lyr" firstAttribute="top" secondItem="Tg9-Da-0GH" secondAttribute="bottom" constant="19" id="JPX-gP-hUj"/>
                             <constraint firstItem="Tg9-Da-0GH" firstAttribute="leading" secondItem="gUi-wN-XFf" secondAttribute="leading" id="LPA-jq-AXJ"/>
                             <constraint firstItem="zG4-xS-Rxc" firstAttribute="bottom" secondItem="sA3-DT-cXR" secondAttribute="bottom" id="MgC-2b-6es"/>
                             <constraint firstItem="zG4-xS-Rxc" firstAttribute="leading" secondItem="sA3-DT-cXR" secondAttribute="leading" constant="188" id="Rfm-0Q-U7z"/>
                             <constraint firstItem="Tg9-Da-0GH" firstAttribute="centerX" secondItem="ayt-2R-lyr" secondAttribute="centerX" id="Seo-xP-hzj"/>
                             <constraint firstItem="Tg9-Da-0GH" firstAttribute="top" secondItem="gUi-wN-XFf" secondAttribute="bottom" constant="8" symbolic="YES" id="Zf5-0R-V9h"/>
+                            <constraint firstItem="ayt-2R-lyr" firstAttribute="bottom" secondItem="T8O-K8-Pgh" secondAttribute="bottom" constant="-40" id="b2b-p3-Frt"/>
                             <constraint firstItem="gUi-wN-XFf" firstAttribute="leading" secondItem="sA3-DT-cXR" secondAttribute="leading" constant="24" id="bag-Xh-B4X"/>
                             <constraint firstItem="T8O-K8-Pgh" firstAttribute="top" secondItem="jud-9m-zuh" secondAttribute="top" id="cAi-Lp-J6o"/>
                             <constraint firstItem="sA3-DT-cXR" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gUi-wN-XFf" secondAttribute="trailing" symbolic="YES" id="n8F-pi-4Ki"/>
@@ -486,6 +498,10 @@ Kalau kamu sudah siap, mari kita mulai perjalanan perahu kertasmu</string>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_ProfileRegis" translatesAutoresizingMaskIntoConstraints="NO" id="gnp-qc-ojy">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="896" id="1c0-Q8-R2l"/>
+                                    <constraint firstAttribute="width" constant="414" id="O1f-EK-2qH"/>
+                                </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7aR-Zz-DsQ">
                                 <rect key="frame" x="45.5" y="148" width="325.5" height="67"/>
