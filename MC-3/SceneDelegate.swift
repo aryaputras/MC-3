@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                
                
                if !UserDefaults.standard.bool(forKey: "didSee") {
-                   UserDefaults.standard.set(true, forKey: "didSee")
+                  
                    
                    print("onboard")
                }

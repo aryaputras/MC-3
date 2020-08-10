@@ -115,7 +115,7 @@ class Register2VC: UIViewController {
                     let newRecord = CKRecord(recordType: "profile")
                     
                     let database = CKContainer.default().publicCloudDatabase
-                    
+                    UserDefaults.standard.set(true, forKey: "didSee")
                     newRecord.setObject(nameRecord, forKey: "username")
                     newRecord.setObject(ageRecord, forKey: "senderAge")
                     newRecord.setObject(genderRecord, forKey: "senderGender")
@@ -133,7 +133,7 @@ class Register2VC: UIViewController {
                                 
                             } else {
                                 print("record was saved")
-                                
+                                 
                                 self.performSegue(withIdentifier: "savingProfile", sender: Any?.self)
                                 
                             }

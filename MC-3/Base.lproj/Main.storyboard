@@ -1211,7 +1211,7 @@ kamu butuhkan</string>
         <!--Item-->
         <scene sceneID="PHX-f3-p1d">
             <objects>
-                <viewController id="02J-wh-gZE" customClass="FrontGateViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="02J-wh-gZE" customClass="ViewController" customModule="Fiu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3NW-41-JZV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1275,12 +1275,9 @@ kamu butuhkan</string>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HOm-d8-hqB">
                                 <rect key="frame" x="77" y="338" width="260" height="219"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="tapButton:" destination="02J-wh-gZE" eventType="touchUpInside" id="5ld-04-tGS"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egy-1A-fuU">
-                                <rect key="frame" x="0.0" y="748" width="48" height="37"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -1325,8 +1322,6 @@ kamu butuhkan</string>
                     <tabBarItem key="tabBarItem" title="Item" image="Dermaga1" id="EX4-Fy-Lmk"/>
                     <navigationItem key="navigationItem" id="Haf-Yf-Nbo"/>
                     <connections>
-                        <outlet property="faceIDLabel" destination="vqB-hd-S2e" id="shb-oC-3Uq"/>
-                        <outlet property="loginButton" destination="HOm-d8-hqB" id="adl-rn-STb"/>
                         <segue destination="Ib3-wX-25M" kind="presentation" identifier="swipeToSend" modalPresentationStyle="fullScreen" id="5Xo-Ek-ILa"/>
                         <segue destination="lmg-fm-10H" kind="presentation" modalPresentationStyle="fullScreen" id="lfE-Ie-0Mh"/>
                     </connections>
@@ -3178,7 +3173,7 @@ kamu merasa tidak nyaman.</string>
     <inferredMetricsTieBreakers>
         <segue reference="Oiv-I1-eQT"/>
         <segue reference="EO2-Pw-c19"/>
-        <segue reference="cYd-ed-PzV"/>
+        <segue reference="lfE-Ie-0Mh"/>
         <segue reference="5Xo-Ek-ILa"/>
     </inferredMetricsTieBreakers>
     <resources>
