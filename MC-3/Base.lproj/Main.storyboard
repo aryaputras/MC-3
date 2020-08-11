@@ -2384,7 +2384,7 @@ perahu kertas!</string>
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Perahu Kertasku" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FY1-xO-KsI">
-                                <rect key="frame" x="108" y="128" width="198" height="34"/>
+                                <rect key="frame" x="108" y="67" width="198" height="34"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -2395,11 +2395,11 @@ perahu kertas!</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="FY1-xO-KsI" firstAttribute="leading" secondItem="R96-vv-MYX" secondAttribute="leading" constant="108" id="7IL-Gy-qta"/>
-                            <constraint firstItem="FY1-xO-KsI" firstAttribute="top" secondItem="R96-vv-MYX" secondAttribute="top" constant="40" id="G6Q-4J-lvf"/>
+                            <constraint firstItem="FY1-xO-KsI" firstAttribute="top" secondItem="R96-vv-MYX" secondAttribute="top" constant="-21" id="G6Q-4J-lvf"/>
                             <constraint firstItem="FY1-xO-KsI" firstAttribute="centerX" secondItem="y4G-Cd-s2a" secondAttribute="centerX" id="Q6s-va-bNZ"/>
                             <constraint firstItem="R96-vv-MYX" firstAttribute="trailing" secondItem="fFU-PU-NPB" secondAttribute="trailing" constant="24" id="SxO-02-Tzl"/>
                             <constraint firstItem="fFU-PU-NPB" firstAttribute="leading" secondItem="R96-vv-MYX" secondAttribute="leading" constant="24" id="cQH-Nx-eUy"/>
-                            <constraint firstItem="fFU-PU-NPB" firstAttribute="top" secondItem="FY1-xO-KsI" secondAttribute="bottom" constant="161" id="iGJ-sZ-6HY"/>
+                            <constraint firstItem="fFU-PU-NPB" firstAttribute="top" secondItem="FY1-xO-KsI" secondAttribute="bottom" constant="222" id="iGJ-sZ-6HY"/>
                             <constraint firstAttribute="bottomMargin" secondItem="fFU-PU-NPB" secondAttribute="bottom" constant="-16" id="mGj-HN-KP2"/>
                             <constraint firstItem="vpk-ay-bwG" firstAttribute="top" secondItem="y4G-Cd-s2a" secondAttribute="top" id="tAx-Ft-zXm"/>
                             <constraint firstItem="FY1-xO-KsI" firstAttribute="centerX" secondItem="vpk-ay-bwG" secondAttribute="centerX" id="vJc-1L-LlI"/>
@@ -2607,7 +2607,7 @@ perahu kertas!</string>
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mercusuar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKm-aT-52W">
-                                <rect key="frame" x="142.5" y="128" width="129" height="34"/>
+                                <rect key="frame" x="142.5" y="67" width="129" height="34"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -2615,7 +2615,7 @@ perahu kertas!</string>
                                 <size key="shadowOffset" width="1" height="0.0"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Djt-pD-CgU">
-                                <rect key="frame" x="364" y="62" width="45" height="107"/>
+                                <rect key="frame" x="364" y="62" width="45" height="45"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="plus.circle" catalog="system">
@@ -2689,11 +2689,11 @@ perahu kertas!</string>
                         <constraints>
                             <constraint firstItem="GyH-35-NqV" firstAttribute="trailing" secondItem="riw-mK-wzG" secondAttribute="trailing" id="0aU-uo-ebL"/>
                             <constraint firstItem="GyH-35-NqV" firstAttribute="leading" secondItem="riw-mK-wzG" secondAttribute="leading" id="9bS-4Z-cae"/>
-                            <constraint firstItem="jKm-aT-52W" firstAttribute="top" secondItem="qkf-7q-n0e" secondAttribute="top" constant="40" id="EWi-bo-KuW"/>
+                            <constraint firstItem="jKm-aT-52W" firstAttribute="top" secondItem="qkf-7q-n0e" secondAttribute="top" constant="-21" id="EWi-bo-KuW"/>
                             <constraint firstItem="GyH-35-NqV" firstAttribute="leading" secondItem="veP-nw-ppW" secondAttribute="leading" id="Gud-cG-Efr"/>
                             <constraint firstItem="GyH-35-NqV" firstAttribute="trailing" secondItem="veP-nw-ppW" secondAttribute="trailing" id="Q4o-JK-1se"/>
                             <constraint firstItem="Djt-pD-CgU" firstAttribute="leading" secondItem="jKm-aT-52W" secondAttribute="trailing" constant="92.5" id="Ueg-S8-phz"/>
-                            <constraint firstItem="GyH-35-NqV" firstAttribute="top" secondItem="Djt-pD-CgU" secondAttribute="bottom" constant="61" id="VIZ-Qv-IEA"/>
+                            <constraint firstItem="GyH-35-NqV" firstAttribute="top" secondItem="Djt-pD-CgU" secondAttribute="bottom" constant="123" id="VIZ-Qv-IEA"/>
                             <constraint firstItem="jKm-aT-52W" firstAttribute="centerX" secondItem="Qck-kU-3Zj" secondAttribute="centerX" id="ZHD-rr-51a"/>
                             <constraint firstItem="riw-mK-wzG" firstAttribute="top" secondItem="GyH-35-NqV" secondAttribute="bottom" constant="20" id="aVZ-iZ-nqB"/>
                             <constraint firstItem="jKm-aT-52W" firstAttribute="centerX" secondItem="GyH-35-NqV" secondAttribute="centerX" id="jkO-w0-AvJ"/>
@@ -2701,7 +2701,7 @@ perahu kertas!</string>
                             <constraint firstItem="veP-nw-ppW" firstAttribute="top" secondItem="Qck-kU-3Zj" secondAttribute="top" id="pPQ-ep-1Ow"/>
                             <constraint firstItem="riw-mK-wzG" firstAttribute="bottom" secondItem="veP-nw-ppW" secondAttribute="bottom" id="vqf-JF-LSW"/>
                             <constraint firstItem="Djt-pD-CgU" firstAttribute="top" secondItem="Qck-kU-3Zj" secondAttribute="topMargin" constant="-26" id="vux-OV-gfh"/>
-                            <constraint firstItem="GyH-35-NqV" firstAttribute="top" secondItem="jKm-aT-52W" secondAttribute="bottom" constant="68" id="w6y-tS-2Hv"/>
+                            <constraint firstItem="GyH-35-NqV" firstAttribute="top" secondItem="jKm-aT-52W" secondAttribute="bottom" constant="129" id="w6y-tS-2Hv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qkf-7q-n0e"/>
                     </view>
@@ -3095,7 +3095,7 @@ kamu merasa tidak nyaman.</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Oiv-I1-eQT"/>
-        <segue reference="2Ho-RR-mWr"/>
+        <segue reference="Ztl-w1-L5g"/>
         <segue reference="EO2-Pw-c19"/>
         <segue reference="Pj7-gd-Isc"/>
         <segue reference="9b2-eg-5M3"/>
