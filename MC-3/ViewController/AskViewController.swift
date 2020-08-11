@@ -44,6 +44,9 @@ class AskViewController: UIViewController {
                     print("error")
                 } else {
                     print("record was saved")
+                    self.dismiss(animated: true) {
+                        
+                    }
                 }
             }
         }

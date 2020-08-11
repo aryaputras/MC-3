@@ -34,9 +34,12 @@ class MercusuarViewController: UIViewController{
         database.perform(query, inZoneWith: nil) { (records, error) in
             if let fetchedRecords = records {
                 self.records = fetchedRecords
+                
                 DispatchQueue.main.async {
                     self.mercusuarCollectionView.reloadData()
+                    
                     //print(fetchedRecords)
+                    
                 }
                 
             }
@@ -59,7 +62,8 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
         let record = records[indexPath.row]
         cell.tag = indexPath.row
         
-        let likesNumber = record.object(forKey: "likesLog") as! [String]
+        let likesNumber = record.object(forKey: "likesLog") as? [String] ?? []
+        
         
         
         
@@ -89,7 +93,8 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
         cell.addGestureRecognizer(tapRecognizer)
         cell.recordName = record.recordID.recordName
         
-        cell.likesLog = record.object(forKey: "likesLog") as! [String]
+        cell.likesLog = record.object(forKey: "likesLog") as? [String] ?? []
+        
         
         
 
@@ -174,13 +179,14 @@ extension MercusuarViewController: UICollectionViewDelegate, UICollectionViewDat
                         
                         let newLikesLog = likesLog
                         self.newLikes = "\(newLikesLog.count)"
+                        let newLikesCount = newLikesLog.count
                         DispatchQueue.main.async {
                             
                             
                             cellOwner.numberOfLikes.text = self.newLikes
                         }
                         print(newLikesLog)
-                        
+                        newRecord.setValue(newLikesCount, forKey: "likes")
                         newRecord.setValue(newLikesLog, forKey: "likesLog")
                         
                         let operation = CKModifyRecordsOperation(recordsToSave: [newRecord], recordIDsToDelete: nil)
