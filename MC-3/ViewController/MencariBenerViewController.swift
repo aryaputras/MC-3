@@ -24,8 +24,14 @@ class MencariBenerViewController: UIViewController {
         
         // Do any additional setup after loading the view.
     }
-    @IBAction func myUnwindSegue(unwindSegue: UIStoryboardSegue){
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?){
         
+        if segue.identifier == "swipeToReceive" {
+            if let destination = segue.destination as? HomeViewController{
+                print("TEST")
+            }
+        }
     }
     override func becomeFirstResponder() -> Bool {
         return true

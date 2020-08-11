@@ -37,7 +37,8 @@ class MercusuarCollectionViewCell: UICollectionViewCell {
     }
 
     @IBAction func reportButton(_ sender: Any) {
-        
+        cell.view.performSegue
+        view.performSegue(withIdentifier: "MercusuarToReport", sender: UIButton.self)
     }
 }
 
