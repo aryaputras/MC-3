@@ -468,17 +468,18 @@ Kalau kamu sudah siap, mari kita mulai perjalanan perahu kertasmu</string>
                         <constraints>
                             <constraint firstItem="Tg9-Da-0GH" firstAttribute="centerX" secondItem="jud-9m-zuh" secondAttribute="centerX" id="6bl-Vu-6JJ"/>
                             <constraint firstItem="Tg9-Da-0GH" firstAttribute="centerX" secondItem="zG4-xS-Rxc" secondAttribute="centerX" constant="-1" id="6kW-Js-5Qx"/>
-                            <constraint firstItem="gUi-wN-XFf" firstAttribute="top" secondItem="sA3-DT-cXR" secondAttribute="top" constant="476" id="J0n-Ej-Hob"/>
                             <constraint firstItem="Tg9-Da-0GH" firstAttribute="leading" secondItem="gUi-wN-XFf" secondAttribute="leading" id="LPA-jq-AXJ"/>
                             <constraint firstItem="zG4-xS-Rxc" firstAttribute="bottom" secondItem="sA3-DT-cXR" secondAttribute="bottom" id="MgC-2b-6es"/>
                             <constraint firstItem="zG4-xS-Rxc" firstAttribute="leading" secondItem="sA3-DT-cXR" secondAttribute="leading" constant="188" id="Rfm-0Q-U7z"/>
                             <constraint firstItem="Tg9-Da-0GH" firstAttribute="centerX" secondItem="ayt-2R-lyr" secondAttribute="centerX" id="Seo-xP-hzj"/>
+                            <constraint firstItem="ayt-2R-lyr" firstAttribute="top" secondItem="Tg9-Da-0GH" secondAttribute="bottom" constant="19" id="XbW-al-isq"/>
                             <constraint firstItem="Tg9-Da-0GH" firstAttribute="top" secondItem="gUi-wN-XFf" secondAttribute="bottom" constant="8" symbolic="YES" id="Zf5-0R-V9h"/>
-                            <constraint firstItem="ayt-2R-lyr" firstAttribute="bottom" secondItem="T8O-K8-Pgh" secondAttribute="bottom" constant="-40" id="b2b-p3-Frt"/>
+                            <constraint firstItem="ayt-2R-lyr" firstAttribute="bottom" secondItem="jud-9m-zuh" secondAttribute="bottom" constant="-40" id="b2b-p3-Frt"/>
                             <constraint firstItem="gUi-wN-XFf" firstAttribute="leading" secondItem="sA3-DT-cXR" secondAttribute="leading" constant="24" id="bag-Xh-B4X"/>
                             <constraint firstItem="T8O-K8-Pgh" firstAttribute="top" secondItem="jud-9m-zuh" secondAttribute="top" id="cAi-Lp-J6o"/>
+                            <constraint firstAttribute="bottom" secondItem="T8O-K8-Pgh" secondAttribute="bottom" id="hQQ-eK-b5a"/>
                             <constraint firstItem="sA3-DT-cXR" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gUi-wN-XFf" secondAttribute="trailing" symbolic="YES" id="n8F-pi-4Ki"/>
-                            <constraint firstItem="Tg9-Da-0GH" firstAttribute="centerX" secondItem="T8O-K8-Pgh" secondAttribute="centerX" id="nfo-4N-meb"/>
+                            <constraint firstAttribute="centerX" secondItem="T8O-K8-Pgh" secondAttribute="centerX" id="nfo-4N-meb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sA3-DT-cXR"/>
                     </view>
