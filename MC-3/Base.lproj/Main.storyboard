@@ -24,7 +24,7 @@
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aln-6j-PTd">
-                                <rect key="frame" x="90" y="192" width="234" height="67"/>
+                                <rect key="frame" x="90" y="192" width="234" height="52"/>
                                 <string key="text">Ceritakan sedikit 
 tentang dirimu</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
@@ -34,16 +34,16 @@ tentang dirimu</string>
                                     <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="28"/>
                                 </variation>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Avatar 1" translatesAutoresizingMaskIntoConstraints="NO" id="1ZP-Bu-ngw">
-                                <rect key="frame" x="132" y="286" width="150" height="150"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="Avatar 1" translatesAutoresizingMaskIntoConstraints="NO" id="1ZP-Bu-ngw">
+                                <rect key="frame" x="132" y="271" width="150" height="150"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nama aliasmu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgS-bf-mam">
-                                <rect key="frame" x="152.5" y="423.5" width="111.5" height="20.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" misplaced="YES" text="Nama aliasmu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgS-bf-mam">
+                                <rect key="frame" x="152.5" y="428.5" width="111.5" height="20.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nama alias" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TK8-NE-xJc">
+                            <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="753" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nama alias" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TK8-NE-xJc">
                                 <rect key="frame" x="54" y="460" width="308" height="34"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
@@ -71,9 +71,8 @@ tentang dirimu</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbM-FP-eTb">
-                                <rect key="frame" x="91" y="305" width="25" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HbM-FP-eTb">
+                                <rect key="frame" x="91" y="333" width="25" height="26"/>
                                 <state key="normal" image="Triangle"/>
                                 <connections>
                                     <action selector="buttonLeft:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0qp-C5-YUE"/>
@@ -86,9 +85,8 @@ tentang dirimu</string>
                                     <action selector="buttonNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qYL-C1-Hsp"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbF-zj-HCO">
-                                <rect key="frame" x="298" y="305" width="25" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZbF-zj-HCO">
+                                <rect key="frame" x="298" y="333" width="25" height="26"/>
                                 <state key="normal" image="Triangle_Kanan"/>
                                 <connections>
                                     <action selector="buttonRight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aaB-R9-5gk"/>
@@ -137,15 +135,20 @@ tentang dirimu</string>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="QgS-bf-mam" secondAttribute="centerX" id="4Uj-ef-jql"/>
                             <constraint firstItem="YYe-zB-WsI" firstAttribute="centerX" secondItem="w4Z-uP-Wgn" secondAttribute="centerX" id="7Xa-kH-BYG"/>
                             <constraint firstItem="nmf-ye-YsU" firstAttribute="top" secondItem="znz-75-iWu" secondAttribute="top" id="8QH-oV-VdM"/>
+                            <constraint firstItem="QgS-bf-mam" firstAttribute="top" secondItem="1ZP-Bu-ngw" secondAttribute="bottom" constant="2.5" id="9qb-D8-52S"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="AKp-FV-lYb"/>
                             <constraint firstItem="YYe-zB-WsI" firstAttribute="top" secondItem="w4Z-uP-Wgn" secondAttribute="bottom" constant="9" id="At2-mj-0Qx"/>
+                            <constraint firstItem="ZbF-zj-HCO" firstAttribute="centerY" secondItem="1ZP-Bu-ngw" secondAttribute="centerY" id="CRk-gK-O7e"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="IJm-gu-tfV" secondAttribute="centerX" id="DBD-qC-c9Z"/>
                             <constraint firstItem="026-sm-dPE" firstAttribute="centerY" secondItem="dXN-4D-GTy" secondAttribute="centerY" id="FSF-cP-d4A"/>
+                            <constraint firstItem="1ZP-Bu-ngw" firstAttribute="leading" secondItem="HbM-FP-eTb" secondAttribute="trailing" constant="16" id="G6m-ak-cTx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="w4Z-uP-Wgn" secondAttribute="bottom" constant="57" id="NUV-ch-5j3"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="aln-6j-PTd" secondAttribute="centerX" constant="1" id="OK1-aO-OEN"/>
                             <constraint firstItem="IJm-gu-tfV" firstAttribute="top" secondItem="026-sm-dPE" secondAttribute="bottom" constant="29" id="OmF-Hm-NqT"/>
                             <constraint firstItem="nmf-ye-YsU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="108" id="PLe-jx-uGn"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="wvD-Ie-Bkw" secondAttribute="centerX" constant="1" id="QOx-hr-GJ3"/>
+                            <constraint firstItem="ZbF-zj-HCO" firstAttribute="leading" secondItem="1ZP-Bu-ngw" secondAttribute="trailing" constant="16" id="TXy-rD-row"/>
+                            <constraint firstItem="wvD-Ie-Bkw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UEZ-yL-wSK"/>
                             <constraint firstItem="WBa-1l-fhA" firstAttribute="top" secondItem="TK8-NE-xJc" secondAttribute="bottom" constant="24" id="UgW-SU-ZFy"/>
                             <constraint firstItem="dBo-w7-QIE" firstAttribute="leading" secondItem="026-sm-dPE" secondAttribute="trailing" constant="25" id="WYR-db-VKD"/>
                             <constraint firstItem="dXN-4D-GTy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140.5" id="XBT-Da-MNY"/>
@@ -157,7 +160,9 @@ tentang dirimu</string>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="YYe-zB-WsI" secondAttribute="bottom" constant="27" id="btp-lv-NC2"/>
                             <constraint firstItem="aln-6j-PTd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="104" id="eHW-fw-mhs"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="026-sm-dPE" secondAttribute="centerX" id="ffh-yb-cXN"/>
+                            <constraint firstItem="HbM-FP-eTb" firstAttribute="centerY" secondItem="1ZP-Bu-ngw" secondAttribute="centerY" id="g2e-qt-cXX"/>
                             <constraint firstItem="w4Z-uP-Wgn" firstAttribute="top" secondItem="nmf-ye-YsU" secondAttribute="bottom" constant="37" id="h3q-nD-9hT"/>
+                            <constraint firstItem="wvD-Ie-Bkw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hCP-Yz-1oj"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="1ZP-Bu-ngw" secondAttribute="centerX" constant="1" id="k5v-be-2RS"/>
                             <constraint firstItem="znz-75-iWu" firstAttribute="leading" secondItem="nmf-ye-YsU" secondAttribute="trailing" constant="57" id="sFz-ud-PBl"/>
                             <constraint firstItem="YYe-zB-WsI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="sUc-jd-4ne"/>
@@ -165,6 +170,7 @@ tentang dirimu</string>
                             <constraint firstItem="026-sm-dPE" firstAttribute="top" secondItem="WBa-1l-fhA" secondAttribute="bottom" constant="15.5" id="uM1-3N-PZH"/>
                             <constraint firstItem="026-sm-dPE" firstAttribute="centerY" secondItem="dBo-w7-QIE" secondAttribute="centerY" id="whk-MX-RIW"/>
                             <constraint firstItem="wvD-Ie-Bkw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yNm-3b-QXW"/>
+                            <constraint firstAttribute="bottom" secondItem="wvD-Ie-Bkw" secondAttribute="bottom" id="z8c-MR-Jbi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -193,6 +199,10 @@ tentang dirimu</string>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_LandingPage" translatesAutoresizingMaskIntoConstraints="NO" id="qzx-ZU-R6J">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="5iR-nV-RFV"/>
+                                    <constraint firstAttribute="height" constant="896" id="MLl-zj-7os"/>
+                                </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image_LandingPage_Kotak" translatesAutoresizingMaskIntoConstraints="NO" id="Psf-b4-y42">
                                 <rect key="frame" x="24" y="275" width="366" height="389"/>
@@ -233,8 +243,8 @@ geser ke bawah  untuk menangkap satu.</string>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ottis, The Otter" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3t-dP-Jyz">
-                                <rect key="frame" x="40" y="618" width="123" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ottis, Si Berang-berang" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3t-dP-Jyz">
+                                <rect key="frame" x="40" y="618" width="188" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Ydz-AW-odH"/>
                                 </constraints>
@@ -289,10 +299,11 @@ geser ke bawah  untuk menangkap satu.</string>
                             <constraint firstItem="n3t-dP-Jyz" firstAttribute="top" secondItem="JVl-I6-gvc" secondAttribute="bottom" constant="50" id="Bmu-OH-d1B"/>
                             <constraint firstItem="gcD-1j-h2B" firstAttribute="leading" secondItem="X4v-oB-Nyn" secondAttribute="leading" constant="164" id="CvG-dK-pTr"/>
                             <constraint firstItem="n3t-dP-Jyz" firstAttribute="leading" secondItem="X4v-oB-Nyn" secondAttribute="leading" constant="40" id="Czt-ft-MXJ"/>
+                            <constraint firstAttribute="bottom" secondItem="qzx-ZU-R6J" secondAttribute="bottom" id="Ege-eS-LQ5"/>
                             <constraint firstItem="X4v-oB-Nyn" firstAttribute="bottom" secondItem="n3t-dP-Jyz" secondAttribute="bottom" constant="174" id="G6E-UF-f0x"/>
                             <constraint firstAttribute="bottom" secondItem="7tW-7A-W1k" secondAttribute="bottom" constant="390" id="HxQ-AC-Qm7"/>
                             <constraint firstItem="qzx-ZU-R6J" firstAttribute="centerX" secondItem="sTc-gm-LHZ" secondAttribute="centerX" id="IJU-66-UMw"/>
-                            <constraint firstItem="uEf-f8-9ur" firstAttribute="leading" secondItem="n3t-dP-Jyz" secondAttribute="trailing" constant="14" id="KLK-Em-B3h"/>
+                            <constraint firstItem="uEf-f8-9ur" firstAttribute="leading" secondItem="n3t-dP-Jyz" secondAttribute="trailing" constant="-51" id="KLK-Em-B3h"/>
                             <constraint firstItem="uEf-f8-9ur" firstAttribute="trailing" secondItem="qzx-ZU-R6J" secondAttribute="trailing" id="Odc-Gx-J5d"/>
                             <constraint firstAttribute="trailing" secondItem="uEf-f8-9ur" secondAttribute="trailing" id="P3w-QY-hZI"/>
                             <constraint firstItem="X4v-oB-Nyn" firstAttribute="bottom" secondItem="uEf-f8-9ur" secondAttribute="bottom" constant="-1" id="Qz5-eE-Nzo"/>
@@ -302,9 +313,11 @@ geser ke bawah  untuk menangkap satu.</string>
                             <constraint firstItem="X4v-oB-Nyn" firstAttribute="bottom" secondItem="Psf-b4-y42" secondAttribute="bottom" constant="149" id="djd-0e-c7X"/>
                             <constraint firstItem="7tW-7A-W1k" firstAttribute="leading" secondItem="X4v-oB-Nyn" secondAttribute="leading" constant="146" id="f8Z-8n-1Ol"/>
                             <constraint firstItem="n3t-dP-Jyz" firstAttribute="leading" secondItem="JVl-I6-gvc" secondAttribute="leading" id="flB-hd-fr1"/>
+                            <constraint firstItem="qzx-ZU-R6J" firstAttribute="leading" secondItem="X4v-oB-Nyn" secondAttribute="leading" id="hjw-8s-1Gd"/>
                             <constraint firstItem="qzx-ZU-R6J" firstAttribute="centerX" secondItem="Psf-b4-y42" secondAttribute="centerX" id="ne6-AI-zXj"/>
                             <constraint firstItem="X4v-oB-Nyn" firstAttribute="trailing" secondItem="gcD-1j-h2B" secondAttribute="trailing" constant="236" id="r0m-PG-acq"/>
-                            <constraint firstItem="7tW-7A-W1k" firstAttribute="trailing" secondItem="n3t-dP-Jyz" secondAttribute="trailing" id="yeK-g5-rhb"/>
+                            <constraint firstItem="qzx-ZU-R6J" firstAttribute="trailing" secondItem="X4v-oB-Nyn" secondAttribute="trailing" id="sAx-cN-En2"/>
+                            <constraint firstItem="7tW-7A-W1k" firstAttribute="trailing" secondItem="n3t-dP-Jyz" secondAttribute="trailing" constant="-65" id="yeK-g5-rhb"/>
                             <constraint firstItem="JVl-I6-gvc" firstAttribute="top" secondItem="sTc-gm-LHZ" secondAttribute="bottom" constant="15.5" id="yz2-wC-zJW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="X4v-oB-Nyn"/>
@@ -473,11 +486,13 @@ Kalau kamu sudah siap, mari kita mulai perjalanan perahu kertasmu</string>
                             <constraint firstItem="zG4-xS-Rxc" firstAttribute="leading" secondItem="sA3-DT-cXR" secondAttribute="leading" constant="188" id="Rfm-0Q-U7z"/>
                             <constraint firstItem="Tg9-Da-0GH" firstAttribute="centerX" secondItem="ayt-2R-lyr" secondAttribute="centerX" id="Seo-xP-hzj"/>
                             <constraint firstItem="ayt-2R-lyr" firstAttribute="top" secondItem="Tg9-Da-0GH" secondAttribute="bottom" constant="19" id="XbW-al-isq"/>
+                            <constraint firstItem="T8O-K8-Pgh" firstAttribute="leading" secondItem="sA3-DT-cXR" secondAttribute="leading" id="ZM4-DY-Ehi"/>
                             <constraint firstItem="Tg9-Da-0GH" firstAttribute="top" secondItem="gUi-wN-XFf" secondAttribute="bottom" constant="8" symbolic="YES" id="Zf5-0R-V9h"/>
                             <constraint firstItem="ayt-2R-lyr" firstAttribute="bottom" secondItem="jud-9m-zuh" secondAttribute="bottom" constant="-40" id="b2b-p3-Frt"/>
                             <constraint firstItem="gUi-wN-XFf" firstAttribute="leading" secondItem="sA3-DT-cXR" secondAttribute="leading" constant="24" id="bag-Xh-B4X"/>
                             <constraint firstItem="T8O-K8-Pgh" firstAttribute="top" secondItem="jud-9m-zuh" secondAttribute="top" id="cAi-Lp-J6o"/>
                             <constraint firstAttribute="bottom" secondItem="T8O-K8-Pgh" secondAttribute="bottom" id="hQQ-eK-b5a"/>
+                            <constraint firstItem="T8O-K8-Pgh" firstAttribute="trailing" secondItem="sA3-DT-cXR" secondAttribute="trailing" id="jvG-8N-HQh"/>
                             <constraint firstItem="sA3-DT-cXR" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gUi-wN-XFf" secondAttribute="trailing" symbolic="YES" id="n8F-pi-4Ki"/>
                             <constraint firstAttribute="centerX" secondItem="T8O-K8-Pgh" secondAttribute="centerX" id="nfo-4N-meb"/>
                         </constraints>
@@ -518,6 +533,7 @@ kamu butuhkan</string>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rentang Usia Mereka" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqx-e6-IGy">
                                 <rect key="frame" x="123" y="274" width="170.5" height="21"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="170.5" id="9NZ-zq-BlO"/>
                                     <constraint firstAttribute="height" constant="21" id="qQK-py-2Hx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
@@ -581,6 +597,7 @@ kamu butuhkan</string>
                                 <rect key="frame" x="107" y="406" width="200" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="aHo-MJ-pta"/>
+                                    <constraint firstAttribute="width" constant="200" id="aPr-m0-0n9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -626,6 +643,7 @@ kamu butuhkan</string>
                             <constraint firstItem="USs-A1-a2e" firstAttribute="leading" secondItem="Ryg-MJ-1gC" secondAttribute="leading" constant="87" id="5hR-Ez-QPk"/>
                             <constraint firstItem="wDZ-Df-v2X" firstAttribute="centerX" secondItem="USs-A1-a2e" secondAttribute="centerX" id="CKq-BH-Vrp"/>
                             <constraint firstItem="oqx-e6-IGy" firstAttribute="top" secondItem="7aR-Zz-DsQ" secondAttribute="bottom" constant="59" id="DfS-3a-FQ4"/>
+                            <constraint firstItem="gnp-qc-ojy" firstAttribute="trailing" secondItem="Ryg-MJ-1gC" secondAttribute="trailing" id="Fyx-Nt-o61"/>
                             <constraint firstItem="7IU-Z7-BJD" firstAttribute="centerX" secondItem="UqZ-xp-quk" secondAttribute="centerX" id="HBI-EX-H0G"/>
                             <constraint firstItem="7IU-Z7-BJD" firstAttribute="top" secondItem="Itk-fK-Imh" secondAttribute="top" constant="406" id="N4X-s0-U09"/>
                             <constraint firstItem="7IU-Z7-BJD" firstAttribute="centerX" secondItem="7aR-Zz-DsQ" secondAttribute="centerX" constant="-1.25" id="Rz1-Fy-gfG"/>
@@ -633,8 +651,10 @@ kamu butuhkan</string>
                             <constraint firstItem="7IU-Z7-BJD" firstAttribute="centerX" secondItem="gnp-qc-ojy" secondAttribute="centerX" id="WV9-P5-SQg"/>
                             <constraint firstItem="gnp-qc-ojy" firstAttribute="centerX" secondItem="USs-A1-a2e" secondAttribute="centerX" id="aNX-Z4-ZqK"/>
                             <constraint firstItem="Ryg-MJ-1gC" firstAttribute="bottom" secondItem="UqZ-xp-quk" secondAttribute="bottom" constant="57" id="eIM-RZ-RUb"/>
+                            <constraint firstAttribute="bottom" secondItem="gnp-qc-ojy" secondAttribute="bottom" id="fK7-fJ-B4j"/>
                             <constraint firstItem="UqZ-xp-quk" firstAttribute="centerX" secondItem="USs-A1-a2e" secondAttribute="centerX" id="gFP-5G-JjM"/>
                             <constraint firstItem="N7B-QO-XJB" firstAttribute="centerX" secondItem="UqZ-xp-quk" secondAttribute="centerX" id="h0w-Lq-jCm"/>
+                            <constraint firstItem="gnp-qc-ojy" firstAttribute="leading" secondItem="Ryg-MJ-1gC" secondAttribute="leading" id="hJo-ru-Ngw"/>
                             <constraint firstItem="wDZ-Df-v2X" firstAttribute="top" secondItem="g8s-z5-MfZ" secondAttribute="bottom" constant="26" id="jgK-xQ-yU4"/>
                             <constraint firstItem="7IU-Z7-BJD" firstAttribute="top" secondItem="USs-A1-a2e" secondAttribute="bottom" constant="55" id="kIq-AX-eOw"/>
                             <constraint firstItem="oqx-e6-IGy" firstAttribute="leading" secondItem="Ryg-MJ-1gC" secondAttribute="leading" constant="123" id="kxm-Mz-5qk"/>
@@ -674,6 +694,10 @@ kamu butuhkan</string>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="g6g-EU-N6Q">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="2WQ-dn-Gz7"/>
+                                    <constraint firstAttribute="height" constant="896" id="WaW-0j-mWj"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="noy-ue-TQa">
                                 <rect key="frame" x="20" y="61" width="44" height="44"/>
@@ -807,11 +831,13 @@ kamu butuhkan</string>
                             <constraint firstItem="2VE-QZ-aAc" firstAttribute="leading" secondItem="lGr-2H-PaE" secondAttribute="trailing" constant="16.5" id="5nH-A5-Wvg"/>
                             <constraint firstAttribute="bottom" secondItem="Sgs-Ky-fXK" secondAttribute="bottom" constant="279" id="BYk-Mg-PNB"/>
                             <constraint firstItem="MFI-Xq-x3k" firstAttribute="top" secondItem="lGr-2H-PaE" secondAttribute="top" id="DdE-3Q-sfv"/>
+                            <constraint firstItem="g6g-EU-N6Q" firstAttribute="top" secondItem="dm5-4f-igj" secondAttribute="top" id="DpI-GH-vNv"/>
                             <constraint firstItem="XuA-jN-RRv" firstAttribute="leading" secondItem="LEe-PI-5Zt" secondAttribute="leading" constant="24" id="E2M-lo-TQa"/>
                             <constraint firstItem="q6L-81-8Gd" firstAttribute="trailing" secondItem="3kr-ee-5HC" secondAttribute="trailing" id="EJI-dX-VFT"/>
                             <constraint firstItem="nmy-k3-7dI" firstAttribute="baseline" secondItem="NsL-aV-pUB" secondAttribute="baseline" id="EUB-7S-dfV"/>
                             <constraint firstItem="0H7-3y-EjO" firstAttribute="top" secondItem="Ays-WA-CiJ" secondAttribute="bottom" constant="34" id="ExF-dJ-6b9"/>
                             <constraint firstItem="ECX-Uj-Rd6" firstAttribute="leading" secondItem="LEe-PI-5Zt" secondAttribute="leading" constant="117.5" id="Fsv-hp-cnJ"/>
+                            <constraint firstItem="g6g-EU-N6Q" firstAttribute="leading" secondItem="LEe-PI-5Zt" secondAttribute="leading" id="J0S-z5-SYp"/>
                             <constraint firstItem="MFI-Xq-x3k" firstAttribute="leading" secondItem="2VE-QZ-aAc" secondAttribute="trailing" constant="16" id="JYy-n2-g2i"/>
                             <constraint firstItem="Sgs-Ky-fXK" firstAttribute="leading" secondItem="LEe-PI-5Zt" secondAttribute="leading" constant="25" id="Jyk-MU-QRO"/>
                             <constraint firstItem="C8s-dH-Ohd" firstAttribute="top" secondItem="LEe-PI-5Zt" secondAttribute="top" constant="22" id="Kkj-2S-ATh"/>
@@ -842,10 +868,12 @@ kamu butuhkan</string>
                             <constraint firstItem="ECX-Uj-Rd6" firstAttribute="centerX" secondItem="CDM-60-8c5" secondAttribute="centerX" id="ppg-YI-yNf"/>
                             <constraint firstItem="Sgs-Ky-fXK" firstAttribute="top" secondItem="XuA-jN-RRv" secondAttribute="bottom" constant="15" id="pxF-4f-d2o"/>
                             <constraint firstItem="nmy-k3-7dI" firstAttribute="firstBaseline" secondItem="NsL-aV-pUB" secondAttribute="firstBaseline" id="qkf-Dg-zuC"/>
+                            <constraint firstItem="g6g-EU-N6Q" firstAttribute="trailing" secondItem="LEe-PI-5Zt" secondAttribute="trailing" id="rgp-Ig-Tkc"/>
                             <constraint firstItem="REH-nG-zNz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="nmy-k3-7dI" secondAttribute="trailing" constant="8" symbolic="YES" id="ryp-wQ-irH"/>
                             <constraint firstItem="LEe-PI-5Zt" firstAttribute="trailing" secondItem="q6L-81-8Gd" secondAttribute="trailing" constant="24" id="s5X-31-Plz"/>
                             <constraint firstItem="ECX-Uj-Rd6" firstAttribute="top" secondItem="2VE-QZ-aAc" secondAttribute="bottom" constant="43" id="scm-yG-KSl"/>
                             <constraint firstItem="NsL-aV-pUB" firstAttribute="leading" secondItem="LEe-PI-5Zt" secondAttribute="leading" constant="75" id="vOx-Hb-Iyc"/>
+                            <constraint firstAttribute="bottom" secondItem="g6g-EU-N6Q" secondAttribute="bottom" id="wfo-8I-dku"/>
                             <constraint firstItem="0H7-3y-EjO" firstAttribute="centerX" secondItem="XuA-jN-RRv" secondAttribute="centerX" constant="-2.25" id="xkk-DO-1II"/>
                             <constraint firstItem="ECX-Uj-Rd6" firstAttribute="centerY" secondItem="dm5-4f-igj" secondAttribute="centerY" id="yKe-2J-Tc8"/>
                             <constraint firstItem="NsL-aV-pUB" firstAttribute="bottom" secondItem="Ays-WA-CiJ" secondAttribute="bottom" id="zFC-Ps-xCi"/>
@@ -1217,9 +1245,12 @@ kamu butuhkan</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background_LandingPage" translatesAutoresizingMaskIntoConstraints="NO" id="H4x-Zh-HKk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_LandingPage" translatesAutoresizingMaskIntoConstraints="NO" id="H4x-Zh-HKk">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="896" id="DqX-dc-sub"/>
+                                    <constraint firstAttribute="width" constant="414" id="g3c-cY-Ik3"/>
+                                </constraints>
                             </imageView>
                             <view alpha="0.5" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jbu-0p-HjQ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -1289,6 +1320,7 @@ kamu butuhkan</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="2Xe-g7-WOT" firstAttribute="top" secondItem="nEH-3b-frY" secondAttribute="bottom" constant="8" id="0qt-xm-bRX"/>
+                            <constraint firstItem="H4x-Zh-HKk" firstAttribute="trailing" secondItem="KnV-Ox-0Tp" secondAttribute="trailing" id="5SN-yh-QOb"/>
                             <constraint firstItem="nEz-Iz-pyv" firstAttribute="top" secondItem="B5g-Vu-XEV" secondAttribute="bottom" constant="26" id="7Tk-qU-vyp"/>
                             <constraint firstItem="KnV-Ox-0Tp" firstAttribute="trailing" secondItem="q4z-G1-CM0" secondAttribute="trailing" constant="198.5" id="7pQ-e4-AKC"/>
                             <constraint firstItem="nEH-3b-frY" firstAttribute="leading" secondItem="KnV-Ox-0Tp" secondAttribute="leading" constant="199" id="8wD-EU-55e"/>
@@ -1302,10 +1334,12 @@ kamu butuhkan</string>
                             <constraint firstItem="KnV-Ox-0Tp" firstAttribute="trailing" secondItem="B5g-Vu-XEV" secondAttribute="trailing" constant="150" id="Izq-gQ-ffZ"/>
                             <constraint firstItem="KnV-Ox-0Tp" firstAttribute="trailing" secondItem="vqB-hd-S2e" secondAttribute="trailing" constant="107" id="MxN-gL-IrB"/>
                             <constraint firstItem="Mnw-5Q-umr" firstAttribute="leading" secondItem="KnV-Ox-0Tp" secondAttribute="leading" constant="50" id="O8r-6a-CO2"/>
+                            <constraint firstAttribute="bottom" secondItem="H4x-Zh-HKk" secondAttribute="bottom" id="QDg-Ue-CNW"/>
                             <constraint firstItem="vqB-hd-S2e" firstAttribute="top" secondItem="HJe-fx-QRw" secondAttribute="bottom" constant="8.5" id="Qsv-KC-L4S"/>
                             <constraint firstItem="nEz-Iz-pyv" firstAttribute="leading" secondItem="KnV-Ox-0Tp" secondAttribute="leading" constant="43" id="S3R-jQ-R6j"/>
                             <constraint firstItem="2Xe-g7-WOT" firstAttribute="leading" secondItem="KnV-Ox-0Tp" secondAttribute="leading" constant="137.5" id="ZcN-Fw-MZq"/>
                             <constraint firstItem="B5g-Vu-XEV" firstAttribute="leading" secondItem="KnV-Ox-0Tp" secondAttribute="leading" constant="146" id="aHg-2N-NZ1"/>
+                            <constraint firstItem="H4x-Zh-HKk" firstAttribute="leading" secondItem="KnV-Ox-0Tp" secondAttribute="leading" id="bx4-Rp-MVO"/>
                             <constraint firstItem="KnV-Ox-0Tp" firstAttribute="trailing" secondItem="nEH-3b-frY" secondAttribute="trailing" constant="198" id="gHL-Ra-7kK"/>
                             <constraint firstItem="KnV-Ox-0Tp" firstAttribute="trailing" secondItem="2Xe-g7-WOT" secondAttribute="trailing" constant="137.5" id="gxt-pW-nua"/>
                             <constraint firstItem="HJe-fx-QRw" firstAttribute="top" secondItem="KnV-Ox-0Tp" secondAttribute="top" constant="322.5" id="lty-ff-k8J"/>
@@ -1315,6 +1349,7 @@ kamu butuhkan</string>
                             <constraint firstItem="q4z-G1-CM0" firstAttribute="top" secondItem="nEz-Iz-pyv" secondAttribute="bottom" constant="13" id="tK6-XV-7C7"/>
                             <constraint firstItem="KnV-Ox-0Tp" firstAttribute="trailing" secondItem="HJe-fx-QRw" secondAttribute="trailing" constant="177" id="uZC-Ho-Baw"/>
                             <constraint firstItem="nEH-3b-frY" firstAttribute="top" secondItem="HJe-fx-QRw" secondAttribute="bottom" constant="136.5" id="vcW-2F-fJl"/>
+                            <constraint firstItem="H4x-Zh-HKk" firstAttribute="top" secondItem="3NW-41-JZV" secondAttribute="top" id="wmA-go-WOx"/>
                             <constraint firstItem="KnV-Ox-0Tp" firstAttribute="bottom" secondItem="HJe-fx-QRw" secondAttribute="bottom" constant="341.5" id="y6k-xJ-DrO"/>
                             <constraint firstItem="nEz-Iz-pyv" firstAttribute="top" secondItem="B5g-Vu-XEV" secondAttribute="bottom" constant="26" id="ybc-Iz-RpX"/>
                         </constraints>
@@ -1517,6 +1552,10 @@ Bullying/rasisme</string>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="UN6-fq-hVa">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="896" id="1Fe-Kj-gex"/>
+                                    <constraint firstAttribute="width" constant="414" id="nix-4s-36J"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VG2-pE-HsN">
                                 <rect key="frame" x="20" y="61" width="44" height="44"/>
@@ -1574,7 +1613,9 @@ Bullying/rasisme</string>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="UN6-fq-hVa" firstAttribute="leading" secondItem="6Bq-bU-w1D" secondAttribute="leading" id="260-0w-bPe"/>
                             <constraint firstItem="orc-dn-8aI" firstAttribute="centerX" secondItem="UN6-fq-hVa" secondAttribute="centerX" id="2Md-9s-6Bz"/>
+                            <constraint firstItem="UN6-fq-hVa" firstAttribute="trailing" secondItem="6Bq-bU-w1D" secondAttribute="trailing" id="2gK-FQ-wuQ"/>
                             <constraint firstItem="K8G-G0-ZhE" firstAttribute="leading" secondItem="6Bq-bU-w1D" secondAttribute="leading" constant="120" id="8zU-PH-q3x"/>
                             <constraint firstItem="hGM-Up-oUo" firstAttribute="centerY" secondItem="kd7-kp-mxU" secondAttribute="centerY" id="CEN-7u-0Z7"/>
                             <constraint firstItem="hGM-Up-oUo" firstAttribute="top" secondItem="o4P-q8-CkT" secondAttribute="bottom" constant="22.5" id="D3y-Md-IKP"/>
@@ -1583,6 +1624,7 @@ Bullying/rasisme</string>
                             <constraint firstItem="6Bq-bU-w1D" firstAttribute="bottom" secondItem="r6r-mi-c3o" secondAttribute="bottom" constant="75" id="QUs-es-O5l"/>
                             <constraint firstItem="UN6-fq-hVa" firstAttribute="top" secondItem="kd7-kp-mxU" secondAttribute="top" id="RCV-RS-zdJ"/>
                             <constraint firstItem="orc-dn-8aI" firstAttribute="top" secondItem="6Bq-bU-w1D" secondAttribute="top" constant="22" id="Saq-Rz-yAY"/>
+                            <constraint firstAttribute="bottom" secondItem="UN6-fq-hVa" secondAttribute="bottom" id="akt-E9-dHw"/>
                             <constraint firstItem="r6r-mi-c3o" firstAttribute="top" secondItem="K8G-G0-ZhE" secondAttribute="bottom" constant="94" id="bVA-D9-21x"/>
                             <constraint firstItem="r6r-mi-c3o" firstAttribute="leading" secondItem="6Bq-bU-w1D" secondAttribute="leading" constant="57" id="k1y-Tb-Bn3"/>
                             <constraint firstItem="Wzz-lm-nEZ" firstAttribute="top" secondItem="orc-dn-8aI" secondAttribute="bottom" constant="136" id="pok-bb-Bn0"/>
@@ -1612,6 +1654,10 @@ Bullying/rasisme</string>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="DDa-Md-l32">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="896" id="9Re-wu-5UF"/>
+                                    <constraint firstAttribute="width" constant="414" id="chL-Q4-uhp"/>
+                                </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJw-tj-RzC">
                                 <rect key="frame" x="20" y="61" width="44" height="44"/>
@@ -1665,8 +1711,11 @@ perahu kertas!</string>
                             <constraint firstItem="Jms-kC-lrN" firstAttribute="centerX" secondItem="e7q-wu-8L2" secondAttribute="centerX" id="CTj-Zz-GWr"/>
                             <constraint firstItem="G1c-lo-hM9" firstAttribute="centerX" secondItem="e7q-wu-8L2" secondAttribute="centerX" constant="1" id="J3F-EB-Tbm"/>
                             <constraint firstItem="G1c-lo-hM9" firstAttribute="top" secondItem="c86-Xm-PD5" secondAttribute="top" constant="257" id="KXB-eW-WD7"/>
+                            <constraint firstItem="DDa-Md-l32" firstAttribute="leading" secondItem="c86-Xm-PD5" secondAttribute="leading" id="OkU-Jq-v9K"/>
                             <constraint firstItem="G1c-lo-hM9" firstAttribute="centerX" secondItem="DDa-Md-l32" secondAttribute="centerX" constant="1" id="Yyo-Ni-nPy"/>
                             <constraint firstItem="DDa-Md-l32" firstAttribute="top" secondItem="NOp-5J-odr" secondAttribute="top" id="b3F-Sh-l2O"/>
+                            <constraint firstItem="DDa-Md-l32" firstAttribute="trailing" secondItem="c86-Xm-PD5" secondAttribute="trailing" id="dPN-OB-BrN"/>
+                            <constraint firstAttribute="bottom" secondItem="DDa-Md-l32" secondAttribute="bottom" id="eJx-Wb-sao"/>
                             <constraint firstItem="Jms-kC-lrN" firstAttribute="leading" secondItem="c86-Xm-PD5" secondAttribute="leading" constant="78" id="h5j-Rx-QZZ"/>
                             <constraint firstItem="G1c-lo-hM9" firstAttribute="centerX" secondItem="NOp-5J-odr" secondAttribute="centerX" constant="1" id="l1d-az-KV6"/>
                             <constraint firstItem="G1c-lo-hM9" firstAttribute="leading" secondItem="c86-Xm-PD5" secondAttribute="leading" constant="51" id="uTb-Oq-Rke"/>
@@ -1690,6 +1739,10 @@ perahu kertas!</string>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="eZt-LS-gaM">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="896" id="qBr-Eb-KMN"/>
+                                    <constraint firstAttribute="width" constant="414" id="u3u-ja-pmk"/>
+                                </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kertas_Surat-1" translatesAutoresizingMaskIntoConstraints="NO" id="jAd-zr-fOJ">
                                 <rect key="frame" x="24" y="280" width="366" height="351"/>
@@ -1794,6 +1847,8 @@ perahu kertas!</string>
                             <constraint firstItem="SgB-wZ-0ge" firstAttribute="trailing" secondItem="8pK-wv-9mK" secondAttribute="trailing" constant="350" id="LBy-zy-d6m"/>
                             <constraint firstItem="jAd-zr-fOJ" firstAttribute="top" secondItem="d7y-Dh-gdr" secondAttribute="top" constant="280" id="LqE-Rm-3li"/>
                             <constraint firstItem="1MY-JD-nTe" firstAttribute="top" secondItem="KxB-3d-KMV" secondAttribute="bottom" id="Mea-YD-aQR"/>
+                            <constraint firstItem="eZt-LS-gaM" firstAttribute="trailing" secondItem="SgB-wZ-0ge" secondAttribute="trailing" id="NKM-N4-pJx"/>
+                            <constraint firstItem="eZt-LS-gaM" firstAttribute="leading" secondItem="SgB-wZ-0ge" secondAttribute="leading" id="RIi-eJ-qY6"/>
                             <constraint firstItem="jAd-zr-fOJ" firstAttribute="top" secondItem="NYE-pT-Shi" secondAttribute="bottom" constant="-70" id="U8h-92-e66"/>
                             <constraint firstItem="Nzp-jg-MmB" firstAttribute="top" secondItem="hAl-7I-bJW" secondAttribute="bottom" constant="24" id="V8r-FF-eVl"/>
                             <constraint firstItem="KxB-3d-KMV" firstAttribute="top" secondItem="d7y-Dh-gdr" secondAttribute="top" constant="365" id="WTO-4b-rw9"/>
@@ -1810,6 +1865,7 @@ perahu kertas!</string>
                             <constraint firstItem="SWK-Ua-XZv" firstAttribute="top" secondItem="NYE-pT-Shi" secondAttribute="bottom" constant="8" symbolic="YES" id="my7-Iv-gJH"/>
                             <constraint firstItem="jAd-zr-fOJ" firstAttribute="leading" secondItem="NYE-pT-Shi" secondAttribute="trailing" constant="-60" id="oHi-8V-q4K"/>
                             <constraint firstItem="SWK-Ua-XZv" firstAttribute="centerX" secondItem="Nzp-jg-MmB" secondAttribute="centerX" id="pep-Bt-dCe"/>
+                            <constraint firstAttribute="bottom" secondItem="eZt-LS-gaM" secondAttribute="bottom" id="r6o-RV-Nmt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="SgB-wZ-0ge"/>
                     </view>
@@ -1909,9 +1965,13 @@ perahu kertas!</string>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="zFF-IM-JSc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="1An-00-Qi8"/>
+                                    <constraint firstAttribute="height" constant="896" id="f9h-20-8KG"/>
+                                </constraints>
                             </imageView>
                             <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZcG-yV-lfb">
-                                <rect key="frame" x="0.0" y="-55" width="414" height="1001"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="laporkanpengguna" translatesAutoresizingMaskIntoConstraints="NO" id="btA-sQ-vRs">
@@ -1941,6 +2001,8 @@ perahu kertas!</string>
                         <constraints>
                             <constraint firstItem="zFF-IM-JSc" firstAttribute="top" secondItem="dCg-uP-NCF" secondAttribute="top" id="0kg-SD-BW2"/>
                             <constraint firstItem="wdh-0k-iFL" firstAttribute="leading" secondItem="GaC-qs-gFG" secondAttribute="trailing" constant="28" id="EQq-YW-y0t"/>
+                            <constraint firstAttribute="bottom" secondItem="zFF-IM-JSc" secondAttribute="bottom" id="HVB-W3-HhM"/>
+                            <constraint firstItem="zFF-IM-JSc" firstAttribute="leading" secondItem="3Sg-dV-sLR" secondAttribute="leading" id="Ive-UE-T0f"/>
                             <constraint firstItem="btA-sQ-vRs" firstAttribute="centerX" secondItem="ZcG-yV-lfb" secondAttribute="centerX" id="ShD-2Y-Scp"/>
                             <constraint firstItem="ZcG-yV-lfb" firstAttribute="leading" secondItem="zFF-IM-JSc" secondAttribute="leading" id="THx-QY-U5h"/>
                             <constraint firstAttribute="bottom" secondItem="GaC-qs-gFG" secondAttribute="bottom" constant="318" id="Z4a-c4-IaP"/>
@@ -1948,10 +2010,11 @@ perahu kertas!</string>
                             <constraint firstItem="btA-sQ-vRs" firstAttribute="centerY" secondItem="zFF-IM-JSc" secondAttribute="centerY" id="kCL-5z-wsi"/>
                             <constraint firstItem="btA-sQ-vRs" firstAttribute="centerX" secondItem="dCg-uP-NCF" secondAttribute="centerX" id="kKy-f0-Iaa"/>
                             <constraint firstItem="3Sg-dV-sLR" firstAttribute="bottom" secondItem="wdh-0k-iFL" secondAttribute="bottom" constant="282" id="lz8-Hh-E3i"/>
+                            <constraint firstItem="zFF-IM-JSc" firstAttribute="trailing" secondItem="3Sg-dV-sLR" secondAttribute="trailing" id="m8Z-WT-5Td"/>
                             <constraint firstItem="3Sg-dV-sLR" firstAttribute="trailing" secondItem="wdh-0k-iFL" secondAttribute="trailing" constant="84" id="n9s-qA-54T"/>
-                            <constraint firstItem="ZcG-yV-lfb" firstAttribute="top" secondItem="dCg-uP-NCF" secondAttribute="top" constant="-55" id="tpq-96-RBs"/>
+                            <constraint firstItem="ZcG-yV-lfb" firstAttribute="top" secondItem="dCg-uP-NCF" secondAttribute="top" id="tpq-96-RBs"/>
                             <constraint firstItem="wdh-0k-iFL" firstAttribute="top" secondItem="3Sg-dV-sLR" secondAttribute="top" constant="474" id="w2G-CM-nZG"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="ZcG-yV-lfb" secondAttribute="bottom" constant="-84" id="xgk-Xe-70b"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="ZcG-yV-lfb" secondAttribute="bottom" constant="-34" id="xgk-Xe-70b"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3Sg-dV-sLR"/>
                     </view>
@@ -1972,6 +2035,10 @@ perahu kertas!</string>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="9Zz-Gc-aWw">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="evo-Wf-xAY"/>
+                                    <constraint firstAttribute="height" constant="896" id="kc5-Ba-ajd"/>
+                                </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kertas_balasan_White" translatesAutoresizingMaskIntoConstraints="NO" id="jAm-GM-LsU">
                                 <rect key="frame" x="24" y="426" width="366" height="271"/>
@@ -2287,6 +2354,7 @@ perahu kertas!</string>
                             <constraint firstItem="EgK-SU-Ibf" firstAttribute="bottom" secondItem="bFB-w3-eVM" secondAttribute="bottom" id="YW3-fl-jJr"/>
                             <constraint firstItem="xyH-Pw-cl1" firstAttribute="leading" secondItem="4Q2-8b-9YY" secondAttribute="leading" constant="52" id="Ym2-X3-E8y"/>
                             <constraint firstItem="3Pw-If-xbv" firstAttribute="leading" secondItem="4Q2-8b-9YY" secondAttribute="leading" constant="20" id="YmR-19-XhH"/>
+                            <constraint firstAttribute="bottom" secondItem="9Zz-Gc-aWw" secondAttribute="bottom" id="ZG4-uw-ieD"/>
                             <constraint firstItem="g0P-Pj-weQ" firstAttribute="top" secondItem="jAm-GM-LsU" secondAttribute="bottom" constant="24.5" id="ZoC-kb-XWV"/>
                             <constraint firstItem="oa9-07-acV" firstAttribute="leading" secondItem="yAx-nm-KBR" secondAttribute="trailing" constant="17.5" id="am3-2L-0cE"/>
                             <constraint firstItem="b7l-sM-l5X" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GMn-qb-Dam" secondAttribute="trailing" constant="8" symbolic="YES" id="bNe-jV-FTa"/>
@@ -2307,8 +2375,10 @@ perahu kertas!</string>
                             <constraint firstItem="RQg-Nv-dp2" firstAttribute="centerX" secondItem="Pof-2P-P9c" secondAttribute="centerX" id="oft-Jc-ppS"/>
                             <constraint firstItem="ik2-fj-Jan" firstAttribute="leading" secondItem="4Q2-8b-9YY" secondAttribute="leading" constant="39" id="pbA-IH-vnK"/>
                             <constraint firstItem="bAQ-KZ-caC" firstAttribute="leading" secondItem="4Q2-8b-9YY" secondAttribute="leading" constant="32" id="rBu-f3-xhD"/>
+                            <constraint firstItem="9Zz-Gc-aWw" firstAttribute="trailing" secondItem="4Q2-8b-9YY" secondAttribute="trailing" id="rjg-s5-FIm"/>
                             <constraint firstItem="b7l-sM-l5X" firstAttribute="firstBaseline" secondItem="GMn-qb-Dam" secondAttribute="firstBaseline" id="ssK-2M-Sdg"/>
                             <constraint firstItem="f5v-u2-7m4" firstAttribute="centerY" secondItem="ik2-fj-Jan" secondAttribute="centerY" id="tat-Fn-adR"/>
+                            <constraint firstItem="9Zz-Gc-aWw" firstAttribute="leading" secondItem="4Q2-8b-9YY" secondAttribute="leading" id="tp3-IH-caP"/>
                             <constraint firstItem="EgK-SU-Ibf" firstAttribute="bottom" secondItem="nf3-PG-ZEJ" secondAttribute="bottom" id="u76-a8-b3k"/>
                             <constraint firstItem="EgK-SU-Ibf" firstAttribute="bottom" secondItem="Y6Q-aE-eek" secondAttribute="bottom" id="xNo-db-iFh"/>
                             <constraint firstItem="CkK-5h-oAa" firstAttribute="leading" secondItem="JmL-gt-cVi" secondAttribute="leadingMargin" constant="-45" id="xR1-Fa-v9a"/>
@@ -2363,6 +2433,10 @@ perahu kertas!</string>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="vpk-ay-bwG">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="Fc7-t1-Lvk"/>
+                                    <constraint firstAttribute="height" constant="896" id="nwB-on-tHd"/>
+                                </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fFU-PU-NPB">
                                 <rect key="frame" x="24" y="323" width="366" height="506"/>
@@ -2397,11 +2471,14 @@ perahu kertas!</string>
                         <constraints>
                             <constraint firstItem="FY1-xO-KsI" firstAttribute="leading" secondItem="R96-vv-MYX" secondAttribute="leading" constant="108" id="7IL-Gy-qta"/>
                             <constraint firstItem="FY1-xO-KsI" firstAttribute="top" secondItem="R96-vv-MYX" secondAttribute="top" constant="-21" id="G6Q-4J-lvf"/>
+                            <constraint firstItem="vpk-ay-bwG" firstAttribute="trailing" secondItem="R96-vv-MYX" secondAttribute="trailing" id="J6d-fP-muC"/>
                             <constraint firstItem="FY1-xO-KsI" firstAttribute="centerX" secondItem="y4G-Cd-s2a" secondAttribute="centerX" id="Q6s-va-bNZ"/>
                             <constraint firstItem="R96-vv-MYX" firstAttribute="trailing" secondItem="fFU-PU-NPB" secondAttribute="trailing" constant="24" id="SxO-02-Tzl"/>
+                            <constraint firstAttribute="bottom" secondItem="vpk-ay-bwG" secondAttribute="bottom" id="au2-eO-he4"/>
                             <constraint firstItem="fFU-PU-NPB" firstAttribute="leading" secondItem="R96-vv-MYX" secondAttribute="leading" constant="24" id="cQH-Nx-eUy"/>
                             <constraint firstItem="fFU-PU-NPB" firstAttribute="top" secondItem="FY1-xO-KsI" secondAttribute="bottom" constant="222" id="iGJ-sZ-6HY"/>
                             <constraint firstAttribute="bottomMargin" secondItem="fFU-PU-NPB" secondAttribute="bottom" constant="-16" id="mGj-HN-KP2"/>
+                            <constraint firstItem="vpk-ay-bwG" firstAttribute="leading" secondItem="R96-vv-MYX" secondAttribute="leading" id="rxt-YT-R3r"/>
                             <constraint firstItem="vpk-ay-bwG" firstAttribute="top" secondItem="y4G-Cd-s2a" secondAttribute="top" id="tAx-Ft-zXm"/>
                             <constraint firstItem="FY1-xO-KsI" firstAttribute="centerX" secondItem="vpk-ay-bwG" secondAttribute="centerX" id="vJc-1L-LlI"/>
                         </constraints>
@@ -2426,7 +2503,11 @@ perahu kertas!</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="pmT-7G-NN0">
-                                <rect key="frame" x="0.0" y="-1" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-1" width="414" height="897"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="8Ni-AC-j0Q"/>
+                                    <constraint firstAttribute="height" constant="897" id="Wxl-2N-D3H"/>
+                                </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Top_rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="qTv-AA-2Mq">
                                 <rect key="frame" x="24" y="242" width="366" height="264"/>
@@ -2500,7 +2581,7 @@ perahu kertas!</string>
                                 <size key="shadowOffset" width="1" height="0.0"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="d5C-wN-xvc">
-                                <rect key="frame" x="20" y="530" width="366" height="365"/>
+                                <rect key="frame" x="20" y="530" width="366" height="366"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="30Q-Qs-TO7">
                                     <size key="itemSize" width="366" height="242"/>
@@ -2560,12 +2641,15 @@ perahu kertas!</string>
                             <constraint firstItem="AYY-g3-arc" firstAttribute="leading" secondItem="Eju-rM-b4O" secondAttribute="leadingMargin" id="STI-GU-kjU"/>
                             <constraint firstItem="pmT-7G-NN0" firstAttribute="top" secondItem="Eju-rM-b4O" secondAttribute="topMargin" constant="-45" id="TJ3-eh-rRQ"/>
                             <constraint firstItem="ogN-Nx-Or4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="jv6-2v-6Gc" secondAttribute="leading" id="WAU-Ba-QKn"/>
+                            <constraint firstAttribute="bottom" secondItem="pmT-7G-NN0" secondAttribute="bottom" id="YfO-Vg-8b3"/>
                             <constraint firstItem="jv6-2v-6Gc" firstAttribute="trailing" secondItem="t7s-GS-Xbk" secondAttribute="trailing" constant="74.5" id="aIC-lU-gSS"/>
                             <constraint firstItem="5kU-Zh-FVb" firstAttribute="centerY" secondItem="f7b-r9-OjN" secondAttribute="centerY" id="bLS-8H-ffX"/>
                             <constraint firstItem="5kU-Zh-FVb" firstAttribute="top" secondItem="jv6-2v-6Gc" secondAttribute="top" constant="207" id="bOW-k1-Ygj"/>
                             <constraint firstItem="pmT-7G-NN0" firstAttribute="bottom" secondItem="d5C-wN-xvc" secondAttribute="bottom" id="bST-Ll-Whf"/>
+                            <constraint firstItem="pmT-7G-NN0" firstAttribute="leading" secondItem="jv6-2v-6Gc" secondAttribute="leading" id="enR-bD-pRW"/>
                             <constraint firstItem="jv6-2v-6Gc" firstAttribute="trailing" secondItem="qTv-AA-2Mq" secondAttribute="trailing" constant="24" id="gjS-nC-vlN"/>
                             <constraint firstItem="AYY-g3-arc" firstAttribute="leading" secondItem="d5C-wN-xvc" secondAttribute="leading" id="glV-hi-1Qx"/>
+                            <constraint firstItem="pmT-7G-NN0" firstAttribute="trailing" secondItem="jv6-2v-6Gc" secondAttribute="trailing" id="goq-9T-OiP"/>
                             <constraint firstItem="aaj-l2-38j" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qTv-AA-2Mq" secondAttribute="trailing" id="hae-Hz-L0i"/>
                             <constraint firstItem="f7b-r9-OjN" firstAttribute="leading" secondItem="5kU-Zh-FVb" secondAttribute="trailing" constant="8" symbolic="YES" id="hhh-Bc-3el"/>
                             <constraint firstItem="t7s-GS-Xbk" firstAttribute="centerX" secondItem="aaj-l2-38j" secondAttribute="centerX" id="ixF-Gx-Svg"/>
@@ -2724,12 +2808,19 @@ perahu kertas!</string>
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="gyG-6u-XI1">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="gyG-6u-XI1">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="896" id="HX8-8H-eJA"/>
+                                    <constraint firstAttribute="width" constant="414" id="ib5-aH-95h"/>
+                                </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Kertas_Surat" translatesAutoresizingMaskIntoConstraints="NO" id="57x-Rm-3ni">
                                 <rect key="frame" x="24.5" y="201" width="366" height="530"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="530" id="NWh-3E-bU1"/>
+                                    <constraint firstAttribute="width" constant="366" id="ocb-MV-wvk"/>
+                                </constraints>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="ketuk untuk mulai menulis pertanyaanmu" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="TAd-U8-48M">
                                 <rect key="frame" x="49" y="278" width="317" height="20"/>
@@ -2774,13 +2865,17 @@ perahu kertas!</string>
                         <constraints>
                             <constraint firstItem="TAd-U8-48M" firstAttribute="centerX" secondItem="57x-Rm-3ni" secondAttribute="centerX" id="11Z-J8-Pqh"/>
                             <constraint firstItem="TAd-U8-48M" firstAttribute="top" secondItem="CN6-s6-a3Q" secondAttribute="bottom" constant="20" id="5Lo-NS-mQ4"/>
+                            <constraint firstAttribute="bottom" secondItem="gyG-6u-XI1" secondAttribute="bottom" id="6nx-Ho-HV8"/>
                             <constraint firstItem="sI2-wd-7aR" firstAttribute="leading" secondItem="K1d-W5-eBp" secondAttribute="leading" constant="55" id="7sS-MK-okn"/>
                             <constraint firstItem="sI2-wd-7aR" firstAttribute="baseline" secondItem="CN6-s6-a3Q" secondAttribute="baseline" id="Azv-OZ-GZ7"/>
                             <constraint firstItem="sI2-wd-7aR" firstAttribute="top" secondItem="K1d-W5-eBp" secondAttribute="top" constant="181" id="HsU-UO-zxZ"/>
+                            <constraint firstItem="gyG-6u-XI1" firstAttribute="leading" secondItem="K1d-W5-eBp" secondAttribute="leading" id="IXo-OH-nHe"/>
                             <constraint firstItem="K1d-W5-eBp" firstAttribute="bottom" secondItem="57x-Rm-3ni" secondAttribute="bottom" constant="131" id="Il1-4F-fbl"/>
                             <constraint firstItem="CN6-s6-a3Q" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="sI2-wd-7aR" secondAttribute="trailing" constant="8" symbolic="YES" id="K7l-1C-OrI"/>
                             <constraint firstItem="TAd-U8-48M" firstAttribute="trailing" secondItem="CN6-s6-a3Q" secondAttribute="trailing" id="g0J-Fi-vn3"/>
+                            <constraint firstItem="gyG-6u-XI1" firstAttribute="top" secondItem="XW0-XD-85U" secondAttribute="top" id="iXm-Zg-gFp"/>
                             <constraint firstItem="57x-Rm-3ni" firstAttribute="leading" secondItem="K1d-W5-eBp" secondAttribute="leading" constant="24.5" id="qAs-g2-zMM"/>
+                            <constraint firstItem="gyG-6u-XI1" firstAttribute="trailing" secondItem="K1d-W5-eBp" secondAttribute="trailing" id="xHB-6v-iKx"/>
                             <constraint firstItem="K1d-W5-eBp" firstAttribute="trailing" secondItem="CN6-s6-a3Q" secondAttribute="trailing" constant="48" id="z06-oZ-VgG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="K1d-W5-eBp"/>
@@ -2939,6 +3034,10 @@ bebanmu melalui perahu kertas ini</string>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Profile" translatesAutoresizingMaskIntoConstraints="NO" id="8Zb-nc-W13">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="G8u-gv-MMT"/>
+                                    <constraint firstAttribute="height" constant="896" id="Kx1-KM-o7i"/>
+                                </constraints>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background_Report" translatesAutoresizingMaskIntoConstraints="NO" id="C9Y-th-SyK">
                                 <rect key="frame" x="24" y="287" width="366" height="351"/>
@@ -2981,8 +3080,11 @@ kamu merasa tidak nyaman.</string>
                             <constraint firstItem="Iqo-gU-UDF" firstAttribute="centerX" secondItem="af4-pC-fn6" secondAttribute="centerX" id="4ht-cj-qmh"/>
                             <constraint firstItem="c3S-gE-mY2" firstAttribute="leading" secondItem="yOf-mA-lQe" secondAttribute="leading" constant="100" id="6lT-N8-nVd"/>
                             <constraint firstItem="C9Y-th-SyK" firstAttribute="top" secondItem="yOf-mA-lQe" secondAttribute="top" constant="243" id="K1H-a0-gbi"/>
+                            <constraint firstAttribute="bottom" secondItem="8Zb-nc-W13" secondAttribute="bottom" id="KFi-5V-I2p"/>
                             <constraint firstItem="8Zb-nc-W13" firstAttribute="top" secondItem="k59-WL-Uty" secondAttribute="top" id="SFk-6G-OD2"/>
                             <constraint firstItem="af4-pC-fn6" firstAttribute="top" secondItem="c3S-gE-mY2" secondAttribute="bottom" constant="14" id="UHl-vD-c4x"/>
+                            <constraint firstItem="8Zb-nc-W13" firstAttribute="trailing" secondItem="yOf-mA-lQe" secondAttribute="trailing" id="WTM-o7-6x6"/>
+                            <constraint firstItem="8Zb-nc-W13" firstAttribute="leading" secondItem="yOf-mA-lQe" secondAttribute="leading" id="aEN-hj-61i"/>
                             <constraint firstItem="af4-pC-fn6" firstAttribute="centerX" secondItem="k59-WL-Uty" secondAttribute="centerX" id="iL9-9L-TXp"/>
                             <constraint firstItem="af4-pC-fn6" firstAttribute="top" secondItem="k59-WL-Uty" secondAttribute="top" constant="431" id="iqG-ga-dX3"/>
                             <constraint firstItem="c3S-gE-mY2" firstAttribute="top" secondItem="yOf-mA-lQe" secondAttribute="top" constant="305" id="jrw-aQ-N7x"/>
@@ -3012,9 +3114,17 @@ kamu merasa tidak nyaman.</string>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle-2" translatesAutoresizingMaskIntoConstraints="NO" id="cW5-A1-Scy">
                                         <rect key="frame" x="0.0" y="-500" width="414" height="1050"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1050" id="Ah7-CX-R2g"/>
+                                            <constraint firstAttribute="width" constant="414" id="sxB-QZ-K7M"/>
+                                        </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 3" translatesAutoresizingMaskIntoConstraints="NO" id="Fgz-AC-6yD">
                                         <rect key="frame" x="0.0" y="60" width="414" height="838"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="838" id="vjo-jS-pFq"/>
+                                            <constraint firstAttribute="width" constant="414" id="xXZ-Ut-LhS"/>
+                                        </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9I-Bv-Sdf">
                                         <rect key="frame" x="20" y="61" width="44" height="44"/>
@@ -3047,13 +3157,17 @@ kamu merasa tidak nyaman.</string>
                                 <constraints>
                                     <constraint firstItem="nOx-Vp-GUn" firstAttribute="top" secondItem="MZC-Qs-nFQ" secondAttribute="top" constant="309" id="6kv-lC-BvX"/>
                                     <constraint firstAttribute="trailing" secondItem="n9I-Bv-Sdf" secondAttribute="trailing" constant="350" id="7dm-DA-kOt"/>
+                                    <constraint firstItem="Fgz-AC-6yD" firstAttribute="leading" secondItem="MZC-Qs-nFQ" secondAttribute="leading" id="8WU-Ld-zIn"/>
                                     <constraint firstItem="Fgz-AC-6yD" firstAttribute="top" secondItem="MZC-Qs-nFQ" secondAttribute="top" constant="60" id="AUJ-0T-qT3"/>
                                     <constraint firstItem="cW5-A1-Scy" firstAttribute="top" secondItem="MZC-Qs-nFQ" secondAttribute="top" constant="-500" id="H9h-KV-3Vl"/>
                                     <constraint firstItem="nOx-Vp-GUn" firstAttribute="trailing" secondItem="MZC-Qs-nFQ" secondAttribute="trailingMargin" id="Hne-41-lBR"/>
                                     <constraint firstItem="eAs-4w-Iit" firstAttribute="centerX" secondItem="Fgz-AC-6yD" secondAttribute="centerX" id="Jvy-JJ-UH8"/>
+                                    <constraint firstItem="cW5-A1-Scy" firstAttribute="leading" secondItem="MZC-Qs-nFQ" secondAttribute="leading" id="MlW-Ne-3QB"/>
                                     <constraint firstItem="eAs-4w-Iit" firstAttribute="leading" secondItem="MZC-Qs-nFQ" secondAttribute="leading" constant="93" id="RTl-qU-K6h"/>
                                     <constraint firstItem="eAs-4w-Iit" firstAttribute="centerX" secondItem="MZC-Qs-nFQ" secondAttribute="centerX" id="Tdw-cc-UWq"/>
+                                    <constraint firstAttribute="trailing" secondItem="cW5-A1-Scy" secondAttribute="trailing" id="Tem-eu-i8h"/>
                                     <constraint firstAttribute="bottom" secondItem="n9I-Bv-Sdf" secondAttribute="bottom" constant="791" id="Yqw-wd-COV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Fgz-AC-6yD" secondAttribute="trailing" id="k84-ER-ZWp"/>
                                     <constraint firstItem="eAs-4w-Iit" firstAttribute="centerX" secondItem="cW5-A1-Scy" secondAttribute="centerX" id="kgy-3O-Iy5"/>
                                     <constraint firstItem="n9I-Bv-Sdf" firstAttribute="top" secondItem="MZC-Qs-nFQ" secondAttribute="top" constant="61" id="mhy-LA-TGv"/>
                                     <constraint firstAttribute="bottom" secondItem="Fgz-AC-6yD" secondAttribute="bottom" constant="-2" id="pLw-Lw-P0r"/>
@@ -3095,7 +3209,7 @@ kamu merasa tidak nyaman.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Oiv-I1-eQT"/>
+        <segue reference="CNY-6n-FqC"/>
         <segue reference="Ztl-w1-L5g"/>
         <segue reference="EO2-Pw-c19"/>
         <segue reference="Pj7-gd-Isc"/>
