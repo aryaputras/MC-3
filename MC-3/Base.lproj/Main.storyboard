@@ -37,7 +37,7 @@ tentang dirimu</string>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" image="Avatar 1" translatesAutoresizingMaskIntoConstraints="NO" id="1ZP-Bu-ngw">
                                 <rect key="frame" x="132" y="271" width="150" height="150"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" misplaced="YES" text="Nama aliasmu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgS-bf-mam">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Nama aliasmu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgS-bf-mam">
                                 <rect key="frame" x="152.5" y="428.5" width="111.5" height="20.5"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -135,7 +135,7 @@ tentang dirimu</string>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="QgS-bf-mam" secondAttribute="centerX" id="4Uj-ef-jql"/>
                             <constraint firstItem="YYe-zB-WsI" firstAttribute="centerX" secondItem="w4Z-uP-Wgn" secondAttribute="centerX" id="7Xa-kH-BYG"/>
                             <constraint firstItem="nmf-ye-YsU" firstAttribute="top" secondItem="znz-75-iWu" secondAttribute="top" id="8QH-oV-VdM"/>
-                            <constraint firstItem="QgS-bf-mam" firstAttribute="top" secondItem="1ZP-Bu-ngw" secondAttribute="bottom" constant="2.5" id="9qb-D8-52S"/>
+                            <constraint firstItem="QgS-bf-mam" firstAttribute="top" secondItem="1ZP-Bu-ngw" secondAttribute="bottom" constant="7.5" id="9qb-D8-52S"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="54" id="AKp-FV-lYb"/>
                             <constraint firstItem="YYe-zB-WsI" firstAttribute="top" secondItem="w4Z-uP-Wgn" secondAttribute="bottom" constant="9" id="At2-mj-0Qx"/>
                             <constraint firstItem="ZbF-zj-HCO" firstAttribute="centerY" secondItem="1ZP-Bu-ngw" secondAttribute="centerY" id="CRk-gK-O7e"/>
@@ -152,7 +152,7 @@ tentang dirimu</string>
                             <constraint firstItem="WBa-1l-fhA" firstAttribute="top" secondItem="TK8-NE-xJc" secondAttribute="bottom" constant="24" id="UgW-SU-ZFy"/>
                             <constraint firstItem="dBo-w7-QIE" firstAttribute="leading" secondItem="026-sm-dPE" secondAttribute="trailing" constant="25" id="WYR-db-VKD"/>
                             <constraint firstItem="dXN-4D-GTy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="140.5" id="XBT-Da-MNY"/>
-                            <constraint firstItem="TK8-NE-xJc" firstAttribute="top" secondItem="QgS-bf-mam" secondAttribute="bottom" constant="16" id="XDW-Me-wyH"/>
+                            <constraint firstItem="TK8-NE-xJc" firstAttribute="top" secondItem="QgS-bf-mam" secondAttribute="bottom" constant="11" id="XDW-Me-wyH"/>
                             <constraint firstItem="1ZP-Bu-ngw" firstAttribute="top" secondItem="aln-6j-PTd" secondAttribute="bottom" constant="27" id="XEF-XA-24c"/>
                             <constraint firstAttribute="bottom" secondItem="TK8-NE-xJc" secondAttribute="bottom" constant="402" id="Ysw-xg-BGK"/>
                             <constraint firstItem="TK8-NE-xJc" firstAttribute="centerX" secondItem="w4Z-uP-Wgn" secondAttribute="centerX" constant="1" id="aZy-AR-Gud"/>
@@ -3211,6 +3211,7 @@ kamu merasa tidak nyaman.</string>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="ZkE-Bg-WQ2"/>
         <segue reference="CNY-6n-FqC"/>
         <segue reference="2Ho-RR-mWr"/>
         <segue reference="EO2-Pw-c19"/>
