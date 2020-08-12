@@ -1751,8 +1751,10 @@ perahu kertas!</string>
                                 <rect key="frame" x="345" y="593" width="29" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
-                                <state key="normal" image="Report_Button">
+                                <color key="tintColor" red="0.2010057569" green="0.19341084359999999" blue="0.3255038261" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="exclamationmark.triangle" catalog="system">
                                     <color key="titleColor" red="0.1529411765" green="0.13725490200000001" blue="0.26274509800000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="22"/>
                                 </state>
                                 <connections>
                                     <segue destination="WEf-Aq-8Jd" kind="presentation" modalPresentationStyle="fullScreen" id="2Ho-RR-mWr"/>
@@ -3210,9 +3212,9 @@ kamu merasa tidak nyaman.</string>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="CNY-6n-FqC"/>
-        <segue reference="3Bt-q9-Wbd"/>
+        <segue reference="2Ho-RR-mWr"/>
         <segue reference="EO2-Pw-c19"/>
-        <segue reference="dD4-aT-L0R"/>
+        <segue reference="cYd-ed-PzV"/>
         <segue reference="9b2-eg-5M3"/>
     </inferredMetricsTieBreakers>
     <resources>
@@ -3259,7 +3261,6 @@ kamu merasa tidak nyaman.</string>
         <image name="Primary Button" width="192" height="55"/>
         <image name="Purple" width="17" height="17"/>
         <image name="Rectangle-2" width="414" height="1050"/>
-        <image name="Report_Button" width="25" height="22"/>
         <image name="Slider_Size" width="24" height="236"/>
         <image name="Slider_Size-1" width="24" height="236"/>
         <image name="Soft_pink" width="17" height="17"/>
@@ -3275,6 +3276,7 @@ kamu merasa tidak nyaman.</string>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="circle" catalog="system" width="128" height="121"/>
         <image name="clock.fill" catalog="system" width="128" height="121"/>
+        <image name="exclamationmark.triangle" catalog="system" width="128" height="112"/>
         <image name="forward.fill" catalog="system" width="128" height="79"/>
         <image name="laporkanpengguna" width="314" height="290"/>
         <image name="mic.fill" catalog="system" width="108" height="128"/>
